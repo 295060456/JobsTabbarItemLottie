@@ -84,12 +84,12 @@
 		9FF0AD01DF7B1F2161B7B7A8 /* Pods-TabbarItemLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.debug.xcconfig"; sourceTree = "<group>"; };
 		C53026C72535C873009EDFDA /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
 		C53026C82535C873009EDFDA /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
-		C53026D92535C952009EDFDA /* VC@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@1.h"; path = "TabbarItemLottie/VC@1.h"; sourceTree = SOURCE_ROOT; };
-		C53026DA2535C952009EDFDA /* VC@1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@1.m"; path = "TabbarItemLottie/VC@1.m"; sourceTree = SOURCE_ROOT; };
-		C53026DE2535C95E009EDFDA /* VC@2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@2.h"; path = "TabbarItemLottie/VC@2.h"; sourceTree = SOURCE_ROOT; };
-		C53026DF2535C95E009EDFDA /* VC@2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@2.m"; path = "TabbarItemLottie/VC@2.m"; sourceTree = SOURCE_ROOT; };
-		C53026E32535C96B009EDFDA /* VC@3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@3.h"; path = "TabbarItemLottie/VC@3.h"; sourceTree = SOURCE_ROOT; };
-		C53026E42535C96B009EDFDA /* VC@3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@3.m"; path = "TabbarItemLottie/VC@3.m"; sourceTree = SOURCE_ROOT; };
+		C53026D92535C952009EDFDA /* VC@1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@1.h"; path = "TabbarItemLottie/VC/VC@1.h"; sourceTree = SOURCE_ROOT; };
+		C53026DA2535C952009EDFDA /* VC@1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@1.m"; path = "TabbarItemLottie/VC/VC@1.m"; sourceTree = SOURCE_ROOT; };
+		C53026DE2535C95E009EDFDA /* VC@2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@2.h"; path = "TabbarItemLottie/VC/VC@2.h"; sourceTree = SOURCE_ROOT; };
+		C53026DF2535C95E009EDFDA /* VC@2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@2.m"; path = "TabbarItemLottie/VC/VC@2.m"; sourceTree = SOURCE_ROOT; };
+		C53026E32535C96B009EDFDA /* VC@3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VC@3.h"; path = "TabbarItemLottie/VC/VC@3.h"; sourceTree = SOURCE_ROOT; };
+		C53026E42535C96B009EDFDA /* VC@3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "VC@3.m"; path = "TabbarItemLottie/VC/VC@3.m"; sourceTree = SOURCE_ROOT; };
 		C53026EF2535CED5009EDFDA /* My_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My_selected@2x.png"; sourceTree = "<group>"; };
 		C53026F02535CED5009EDFDA /* My_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My_selected@3x.png"; sourceTree = "<group>"; };
 		C53026F12535CED5009EDFDA /* My_unselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My_unselected@3x.png"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 				39470D601F7BB0770015EB64 /* AppDelegate.h */,
 				39470D611F7BB0770015EB64 /* AppDelegate.m */,
 				C53027272535D95E009EDFDA /* 一些第三方 */,
-				C53026D82535C936009EDFDA /* VC */,
+				C5BA302E2536CEF500C6156D /* VC */,
 				C53026EA2535C9AB009EDFDA /* UITabBarController */,
 				C53026E92535C99A009EDFDA /* UITabBar */,
 				39470D6E1F7BB0770015EB64 /* Info.plist */,
@@ -202,19 +202,6 @@
 				1262DB9F2C4A38624766D384 /* libPods-TabbarItemLottie.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C53026D82535C936009EDFDA /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				C53026D92535C952009EDFDA /* VC@1.h */,
-				C53026DA2535C952009EDFDA /* VC@1.m */,
-				C53026DE2535C95E009EDFDA /* VC@2.h */,
-				C53026DF2535C95E009EDFDA /* VC@2.m */,
-				C53026E32535C96B009EDFDA /* VC@3.h */,
-				C53026E42535C96B009EDFDA /* VC@3.m */,
-			);
-			path = VC;
 			sourceTree = "<group>";
 		};
 		C53026E82535C974009EDFDA /* PIC */ = {
@@ -316,6 +303,19 @@
 			path = "一些第三方";
 			sourceTree = "<group>";
 		};
+		C5BA302E2536CEF500C6156D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C53026D92535C952009EDFDA /* VC@1.h */,
+				C53026DA2535C952009EDFDA /* VC@1.m */,
+				C53026DE2535C95E009EDFDA /* VC@2.h */,
+				C53026DF2535C95E009EDFDA /* VC@2.m */,
+				C53026E32535C96B009EDFDA /* VC@3.h */,
+				C53026E42535C96B009EDFDA /* VC@3.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,8 +327,6 @@
 				39470D591F7BB0770015EB64 /* Sources */,
 				39470D5A1F7BB0770015EB64 /* Frameworks */,
 				39470D5B1F7BB0770015EB64 /* Resources */,
-				0E99EA60AE6976251C291805 /* [CP] Embed Pods Frameworks */,
-				CC3009F825671E2393BD483C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,21 +438,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E99EA60AE6976251C291805 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		567E1C88CDE118D879974A88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,21 +454,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CC3009F825671E2393BD483C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
