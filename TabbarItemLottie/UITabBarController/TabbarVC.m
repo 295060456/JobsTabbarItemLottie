@@ -7,9 +7,6 @@
 //
 
 #import "TabbarVC.h"
-#import "LoadingImage.h"
-
-#import <QuartzCore/QuartzCore.h>
 
 TabbarVC *tabbarVC;
 
@@ -19,6 +16,7 @@ TabbarVC *tabbarVC;
 @property(nonatomic,strong)NSMutableArray <NSString *>*tabLottieMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*imagesMutArr;
+@property(nonatomic,strong)NSMutableArray <UIView *>*UITabBarButtonMutArr;//UITabBarButton 是内部类 直接获取不到，需要间接获取
 
 @end
 
@@ -61,11 +59,12 @@ TabbarVC *tabbarVC;
         }
     }
 
-//    for (UIView *subView in self.tabBar.subviews) {
-//        if ([subView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-//
-//        }
-//    }
+    for (UIView *subView in self.tabBar.subviews) {
+        if ([subView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [UIView animationAlert:subView];//图片从小放大
+            [self.UITabBarButtonMutArr addObject:subView];
+        }
+    }
 }
 
 - (void)UISetting{
@@ -82,10 +81,8 @@ TabbarVC *tabbarVC;
                  lottieImage:self.lottieImageMutArr[i]];
 
         [vc setTitle:self.titleMutArr[i]];
-        vc.tabBarItem.image = [KIMG(imageUnselected)
-                               imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        vc.tabBarItem.selectedImage = [KIMG(imageSelected)
-                                       imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        vc.tabBarItem.image = [KIMG(imageUnselected) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        vc.tabBarItem.selectedImage = [KIMG(imageSelected) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 #pragma mark —— 凸起部分判断逻辑和处理 —— 一般的图片
         for (NSNumber *b in self.humpIndex) {
             if (b.intValue == i) {
@@ -151,7 +148,6 @@ TabbarVC *tabbarVC;
     lottieView.animationProgress = 0;
     [lottieView play];
 }
-
 #pragma mark - UITabBarControllerDelegate
 - (BOOL)tabBarController:(UITabBarController *)tabBarController
 shouldSelectViewController:(UIViewController *)viewController {
@@ -168,6 +164,9 @@ shouldSelectViewController:(UIViewController *)viewController {
         [NSObject feedbackGenerator];
         shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
         [item pp_increase];
+        
+        UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
+        [UIView animationAlert:UITabBarButton];//图片从小放大
     }
 }
 #pragma mark —— lazyLoad
@@ -258,6 +257,12 @@ shouldSelectViewController:(UIViewController *)viewController {
     if (!_humpIndex) {
         _humpIndex = NSMutableArray.array;
     }return _humpIndex;
+}
+
+-(NSMutableArray<UIView *> *)UITabBarButtonMutArr{
+    if (!_UITabBarButtonMutArr) {
+        _UITabBarButtonMutArr = NSMutableArray.array;
+    }return _UITabBarButtonMutArr;
 }
 
 @end
