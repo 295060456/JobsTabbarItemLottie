@@ -64,6 +64,7 @@
 		C5AEE94B25373638000E1C5F /* VC@7.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE93425373638000E1C5F /* VC@7.m */; };
 		C5AEE94C25373638000E1C5F /* VC@4.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE93925373638000E1C5F /* VC@4.m */; };
 		C5AEEA2625373F86000E1C5F /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2525373F86000E1C5F /* TabBarItem.m */; };
+		C5AEEA2F253747A3000E1C5F /* UITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */; };
 		FC44D2CEA2E3A6EC22965AFE /* Pods_TabbarItemLottieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2460135C339399839C459CA6 /* Pods_TabbarItemLottieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +177,8 @@
 		C5AEE93925373638000E1C5F /* VC@4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VC@4.m"; sourceTree = "<group>"; };
 		C5AEEA2425373F86000E1C5F /* TabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
 		C5AEEA2525373F86000E1C5F /* TabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
+		C5AEEA2D253747A3000E1C5F /* UITabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITabBarButton.h; sourceTree = "<group>"; };
+		C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITabBarButton.m; sourceTree = "<group>"; };
 		F3A8DBBFFD53ADED663AF9F3 /* Pods-TabbarItemLottieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.release.xcconfig"; sourceTree = "<group>"; };
 		F49C4681F019908A768FD50F /* Pods-TabbarItemLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +244,8 @@
 				C5AEE92725373638000E1C5F /* VC */,
 				C5AEE8CC25373609000E1C5F /* Others */,
 				C5AEE8A125373581000E1C5F /* Info.plist */,
+				C5AEEA2D253747A3000E1C5F /* UITabBarButton.h */,
+				C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */,
 			);
 			path = TabbarItemLottie;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5AEE94C25373638000E1C5F /* VC@4.m in Sources */,
+				C5AEEA2F253747A3000E1C5F /* UITabBarButton.m in Sources */,
 				C5AEE94525373638000E1C5F /* VC@5.m in Sources */,
 				C5AEE8A325373581000E1C5F /* main.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
