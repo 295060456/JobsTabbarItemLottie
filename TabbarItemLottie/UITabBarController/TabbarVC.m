@@ -54,14 +54,11 @@ TabbarVC *tabbarVC;
     for (UITabBarItem *item in self.tabBar.items) {
         if ([item.title isEqualToString:@"首页"]) {
             [item pp_addBadgeWithText:@"99+"];
-            [UIView animationAlert:item.badgeView];
-            
-//            shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
-            
-            [UIView 视图上下一直来回跳动的动画:item.badgeView];
+#pragma mark —— 动画
+            [UIView animationAlert:item.badgeView];//图片从小放大
+            shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
+//            [UIView 视图上下一直来回跳动的动画:item.badgeView];
         }
-        
-        
     }
 
 //    for (UIView *subView in self.tabBar.subviews) {
@@ -160,6 +157,8 @@ TabbarVC *tabbarVC;
 - (BOOL)tabBarController:(UITabBarController *)tabBarController
 shouldSelectViewController:(UIViewController *)viewController {
     [self lottieImagePlay:viewController];
+    [NSObject playSoundWithFileName:@"Sound.wav"];
+    [NSObject feedbackGenerator];
     return YES;
 }
 //点击事件

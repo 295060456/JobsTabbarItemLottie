@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Lottie/Lottie.h>
 #import "PPBadgeView.h"
+#import "NSObject+Sound.h"
+#import "NSObject+Extras.h"
 
 #import "UITabBar+Ex.h"
 #import "UIView+Measure.h"
