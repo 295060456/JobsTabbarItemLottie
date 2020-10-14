@@ -15,7 +15,7 @@
 
 @implementation CustomTabBar
 
-- (instancetype)initWithBgImg:(UIImage *)bgImg{
+- (instancetype __nullable)initWithBgImg:(UIImage *__nullable)bgImg{
     if (self = [super init]) {
         self.clipsToBounds = NO;//超出视图部分显示
         if (!bgImg) {
@@ -41,12 +41,6 @@
     if (!_bgColor) {
         _bgColor = [UIColor yellowColor];
     }return _bgColor;
-}
-
--(UIImage *)bgImg{
-    if (!_bgImg) {
-        _bgImg = KIMG(@"gradualColor");
-    }return _bgImg;
 }
 
 @end

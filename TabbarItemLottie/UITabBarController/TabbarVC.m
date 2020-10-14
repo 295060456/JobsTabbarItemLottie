@@ -95,28 +95,21 @@
     self.viewControllers = mArr;
     
 #pragma mark —— 凸起部分判断逻辑和处理 —— Lottie 动画
-//    for (int d = 0; d < self.childMutArr.count; d++) {
-//        if (self.humpIndex.count) {
-////            NSNumber *b = self.humpIndex[d];
-////            [self.tabBar addLottieImage:d
-////                                offsetY:d == b.intValue ? - self.humpOffsetY / 2 : 0
-////                             lottieName:self.tabLottieMutArr[d]];
-//
-//            for (NSNumber *b in self.humpIndex) {
-//                if (b.intValue == d) {
-//                    <#statements#>
-//                }else{
-//
-//                }
-//            }
-//
-//
-//        }else{
-//            [self.tabBar addLottieImage:d
-//                                offsetY:0
-//                             lottieName:self.tabLottieMutArr[d]];
-//        }
-//    }
+    for (int d = 0; d < self.childMutArr.count; d++) {
+        if (self.humpIndex.count) {
+            for (NSNumber *b in self.humpIndex) {
+                if (d == b.intValue) {
+                    [self.tabBar addLottieImage:d
+                                        offsetY:- self.myTabBar.humpOffsetY / 2
+                                     lottieName:self.tabLottieMutArr[d]];
+                }
+            }
+        }else{
+            [self.tabBar addLottieImage:d
+                                offsetY:0
+                             lottieName:self.tabLottieMutArr[d]];
+        }
+    }
     
     //初始显示
     if (self.firstUI_selectedIndex < self.viewControllers.count) {
@@ -168,7 +161,7 @@ shouldSelectViewController:(UIViewController *)viewController {
 #pragma mark —— lazyLoad
 -(CustomTabBar *)myTabBar{
     if (!_myTabBar) {
-        _myTabBar = CustomTabBar.new;
+        _myTabBar = [[CustomTabBar alloc] initWithBgImg:nil];
         [self setValue:_myTabBar
                 forKey:@"tabBar"];//KVC 进行替换
         _myTabBar.frame = self.tabBar.bounds;
