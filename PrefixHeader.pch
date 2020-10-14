@@ -11,7 +11,12 @@
 
 #import "PPBadgeView.h"
 #import "TabbarVC.h"
+#import "CustomTabBar.h"
 #import "UIView+Animation.h"
+#import "UITabBar+Ex.h"
+
+#define HDDevice [UIDevice currentDevice]
+#define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
 
 ///随机颜色
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 \

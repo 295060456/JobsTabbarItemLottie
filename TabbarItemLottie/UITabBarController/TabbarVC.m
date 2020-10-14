@@ -82,9 +82,9 @@ TabbarVC *tabbarVC;
                  lottieImage:self.lottieImageMutArr[i]];
 
         [vc setTitle:self.titleMutArr[i]];
-        vc.tabBarItem.image = [[UIImage imageNamed:imageUnselected]
+        vc.tabBarItem.image = [KIMG(imageUnselected)
                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        vc.tabBarItem.selectedImage = [[UIImage imageNamed:imageSelected]
+        vc.tabBarItem.selectedImage = [KIMG(imageSelected)
                                        imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 #pragma mark —— 凸起部分判断逻辑和处理 —— 一般的图片
         for (NSNumber *b in self.humpIndex) {
@@ -128,7 +128,6 @@ TabbarVC *tabbarVC;
     }
 }
 
-
 - (void)addLottieImage:(UIViewController *)vc
            lottieImage:(NSString *)lottieImage {
     vc.view.backgroundColor = [UIColor lightGrayColor];
@@ -157,8 +156,6 @@ TabbarVC *tabbarVC;
 - (BOOL)tabBarController:(UITabBarController *)tabBarController
 shouldSelectViewController:(UIViewController *)viewController {
     [self lottieImagePlay:viewController];
-    [NSObject playSoundWithFileName:@"Sound.wav"];
-    [NSObject feedbackGenerator];
     return YES;
 }
 //点击事件
@@ -167,6 +164,10 @@ shouldSelectViewController:(UIViewController *)viewController {
     if ([self.tabBar.items containsObject:item]) {
         NSInteger index = [self.tabBar.items indexOfObject:item];
         [self.tabBar animationLottieImage:(int)index];
+        [NSObject playSoundWithFileName:@"Sound.wav"];
+        [NSObject feedbackGenerator];
+        shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
+        [item pp_increase];
     }
 }
 #pragma mark —— lazyLoad
