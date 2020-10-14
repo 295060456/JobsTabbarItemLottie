@@ -157,7 +157,6 @@ shouldSelectViewController:(UIViewController *)viewController {
 -(CustomTabBar *)myTabBar{
     if (!_myTabBar) {
         _myTabBar = CustomTabBar.new;
-//        _myTabBar.effectAreaY = -150;
         [self setValue:_myTabBar
                 forKey:@"tabBar"];//KVC 进行替换
     }return _myTabBar;
