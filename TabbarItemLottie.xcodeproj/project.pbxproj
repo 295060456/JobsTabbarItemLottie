@@ -53,6 +53,7 @@
 		C5AEE6FB25370A25000E1C5F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE6F925370A25000E1C5F /* NSString+Extras.m */; };
 		C5AEE76625370E78000E1C5F /* gradualColor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE76425370E78000E1C5F /* gradualColor@2x.png */; };
 		C5AEE76725370E78000E1C5F /* gradualColor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE76525370E78000E1C5F /* gradualColor@3x.png */; };
+		C5AEE83725372595000E1C5F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE83625372595000E1C5F /* UIView+Animation.m */; };
 		C5BA30CA2536D04F00C6156D /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BA30C92536D04F00C6156D /* UIView+Measure.m */; };
 		E33A1D77203E8229242275E4 /* libPods-TabbarItemLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262DB9F2C4A38624766D384 /* libPods-TabbarItemLottie.a */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,8 @@
 		C5AEE6FA25370A25000E1C5F /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C5AEE76425370E78000E1C5F /* gradualColor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradualColor@2x.png"; sourceTree = "<group>"; };
 		C5AEE76525370E78000E1C5F /* gradualColor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradualColor@3x.png"; sourceTree = "<group>"; };
+		C5AEE83525372595000E1C5F /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		C5AEE83625372595000E1C5F /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		C5BA30C82536D04F00C6156D /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
 		C5BA30C92536D04F00C6156D /* UIView+Measure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Measure.m"; sourceTree = "<group>"; };
 		EE4AC178ED8A7968B42FB51C /* Pods-TabbarItemLottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.release.xcconfig"; sourceTree = "<group>"; };
@@ -326,17 +329,19 @@
 		C53027272535D95E009EDFDA /* 一些第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				C53027372535E390009EDFDA /* HitTestTool.h */,
+				C53027382535E390009EDFDA /* HitTestTool.m */,
+				C5AEE6F6253709C7000E1C5F /* LoadingImage.h */,
 				C5AEE6FA25370A25000E1C5F /* NSString+Extras.h */,
 				C5AEE6F925370A25000E1C5F /* NSString+Extras.m */,
-				C5AEE6F6253709C7000E1C5F /* LoadingImage.h */,
-				C5BA30C82536D04F00C6156D /* UIView+Measure.h */,
-				C5BA30C92536D04F00C6156D /* UIView+Measure.m */,
+				C5AEE83525372595000E1C5F /* UIView+Animation.h */,
+				C5AEE83625372595000E1C5F /* UIView+Animation.m */,
 				C53027282535D97A009EDFDA /* UIView+Chain.h */,
 				C53027292535D97A009EDFDA /* UIView+Chain.m */,
 				C53027322535E364009EDFDA /* UIView+HitAreaExpand.h */,
 				C53027332535E364009EDFDA /* UIView+HitAreaExpand.m */,
-				C53027372535E390009EDFDA /* HitTestTool.h */,
-				C53027382535E390009EDFDA /* HitTestTool.m */,
+				C5BA30C82536D04F00C6156D /* UIView+Measure.h */,
+				C5BA30C92536D04F00C6156D /* UIView+Measure.m */,
 			);
 			path = "一些第三方";
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				C53027342535E364009EDFDA /* UIView+HitAreaExpand.m in Sources */,
 				39470D701F7BB0770015EB64 /* main.m in Sources */,
 				C5AEE6D72536F50A000E1C5F /* VC@6.m in Sources */,
+				C5AEE83725372595000E1C5F /* UIView+Animation.m in Sources */,
 				C53026DB2535C952009EDFDA /* VC@1.m in Sources */,
 				395659861F7DEFCA00D82D39 /* TabbarVC.m in Sources */,
 				395659911F7E2DCF00D82D39 /* UITabBar+Ex.m in Sources */,

@@ -11,6 +11,7 @@
 
 #import "PPBadgeView.h"
 #import "TabbarVC.h"
+#import "UIView+Animation.h"
 
 ///随机颜色
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 \

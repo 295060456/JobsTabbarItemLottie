@@ -52,6 +52,7 @@ TabbarVC *tabbarVC;
     for (UITabBarItem *item in self.tabBar.items) {
         if ([item.title isEqualToString:@"首页"]) {
             [item pp_addBadgeWithText:@"99+"];
+            [UIView animationAlert:item.badgeView];
         }
     }
 
