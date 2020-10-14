@@ -1,18 +1,18 @@
 //
-//  VC@3.m
+//  VC@7.m
 //  TabbarItemLottie
 //
-//  Created by Jobs on 2020/10/13.
+//  Created by Jobs on 2020/10/14.
 //  Copyright © 2020 xa. All rights reserved.
 //
 
-#import "VC@3.h"
+#import "VC@7.h"
 
-@interface VC_3 ()
+@interface VC_7 ()
 
 @end
 
-@implementation VC_3
+@implementation VC_7
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,23 +6,13 @@
 //  Copyright © 2017年 xa. All rights reserved.
 //
 
-#import <Lottie/Lottie.h>
-
 #import "TabbarVC.h"
-#import "CustomTabBar.h"
-#import "UITabBar+Ex.h"
-
-#import "VC@1.h"
-#import "VC@2.h"
-#import "VC@3.h"
+#import "LoadingImage.h"
 
 @interface TabbarVC () <UITabBarControllerDelegate>
 
-@property(nonatomic,strong)CustomTabBar *myTabBar;
-
 @property(nonatomic,strong)NSMutableArray <NSString *>*lottieImageMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*tabLottieMutArr;
-@property(nonatomic,strong)NSMutableArray <UIViewController *>*childMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*titleMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*imagesMutArr;
 
@@ -43,20 +33,19 @@
                                              forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}
                                              forState:UIControlStateSelected];
-    self.tabBar.backgroundColor = UIColor.whiteColor;
-    self.tabBar.barStyle = UIBarStyleBlack;
+}
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self UISetting];
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    CGRect frame = self.tabBar.frame;
-    frame.size.height += 5;
-    frame.origin.y = self.view.frame.size.height - frame.size.height;
-    self.tabBar.frame = frame;
-
+    self.myTabBar.height += self.myTabBar.offsetHeight;
+    self.myTabBar.y = self.view.height - self.myTabBar.height;
+    
 //    for (UITabBarItem *item in self.tabBar.items) {
 //        if ([item.title isEqualToString:@"直播"]) {
 //
@@ -65,13 +54,12 @@
 
 //    for (UIView *subView in self.tabBar.subviews) {
 //        if ([subView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+//
 //        }
 //    }
 }
 
 - (void)UISetting{
-    
-    self.myTabBar.alpha = 1;// 更换tabBar
     
     NSMutableArray *mArr = NSMutableArray.array;
     for (int i = 0 ; i < self.childMutArr.count; i++){
@@ -89,12 +77,16 @@
                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         vc.tabBarItem.selectedImage = [[UIImage imageNamed:imageSelected]
                                        imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
-        if (i == 1) {
-            [vc.tabBarItem setImageInsets:UIEdgeInsetsMake(-30, 0, 15, 0)];//修改图片偏移量，上下，左右必须为相反数，否则图片会被压缩
-            [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -30)];//修改文字偏移量
+#pragma mark —— 凸起部分判断逻辑和处理 —— 一般的图片
+        for (NSNumber *b in self.humpIndex) {
+            if (b.intValue == i) {
+                [vc.tabBarItem setImageInsets:UIEdgeInsetsMake(-self.myTabBar.humpOffsetY,
+                                                               0,
+                                                               -self.myTabBar.humpOffsetY / 2,
+                                                               0)];//修改图片偏移量，上下，左右必须为相反数，否则图片会被压缩
+                [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];//修改文字偏移量
+            }
         }
-        
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         nav.title = self.titleMutArr[i];
         [mArr addObject:nav];
@@ -102,10 +94,30 @@
     
     self.viewControllers = mArr;
     
-    for (int d = 0; d < self.childMutArr.count; d++) {
-        [self.tabBar addLottieImage:d
-                         lottieName:self.tabLottieMutArr[d]];
-    }
+#pragma mark —— 凸起部分判断逻辑和处理 —— Lottie 动画
+//    for (int d = 0; d < self.childMutArr.count; d++) {
+//        if (self.humpIndex.count) {
+////            NSNumber *b = self.humpIndex[d];
+////            [self.tabBar addLottieImage:d
+////                                offsetY:d == b.intValue ? - self.humpOffsetY / 2 : 0
+////                             lottieName:self.tabLottieMutArr[d]];
+//
+//            for (NSNumber *b in self.humpIndex) {
+//                if (b.intValue == d) {
+//                    <#statements#>
+//                }else{
+//
+//                }
+//            }
+//
+//
+//        }else{
+//            [self.tabBar addLottieImage:d
+//                                offsetY:0
+//                             lottieName:self.tabLottieMutArr[d]];
+//        }
+//    }
+    
     //初始显示
     if (self.firstUI_selectedIndex < self.viewControllers.count) {
         self.selectedIndex = self.firstUI_selectedIndex;//初始显示哪个
@@ -159,12 +171,21 @@ shouldSelectViewController:(UIViewController *)viewController {
         _myTabBar = CustomTabBar.new;
         [self setValue:_myTabBar
                 forKey:@"tabBar"];//KVC 进行替换
+        _myTabBar.frame = self.tabBar.bounds;
     }return _myTabBar;
 }
 
 -(NSMutableArray<NSString *> *)lottieImageMutArr{
     if (!_lottieImageMutArr) {
         _lottieImageMutArr = NSMutableArray.array;
+        [_lottieImageMutArr addObject:@"home_priase_animation"];
+        [_lottieImageMutArr addObject:@"music_animation"];
+        [_lottieImageMutArr addObject:@"record_change"];
+        
+        [_lottieImageMutArr addObject:@"home_priase_animation"];
+        [_lottieImageMutArr addObject:@"music_animation"];
+        [_lottieImageMutArr addObject:@"record_change"];
+        
         [_lottieImageMutArr addObject:@"home_priase_animation"];
         [_lottieImageMutArr addObject:@"music_animation"];
         [_lottieImageMutArr addObject:@"record_change"];
@@ -177,21 +198,34 @@ shouldSelectViewController:(UIViewController *)viewController {
         [_tabLottieMutArr addObject:@"tab_home_animate"];
         [_tabLottieMutArr addObject:@"tab_search_animate"];
         [_tabLottieMutArr addObject:@"tab_message_animate"];
+        
+        [_tabLottieMutArr addObject:@"tab_home_animate"];
+        [_tabLottieMutArr addObject:@"tab_search_animate"];
+        [_tabLottieMutArr addObject:@"tab_message_animate"];
+        
+        [_tabLottieMutArr addObject:@"tab_home_animate"];
+        [_tabLottieMutArr addObject:@"tab_search_animate"];
+        [_tabLottieMutArr addObject:@"tab_message_animate"];
     }return _tabLottieMutArr;
 }
 
 -(NSMutableArray<UIViewController *> *)childMutArr{
     if (!_childMutArr) {
         _childMutArr = NSMutableArray.array;
-        [_childMutArr addObject:VC_1.new];
-        [_childMutArr addObject:VC_2.new];
-        [_childMutArr addObject:VC_3.new];
     }return _childMutArr;
 }
 
 -(NSMutableArray<NSString *> *)titleMutArr{
     if (!_titleMutArr) {
         _titleMutArr = NSMutableArray.array;
+        [_titleMutArr addObject:@"首页"];
+        [_titleMutArr addObject:@"精彩生活"];
+        [_titleMutArr addObject:@"发现"];
+        
+        [_titleMutArr addObject:@"首页"];
+        [_titleMutArr addObject:@"精彩生活"];
+        [_titleMutArr addObject:@"发现"];
+        
         [_titleMutArr addObject:@"首页"];
         [_titleMutArr addObject:@"精彩生活"];
         [_titleMutArr addObject:@"发现"];
@@ -204,7 +238,21 @@ shouldSelectViewController:(UIViewController *)viewController {
         [_imagesMutArr addObject:@"community"];
         [_imagesMutArr addObject:@"post"];
         [_imagesMutArr addObject:@"My"];
+        
+        [_imagesMutArr addObject:@"community"];
+        [_imagesMutArr addObject:@"post"];
+        [_imagesMutArr addObject:@"My"];
+        
+        [_imagesMutArr addObject:@"community"];
+        [_imagesMutArr addObject:@"post"];
+        [_imagesMutArr addObject:@"My"];
     }return _imagesMutArr;
+}
+
+-(NSMutableArray<NSNumber *> *)humpIndex{
+    if (!_humpIndex) {
+        _humpIndex = NSMutableArray.array;
+    }return _humpIndex;
 }
 
 @end

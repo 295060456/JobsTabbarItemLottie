@@ -7,18 +7,46 @@
 //
 
 #import "CustomTabBar.h"
+#import "LoadingImage.h"
+
+@interface CustomTabBar ()
+
+@end
 
 @implementation CustomTabBar
 
-//- (instancetype)init{
-//    if (self = [super init]) {
-//        NSLog(@"");
-//    }return self;
-//}
-//
+- (instancetype)initWithBgImg:(UIImage *)bgImg{
+    if (self = [super init]) {
+        self.clipsToBounds = NO;//超出视图部分显示
+        if (!bgImg) {
+            bgImg = KIMG(@"gradualColor");
+        }
+        [self setBackgroundImage:bgImg];
+    }return self;
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    [self setBarTintColor:self.bgColor];//这样写才能达到效果。
+    self.barStyle = UIBarStyleBlack;
+    self.translucent = self.isTranslucent;// 这句表示取消tabBar的透明效果。
+}
+
 //-(UIView *)hitTest:(CGPoint)point
 //         withEvent:(UIEvent *)event{
 //    
 //}
+#pragma mark —— LazyLoad
+-(UIColor *)bgColor{
+    if (!_bgColor) {
+        _bgColor = [UIColor yellowColor];
+    }return _bgColor;
+}
+
+-(UIImage *)bgImg{
+    if (!_bgImg) {
+        _bgImg = KIMG(@"gradualColor");
+    }return _bgImg;
+}
 
 @end

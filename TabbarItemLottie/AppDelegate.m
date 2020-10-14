@@ -11,30 +11,28 @@
 
 @interface AppDelegate ()
 
+@property(nonatomic,strong)TabbarVC *tabbarVC;
+
 @end
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    TabbarVC *tbvc = [[TabbarVC alloc] init];
-    self.window.rootViewController = tbvc;
+    self.window.rootViewController = self.tabbarVC;
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -54,6 +52,26 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+#pragma mark —— lazyLoad
+-(TabbarVC *)tabbarVC{
+    if (!_tabbarVC) {
+        _tabbarVC = TabbarVC.new;
+        _tabbarVC.myTabBar.offsetHeight = 5;
+        
+        [_tabbarVC.humpIndex addObject:@(1)];
+        [_tabbarVC.humpIndex addObject:@(2)];
+        
+        [_tabbarVC.childMutArr addObject:VC_1.new];
+        [_tabbarVC.childMutArr addObject:VC_2.new];
+        [_tabbarVC.childMutArr addObject:VC_3.new];
+    //    [_tabbarVC.childMutArr addObject:VC_4.new];
+    //    [_tabbarVC.childMutArr addObject:VC_5.new];
+    //    [_tabbarVC.childMutArr addObject:VC_6.new];
+    //    [_tabbarVC.childMutArr addObject:VC_7.new];
+    //    [_tabbarVC.childMutArr addObject:VC_8.new];
+    //    [_tabbarVC.childMutArr addObject:VC_9.new];
+    }return _tabbarVC;
 }
 
 
