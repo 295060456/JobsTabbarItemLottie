@@ -9,7 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-
+#import "PPBadgeView.h"
+#import "TabbarVC.h"
 
 ///随机颜色
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 \

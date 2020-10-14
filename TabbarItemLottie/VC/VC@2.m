@@ -19,5 +19,16 @@
     self.view.backgroundColor = RandomColor;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event{
+    extern TabbarVC *tabbarVC;
+    for (UITabBarItem *item in tabbarVC.myTabBar.items) {
+        if ([item.title isEqualToString:@"首页"]) {
+            [item pp_increase];
+        }
+    }
+}
+
+
 
 @end

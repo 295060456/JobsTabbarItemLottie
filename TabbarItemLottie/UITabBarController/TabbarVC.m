@@ -9,6 +9,8 @@
 #import "TabbarVC.h"
 #import "LoadingImage.h"
 
+TabbarVC *tabbarVC;
+
 @interface TabbarVC () <UITabBarControllerDelegate>
 
 @property(nonatomic,strong)NSMutableArray <NSString *>*lottieImageMutArr;
@@ -23,6 +25,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         self.delegate = self;
+        tabbarVC = self;
     }return self;
 }
 
@@ -46,11 +49,11 @@
     self.myTabBar.height += self.myTabBar.offsetHeight;
     self.myTabBar.y = self.view.height - self.myTabBar.height;
     
-//    for (UITabBarItem *item in self.tabBar.items) {
-//        if ([item.title isEqualToString:@"直播"]) {
-//
-//        }
-//    }
+    for (UITabBarItem *item in self.tabBar.items) {
+        if ([item.title isEqualToString:@"首页"]) {
+            [item pp_addBadgeWithText:@"99+"];
+        }
+    }
 
 //    for (UIView *subView in self.tabBar.subviews) {
 //        if ([subView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
