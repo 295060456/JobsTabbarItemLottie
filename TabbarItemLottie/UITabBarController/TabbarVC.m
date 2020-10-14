@@ -9,6 +9,8 @@
 #import "TabbarVC.h"
 #import "LoadingImage.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 TabbarVC *tabbarVC;
 
 @interface TabbarVC () <UITabBarControllerDelegate>
@@ -53,7 +55,13 @@ TabbarVC *tabbarVC;
         if ([item.title isEqualToString:@"首页"]) {
             [item pp_addBadgeWithText:@"99+"];
             [UIView animationAlert:item.badgeView];
+            
+//            shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
+            
+            [UIView 视图上下一直来回跳动的动画:item.badgeView];
         }
+        
+        
     }
 
 //    for (UIView *subView in self.tabBar.subviews) {
