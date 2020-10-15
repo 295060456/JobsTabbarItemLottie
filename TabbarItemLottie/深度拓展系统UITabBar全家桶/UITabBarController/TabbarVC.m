@@ -161,7 +161,6 @@ shouldSelectViewController:(UIViewController *)viewController {
 
         UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
         [UIView animationAlert:UITabBarButton];//图片从小放大
-    
     }
 }
 #pragma mark —— 手势调用方法
@@ -208,25 +207,29 @@ shouldSelectViewController:(UIViewController *)viewController {
 -(void)LZBTabBarItemLongPress:(UILongPressGestureRecognizer *)longPressGR{
     switch (longPressGR.state) {
         case UIGestureRecognizerStatePossible:{
-//            NSLog(@"没有触摸事件发生，所有手势识别的默认状态");
+            NSLog(@"没有触摸事件发生，所有手势识别的默认状态");
         }break;
         case UIGestureRecognizerStateBegan:{
             //长按手势
             NSInteger currentIndex = [self.UITabBarButtonMutArr indexOfObject:longPressGR.view];
             NSLog(@"一个手势已经开始 但尚未改变或者完成时，当前长按点击序号：%ld",currentIndex);//长按手势的锚点
             [NSObject feedbackGenerator];//震动反馈
+            
+//            [JobsPullListAutoSizeView initWithTargetView:longPressGR.view
+//                                            imagesMutArr:nil
+//                                             titleMutArr:[NSMutableArray arrayWithObjects:@"qqq",@"24r",nil]];
         }break;
         case UIGestureRecognizerStateChanged:{
-//            NSLog(@"手势状态改变");
+            NSLog(@"手势状态改变");
         }break;
         case UIGestureRecognizerStateEnded:{// = UIGestureRecognizerStateRecognized
-//            NSLog(@"手势完成");
+            NSLog(@"手势完成");
         }break;
         case UIGestureRecognizerStateCancelled:{
-//            NSLog(@"手势取消，恢复至Possible状态");
+            NSLog(@"手势取消，恢复至Possible状态");
         }break;
         case UIGestureRecognizerStateFailed:{
-//            NSLog(@"手势失败，恢复至Possible状态");
+            NSLog(@"手势失败，恢复至Possible状态");
         }break;
         default:
             break;

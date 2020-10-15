@@ -27,20 +27,26 @@
 #endif
 
 //我自己的定义的
+#import "AABlock.h"
 #import "LoadingImage.h"
 #import "NSObject+Sound.h"
 #import "NSObject+Extras.h"
 #import "UITabBar+Ex.h"
 #import "TabBarItem.h"
 #import "UIView+Measure.h"
+#import "UIView+Extras.h"
 #import "UIView+Animation.h"
 #import "CustomTabBar.h"
 #import "TabbarVC.h"
 #import "TabbarVC+UIGestureRecognizerDelegate.h"
 #import "ScrollTabBarDelegate.h"
 
+#import "JobsPullListAutoSizeView.h"
+
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
+
+#define ReuseIdentifier NSStringFromClass ([self class])
 
 ///随机颜色
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 \
@@ -50,18 +56,15 @@ alpha:1] \
 
 #define StringFormat(format,...) [NSString stringWithFormat:format, ##__VA_ARGS__]
 
-static inline UIWindow *getMainWindow(){
-  UIWindow *window = nil;
-   window = UIApplication.sharedApplication.delegate.window;
-   if (!window) {
-       if (@available(iOS 13.0, *)) {
-           NSSet<UIScene *> *connectedScenes =  UIApplication.sharedApplication.connectedScenes;
-           if (connectedScenes.count > 0 ) {
-               UIWindowScene *scene = (UIWindowScene *)connectedScenes.anyObject;
-                window = scene.windows.firstObject;
-           }
-       }
-   }return window;
+#import "SceneDelegate.h"
+static inline UIWindow * getMainWindow(){
+    UIWindow *window = nil;
+    if (@available(iOS 13.0, *)) {
+        window = [SceneDelegate sharedInstance].window;
+    }else{
+        window = UIApplication.sharedApplication.delegate.window;
+//        [UIApplication sharedApplication].keyWindow
+    }return window;
 }
 
 #import "VC@1.h"

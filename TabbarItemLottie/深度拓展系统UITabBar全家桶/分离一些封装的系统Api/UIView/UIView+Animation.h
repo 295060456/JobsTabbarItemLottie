@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "AABlock.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,10 @@ void shakerAnimation (UIView *view,
                       float height);
 
 +(void)视图上下一直来回跳动的动画:(UIView *)view;
+
+///点击放大再缩小
++ (void)addViewAnimation:(UIView *)sender
+         completionBlock:(MKDataBlock)completionBlock;
 
 @end
 
