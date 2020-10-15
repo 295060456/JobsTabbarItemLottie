@@ -17,6 +17,5 @@
 - (void)saveContext;
 +(AppDelegate *)sharedInstance;
 
-
 @end
 

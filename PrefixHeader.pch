@@ -31,16 +31,16 @@
 #import "LoadingImage.h"
 #import "NSObject+Sound.h"
 #import "NSObject+Extras.h"
-#import "UITabBar+Ex.h"
-#import "TabBarItem.h"
 #import "UIView+Measure.h"
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
+
+#import "TabBarItem.h"
+#import "UITabBar+Ex.h"
 #import "CustomTabBar.h"
 #import "TabbarVC.h"
 #import "TabbarVC+UIGestureRecognizerDelegate.h"
 #import "ScrollTabBarDelegate.h"
-
 #import "JobsPullListAutoSizeView.h"
 
 #define HDDevice [UIDevice currentDevice]
