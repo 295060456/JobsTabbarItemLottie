@@ -66,6 +66,8 @@
 		C5AEEA2625373F86000E1C5F /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2525373F86000E1C5F /* TabBarItem.m */; };
 		C5AEEA2F253747A3000E1C5F /* UITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */; };
 		C5AEEA352537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */; };
+		C5AEEA4E25380197000E1C5F /* ScrollTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */; };
+		C5AEEA4F25380197000E1C5F /* ScrollTabBarDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */; };
 		FC44D2CEA2E3A6EC22965AFE /* Pods_TabbarItemLottieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2460135C339399839C459CA6 /* Pods_TabbarItemLottieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,10 @@
 		C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITabBarButton.m; sourceTree = "<group>"; };
 		C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbarVC+UIGestureRecognizerDelegate.h"; sourceTree = "<group>"; };
 		C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TabbarVC+UIGestureRecognizerDelegate.m"; sourceTree = "<group>"; };
+		C5AEEA4A25380197000E1C5F /* ScrollTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTabBarAnimator.h; sourceTree = "<group>"; };
+		C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTabBarAnimator.m; sourceTree = "<group>"; };
+		C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTabBarDelegate.m; sourceTree = "<group>"; };
+		C5AEEA4D25380197000E1C5F /* ScrollTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTabBarDelegate.h; sourceTree = "<group>"; };
 		F3A8DBBFFD53ADED663AF9F3 /* Pods-TabbarItemLottieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.release.xcconfig"; sourceTree = "<group>"; };
 		F49C4681F019908A768FD50F /* Pods-TabbarItemLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,7 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
-				C5AEE8D12537362C000E1C5F /* DATA */,
+				C5AEE8CC25373609000E1C5F /* Others */,
+				C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */,
 				C5AEE88C25373580000E1C5F /* TabbarItemLottie */,
 				D1972A22E2348091360E3370 /* Pods */,
 				F00E88714FCA06A5D131158D /* Frameworks */,
@@ -239,13 +246,9 @@
 		C5AEE88C25373580000E1C5F /* TabbarItemLottie */ = {
 			isa = PBXGroup;
 			children = (
+				C5AEE8D12537362C000E1C5F /* DATA */,
 				C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */,
-				C5AEEA1D25373F5C000E1C5F /* UITabBarItem */,
-				C5AEE92425373638000E1C5F /* UITabBarController */,
-				C5AEE90D25373638000E1C5F /* UITabBar */,
-				C5AEE91225373638000E1C5F /* 一些第三方 */,
-				C5AEE92725373638000E1C5F /* VC */,
-				C5AEE8CC25373609000E1C5F /* Others */,
+				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
 				C5AEE8A125373581000E1C5F /* Info.plist */,
 				C5AEEA2D253747A3000E1C5F /* UITabBarButton.h */,
 				C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */,
@@ -373,26 +376,26 @@
 			path = UITabBar;
 			sourceTree = "<group>";
 		};
-		C5AEE91225373638000E1C5F /* 一些第三方 */ = {
+		C5AEE91225373638000E1C5F /* 分离一些封装的系统Api */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE91325373638000E1C5F /* UIView */,
 				C5AEE91A25373638000E1C5F /* LoadingImage.h */,
+				C5AEE91325373638000E1C5F /* UIView */,
 				C5AEE91B25373638000E1C5F /* NSString */,
 				C5AEE91E25373638000E1C5F /* NSObject */,
 			);
-			path = "一些第三方";
+			path = "分离一些封装的系统Api";
 			sourceTree = "<group>";
 		};
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE91425373638000E1C5F /* UIView+Chain.m */,
-				C5AEE91525373638000E1C5F /* UIView+Measure.m */,
+				C5AEE91825373638000E1C5F /* UIView+Animation.h */,
 				C5AEE91625373638000E1C5F /* UIView+Animation.m */,
 				C5AEE91725373638000E1C5F /* UIView+Chain.h */,
-				C5AEE91825373638000E1C5F /* UIView+Animation.h */,
+				C5AEE91425373638000E1C5F /* UIView+Chain.m */,
 				C5AEE91925373638000E1C5F /* UIView+Measure.h */,
+				C5AEE91525373638000E1C5F /* UIView+Measure.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -400,8 +403,8 @@
 		C5AEE91B25373638000E1C5F /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE91C25373638000E1C5F /* NSString+Extras.m */,
 				C5AEE91D25373638000E1C5F /* NSString+Extras.h */,
+				C5AEE91C25373638000E1C5F /* NSString+Extras.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -429,7 +432,7 @@
 			path = UITabBarController;
 			sourceTree = "<group>";
 		};
-		C5AEE92725373638000E1C5F /* VC */ = {
+		C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */ = {
 			isa = PBXGroup;
 			children = (
 				C5AEE93525373638000E1C5F /* VC@1.h */,
@@ -451,7 +454,7 @@
 				C5AEE92B25373638000E1C5F /* VC@9.h */,
 				C5AEE93225373638000E1C5F /* VC@9.m */,
 			);
-			path = VC;
+			path = "外部挂载的VC，用户自定义";
 			sourceTree = "<group>";
 		};
 		C5AEEA1D25373F5C000E1C5F /* UITabBarItem */ = {
@@ -461,6 +464,29 @@
 				C5AEEA2525373F86000E1C5F /* TabBarItem.m */,
 			);
 			path = UITabBarItem;
+			sourceTree = "<group>";
+		};
+		C5AEEA492538018E000E1C5F /* 功能性：手势横向滚动子VC联动Tabbar切换 */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEEA4A25380197000E1C5F /* ScrollTabBarAnimator.h */,
+				C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */,
+				C5AEEA4D25380197000E1C5F /* ScrollTabBarDelegate.h */,
+				C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */,
+			);
+			path = "功能性：手势横向滚动子VC联动Tabbar切换";
+			sourceTree = "<group>";
+		};
+		C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEE91225373638000E1C5F /* 分离一些封装的系统Api */,
+				C5AEEA492538018E000E1C5F /* 功能性：手势横向滚动子VC联动Tabbar切换 */,
+				C5AEEA1D25373F5C000E1C5F /* UITabBarItem */,
+				C5AEE92425373638000E1C5F /* UITabBarController */,
+				C5AEE90D25373638000E1C5F /* UITabBar */,
+			);
+			path = "深度拓展系统UITabBar全家桶";
 			sourceTree = "<group>";
 		};
 		D1972A22E2348091360E3370 /* Pods */ = {
@@ -757,7 +783,9 @@
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
 				C5AEE93E25373638000E1C5F /* UIView+Animation.m in Sources */,
+				C5AEEA4E25380197000E1C5F /* ScrollTabBarAnimator.m in Sources */,
 				C5AEE94A25373638000E1C5F /* VC@3.m in Sources */,
+				C5AEEA4F25380197000E1C5F /* ScrollTabBarDelegate.m in Sources */,
 				C5AEE94725373638000E1C5F /* VC@8.m in Sources */,
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */,

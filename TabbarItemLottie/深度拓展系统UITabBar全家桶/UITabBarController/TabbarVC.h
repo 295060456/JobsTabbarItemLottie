@@ -34,5 +34,6 @@
 @property(nonatomic,assign)NSInteger firstUI_selectedIndex;//初始显示第一个
 @property(nonatomic,strong)NSMutableArray <NSNumber *>*humpIndex;//需要凸起的序号
 @property(nonatomic,strong)NSMutableArray <UIViewController *>*childMutArr;//子控制器
+@property(nonatomic,assign)BOOL isOpenScrollTabbar;//是否开启手势横向滚动子VC联动Tabbar切换，默认开启
 
 @end
