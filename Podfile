@@ -8,7 +8,6 @@ target 'TabbarItemLottie' do
   # Pods for TabbarItemLottie
     pod 'lottie-ios', '~> 2.5.3'
     pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
-    pod 'ZWPullMenuView' # https://github.com/wangziwu/ZWPullMenuView 下拉选择视图、支持微信、支付宝等样式。自动计算最优显示位置、动画效果。
 
   target 'TabbarItemLottieTests' do
     inherit! :search_paths

@@ -1,24 +1,20 @@
 PODS:
   - lottie-ios (2.5.3)
   - PPBadgeView (3.1.0)
-  - ZWPullMenuView (0.1.1)
 
 DEPENDENCIES:
   - lottie-ios (~> 2.5.3)
   - PPBadgeView
-  - ZWPullMenuView
 
 SPEC REPOS:
   trunk:
     - lottie-ios
     - PPBadgeView
-    - ZWPullMenuView
 
 SPEC CHECKSUMS:
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   PPBadgeView: b50a223638970fd0781e8753250385864b6dd2fe
-  ZWPullMenuView: dad96c2a9b0aa797145e255336047456cab3416c
 
-PODFILE CHECKSUM: bf087308c07392e0aa6605f81472d1df2f31192e
+PODFILE CHECKSUM: 876ce3e587a70b00effc397e27e1044dc789c9e7
 
 COCOAPODS: 1.9.3

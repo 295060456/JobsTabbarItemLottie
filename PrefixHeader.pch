@@ -26,12 +26,6 @@
 #import "PPBadgeView.h"
 #endif
 
-#if __has_include(<ZWPullMenuView/ZWPullMenuView.h>)
-#import <ZWPullMenuView/ZWPullMenuView.h>
-#else
-#import "ZWPullMenuView.h"
-#endif
-
 //我自己的定义的
 #import "LoadingImage.h"
 #import "NSObject+Sound.h"

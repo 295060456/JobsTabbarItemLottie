@@ -158,9 +158,10 @@ shouldSelectViewController:(UIViewController *)viewController {
         [NSObject feedbackGenerator];
         shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
         [item pp_increase];
-        
+
         UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
         [UIView animationAlert:UITabBarButton];//图片从小放大
+    
     }
 }
 #pragma mark —— 手势调用方法
@@ -214,13 +215,6 @@ shouldSelectViewController:(UIViewController *)viewController {
             NSInteger currentIndex = [self.UITabBarButtonMutArr indexOfObject:longPressGR.view];
             NSLog(@"一个手势已经开始 但尚未改变或者完成时，当前长按点击序号：%ld",currentIndex);//长按手势的锚点
             [NSObject feedbackGenerator];//震动反馈
-            ZWPullMenuView *menuView = [ZWPullMenuView pullMenuAnchorView:longPressGR.view titleArray:@[@"2019年02月",
-                                                                                              @"2019年01月",
-                                                                                              @"2018年12月",
-                                                                                              @"2018年11月"]];
-            menuView.blockSelectedMenu = ^(NSInteger menuRow) {
-                NSLog(@"action----->%ld",(long)menuRow);
-            };
         }break;
         case UIGestureRecognizerStateChanged:{
 //            NSLog(@"手势状态改变");
