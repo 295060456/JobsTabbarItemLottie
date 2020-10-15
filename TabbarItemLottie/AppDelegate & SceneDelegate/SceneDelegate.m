@@ -12,8 +12,6 @@ API_AVAILABLE(ios(13.0))
 
 @interface SceneDelegate ()
 
-@property(nonatomic,strong)TabbarVC *tabbarVC;
-
 @end
 
 @implementation SceneDelegate
@@ -38,7 +36,7 @@ willConnectToSession:(UISceneSession *)session
     //在这里手动创建新的window
     if (@available(iOS 13.0, *)) {
         self.windowScene = (UIWindowScene *)scene;
-        [self.window setRootViewController:self.tabbarVC];
+        [self.window setRootViewController:AppDelegate.sharedInstance.tabbarVC];
         [self.window makeKeyAndVisible];
     }
 }
@@ -69,25 +67,5 @@ willConnectToSession:(UISceneSession *)session
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }
 #pragma mark —— lazyLoad
--(TabbarVC *)tabbarVC{
-    if (!_tabbarVC) {
-        _tabbarVC = TabbarVC.new;
-        _tabbarVC.myTabBar.offsetHeight = 5;
-        
-        [_tabbarVC.humpIndex addObject:@(1)];
-        [_tabbarVC.humpIndex addObject:@(2)];
-        
-        [_tabbarVC.childMutArr addObject:VC_1.new];
-        [_tabbarVC.childMutArr addObject:VC_2.new];
-        [_tabbarVC.childMutArr addObject:VC_3.new];
-    //    [_tabbarVC.childMutArr addObject:VC_4.new];
-    //    [_tabbarVC.childMutArr addObject:VC_5.new];
-    //    [_tabbarVC.childMutArr addObject:VC_6.new];
-    //    [_tabbarVC.childMutArr addObject:VC_7.new];
-    //    [_tabbarVC.childMutArr addObject:VC_8.new];
-    //    [_tabbarVC.childMutArr addObject:VC_9.new];
-    }return _tabbarVC;
-}
-
 
 @end

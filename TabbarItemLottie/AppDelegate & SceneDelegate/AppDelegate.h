@@ -12,6 +12,7 @@
 
 @property(readonly,strong)NSPersistentCloudKitContainer *persistentContainer;
 @property(nonatomic,strong)UIWindow *window;//仅仅为了iOS 13 版本向下兼容而存在
+@property(nonatomic,strong)TabbarVC *tabbarVC;
 
 - (void)saveContext;
 +(AppDelegate *)sharedInstance;

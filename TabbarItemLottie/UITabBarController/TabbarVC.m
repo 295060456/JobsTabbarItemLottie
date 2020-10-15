@@ -7,6 +7,7 @@
 //
 
 #import "TabbarVC.h"
+#import "TabbarVC+UIGestureRecognizerDelegate.h"
 
 TabbarVC *tabbarVC;
 
@@ -62,7 +63,10 @@ UIGestureRecognizerDelegate
 //            [UIView 视图上下一直来回跳动的动画:item.badgeView];
         }
     }
+}
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     for (UIView *subView in self.tabBar.subviews) {
         if ([subView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             [UIView animationAlert:subView];//图片从小放大
@@ -81,8 +85,9 @@ UIGestureRecognizerDelegate
          并且当任何手指抬起时手势识别器结束（UIGestureRecognizerStateEnded）。
          *
          */
+        
         UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(LZBTabBarItemLongPress:subView:)];
+                                                                                                  action:@selector(LZBTabBarItemLongPress:)];
         longPressGR.delegate = self;
 
         longPressGR.numberOfTouchesRequired = 1;//手指数
@@ -93,15 +98,16 @@ UIGestureRecognizerDelegate
     }
 }
 
--(void)LZBTabBarItemLongPress:(UILongPressGestureRecognizer *)longPressGR
-                      subView:(UIView *)subView{
+-(void)LZBTabBarItemLongPress:(UILongPressGestureRecognizer *)longPressGR{
     switch (longPressGR.state) {
         case UIGestureRecognizerStatePossible:{
 //            NSLog(@"没有触摸事件发生，所有手势识别的默认状态");
         }break;
         case UIGestureRecognizerStateBegan:{
             //长按手势
-            NSLog(@"一个手势已经开始 但尚未改变或者完成时");
+            NSInteger currentIndex = [self.UITabBarButtonMutArr indexOfObject:longPressGR.view];
+            NSLog(@"一个手势已经开始 但尚未改变或者完成时，当前长按点击序号：%ld",currentIndex);//长按手势的锚点
+            [NSObject feedbackGenerator];//震动反馈
         }break;
         case UIGestureRecognizerStateChanged:{
 //            NSLog(@"手势状态改变");

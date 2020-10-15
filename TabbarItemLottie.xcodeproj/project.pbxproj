@@ -65,6 +65,7 @@
 		C5AEE94C25373638000E1C5F /* VC@4.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE93925373638000E1C5F /* VC@4.m */; };
 		C5AEEA2625373F86000E1C5F /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2525373F86000E1C5F /* TabBarItem.m */; };
 		C5AEEA2F253747A3000E1C5F /* UITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */; };
+		C5AEEA352537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */; };
 		FC44D2CEA2E3A6EC22965AFE /* Pods_TabbarItemLottieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2460135C339399839C459CA6 /* Pods_TabbarItemLottieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +180,8 @@
 		C5AEEA2525373F86000E1C5F /* TabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
 		C5AEEA2D253747A3000E1C5F /* UITabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITabBarButton.h; sourceTree = "<group>"; };
 		C5AEEA2E253747A3000E1C5F /* UITabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITabBarButton.m; sourceTree = "<group>"; };
+		C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbarVC+UIGestureRecognizerDelegate.h"; sourceTree = "<group>"; };
+		C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TabbarVC+UIGestureRecognizerDelegate.m"; sourceTree = "<group>"; };
 		F3A8DBBFFD53ADED663AF9F3 /* Pods-TabbarItemLottieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.release.xcconfig"; sourceTree = "<group>"; };
 		F49C4681F019908A768FD50F /* Pods-TabbarItemLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -407,10 +410,10 @@
 			isa = PBXGroup;
 			children = (
 				C5AEE91F25373638000E1C5F /* NSObject+Extras.h */,
-				C5AEE92025373638000E1C5F /* Sound.wav */,
-				C5AEE92125373638000E1C5F /* NSObject+Sound.m */,
-				C5AEE92225373638000E1C5F /* NSObject+Sound.h */,
 				C5AEE92325373638000E1C5F /* NSObject+Extras.m */,
+				C5AEE92225373638000E1C5F /* NSObject+Sound.h */,
+				C5AEE92125373638000E1C5F /* NSObject+Sound.m */,
+				C5AEE92025373638000E1C5F /* Sound.wav */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -420,6 +423,8 @@
 			children = (
 				C5AEE92525373638000E1C5F /* TabbarVC.h */,
 				C5AEE92625373638000E1C5F /* TabbarVC.m */,
+				C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */,
+				C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -757,6 +762,7 @@
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */,
 				C5AEE94825373638000E1C5F /* VC@6.m in Sources */,
+				C5AEEA352537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m in Sources */,
 				C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */,
 				C5AEE93F25373638000E1C5F /* NSString+Extras.m in Sources */,
 				C5AEE94325373638000E1C5F /* TabbarVC.m in Sources */,

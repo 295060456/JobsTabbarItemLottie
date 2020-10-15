@@ -9,8 +9,6 @@
 
 @interface AppDelegate ()
 
-@property(nonatomic,strong)TabbarVC *tabbarVC;
-
 @end
 
 @implementation AppDelegate
