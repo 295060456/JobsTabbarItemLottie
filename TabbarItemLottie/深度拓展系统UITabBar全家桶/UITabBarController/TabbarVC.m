@@ -32,8 +32,10 @@ UIGestureRecognizerDelegate
 
 @implementation TabbarVC
 
-
-
+- (void)dealloc{
+    NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 -(instancetype)init{
     if (self = [super init]) {
@@ -50,7 +52,7 @@ UIGestureRecognizerDelegate
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}
                                              forState:UIControlStateSelected];
     
-    [self scrollTabbar];
+    [self scrollTabbar];//手势横向滚动子VC联动Tabbar切换
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -107,6 +109,28 @@ UIGestureRecognizerDelegate
         [subView addGestureRecognizer:longPressGR];
     }
 }
+#pragma mark —— 一些私有方法
+-(void)addLottieImage:(UIViewController *)vc
+          lottieImage:(NSString *)lottieImage{
+    vc.view.backgroundColor = [UIColor lightGrayColor];
+
+    LOTAnimationView *lottieView = [LOTAnimationView animationNamed:lottieImage];
+    lottieView.frame = [UIScreen mainScreen].bounds;
+    lottieView.contentMode = UIViewContentModeScaleAspectFit;
+    lottieView.loopAnimation = YES;
+    lottieView.tag = 100;
+    [vc.view addSubview:lottieView];
+}
+
+-(void)lottieImagePlay:(UIViewController *)vc{
+    LOTAnimationView *lottieView = (LOTAnimationView *)[vc.view viewWithTag:100];
+    if (!lottieView ||
+        ![lottieView isKindOfClass:LOTAnimationView.class]) {
+        return;
+    }
+    lottieView.animationProgress = 0;
+    [lottieView play];
+}
 
 -(void)scrollTabbar{
     if (!self.isOpenScrollTabbar) {
@@ -116,6 +140,27 @@ UIGestureRecognizerDelegate
         self.tabBarDelegate = [[ScrollTabBarDelegate alloc] init];
         self.delegate = self.tabBarDelegate;
         self.panGesture.enabled = !self.isOpenScrollTabbar;
+    }
+}
+#pragma mark - UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController
+shouldSelectViewController:(UIViewController *)viewController {
+    [self lottieImagePlay:viewController];
+    return YES;
+}
+//点击事件
+- (void)tabBar:(UITabBar *)tabBar
+ didSelectItem:(UITabBarItem *)item {
+    if ([self.tabBar.items containsObject:item]) {
+        NSInteger index = [self.tabBar.items indexOfObject:item];
+        [self.tabBar animationLottieImage:(int)index];
+        [NSObject playSoundWithFileName:@"Sound.wav"];
+        [NSObject feedbackGenerator];
+        shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
+        [item pp_increase];
+        
+        UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
+        [UIView animationAlert:UITabBarButton];//图片从小放大
     }
 }
 #pragma mark —— 手势调用方法
@@ -169,6 +214,13 @@ UIGestureRecognizerDelegate
             NSInteger currentIndex = [self.UITabBarButtonMutArr indexOfObject:longPressGR.view];
             NSLog(@"一个手势已经开始 但尚未改变或者完成时，当前长按点击序号：%ld",currentIndex);//长按手势的锚点
             [NSObject feedbackGenerator];//震动反馈
+            ZWPullMenuView *menuView = [ZWPullMenuView pullMenuAnchorView:longPressGR.view titleArray:@[@"2019年02月",
+                                                                                              @"2019年01月",
+                                                                                              @"2018年12月",
+                                                                                              @"2018年11月"]];
+            menuView.blockSelectedMenu = ^(NSInteger menuRow) {
+                NSLog(@"action----->%ld",(long)menuRow);
+            };
         }break;
         case UIGestureRecognizerStateChanged:{
 //            NSLog(@"手势状态改变");
@@ -187,8 +239,7 @@ UIGestureRecognizerDelegate
     }
 }
 
-- (void)UISetting{
-    
+-(void)UISetting{
     NSMutableArray *mArr = NSMutableArray.array;
     for (int i = 0 ; i < self.childMutArr.count; i++){
 
@@ -244,51 +295,6 @@ UIGestureRecognizerDelegate
         [self.tabBar animationLottieImage:self.firstUI_selectedIndex];
     }
 }
-
-- (void)addLottieImage:(UIViewController *)vc
-           lottieImage:(NSString *)lottieImage {
-    vc.view.backgroundColor = [UIColor lightGrayColor];
-
-    LOTAnimationView *lottieView = [LOTAnimationView animationNamed:lottieImage];
-    lottieView.frame = [UIScreen mainScreen].bounds;
-    lottieView.contentMode = UIViewContentModeScaleAspectFit;
-    lottieView.loopAnimation = YES;
-    lottieView.tag = 100;
-    [vc.view addSubview:lottieView];
-}
-
-- (void)lottieImagePlay:(UIViewController *)vc {
-    LOTAnimationView *lottieView = (LOTAnimationView *)[vc.view viewWithTag:100];
-    
-    if (!lottieView ||
-        ![lottieView isKindOfClass:LOTAnimationView.class]) {
-        return;
-    }
-    
-    lottieView.animationProgress = 0;
-    [lottieView play];
-}
-#pragma mark - UITabBarControllerDelegate
-- (BOOL)tabBarController:(UITabBarController *)tabBarController
-shouldSelectViewController:(UIViewController *)viewController {
-    [self lottieImagePlay:viewController];
-    return YES;
-}
-//点击事件
-- (void)tabBar:(UITabBar *)tabBar
- didSelectItem:(UITabBarItem *)item {
-    if ([self.tabBar.items containsObject:item]) {
-        NSInteger index = [self.tabBar.items indexOfObject:item];
-        [self.tabBar animationLottieImage:(int)index];
-        [NSObject playSoundWithFileName:@"Sound.wav"];
-        [NSObject feedbackGenerator];
-        shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
-        [item pp_increase];
-        
-        UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
-        [UIView animationAlert:UITabBarButton];//图片从小放大
-    }
-}
 #pragma mark —— lazyLoad
 -(CustomTabBar *)myTabBar{
     if (!_myTabBar) {
@@ -297,6 +303,14 @@ shouldSelectViewController:(UIViewController *)viewController {
                 forKey:@"tabBar"];//KVC 进行替换
         _myTabBar.frame = self.tabBar.bounds;
     }return _myTabBar;
+}
+
+-(UIPanGestureRecognizer *)panGesture{
+    if (!_panGesture) {
+        _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                              action:@selector(panHandle:)];
+        [self.view addGestureRecognizer:_panGesture];
+    }return _panGesture;
 }
 
 -(NSMutableArray<NSString *> *)lottieImageMutArr{
@@ -331,12 +345,6 @@ shouldSelectViewController:(UIViewController *)viewController {
         [_tabLottieMutArr addObject:@"tab_search_animate"];
         [_tabLottieMutArr addObject:@"tab_message_animate"];
     }return _tabLottieMutArr;
-}
-
--(NSMutableArray<UIViewController *> *)childMutArr{
-    if (!_childMutArr) {
-        _childMutArr = NSMutableArray.array;
-    }return _childMutArr;
 }
 
 -(NSMutableArray<NSString *> *)titleMutArr{
@@ -385,12 +393,11 @@ shouldSelectViewController:(UIViewController *)viewController {
     }return _UITabBarButtonMutArr;
 }
 
--(UIPanGestureRecognizer *)panGesture{
-    if (!_panGesture) {
-        _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                              action:@selector(panHandle:)];
-        [self.view addGestureRecognizer:_panGesture];
-    }return _panGesture;
+-(NSMutableArray<UIViewController *> *)childMutArr{
+    if (!_childMutArr) {
+        _childMutArr = NSMutableArray.array;
+    }return _childMutArr;
 }
+
 
 @end

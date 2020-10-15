@@ -9,11 +9,41 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+//系统SDK
+#import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
+//来自于Pods
+
+#if __has_include(<lottie-ios/Lottie.h>)
+#import <lottie-ios/Lottie.h>
+#else
+#import "Lottie.h"
+#endif
+
+#if __has_include(<PPBadgeView/PPBadgeView.h>)
+#import <PPBadgeView/PPBadgeView.h>
+#else
 #import "PPBadgeView.h"
-#import "TabbarVC.h"
-#import "CustomTabBar.h"
-#import "UIView+Animation.h"
+#endif
+
+#if __has_include(<ZWPullMenuView/ZWPullMenuView.h>)
+#import <ZWPullMenuView/ZWPullMenuView.h>
+#else
+#import "ZWPullMenuView.h"
+#endif
+
+//我自己的定义的
+#import "LoadingImage.h"
+#import "NSObject+Sound.h"
+#import "NSObject+Extras.h"
 #import "UITabBar+Ex.h"
+#import "TabBarItem.h"
+#import "UIView+Measure.h"
+#import "UIView+Animation.h"
+#import "CustomTabBar.h"
+#import "TabbarVC.h"
+#import "TabbarVC+UIGestureRecognizerDelegate.h"
+#import "ScrollTabBarDelegate.h"
 
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
