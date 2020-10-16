@@ -45,7 +45,7 @@ UIGestureRecognizerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.panGestureRecognizer.enabled = YES;//self.isOpenScrollTabbar;
+    self.panGestureRecognizer.enabled = self.isOpenScrollTabbar;
 }
 
 -(void)viewWillAppear:(BOOL)animated{

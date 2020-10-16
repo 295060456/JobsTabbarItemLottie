@@ -424,39 +424,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C55D4141253974DA00CFCF73 /* Tabbaritem点击动效 */ = {
-			isa = PBXGroup;
-			children = (
-				C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */,
-				C55D4143253974E900CFCF73 /* TLTabBarAnimation.h */,
-				C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */,
-				C579F9982539DC9C00846814 /* 参考demo */,
-			);
-			path = "Tabbaritem点击动效";
-			sourceTree = "<group>";
-		};
-		C55D41572539760100CFCF73 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				C55D427B2539775B00CFCF73 /* 5 */,
-				C55D42732539774600CFCF73 /* 4 */,
-				C55D41612539762400CFCF73 /* 3 */,
-				C55D41602539762000CFCF73 /* 2 */,
-				C55D415F2539761A00CFCF73 /* 1 */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		C55D415F2539761A00CFCF73 /* 1 */ = {
-			isa = PBXGroup;
-			children = (
-				C55D41582539760C00CFCF73 /* user_00084@2x.png */,
-				C55D41592539760C00CFCF73 /* user_00084@3x.png */,
-			);
-			path = 1;
-			sourceTree = "<group>";
-		};
-		C55D41602539762000CFCF73 /* 2 */ = {
+		C559D4042539E83B00D99C3A /* 静态图轮播 */ = {
 			isa = PBXGroup;
 			children = (
 				C55D417E2539767600CFCF73 /* Tools_00032@2x.png */,
@@ -536,34 +504,18 @@
 				C55D41622539764F00CFCF73 /* Tools_00028@2x.png */,
 				C55D41632539764F00CFCF73 /* Tools_00028@3x.png */,
 			);
-			path = 2;
+			path = "静态图轮播";
 			sourceTree = "<group>";
 		};
-		C55D41612539762400CFCF73 /* 3 */ = {
+		C55D4141253974DA00CFCF73 /* Tabbaritem点击动效 */ = {
 			isa = PBXGroup;
 			children = (
-				C55D426C2539773800CFCF73 /* Settings_00208@2x.png */,
-				C55D426D2539773800CFCF73 /* Settings_00208@3x.png */,
+				C579F9982539DC9C00846814 /* 参考demo */,
+				C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */,
+				C55D4143253974E900CFCF73 /* TLTabBarAnimation.h */,
+				C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */,
 			);
-			path = 3;
-			sourceTree = "<group>";
-		};
-		C55D42732539774600CFCF73 /* 4 */ = {
-			isa = PBXGroup;
-			children = (
-				C55D42752539774D00CFCF73 /* icon_pin_00160@2x.png */,
-				C55D42742539774D00CFCF73 /* icon_pin_00160@3x.png */,
-			);
-			path = 4;
-			sourceTree = "<group>";
-		};
-		C55D427B2539775B00CFCF73 /* 5 */ = {
-			isa = PBXGroup;
-			children = (
-				C55D427C2539776500CFCF73 /* drop@2x.png */,
-				C55D427D2539776500CFCF73 /* drop@3x.png */,
-			);
-			path = 5;
+			path = "Tabbaritem点击动效";
 			sourceTree = "<group>";
 		};
 		C579F83D2539D25100846814 /* Suspend */ = {
@@ -726,9 +678,8 @@
 		C5AEE8D12537362C000E1C5F /* DATA */ = {
 			isa = PBXGroup;
 			children = (
-				C55D41572539760100CFCF73 /* New Group */,
 				C5AEE8D22537362C000E1C5F /* PIC */,
-				C5AEE8E52537362C000E1C5F /* Json */,
+				C5AEE8E52537362C000E1C5F /* JsonForLottie */,
 			);
 			path = DATA;
 			sourceTree = "<group>";
@@ -736,6 +687,15 @@
 		C5AEE8D22537362C000E1C5F /* PIC */ = {
 			isa = PBXGroup;
 			children = (
+				C559D4042539E83B00D99C3A /* 静态图轮播 */,
+				C55D427C2539776500CFCF73 /* drop@2x.png */,
+				C55D427D2539776500CFCF73 /* drop@3x.png */,
+				C55D41582539760C00CFCF73 /* user_00084@2x.png */,
+				C55D41592539760C00CFCF73 /* user_00084@3x.png */,
+				C55D42752539774D00CFCF73 /* icon_pin_00160@2x.png */,
+				C55D42742539774D00CFCF73 /* icon_pin_00160@3x.png */,
+				C55D426C2539773800CFCF73 /* Settings_00208@2x.png */,
+				C55D426D2539773800CFCF73 /* Settings_00208@3x.png */,
 				C5AEE8DF2537362C000E1C5F /* community_selected@2x.png */,
 				C5AEE8E22537362C000E1C5F /* community_selected@3x.png */,
 				C5AEE8D32537362C000E1C5F /* community_unselected@2x.png */,
@@ -758,16 +718,16 @@
 			path = PIC;
 			sourceTree = "<group>";
 		};
-		C5AEE8E52537362C000E1C5F /* Json */ = {
+		C5AEE8E52537362C000E1C5F /* JsonForLottie */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE8E62537362C000E1C5F /* tab */,
-				C5AEE8EB2537362C000E1C5F /* vc */,
+				C5AEE8E62537362C000E1C5F /* Tabbaritem上的动效 */,
+				C5AEE8EB2537362C000E1C5F /* 展现在VC上面的 */,
 			);
-			path = Json;
+			path = JsonForLottie;
 			sourceTree = "<group>";
 		};
-		C5AEE8E62537362C000E1C5F /* tab */ = {
+		C5AEE8E62537362C000E1C5F /* Tabbaritem上的动效 */ = {
 			isa = PBXGroup;
 			children = (
 				C5AEE8E82537362C000E1C5F /* tab_home_animate.json */,
@@ -775,10 +735,10 @@
 				C5AEE8EA2537362C000E1C5F /* tab_message_animate.json */,
 				C5AEE8E92537362C000E1C5F /* tab_search_animate.json */,
 			);
-			path = tab;
+			path = "Tabbaritem上的动效";
 			sourceTree = "<group>";
 		};
-		C5AEE8EB2537362C000E1C5F /* vc */ = {
+		C5AEE8EB2537362C000E1C5F /* 展现在VC上面的 */ = {
 			isa = PBXGroup;
 			children = (
 				C5AEE8EC2537362C000E1C5F /* home_priase_animation.json */,
@@ -786,7 +746,7 @@
 				C5AEE8EF2537362C000E1C5F /* record_change.json */,
 				C5AEE8ED2537362C000E1C5F /* upgrade.json */,
 			);
-			path = vc;
+			path = "展现在VC上面的";
 			sourceTree = "<group>";
 		};
 		C5AEE90D25373638000E1C5F /* UITabBar */ = {
