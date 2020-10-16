@@ -20,6 +20,7 @@
 #import "UIView+Measure.h"
 #import "CustomTabBar.h"
 #import "PPBadgeView.h"
+#import "SuspendBtn.h"
 
 #import "TabBarControllerConfig.h"
 
@@ -36,6 +37,7 @@
 @property(nonatomic,strong)NSMutableArray <UIViewController *>*childMutArr;//子控制器
 @property(nonatomic,assign)BOOL isOpenScrollTabbar;//是否开启手势横向滚动子VC联动Tabbar切换，默认开启
 @property(nonatomic,strong)NSMutableArray <TabBarControllerConfig *>*tabBarControllerConfigMutArr;
+@property(nonatomic,strong)SuspendBtn *suspendBtn;//单个VC里面的旋转按钮,当在旋转的时候不能被拖动
 
 /// 包装 viewController / 自定义样式UITabBarItem
 /// @param viewController 被加工的VC

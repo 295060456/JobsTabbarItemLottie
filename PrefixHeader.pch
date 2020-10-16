@@ -9,6 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <objc/runtime.h>
+
 //系统SDK
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
@@ -42,6 +44,8 @@
 #import "UIView+Measure.h"
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
+#import "UIView+SuspendView.h"
+#import "SuspendBtn.h"
 
 #import "TabBarItem.h"
 #import "UITabBar+Ex.h"
@@ -54,6 +58,17 @@
 
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
+
+// 屏幕大小、宽、高
+#ifndef SCREEN_BOUNDS
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#endif
+#ifndef SCREEN_WIDTH
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#endif
+#ifndef SCREEN_HEIGHT
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#endif
 
 #define ReuseIdentifier NSStringFromClass ([self class])
 

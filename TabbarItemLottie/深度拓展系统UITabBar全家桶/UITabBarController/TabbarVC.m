@@ -11,8 +11,6 @@
 #import "ScrollTabBarDelegate.h"
 #import "TLAnimationTabBar.h"
 
-#import "LongPressGRView.h"
-
 #import "AppDelegate.h"
 
 TabbarVC *tabbarVC;
@@ -131,24 +129,17 @@ UIGestureRecognizerDelegate
     }
 }
 
--(void)添加长按手势{
+-(void)temp{
+    [NSObject feedbackGenerator];//震动反馈
+//    [JobsPullListAutoSizeView initWithTargetView:self.UITabBarButtonMutArr[data.tag]
+//                                    imagesMutArr:nil
+//                                     titleMutArr:[NSMutableArray arrayWithObjects:@"qqq",@"24r",nil]];
+}
 
-    for (UIView *subView in self.UITabBarButtonMutArr) {
-        LongPressGRView *longPressGRView = LongPressGRView.new;
-        longPressGRView.tag = [self.UITabBarButtonMutArr indexOfObject:subView];
-        @weakify(self)
-        [longPressGRView actionBlockLongPressGRView:^(LongPressGRView *data) {
-            @strongify(self)
-            [NSObject feedbackGenerator];//震动反馈
-            [JobsPullListAutoSizeView initWithTargetView:self.UITabBarButtonMutArr[data.tag]
-                                            imagesMutArr:nil
-                                             titleMutArr:[NSMutableArray arrayWithObjects:@"qqq",@"24r",nil]];
-        }];
-        [subView addSubview:longPressGRView];
-        [longPressGRView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(subView);
-        }];
-    }
+-(void)添加长按手势{
+//    for (UIView *subView in self.UITabBarButtonMutArr) {
+//
+//    }
 }
 
 -(void)addLottieImage:(UIViewController *)vc
@@ -183,17 +174,12 @@ UIGestureRecognizerDelegate
         self.panGesture.enabled = !self.isOpenScrollTabbar;
     }
 }
-#pragma mark - UITabBarControllerDelegate
-- (BOOL)tabBarController:(UITabBarController *)tabBarController
-shouldSelectViewController:(UIViewController *)viewController {
-    [self lottieImagePlay:viewController];
-    return YES;
-}
 #pragma mark —— UITabBarDelegate 监听TabBarItem点击事件
 - (void)tabBar:(UITabBar *)tabBar
  didSelectItem:(UITabBarItem *)item {
     if ([self.tabBar.items containsObject:item]) {
         NSInteger index = [self.tabBar.items indexOfObject:item];
+        NSLog(@"当前点击：%ld",(long)index);
         [self.tabBar animationLottieImage:(int)index];
         [NSObject playSoundWithFileName:@"Sound.wav"];
         [NSObject feedbackGenerator];
@@ -203,6 +189,12 @@ shouldSelectViewController:(UIViewController *)viewController {
         UIView *UITabBarButton = self.UITabBarButtonMutArr[index];
         [UIView animationAlert:UITabBarButton];//图片从小放大
     }
+}
+#pragma mark - UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController
+shouldSelectViewController:(UIViewController *)viewController {
+    [self lottieImagePlay:viewController];
+    return YES;
 }
 #pragma mark —— 手势调用方法
 -(void)panHandle:(UIPanGestureRecognizer *)panGesture{
@@ -387,5 +379,25 @@ NSArray *imgs (){
         _tabBarControllerConfigMutArr = NSMutableArray.array;
     }return _tabBarControllerConfigMutArr;
 }
+
+-(SuspendBtn *)suspendBtn{
+    if (!_suspendBtn) {
+        _suspendBtn = SuspendBtn.new;
+        [_suspendBtn setImage:KIMG(@"旋转")
+                     forState:UIControlStateNormal];
+        _suspendBtn.isAllowDrag = NO;//悬浮效果必须要的参数
+        @weakify(self)
+        self.view.vc = self_weak_;
+        [self.view addSubview:_suspendBtn];
+        _suspendBtn.frame = CGRectMake(80, 100, 50, 50);
+        [UIView cornerCutToCircleWithView:_suspendBtn AndCornerRadius:25];
+        [[_suspendBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
+            [self->_suspendBtn startRotateAnimation];
+            
+        }];
+    }return _suspendBtn;
+}
+
 
 @end
