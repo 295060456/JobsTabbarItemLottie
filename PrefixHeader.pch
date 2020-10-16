@@ -51,7 +51,6 @@
 #import "UITabBar+Ex.h"
 #import "CustomTabBar.h"
 #import "TabbarVC.h"
-#import "TabbarVC+UIGestureRecognizerDelegate.h"
 #import "JobsPullListAutoSizeView.h"
 #import "TabBarControllerConfig.h"
 

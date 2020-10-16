@@ -110,6 +110,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 -(TabbarVC *)tabbarVC{
     if (!_tabbarVC) {
         _tabbarVC = TabbarVC.new;
+//        _tabbarVC.isOpenScrollTabbar = NO;
         _tabbarVC.myTabBar.offsetHeight = 5;
         [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_1.new,
                                                                                 @"首页",

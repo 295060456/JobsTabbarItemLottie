@@ -7,7 +7,9 @@
 //
 
 #import "TabbarVC.h"
-#import "TLAnimationTabBar.h"
+#import "TLTabBarAnimation.h"
+#import "UITabBar+TLAnimation.h"
+#import "UITabBarItem+TLAnimation.h"
 #import "TransitionController.h"
 #import "TransitionAnimation.h"
 #import "AppDelegate.h"
@@ -20,10 +22,8 @@ UITabBarControllerDelegate,
 UIGestureRecognizerDelegate
 >
 
-@property(nonatomic,strong)UIPanGestureRecognizer *panGesture;
 @property(nonatomic,assign)NSInteger subViewControllerCount;
 @property(nonatomic,strong)NSMutableArray <UIView *>*UITabBarButtonMutArr;//UITabBarButton 是内部类 直接获取不到，需要间接获取
-
 @property(nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 
 @end
@@ -39,12 +39,13 @@ UIGestureRecognizerDelegate
     if (self = [super init]) {
         self.delegate = self;
         tabbarVC = self;
+        self.isOpenScrollTabbar = YES;
     }return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.panGestureRecognizer.enabled = self.isOpenScrollTabbar;
+    self.panGestureRecognizer.enabled = YES;//self.isOpenScrollTabbar;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -72,6 +73,61 @@ UIGestureRecognizerDelegate
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+}
+/// 包装 viewController / 自定义样式UITabBarItem
+/// @param viewController 被加工的VC
+/// @param title 显示标题
+/// @param imageSelected 选中状态的静态图
+/// @param imageUnselected 未选中状态的静态图
+/// @param humpOffsetY 凸起偏移量，传0就是不凸起
+/// @param lottieName 只要不为空值则启用Lottie动画
+/// @param tag tag值定位
+UIViewController *childViewController_customStyle(UIViewController *viewController,
+                                                  NSString *title,
+                                                  UIImage *imageSelected,
+                                                  UIImage *imageUnselected,
+                                                  CGFloat humpOffsetY,//Y轴凸起的偏移量 传0就是不凸起
+                                                  NSString *lottieName,//有值则用Lottie动画
+                                                  NSUInteger tag){
+
+    TabBarControllerConfig *config = TabBarControllerConfig.new;
+    config.vc = viewController;
+    config.title = title;
+    config.imageSelected = imageSelected;
+    config.imageUnselected = imageUnselected;
+    config.humpOffsetY = humpOffsetY;
+    config.lottieName = lottieName;
+    config.tag = tag;
+    
+    [[AppDelegate sharedInstance].tabbarVC.tabBarControllerConfigMutArr addObject:config];
+    
+    setAnimation(viewController.tabBarItem, tag);
+    return viewController;
+}
+
+/*  系统样式UITabBarItem
+ *  UITabBarSystemItemMore,
+ *  UITabBarSystemItemFavorites,
+ *  UITabBarSystemItemFeatured,
+ *  UITabBarSystemItemTopRated,
+ *  UITabBarSystemItemRecents,
+ *  UITabBarSystemItemContacts,
+ *  UITabBarSystemItemHistory,
+ *  UITabBarSystemItemBookmarks,
+ *  UITabBarSystemItemSearch,
+ *  UITabBarSystemItemDownloads,
+ *  UITabBarSystemItemMostRecent,
+ *  UITabBarSystemItemMostViewed,
+ */
+
+UIViewController *childViewController_SystemStyle(UIViewController *viewController,
+                                                  UITabBarSystemItem systemItem,
+                                                  NSUInteger tag){
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem
+                                                                           tag:tag];
+    setAnimation(viewController.tabBarItem, tag);
+    return viewController;
 }
 #pragma mark —— 一些私有方法
 -(void)UISetting{
@@ -128,7 +184,79 @@ UIGestureRecognizerDelegate
         [self.tabBar animationLottieImage:self.firstUI_selectedIndex];
     }
 }
+// MARK: - 给UITabBarItem绑定动画
+/// 给UITabBarItem绑定动画
+void setAnimation(UITabBarItem *item,
+                  NSInteger index) {
+     item.animation = @[
+                       bounceAnimation(),
+                       rotationAnimation(),
+                       transitionAniamtion(),
+                       fumeAnimation(),
+                       frameAnimation()
+                       ][index];
+}
+// MARK: - 创建动画函数
+TLBounceAnimation *bounceAnimation(){
+    TLBounceAnimation *anm = TLBounceAnimation.new;
+    anm.isPlayFireworksAnimation = YES;
+    return anm;
+}
 
+TLRotationAnimation *rotationAnimation(){
+    TLRotationAnimation *anm = TLRotationAnimation.new;
+    return anm;
+}
+
+TLTransitionAniamtion *transitionAniamtion(){
+    TLTransitionAniamtion *anm = TLTransitionAniamtion.new;
+    anm.direction = 1; // 1~6
+    anm.disableDeselectAnimation = NO;
+    return anm;
+}
+
+TLFumeAnimation *fumeAnimation(){
+    TLFumeAnimation *anm = TLFumeAnimation.new;
+    return anm;
+}
+
+TLFrameAnimation *frameAnimation(){
+    TLFrameAnimation *anm = TLFrameAnimation.new;
+    anm.images = imgs();
+    anm.isPlayFireworksAnimation = YES;
+    return anm;
+}
+
+NSArray *imgs (){
+    NSMutableArray *temp = NSMutableArray.array;
+    for (NSInteger i = 28 ; i <= 65; i++) {
+        NSString *imgName = [NSString stringWithFormat:@"Tools_000%zi", i];
+        CGImageRef img = [UIImage imageNamed:imgName].CGImage;
+        [temp addObject:(__bridge id _Nonnull)(img)];
+    }return temp;
+}
+#pragma mark —— 手势事件
+- (void)panGestureRecognizer:(UIPanGestureRecognizer *)pan{
+    if (self.transitionCoordinator) {
+        return;
+    }
+    
+    if (pan.state == UIGestureRecognizerStateBegan ||
+        pan.state == UIGestureRecognizerStateChanged){
+        [self beginInteractiveTransitionIfPossible:pan];
+    }
+}
+
+-(void)beginInteractiveTransitionIfPossible:(UIPanGestureRecognizer *)sender{
+    CGPoint translation = [sender translationInView:self.view];
+    if (translation.x > 0.f && self.selectedIndex > 0) {
+        self.selectedIndex --;
+    }
+    else if (translation.x < 0.f && self.selectedIndex + 1 < self.viewControllers.count) {
+        self.selectedIndex ++;
+    }
+}
+#pragma mark —— 未实现的，有技术门槛的
 -(void)temp{
     [NSObject feedbackGenerator];//震动反馈
 //    [JobsPullListAutoSizeView initWithTargetView:self.UITabBarButtonMutArr[data.tag]
@@ -185,35 +313,33 @@ shouldSelectViewController:(UIViewController *)viewController {
     [self lottieImagePlay:viewController];
     return YES;
 }
-/// 包装 viewController / 自定义样式UITabBarItem
-/// @param viewController 被加工的VC
-/// @param title 显示标题
-/// @param imageSelected 选中状态的静态图
-/// @param imageUnselected 未选中状态的静态图
-/// @param humpOffsetY 凸起偏移量，传0就是不凸起
-/// @param lottieName 只要不为空值则启用Lottie动画
-/// @param tag tag值定位
-UIViewController *childViewController_customStyle(UIViewController *viewController,
-                                                  NSString *title,
-                                                  UIImage *imageSelected,
-                                                  UIImage *imageUnselected,
-                                                  CGFloat humpOffsetY,//Y轴凸起的偏移量 传0就是不凸起
-                                                  NSString *lottieName,//有值则用Lottie动画
-                                                  NSUInteger tag){
 
-    TabBarControllerConfig *config = TabBarControllerConfig.new;
-    config.vc = viewController;
-    config.title = title;
-    config.imageSelected = imageSelected;
-    config.imageUnselected = imageUnselected;
-    config.humpOffsetY = humpOffsetY;
-    config.lottieName = lottieName;
-    config.tag = tag;
-    
-    [[AppDelegate sharedInstance].tabbarVC.tabBarControllerConfigMutArr addObject:config];
-    
-    setAnimation(viewController.tabBarItem, tag);
-    return viewController;
+- (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController
+           animationControllerForTransitionFromViewController:(UIViewController *)fromVC
+                                             toViewController:(UIViewController *)toVC{
+    // 打开注释 可以屏蔽点击item时的动画效果
+//    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        NSArray *viewControllers = tabBarController.viewControllers;
+        if ([viewControllers indexOfObject:toVC] > [viewControllers indexOfObject:fromVC]) {
+            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeLeft];
+        }
+        else {
+            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeRight];
+        }
+//    }
+//    else{
+//        return nil;
+//    }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
+                     interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan ||
+        self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        return [[TransitionController alloc] initWithGestureRecognizer:self.panGestureRecognizer];
+    }else {
+        return nil;
+    }
 }
 #pragma mark —— lazyLoad
 -(CustomTabBar *)myTabBar{
@@ -223,110 +349,6 @@ UIViewController *childViewController_customStyle(UIViewController *viewControll
                 forKey:@"tabBar"];//KVC 进行替换
         _myTabBar.frame = self.tabBar.bounds;
     }return _myTabBar;
-}
-
--(UIPanGestureRecognizer *)panGesture{
-    if (!_panGesture) {
-        _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                              action:@selector(panHandle:)];
-        [self.view addGestureRecognizer:_panGesture];
-    }return _panGesture;
-}
-
--(NSMutableArray<UIView *> *)UITabBarButtonMutArr{
-    if (!_UITabBarButtonMutArr) {
-        _UITabBarButtonMutArr = NSMutableArray.array;
-    }return _UITabBarButtonMutArr;
-}
-
--(NSMutableArray<UIViewController *> *)childMutArr{
-    if (!_childMutArr) {
-        _childMutArr = NSMutableArray.array;
-    }return _childMutArr;
-}
-
-/*  系统样式UITabBarItem
- *  UITabBarSystemItemMore,
- *  UITabBarSystemItemFavorites,
- *  UITabBarSystemItemFeatured,
- *  UITabBarSystemItemTopRated,
- *  UITabBarSystemItemRecents,
- *  UITabBarSystemItemContacts,
- *  UITabBarSystemItemHistory,
- *  UITabBarSystemItemBookmarks,
- *  UITabBarSystemItemSearch,
- *  UITabBarSystemItemDownloads,
- *  UITabBarSystemItemMostRecent,
- *  UITabBarSystemItemMostViewed,
- */
-
-UIViewController *childViewController_SystemStyle(UIViewController *viewController,
-                                                  UITabBarSystemItem systemItem,
-                                                  NSUInteger tag){
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem
-                                                                           tag:tag];
-    setAnimation(viewController.tabBarItem, tag);
-    return viewController;
-}
-
-// MARK: - 给UITabBarItem绑定动画
-/// 给UITabBarItem绑定动画
-void setAnimation(UITabBarItem *item,
-                  NSInteger index) {
-     item.animation = @[
-                       bounceAnimation(),
-                       rotationAnimation(),
-                       transitionAniamtion(),
-                       fumeAnimation(),
-                       frameAnimation()
-                       ][index];
-}
-
-// MARK: - 创建动画函数
-TLBounceAnimation *bounceAnimation(){
-    TLBounceAnimation *anm = TLBounceAnimation.new;
-    anm.isPlayFireworksAnimation = YES;
-    return anm;
-}
-
-TLRotationAnimation *rotationAnimation(){
-    TLRotationAnimation *anm = TLRotationAnimation.new;
-    return anm;
-}
-
-TLTransitionAniamtion *transitionAniamtion(){
-    TLTransitionAniamtion *anm = TLTransitionAniamtion.new;
-    anm.direction = 1; // 1~6
-    anm.disableDeselectAnimation = NO;
-    return anm;
-}
-
-TLFumeAnimation *fumeAnimation(){
-    TLFumeAnimation *anm = TLFumeAnimation.new;
-    return anm;
-}
-
-TLFrameAnimation *frameAnimation(){
-    TLFrameAnimation *anm = TLFrameAnimation.new;
-    anm.images = imgs();
-    anm.isPlayFireworksAnimation = YES;
-    return anm;
-}
-
-NSArray *imgs (){
-    NSMutableArray *temp = NSMutableArray.array;
-    for (NSInteger i = 28 ; i <= 65; i++) {
-        NSString *imgName = [NSString stringWithFormat:@"Tools_000%zi", i];
-        CGImageRef img = [UIImage imageNamed:imgName].CGImage;
-        [temp addObject:(__bridge id _Nonnull)(img)];
-    }return temp;
-}
-
--(NSMutableArray<TabBarControllerConfig *> *)tabBarControllerConfigMutArr{
-    if (!_tabBarControllerConfigMutArr) {
-        _tabBarControllerConfigMutArr = NSMutableArray.array;
-    }return _tabBarControllerConfigMutArr;
 }
 
 -(SuspendBtn *)suspendBtn{
@@ -348,62 +370,30 @@ NSArray *imgs (){
     }return _suspendBtn;
 }
 
-
-///
-
-
 - (UIPanGestureRecognizer *)panGestureRecognizer{
-    if (_panGestureRecognizer == nil){
-        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizer:)];
+    if (!_panGestureRecognizer){
+        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                        action:@selector(panGestureRecognizer:)];
         [self.view addGestureRecognizer:_panGestureRecognizer];
-    }
-    return _panGestureRecognizer;
+    }return _panGestureRecognizer;
 }
 
-- (void)panGestureRecognizer:(UIPanGestureRecognizer *)pan{
-    if (self.transitionCoordinator) {
-        return;
-    }
-    
-    if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged){
-        [self beginInteractiveTransitionIfPossible:pan];
-    }
+-(NSMutableArray<UIView *> *)UITabBarButtonMutArr{
+    if (!_UITabBarButtonMutArr) {
+        _UITabBarButtonMutArr = NSMutableArray.array;
+    }return _UITabBarButtonMutArr;
 }
 
-- (void)beginInteractiveTransitionIfPossible:(UIPanGestureRecognizer *)sender{
-    CGPoint translation = [sender translationInView:self.view];
-    if (translation.x > 0.f && self.selectedIndex > 0) {
-        self.selectedIndex --;
-    }
-    else if (translation.x < 0.f && self.selectedIndex + 1 < self.viewControllers.count) {
-        self.selectedIndex ++;
-    }
+-(NSMutableArray<UIViewController *> *)childMutArr{
+    if (!_childMutArr) {
+        _childMutArr = NSMutableArray.array;
+    }return _childMutArr;
 }
 
-- (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
-    // 打开注释 可以屏蔽点击item时的动画效果
-//    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
-        NSArray *viewControllers = tabBarController.viewControllers;
-        if ([viewControllers indexOfObject:toVC] > [viewControllers indexOfObject:fromVC]) {
-            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeLeft];
-        }
-        else {
-            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeRight];
-        }
-//    }
-//    else{
-//        return nil;
-//    }
+-(NSMutableArray<TabBarControllerConfig *> *)tabBarControllerConfigMutArr{
+    if (!_tabBarControllerConfigMutArr) {
+        _tabBarControllerConfigMutArr = NSMutableArray.array;
+    }return _tabBarControllerConfigMutArr;
 }
-
-- (id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
-        return [[TransitionController alloc] initWithGestureRecognizer:self.panGestureRecognizer];
-    }
-    else {
-        return nil;
-    }
-}
-
 
 @end
