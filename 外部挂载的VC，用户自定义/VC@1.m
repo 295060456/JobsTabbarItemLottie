@@ -19,5 +19,10 @@
     self.view.backgroundColor = RandomColor;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"");
+}
+
 
 @end

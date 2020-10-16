@@ -111,19 +111,29 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if (!_tabbarVC) {
         _tabbarVC = TabbarVC.new;
         _tabbarVC.myTabBar.offsetHeight = 5;
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_1.new,
+                                                                                @"首页",
+                                                                                KIMG(@"community_selected"),
+                                                                                KIMG(@"community_unselected"),
+                                                                                0,
+                                                                                @"home_priase_animation",
+                                                                         1)];
         
-        [_tabbarVC.humpIndex addObject:@(1)];
-        [_tabbarVC.humpIndex addObject:@(2)];
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_2.new,
+                                                                                @"精彩生活",
+                                                                                KIMG(@"post_selected"),
+                                                                                KIMG(@"post_unselected"),
+                                                                                30,
+                                                                                @"music_animation",
+                                                                         1)];
         
-        [_tabbarVC.childMutArr addObject:VC_1.new];
-        [_tabbarVC.childMutArr addObject:VC_2.new];
-        [_tabbarVC.childMutArr addObject:VC_3.new];
-    //    [_tabbarVC.childMutArr addObject:VC_4.new];
-    //    [_tabbarVC.childMutArr addObject:VC_5.new];
-    //    [_tabbarVC.childMutArr addObject:VC_6.new];
-    //    [_tabbarVC.childMutArr addObject:VC_7.new];
-    //    [_tabbarVC.childMutArr addObject:VC_8.new];
-    //    [_tabbarVC.childMutArr addObject:VC_9.new];
+        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_3.new,
+                                                                                @"发现",
+                                                                                KIMG(@"My_selected"),
+                                                                                KIMG(@"My_unselected"),
+                                                                                0,
+                                                                                @"record_change",
+                                                                         1)];
     }return _tabbarVC;
 }
 

@@ -42,6 +42,7 @@
 #import "TabbarVC+UIGestureRecognizerDelegate.h"
 #import "ScrollTabBarDelegate.h"
 #import "JobsPullListAutoSizeView.h"
+#import "TabBarControllerConfig.h"
 
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
