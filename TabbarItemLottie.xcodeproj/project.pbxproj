@@ -97,6 +97,7 @@
 		C55D427E2539776500CFCF73 /* drop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427C2539776500CFCF73 /* drop@2x.png */; };
 		C55D427F2539776500CFCF73 /* drop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427D2539776500CFCF73 /* drop@3x.png */; };
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
+		C579F7BD2539A46A00846814 /* LongPressGRView.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F7BC2539A46A00846814 /* LongPressGRView.m */; };
 		C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE88E25373580000E1C5F /* AppDelegate.m */; };
 		C5AEE89225373580000E1C5F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* SceneDelegate.m */; };
 		C5AEE89825373580000E1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89625373580000E1C5F /* Main.storyboard */; };
@@ -281,6 +282,8 @@
 		C55D427D2539776500CFCF73 /* drop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop@3x.png"; sourceTree = "<group>"; };
 		C55D42832539886900CFCF73 /* TabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConfig.h; sourceTree = "<group>"; };
 		C55D42842539886900CFCF73 /* TabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerConfig.m; sourceTree = "<group>"; };
+		C579F7BB2539A46A00846814 /* LongPressGRView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongPressGRView.h; sourceTree = "<group>"; };
+		C579F7BC2539A46A00846814 /* LongPressGRView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LongPressGRView.m; sourceTree = "<group>"; };
 		C5AEE88A25373580000E1C5F /* TabbarItemLottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarItemLottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AEE88D25373580000E1C5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5AEE88E25373580000E1C5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -761,6 +764,8 @@
 			children = (
 				C5AEE92525373638000E1C5F /* TabbarVC.h */,
 				C5AEE92625373638000E1C5F /* TabbarVC.m */,
+				C579F7BB2539A46A00846814 /* LongPressGRView.h */,
+				C579F7BC2539A46A00846814 /* LongPressGRView.m */,
 				C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */,
 				C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */,
 			);
@@ -1239,6 +1244,7 @@
 				C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */,
 				C5AEE94725373638000E1C5F /* VC@8.m in Sources */,
 				C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */,
+				C579F7BD2539A46A00846814 /* LongPressGRView.m in Sources */,
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */,
 				C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */,

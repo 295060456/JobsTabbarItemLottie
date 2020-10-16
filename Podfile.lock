@@ -1,20 +1,28 @@
 PODS:
   - lottie-ios (2.5.3)
+  - Masonry (1.1.0)
   - PPBadgeView (3.1.0)
+  - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
   - lottie-ios (~> 2.5.3)
+  - Masonry
   - PPBadgeView
+  - ReactiveObjC
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - Masonry
     - PPBadgeView
+    - ReactiveObjC
 
 SPEC CHECKSUMS:
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PPBadgeView: b50a223638970fd0781e8753250385864b6dd2fe
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 24e500c5cc334c3b135e24f90e57b5f85bc8a0a5
+PODFILE CHECKSUM: 61f0e82be962f3a8481e83070f60e841eeb6773b
 
 COCOAPODS: 1.9.3

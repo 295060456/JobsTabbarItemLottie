@@ -11,6 +11,8 @@
 #import "ScrollTabBarDelegate.h"
 #import "TLAnimationTabBar.h"
 
+#import "LongPressGRView.h"
+
 #import "AppDelegate.h"
 
 TabbarVC *tabbarVC;
@@ -44,7 +46,7 @@ UIGestureRecognizerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self scrollTabbar];//手势横向滚动子VC联动Tabbar切换
+//    [self scrollTabbar];//手势横向滚动子VC联动Tabbar切换
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -130,27 +132,22 @@ UIGestureRecognizerDelegate
 }
 
 -(void)添加长按手势{
+
     for (UIView *subView in self.UITabBarButtonMutArr) {
-        /*
-         * 长按手势是连续的。
-         当在指定的时间段（minimumPressDuration）
-         按下允许的手指的数量（numberOfTouchesRequired）
-         并且触摸不超过允许的移动范围（allowableMovement）时，
-         手势开始（UIGestureRecognizerStateBegan）。
-         手指移动时，手势识别器转换到“更改”状态，
-         并且当任何手指抬起时手势识别器结束（UIGestureRecognizerStateEnded）。
-         *
-         */
-
-        UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(LZBTabBarItemLongPress:)];
-        longPressGR.delegate = self;
-
-        longPressGR.numberOfTouchesRequired = 1;//手指数
-        longPressGR.minimumPressDuration = 1;
-    //        longPressGR.allowableMovement;
-
-        [subView addGestureRecognizer:longPressGR];
+        LongPressGRView *longPressGRView = LongPressGRView.new;
+        longPressGRView.tag = [self.UITabBarButtonMutArr indexOfObject:subView];
+        @weakify(self)
+        [longPressGRView actionBlockLongPressGRView:^(LongPressGRView *data) {
+            @strongify(self)
+            [NSObject feedbackGenerator];//震动反馈
+            [JobsPullListAutoSizeView initWithTargetView:self.UITabBarButtonMutArr[data.tag]
+                                            imagesMutArr:nil
+                                             titleMutArr:[NSMutableArray arrayWithObjects:@"qqq",@"24r",nil]];
+        }];
+        [subView addSubview:longPressGRView];
+        [longPressGRView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(subView);
+        }];
     }
 }
 
@@ -208,38 +205,6 @@ shouldSelectViewController:(UIViewController *)viewController {
     }
 }
 #pragma mark —— 手势调用方法
--(void)LZBTabBarItemLongPress:(UILongPressGestureRecognizer *)longPressGR{
-    switch (longPressGR.state) {
-        case UIGestureRecognizerStatePossible:{
-            NSLog(@"没有触摸事件发生，所有手势识别的默认状态");
-        }break;
-        case UIGestureRecognizerStateBegan:{
-            //长按手势
-            NSInteger currentIndex = [self.UITabBarButtonMutArr indexOfObject:longPressGR.view];
-            NSLog(@"一个手势已经开始 但尚未改变或者完成时，当前长按点击序号：%ld",currentIndex);//长按手势的锚点
-            [NSObject feedbackGenerator];//震动反馈
-            
-//            [JobsPullListAutoSizeView initWithTargetView:longPressGR.view
-//                                            imagesMutArr:nil
-//                                             titleMutArr:[NSMutableArray arrayWithObjects:@"qqq",@"24r",nil]];
-        }break;
-        case UIGestureRecognizerStateChanged:{
-            NSLog(@"手势状态改变");
-        }break;
-        case UIGestureRecognizerStateEnded:{// = UIGestureRecognizerStateRecognized
-            NSLog(@"手势完成");
-        }break;
-        case UIGestureRecognizerStateCancelled:{
-            NSLog(@"手势取消，恢复至Possible状态");
-        }break;
-        case UIGestureRecognizerStateFailed:{
-            NSLog(@"手势失败，恢复至Possible状态");
-        }break;
-        default:
-            break;
-    }
-}
-
 -(void)panHandle:(UIPanGestureRecognizer *)panGesture{
     // 获取滑动点
     CGFloat translationX = [panGesture translationInView:self.view].x;

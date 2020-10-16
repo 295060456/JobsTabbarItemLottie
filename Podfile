@@ -8,6 +8,8 @@ target 'TabbarItemLottie' do
   # Pods for TabbarItemLottie
     pod 'lottie-ios', '~> 2.5.3'
     pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
+    pod 'Masonry' # https://github.com/SnapKit/Masonry 布局
+    pod 'ReactiveObjC'  # https://github.com/ReactiveCocoa/ReactiveObjC 重量级框架
 
   target 'TabbarItemLottieTests' do
     inherit! :search_paths
