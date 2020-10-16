@@ -52,7 +52,6 @@
 #import "CustomTabBar.h"
 #import "TabbarVC.h"
 #import "TabbarVC+UIGestureRecognizerDelegate.h"
-#import "ScrollTabBarDelegate.h"
 #import "JobsPullListAutoSizeView.h"
 #import "TabBarControllerConfig.h"
 

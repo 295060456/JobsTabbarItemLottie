@@ -10,8 +10,6 @@
 
 @interface UITabBar (Ex)
 
-//@property(nonatomic,assign)CGFloat humpOffsetY;//凸起的高度
-
 -(void)addLottieImage:(NSUInteger)index
               offsetY:(CGFloat)offsetY
            lottieName:(NSString *)lottieName;

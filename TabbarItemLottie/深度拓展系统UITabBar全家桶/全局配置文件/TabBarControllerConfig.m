@@ -9,6 +9,4 @@
 
 @implementation TabBarControllerConfig
 
-
-
 @end

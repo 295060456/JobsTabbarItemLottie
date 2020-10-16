@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 旋转动画 */
 @interface TLRotationAnimation : NSObject <TLAnimationProtocol>
+
 @end
 
 /** 贞动画 */

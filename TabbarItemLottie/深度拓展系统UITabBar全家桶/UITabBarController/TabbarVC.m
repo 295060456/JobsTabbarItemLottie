@@ -7,10 +7,9 @@
 //
 
 #import "TabbarVC.h"
-#import "TabbarVC+UIGestureRecognizerDelegate.h"
-#import "ScrollTabBarDelegate.h"
 #import "TLAnimationTabBar.h"
-
+#import "TransitionController.h"
+#import "TransitionAnimation.h"
 #import "AppDelegate.h"
 
 TabbarVC *tabbarVC;
@@ -23,8 +22,9 @@ UIGestureRecognizerDelegate
 
 @property(nonatomic,strong)UIPanGestureRecognizer *panGesture;
 @property(nonatomic,assign)NSInteger subViewControllerCount;
-@property(nonatomic,strong)ScrollTabBarDelegate *tabBarDelegate;
 @property(nonatomic,strong)NSMutableArray <UIView *>*UITabBarButtonMutArr;//UITabBarButton 是内部类 直接获取不到，需要间接获取
+
+@property(nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 
 @end
 
@@ -44,7 +44,7 @@ UIGestureRecognizerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self scrollTabbar];//手势横向滚动子VC联动Tabbar切换
+    self.panGestureRecognizer.enabled = self.isOpenScrollTabbar;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -163,17 +163,6 @@ UIGestureRecognizerDelegate
     lottieView.animationProgress = 0;
     [lottieView play];
 }
-
--(void)scrollTabbar{
-    if (!self.isOpenScrollTabbar) {
-        // 正确的给予 count
-        self.subViewControllerCount = self.viewControllers ? self.viewControllers.count : 0;
-        // 代理
-        self.tabBarDelegate = [[ScrollTabBarDelegate alloc] init];
-        self.delegate = self.tabBarDelegate;
-        self.panGesture.enabled = !self.isOpenScrollTabbar;
-    }
-}
 #pragma mark —— UITabBarDelegate 监听TabBarItem点击事件
 - (void)tabBar:(UITabBar *)tabBar
  didSelectItem:(UITabBarItem *)item {
@@ -195,46 +184,6 @@ UIGestureRecognizerDelegate
 shouldSelectViewController:(UIViewController *)viewController {
     [self lottieImagePlay:viewController];
     return YES;
-}
-#pragma mark —— 手势调用方法
--(void)panHandle:(UIPanGestureRecognizer *)panGesture{
-    // 获取滑动点
-    CGFloat translationX = [panGesture translationInView:self.view].x;
-    CGFloat progress = fabs(translationX)/self.view.frame.size.width;
-    
-    switch (panGesture.state) {
-        case UIGestureRecognizerStateBegan:{
-            self.tabBarDelegate.interactive = YES;
-            CGFloat velocityX = [panGesture velocityInView:self.view].x;
-            if (velocityX < 0) {
-                if (self.selectedIndex < self.subViewControllerCount - 1) {
-                    self.selectedIndex += 1;
-                }
-            }else {
-                if (self.selectedIndex > 0) {
-                    self.selectedIndex -= 1;
-                }
-            }
-        }break;
-        case UIGestureRecognizerStateChanged:{
-            [self.tabBarDelegate.interactionController updateInteractiveTransition:progress];
-        }break;
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateFailed:
-        case UIGestureRecognizerStateCancelled:{
-            if (progress > 0.3) {
-                self.tabBarDelegate.interactionController.completionSpeed = 0.99;
-                [self.tabBarDelegate.interactionController finishInteractiveTransition];
-            }else{
-                //转场取消后，UITabBarController 自动恢复了 selectedIndex 的值，不需要我们手动恢复。
-                self.tabBarDelegate.interactionController.completionSpeed = 0.99;
-                [self.tabBarDelegate.interactionController cancelInteractiveTransition];
-            }
-            self.tabBarDelegate.interactive = NO;
-        }break;
-        default:
-            break;
-    }
 }
 /// 包装 viewController / 自定义样式UITabBarItem
 /// @param viewController 被加工的VC
@@ -397,6 +346,63 @@ NSArray *imgs (){
             
         }];
     }return _suspendBtn;
+}
+
+
+///
+
+
+- (UIPanGestureRecognizer *)panGestureRecognizer{
+    if (_panGestureRecognizer == nil){
+        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizer:)];
+        [self.view addGestureRecognizer:_panGestureRecognizer];
+    }
+    return _panGestureRecognizer;
+}
+
+- (void)panGestureRecognizer:(UIPanGestureRecognizer *)pan{
+    if (self.transitionCoordinator) {
+        return;
+    }
+    
+    if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged){
+        [self beginInteractiveTransitionIfPossible:pan];
+    }
+}
+
+- (void)beginInteractiveTransitionIfPossible:(UIPanGestureRecognizer *)sender{
+    CGPoint translation = [sender translationInView:self.view];
+    if (translation.x > 0.f && self.selectedIndex > 0) {
+        self.selectedIndex --;
+    }
+    else if (translation.x < 0.f && self.selectedIndex + 1 < self.viewControllers.count) {
+        self.selectedIndex ++;
+    }
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    // 打开注释 可以屏蔽点击item时的动画效果
+//    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        NSArray *viewControllers = tabBarController.viewControllers;
+        if ([viewControllers indexOfObject:toVC] > [viewControllers indexOfObject:fromVC]) {
+            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeLeft];
+        }
+        else {
+            return [[TransitionAnimation alloc] initWithTargetEdge:UIRectEdgeRight];
+        }
+//    }
+//    else{
+//        return nil;
+//    }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    if (self.panGestureRecognizer.state == UIGestureRecognizerStateBegan || self.panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        return [[TransitionController alloc] initWithGestureRecognizer:self.panGestureRecognizer];
+    }
+    else {
+        return nil;
+    }
 }
 
 

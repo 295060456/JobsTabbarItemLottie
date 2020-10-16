@@ -102,6 +102,8 @@
 		C579F8492539D25100846814 /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F8452539D25100846814 /* SuspendView.m */; };
 		C579F84E2539D28C00846814 /* 旋转.png in Resources */ = {isa = PBXBuildFile; fileRef = C579F84D2539D28C00846814 /* 旋转.png */; };
 		C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F8592539D4A000846814 /* UIView+SuspendView.m */; };
+		C579F9852539DACD00846814 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9812539DACC00846814 /* TransitionController.m */; };
+		C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9832539DACC00846814 /* TransitionAnimation.m */; };
 		C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE88E25373580000E1C5F /* AppDelegate.m */; };
 		C5AEE89225373580000E1C5F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* SceneDelegate.m */; };
 		C5AEE89825373580000E1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89625373580000E1C5F /* Main.storyboard */; };
@@ -157,9 +159,6 @@
 		C5AEE94B25373638000E1C5F /* VC@7.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE93425373638000E1C5F /* VC@7.m */; };
 		C5AEE94C25373638000E1C5F /* VC@4.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE93925373638000E1C5F /* VC@4.m */; };
 		C5AEEA2625373F86000E1C5F /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA2525373F86000E1C5F /* TabBarItem.m */; };
-		C5AEEA352537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */; };
-		C5AEEA4E25380197000E1C5F /* ScrollTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */; };
-		C5AEEA4F25380197000E1C5F /* ScrollTabBarDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */; };
 		C5AEEA9425381C69000E1C5F /* JobsPullListAutoSizeView in Resources */ = {isa = PBXBuildFile; fileRef = C5AEEA9325381C69000E1C5F /* JobsPullListAutoSizeView */; };
 		C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA9F25381CDA000E1C5F /* JobsPullListAutoSizeView.m */; };
 		C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEAA9253832EC000E1C5F /* JobsPullListTBVCell.m */; };
@@ -192,7 +191,7 @@
 		AAA8B8784FF6DA80D6DA377A /* Pods_TabbarItemLottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbarItemLottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021345D8916F36EBDA7A9A5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E031382E7854441CBCBECE /* Pods-TabbarItemLottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.release.xcconfig"; sourceTree = "<group>"; };
-		C55D413F253974CE00CFCF73 /* TLAnimationTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationTabBar.h; sourceTree = "<group>"; };
+		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
 		C55D4143253974E900CFCF73 /* TLTabBarAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTabBarAnimation.h; sourceTree = "<group>"; };
@@ -295,6 +294,12 @@
 		C579F84D2539D28C00846814 /* 旋转.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旋转.png"; sourceTree = "<group>"; };
 		C579F8582539D4A000846814 /* UIView+SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SuspendView.h"; sourceTree = "<group>"; };
 		C579F8592539D4A000846814 /* UIView+SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SuspendView.m"; sourceTree = "<group>"; };
+		C579F9812539DACC00846814 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
+		C579F9822539DACC00846814 /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
+		C579F9832539DACC00846814 /* TransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimation.m; sourceTree = "<group>"; };
+		C579F9842539DACD00846814 /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
+		C579F98B2539DBDF00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "功能性动效：手势横向滚动子VC联动Tabbar切换"; sourceTree = "<group>"; };
+		C579F9982539DC9C00846814 /* 参考demo */ = {isa = PBXFileReference; lastKnownFileType = text; path = "参考demo"; sourceTree = "<group>"; };
 		C5AEE88A25373580000E1C5F /* TabbarItemLottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarItemLottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AEE88D25373580000E1C5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5AEE88E25373580000E1C5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -379,12 +384,6 @@
 		C5AEE93925373638000E1C5F /* VC@4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VC@4.m"; sourceTree = "<group>"; };
 		C5AEEA2425373F86000E1C5F /* TabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarItem.h; sourceTree = "<group>"; };
 		C5AEEA2525373F86000E1C5F /* TabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
-		C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbarVC+UIGestureRecognizerDelegate.h"; sourceTree = "<group>"; };
-		C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TabbarVC+UIGestureRecognizerDelegate.m"; sourceTree = "<group>"; };
-		C5AEEA4A25380197000E1C5F /* ScrollTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTabBarAnimator.h; sourceTree = "<group>"; };
-		C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTabBarAnimator.m; sourceTree = "<group>"; };
-		C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTabBarDelegate.m; sourceTree = "<group>"; };
-		C5AEEA4D25380197000E1C5F /* ScrollTabBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTabBarDelegate.h; sourceTree = "<group>"; };
 		C5AEEA9325381C69000E1C5F /* JobsPullListAutoSizeView */ = {isa = PBXFileReference; lastKnownFileType = text; path = JobsPullListAutoSizeView; sourceTree = "<group>"; };
 		C5AEEA9E25381CDA000E1C5F /* JobsPullListAutoSizeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsPullListAutoSizeView.h; sourceTree = "<group>"; };
 		C5AEEA9F25381CDA000E1C5F /* JobsPullListAutoSizeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobsPullListAutoSizeView.m; sourceTree = "<group>"; };
@@ -425,13 +424,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C55D4141253974DA00CFCF73 /* 动画 */ = {
+		C55D4141253974DA00CFCF73 /* Tabbaritem点击动效 */ = {
 			isa = PBXGroup;
 			children = (
+				C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */,
 				C55D4143253974E900CFCF73 /* TLTabBarAnimation.h */,
 				C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */,
+				C579F9982539DC9C00846814 /* 参考demo */,
 			);
-			path = "动画";
+			path = "Tabbaritem点击动效";
 			sourceTree = "<group>";
 		};
 		C55D41572539760100CFCF73 /* New Group */ = {
@@ -602,6 +603,46 @@
 			path = SuspendView;
 			sourceTree = "<group>";
 		};
+		C579F98A2539DBCD00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */ = {
+			isa = PBXGroup;
+			children = (
+				C579F98B2539DBDF00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */,
+				C579F9842539DACD00846814 /* TransitionAnimation.h */,
+				C579F9832539DACC00846814 /* TransitionAnimation.m */,
+				C579F9822539DACC00846814 /* TransitionController.h */,
+				C579F9812539DACC00846814 /* TransitionController.m */,
+			);
+			path = "功能性动效：手势横向滚动子VC联动Tabbar切换";
+			sourceTree = "<group>";
+		};
+		C579F99F2539DD7700846814 /* 一些需要单独列出来的功能性模块 */ = {
+			isa = PBXGroup;
+			children = (
+				C579F9A72539E09F00846814 /* 悬浮小球，可旋转可停止 */,
+				C5AEEA9225381C2F000E1C5F /* Telegram动效：在指定位置出现菜单列表 */,
+				C579F98A2539DBCD00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */,
+				C55D4141253974DA00CFCF73 /* Tabbaritem点击动效 */,
+			);
+			path = "一些需要单独列出来的功能性模块";
+			sourceTree = "<group>";
+		};
+		C579F9A02539DD9C00846814 /* 全局配置文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C55D42832539886900CFCF73 /* TabBarControllerConfig.h */,
+				C55D42842539886900CFCF73 /* TabBarControllerConfig.m */,
+			);
+			path = "全局配置文件";
+			sourceTree = "<group>";
+		};
+		C579F9A72539E09F00846814 /* 悬浮小球，可旋转可停止 */ = {
+			isa = PBXGroup;
+			children = (
+				C579F83D2539D25100846814 /* Suspend */,
+			);
+			path = "悬浮小球，可旋转可停止";
+			sourceTree = "<group>";
+		};
 		C5AEE88125373580000E1C5F = {
 			isa = PBXGroup;
 			children = (
@@ -630,7 +671,6 @@
 		C5AEE88C25373580000E1C5F /* TabbarItemLottie */ = {
 			isa = PBXGroup;
 			children = (
-				C579F83D2539D25100846814 /* Suspend */,
 				C5AEE8D12537362C000E1C5F /* DATA */,
 				C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */,
 				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
@@ -762,7 +802,7 @@
 			path = UITabBar;
 			sourceTree = "<group>";
 		};
-		C5AEE91225373638000E1C5F /* 分离一些封装的系统Api */ = {
+		C5AEE91225373638000E1C5F /* 在系统api基础上二次封装的功能性拓展 */ = {
 			isa = PBXGroup;
 			children = (
 				C5AEE91A25373638000E1C5F /* LoadingImage.h */,
@@ -770,7 +810,7 @@
 				C5AEE91B25373638000E1C5F /* NSString */,
 				C5AEE91E25373638000E1C5F /* NSObject */,
 			);
-			path = "分离一些封装的系统Api";
+			path = "在系统api基础上二次封装的功能性拓展";
 			sourceTree = "<group>";
 		};
 		C5AEE91325373638000E1C5F /* UIView */ = {
@@ -816,8 +856,6 @@
 			children = (
 				C5AEE92525373638000E1C5F /* TabbarVC.h */,
 				C5AEE92625373638000E1C5F /* TabbarVC.m */,
-				C5AEEA332537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.h */,
-				C5AEEA342537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -858,28 +896,13 @@
 			path = UITabBarItem;
 			sourceTree = "<group>";
 		};
-		C5AEEA492538018E000E1C5F /* 功能性：手势横向滚动子VC联动Tabbar切换 */ = {
-			isa = PBXGroup;
-			children = (
-				C5AEEA4A25380197000E1C5F /* ScrollTabBarAnimator.h */,
-				C5AEEA4B25380197000E1C5F /* ScrollTabBarAnimator.m */,
-				C5AEEA4D25380197000E1C5F /* ScrollTabBarDelegate.h */,
-				C5AEEA4C25380197000E1C5F /* ScrollTabBarDelegate.m */,
-			);
-			path = "功能性：手势横向滚动子VC联动Tabbar切换";
-			sourceTree = "<group>";
-		};
 		C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */ = {
 			isa = PBXGroup;
 			children = (
-				C55D42832539886900CFCF73 /* TabBarControllerConfig.h */,
-				C55D42842539886900CFCF73 /* TabBarControllerConfig.m */,
-				C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */,
-				C55D413F253974CE00CFCF73 /* TLAnimationTabBar.h */,
-				C55D4141253974DA00CFCF73 /* 动画 */,
-				C5AEEA9225381C2F000E1C5F /* JobsPullListAutoSizeView */,
-				C5AEE91225373638000E1C5F /* 分离一些封装的系统Api */,
-				C5AEEA492538018E000E1C5F /* 功能性：手势横向滚动子VC联动Tabbar切换 */,
+				C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */,
+				C579F9A02539DD9C00846814 /* 全局配置文件 */,
+				C579F99F2539DD7700846814 /* 一些需要单独列出来的功能性模块 */,
+				C5AEE91225373638000E1C5F /* 在系统api基础上二次封装的功能性拓展 */,
 				C5AEEA1D25373F5C000E1C5F /* UITabBarItem */,
 				C5AEE92425373638000E1C5F /* UITabBarController */,
 				C5AEE90D25373638000E1C5F /* UITabBar */,
@@ -887,7 +910,7 @@
 			path = "深度拓展系统UITabBar全家桶";
 			sourceTree = "<group>";
 		};
-		C5AEEA9225381C2F000E1C5F /* JobsPullListAutoSizeView */ = {
+		C5AEEA9225381C2F000E1C5F /* Telegram动效：在指定位置出现菜单列表 */ = {
 			isa = PBXGroup;
 			children = (
 				C5AEEA9325381C69000E1C5F /* JobsPullListAutoSizeView */,
@@ -895,7 +918,7 @@
 				C5AEEA9E25381CDA000E1C5F /* JobsPullListAutoSizeView.h */,
 				C5AEEA9F25381CDA000E1C5F /* JobsPullListAutoSizeView.m */,
 			);
-			path = JobsPullListAutoSizeView;
+			path = "Telegram动效：在指定位置出现菜单列表";
 			sourceTree = "<group>";
 		};
 		C5AEEAA7253832A9000E1C5F /* Cell */ = {
@@ -1282,18 +1305,18 @@
 			files = (
 				C5AEE94C25373638000E1C5F /* VC@4.m in Sources */,
 				C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */,
+				C579F9852539DACD00846814 /* TransitionController.m in Sources */,
 				C5AEE94525373638000E1C5F /* VC@5.m in Sources */,
 				C5AEE8A325373581000E1C5F /* main.m in Sources */,
 				C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
+				C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */,
 				C5AEEAB625383E8F000E1C5F /* UIView+Extras.m in Sources */,
 				C579F8482539D25100846814 /* SuspendLab.m in Sources */,
 				C5AEE93E25373638000E1C5F /* UIView+Animation.m in Sources */,
-				C5AEEA4E25380197000E1C5F /* ScrollTabBarAnimator.m in Sources */,
 				C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */,
 				C5AEE94A25373638000E1C5F /* VC@3.m in Sources */,
-				C5AEEA4F25380197000E1C5F /* ScrollTabBarDelegate.m in Sources */,
 				C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */,
 				C5AEE94725373638000E1C5F /* VC@8.m in Sources */,
 				C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */,
@@ -1301,7 +1324,6 @@
 				C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */,
 				C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */,
 				C5AEE94825373638000E1C5F /* VC@6.m in Sources */,
-				C5AEEA352537FB66000E1C5F /* TabbarVC+UIGestureRecognizerDelegate.m in Sources */,
 				C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */,
 				C579F8472539D25100846814 /* SuspendBtn.m in Sources */,
 				C5AEE93F25373638000E1C5F /* NSString+Extras.m in Sources */,

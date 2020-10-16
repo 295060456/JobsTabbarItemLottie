@@ -22,9 +22,6 @@
 
 @implementation UITabBar (Ex)
 
-//static char *UITabBar_Ex_humpOffsetY = "UITabBar_Ex_humpOffsetY";
-//@dynamic humpOffsetY;
-
 -(void)addLottieImage:(NSUInteger)index
               offsetY:(CGFloat)offsetY
            lottieName:(NSString *)lottieName {
@@ -78,24 +75,5 @@
         }
     }
 }
-//#pragma mark —— @property(nonatomic,assign)CGFloat humpOffsetY;//凸起的高度
-//-(CGFloat)humpOffsetY{
-//    CGFloat HumpOffsetY = [objc_getAssociatedObject(self, UITabBar_Ex_humpOffsetY) floatValue];
-//    if (HumpOffsetY == 0) {
-//        HumpOffsetY = 30;
-//        objc_setAssociatedObject(self,
-//                                 UITabBar_Ex_humpOffsetY,
-//                                 [NSNumber numberWithInteger:HumpOffsetY],
-//                                 OBJC_ASSOCIATION_ASSIGN);
-//    }return HumpOffsetY;
-//}
-//
-//-(void)setHumpOffsetY:(CGFloat)humpOffsetY{
-//    objc_setAssociatedObject(self,
-//                             UITabBar_Ex_humpOffsetY,
-//                             [NSNumber numberWithInteger:humpOffsetY],
-//                             OBJC_ASSOCIATION_ASSIGN);
-//    
-//}
 
 @end
