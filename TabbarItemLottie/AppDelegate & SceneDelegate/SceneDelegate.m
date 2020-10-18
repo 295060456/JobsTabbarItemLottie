@@ -36,8 +36,7 @@ willConnectToSession:(UISceneSession *)session
     //在这里手动创建新的window
     if (@available(iOS 13.0, *)) {
         self.windowScene = (UIWindowScene *)scene;
-        [self.window setRootViewController:AppDelegate.sharedInstance.tabbarVC];
-        [self.window makeKeyAndVisible];
+        self.window.alpha = 1;
     }
 }
 
@@ -67,5 +66,11 @@ willConnectToSession:(UISceneSession *)session
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }
 #pragma mark —— lazyLoad
+#pragma mark —— lazyLoad
+-(UIWindow *)window{
+    [_window setRootViewController:AppDelegate.sharedInstance.tabbarVC];
+    [_window makeKeyAndVisible];
+    return _window;
+}
 
 @end
