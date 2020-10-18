@@ -62,7 +62,7 @@ UIGestureRecognizerDelegate
     
     for (UITabBarItem *item in self.tabBar.items) {
         if ([item.title isEqualToString:@"首页"]) {
-            [item pp_addBadgeWithText:@"99+"];
+            [item pp_addBadgeWithText:@"919+"];
 #pragma mark —— 动画
             [UIView animationAlert:item.badgeView];//图片从小放大
             shakerAnimation(item.badgeView, 2, 20);//重力弹跳动画效果
@@ -101,7 +101,7 @@ UIViewController *childViewController_customStyle(UIViewController *viewControll
     
     [[AppDelegate sharedInstance].tabbarVC.tabBarControllerConfigMutArr addObject:config];
     
-    setAnimation(viewController.tabBarItem, tag);
+    setAnimation(viewController.tabBarItem, tag);//可选实现
     return viewController;
 }
 
@@ -126,7 +126,7 @@ UIViewController *childViewController_SystemStyle(UIViewController *viewControll
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem
                                                                            tag:tag];
-    setAnimation(viewController.tabBarItem, tag);
+    setAnimation(viewController.tabBarItem, tag);//可选实现
     return viewController;
 }
 #pragma mark —— 一些私有方法
@@ -227,11 +227,11 @@ TLFrameAnimation *frameAnimation(){
     return anm;
 }
 
-NSArray *imgs (){
+NSArray *imgs (){//静态轮播图
     NSMutableArray *temp = NSMutableArray.array;
     for (NSInteger i = 28 ; i <= 65; i++) {
         NSString *imgName = [NSString stringWithFormat:@"Tools_000%zi", i];
-        CGImageRef img = [UIImage imageNamed:imgName].CGImage;
+        CGImageRef img = KIMG(imgName).CGImage;
         [temp addObject:(__bridge id _Nonnull)(img)];
     }return temp;
 }

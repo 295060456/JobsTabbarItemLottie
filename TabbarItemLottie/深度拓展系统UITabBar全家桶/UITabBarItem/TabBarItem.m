@@ -16,7 +16,7 @@
 -(instancetype)initWithConfig:(TabBarControllerConfig *)config{
     if (self = [super init]) {
         
-        [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor yellowColor]}
+        [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}
                             forState:UIControlStateNormal];
         [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blueColor]}
                             forState:UIControlStateSelected];

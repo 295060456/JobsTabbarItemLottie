@@ -45,10 +45,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"---applicationDidBecomeActive----");//进入前台
 }
 #pragma mark - UISceneSession lifecycle
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+- (UISceneConfiguration *)application:(UIApplication *)application
+configurationForConnectingSceneSession:(UISceneSession *)
+connectingSceneSession options:(UISceneConnectionOptions *)options {
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration"
+                                          sessionRole:connectingSceneSession.role];
 }
 
 - (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
@@ -63,7 +66,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     @synchronized (self) {
         if (_persistentContainer == nil) {
             _persistentContainer = [[NSPersistentCloudKitContainer alloc] initWithName:@"TabbarItemLottie"];
-            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription,
+                                                                              NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
                     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -113,27 +117,27 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //        _tabbarVC.isOpenScrollTabbar = NO;
         _tabbarVC.myTabBar.offsetHeight = 5;
         [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_1.new,
-                                                                                @"首页",
-                                                                                KIMG(@"community_selected"),
-                                                                                KIMG(@"community_unselected"),
-                                                                                0,
-                                                                                @"home_priase_animation",
+                                                                         @"首页",
+                                                                         KIMG(@"community_selected"),
+                                                                         KIMG(@"community_unselected"),
+                                                                         0,
+                                                                         @"home_priase_animation",
                                                                          1)];
         
         [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_2.new,
-                                                                                @"精彩生活",
-                                                                                KIMG(@"post_selected"),
-                                                                                KIMG(@"post_unselected"),
-                                                                                30,
-                                                                                @"music_animation",
+                                                                         @"精彩生活",
+                                                                         KIMG(@"post_selected"),
+                                                                         KIMG(@"post_unselected"),
+                                                                         30,
+                                                                         @"music_animation",
                                                                          1)];
         
         [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_3.new,
-                                                                                @"发现",
-                                                                                KIMG(@"My_selected"),
-                                                                                KIMG(@"My_unselected"),
-                                                                                0,
-                                                                                @"record_change",
+                                                                         @"发现",
+                                                                         KIMG(@"My_selected"),
+                                                                         KIMG(@"My_unselected"),
+                                                                         0,
+                                                                         @"record_change",
                                                                          1)];
     }return _tabbarVC;
 }

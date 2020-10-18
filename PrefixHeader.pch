@@ -47,12 +47,7 @@
 #import "UIView+SuspendView.h"
 #import "SuspendBtn.h"
 
-#import "TabBarItem.h"
-#import "UITabBar+Ex.h"
-#import "CustomTabBar.h"
-#import "TabbarVC.h"
-#import "JobsPullListAutoSizeView.h"
-#import "TabBarControllerConfig.h"
+#import "TabbarControllerSysEx.h"
 
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
