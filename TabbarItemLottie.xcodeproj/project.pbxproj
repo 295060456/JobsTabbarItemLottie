@@ -518,6 +518,24 @@
 			path = "Tabbaritem点击动效";
 			sourceTree = "<group>";
 		};
+		C57278CB25409846002373D7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEE88D25373580000E1C5F /* AppDelegate.h */,
+				C5AEE88E25373580000E1C5F /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C57278CC2540984E002373D7 /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEE89025373580000E1C5F /* SceneDelegate.h */,
+				C5AEE89125373580000E1C5F /* SceneDelegate.m */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
 		C579F83D2539D25100846814 /* Suspend */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,10 +670,8 @@
 		C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE88D25373580000E1C5F /* AppDelegate.h */,
-				C5AEE88E25373580000E1C5F /* AppDelegate.m */,
-				C5AEE89025373580000E1C5F /* SceneDelegate.h */,
-				C5AEE89125373580000E1C5F /* SceneDelegate.m */,
+				C57278CB25409846002373D7 /* AppDelegate */,
+				C57278CC2540984E002373D7 /* SceneDelegate */,
 			);
 			path = "AppDelegate & SceneDelegate";
 			sourceTree = "<group>";

@@ -21,6 +21,7 @@
 #import "CustomTabBar.h"
 #import "PPBadgeView.h"
 #import "SuspendBtn.h"
+#import "JobsPullListAutoSizeView.h"
 
 #import "TabBarControllerConfig.h"
 

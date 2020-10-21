@@ -11,16 +11,6 @@
 
 #import "TabBarControllerConfig.h"//全局配置文件
 
-//UITabBarItem
-#import "UITabBarItem+TLAnimation.h"
-#import "TabBarItem.h"
-//UITabBarController
-#import "TabbarVC.h"
-//UITabBar
-#import "UITabBar+TLAnimation.h"
-#import "CustomTabBar.h"
-#import "UITabBar+Ex.h"
-
 //在系统api基础上二次封装的功能性拓展
 #import "LoadingImage.h"
 //UIView
@@ -46,5 +36,15 @@
 #import "TLTabBarAnimation.h"
 //悬浮小球、可旋转、可择机手动停止
 #import "SuspendBtn.h"
+
+//UITabBarItem
+#import "UITabBarItem+TLAnimation.h"
+#import "TabBarItem.h"
+//UITabBarController
+#import "TabbarVC.h"
+//UITabBar
+#import "UITabBar+TLAnimation.h"
+#import "CustomTabBar.h"
+#import "UITabBar+Ex.h"
 
 #endif /* Header_h */
