@@ -24,5 +24,15 @@
     NSLog(@"");
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [UIViewController comingFromVC:self
+                              toVC:VC_9.new
+                       comingStyle:ComingStyle_PUSH
+                 presentationStyle:UIModalPresentationAutomatic
+                     requestParams:@""
+                           success:^(id data) {}
+                          animated:YES];
+}
+
 
 @end

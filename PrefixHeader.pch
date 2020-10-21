@@ -11,6 +11,11 @@
 
 #import <objc/runtime.h>
 
+#import "MacroDef_Sys.h"
+#import "MacroDef_Cor.h"
+#import "MacroDef_Size.h"
+#import "MacroDef_Func.h"
+
 //系统SDK
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
@@ -36,6 +41,19 @@
 #import "PPBadgeView.h"
 #endif
 
+#import "SDWebImage-umbrella.h"//不支持图片后处理
+#import "JXCategoryView.h"
+#import "SPAlertController.h"
+#import "GKNavigationBar.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "BRPickerView.h"
+#import "JPImageresizerView-umbrella.h"
+#import "WHToast.h"
+
+//Pod 不进去的
+#import "BRPickerView.h"
+
 //我自己的定义的
 #import "AABlock.h"
 #import "LoadingImage.h"
@@ -46,8 +64,31 @@
 #import "UIView+Animation.h"
 #import "UIView+SuspendView.h"
 #import "SuspendBtn.h"
+#import "ECAuthorizationTools.h"
+#import "UIButton+ImageTitleSpacing.h"
 
 #import "TabbarControllerSysEx.h"
+
+//UIViewController
+#import "UIViewController+BaseVC.h"
+#import "UIViewController+BackBtn.h"
+#import "UIViewController+BRPickerView.h"
+#import "UIViewController+BWShareView.h"
+#import "UIViewController+GifImageView.h"
+#import "UIViewController+JPImageresizerView.h"
+#import "UIViewController+JXCategoryListContentViewDelegate.h"
+#import "UIViewController+MJRefresh.h"
+#import "UIViewController+Shake.h"
+#import "UIViewController+TZImagePickerController.h"
+#import "UIViewController+TZImagePickerControllerDelegate.h"
+#import "UIViewController+TZLocationManager.h"
+#import "UIViewController+NavigationBar.h"
+//UINavigationController
+#import "BaseNavigationVC.h"
+//UINavigationBar
+#import "NavigationBar.h"
+//NSObject
+#import "NSObject+Shake.h"
 
 #define HDDevice [UIDevice currentDevice]
 #define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
@@ -72,17 +113,6 @@ blue:arc4random_uniform(256) / 255.0 \
 alpha:1] \
 
 #define StringFormat(format,...) [NSString stringWithFormat:format, ##__VA_ARGS__]
-
-#import "SceneDelegate.h"
-static inline UIWindow * getMainWindow(){
-    UIWindow *window = nil;
-    if (@available(iOS 13.0, *)) {
-        window = [SceneDelegate sharedInstance].window;
-    }else{
-        window = UIApplication.sharedApplication.delegate.window;
-//        [UIApplication sharedApplication].keyWindow
-    }return window;
-}
 
 #import "VC@1.h"
 #import "VC@2.h"

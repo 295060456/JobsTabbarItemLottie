@@ -1,28 +1,81 @@
 PODS:
+  - BRPickerView (2.7.3):
+    - BRPickerView/AddressPickerView (= 2.7.3)
+    - BRPickerView/Base (= 2.7.3)
+    - BRPickerView/DatePickerView (= 2.7.3)
+    - BRPickerView/StringPickerView (= 2.7.3)
+  - BRPickerView/AddressPickerView (2.7.3):
+    - BRPickerView/Base
+  - BRPickerView/Base (2.7.3)
+  - BRPickerView/DatePickerView (2.7.3):
+    - BRPickerView/Base
+  - BRPickerView/StringPickerView (2.7.3):
+    - BRPickerView/Base
+  - GKNavigationBar (1.1.6)
+  - JPImageresizerView (1.7.7)
+  - JXCategoryView (1.5.7)
   - lottie-ios (2.5.3)
   - Masonry (1.1.0)
+  - MJExtension (3.2.2)
+  - MJRefresh (3.5.0)
   - PPBadgeView (3.1.0)
   - ReactiveObjC (3.1.1)
+  - SDWebImage (5.9.2):
+    - SDWebImage/Core (= 5.9.2)
+  - SDWebImage/Core (5.9.2)
+  - SPAlertController (4.0.0)
+  - TZImagePickerController (3.4.3)
+  - WHToast (0.0.7)
 
 DEPENDENCIES:
+  - BRPickerView
+  - GKNavigationBar
+  - JPImageresizerView
+  - JXCategoryView
   - lottie-ios (~> 2.5.3)
   - Masonry
+  - MJExtension
+  - MJRefresh
   - PPBadgeView
   - ReactiveObjC
+  - SDWebImage
+  - SPAlertController
+  - TZImagePickerController
+  - WHToast
 
 SPEC REPOS:
   trunk:
+    - BRPickerView
+    - GKNavigationBar
+    - JPImageresizerView
+    - JXCategoryView
     - lottie-ios
     - Masonry
+    - MJExtension
+    - MJRefresh
     - PPBadgeView
     - ReactiveObjC
+    - SDWebImage
+    - SPAlertController
+    - TZImagePickerController
+    - WHToast
 
 SPEC CHECKSUMS:
+  BRPickerView: 9cc11880ac79c4872d081ccb88f306224c1501d7
+  GKNavigationBar: b90183c0566e42f05438ad38ed29cc2a3e6018bc
+  JPImageresizerView: ba2301b87ad03f7a7976deec4ccc75085d29f6c1
+  JXCategoryView: fca2146e87eeaf014c71041337cb07bd4de5830b
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   PPBadgeView: b50a223638970fd0781e8753250385864b6dd2fe
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
+  TZImagePickerController: 4f6e91cf00d67827ec23bd3c2f849cbd054b4979
+  WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
 
-PODFILE CHECKSUM: 61f0e82be962f3a8481e83070f60e841eeb6773b
+PODFILE CHECKSUM: 81156ce9a40acef75136fc2f5e124415b7013b70
 
 COCOAPODS: 1.9.3
