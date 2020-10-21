@@ -33,6 +33,7 @@
 		C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FBA2540A7E400465D01 /* NSObject+SYSAlertController.m */; };
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40262540AAB100465D01 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A40252540AAB100465D01 /* UIButton+ImageTitleSpacing.m */; };
+		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
 		C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */; };
 		C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D414C2539750E00CFCF73 /* UITabBar+TLAnimation.m */; };
 		C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D41512539752300CFCF73 /* UITabBarItem+TLAnimation.m */; };
@@ -266,6 +267,7 @@
 		C50A401F2540AA3800465D01 /* MacroDef_Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Func.h; sourceTree = "<group>"; };
 		C50A40242540AAB100465D01 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C50A40252540AAB100465D01 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
@@ -535,8 +537,8 @@
 		C50A3F6E2540A5A600465D01 /* UINavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				C50A3F6F2540A5A600465D01 /* NavigationBar.m */,
 				C50A3F702540A5A600465D01 /* NavigationBar.h */,
+				C50A3F6F2540A5A600465D01 /* NavigationBar.m */,
 			);
 			path = UINavigationBar;
 			sourceTree = "<group>";
@@ -544,8 +546,8 @@
 		C50A3F712540A5A600465D01 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				C50A3F722540A5A600465D01 /* BaseNavigationVC.m */,
 				C50A3F732540A5A600465D01 /* BaseNavigationVC.h */,
+				C50A3F722540A5A600465D01 /* BaseNavigationVC.m */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -553,12 +555,12 @@
 		C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C50A3F6E2540A5A600465D01 /* UINavigationBar */,
+				C50A3F712540A5A600465D01 /* UINavigationController */,
 				C50A3FEC2540A90600465D01 /* UIImage */,
 				C5AEE91325373638000E1C5F /* UIView */,
 				C5AEE91B25373638000E1C5F /* NSString */,
 				C50A3FB72540A7D900465D01 /* NSObject */,
-				C50A3F6E2540A5A600465D01 /* UINavigationBar */,
-				C50A3F712540A5A600465D01 /* UINavigationController */,
 				C50A3F402540A58C00465D01 /* UIViewController */,
 			);
 			path = BaseCustomizeUIKit;
@@ -835,6 +837,7 @@
 			children = (
 				C579F84D2539D28C00846814 /* 旋转.png */,
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
+				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
 				C50A401B2540AA3000465D01 /* 各项宏定义 */,
 				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
 				C5AEE8CC25373609000E1C5F /* Others */,
@@ -1283,6 +1286,7 @@
 				C55D42682539771400CFCF73 /* Tools_00065@3x.png in Resources */,
 				C55D424B2539770200CFCF73 /* Tools_00061@3x.png in Resources */,
 				C55D423D253976FA00CFCF73 /* Tools_00059@3x.png in Resources */,
+				C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */,
 				C55D41DC253976B700CFCF73 /* Tools_00045@3x.png in Resources */,
 				C5AEE8A025373581000E1C5F /* LaunchScreen.storyboard in Resources */,
 				C55D42762539774E00CFCF73 /* icon_pin_00160@3x.png in Resources */,

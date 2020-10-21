@@ -154,7 +154,7 @@ UIViewController *childViewController_SystemStyle(UIViewController *viewControll
             [viewController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];//修改文字偏移量
         }
 
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+        BaseNavigationVC *nav = [[BaseNavigationVC alloc] initWithRootViewController:viewController];
         nav.title = config.title;
         [self.childMutArr replaceObjectAtIndex:i withObject:nav];//替换元素，每个VC加Navigation
     }

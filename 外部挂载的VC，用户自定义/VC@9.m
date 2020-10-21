@@ -18,6 +18,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = RandomColor;
     
-    self.isHiddenNavigationBar = YES;//这一句决定是否有navigationbar
+    self.isHiddenNavigationBar = NO;//这一句决定是否有navigationbar
 }
+
+
 @end
