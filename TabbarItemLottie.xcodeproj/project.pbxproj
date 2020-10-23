@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B142EFB9F5D2457D52B38870 /* Pods_TabbarItemLottie_TabbarItemLottieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F5847BDB35988196F95FA2 /* Pods_TabbarItemLottie_TabbarItemLottieUITests.framework */; };
+		AD0C530723EBCED7095B6DF2 /* Pods_TabbarItemLottieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B5BA36CFF37230E981C65B /* Pods_TabbarItemLottieUITests.framework */; };
 		C33DC257ECADE495DD23CB17 /* Pods_TabbarItemLottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA8B8784FF6DA80D6DA377A /* Pods_TabbarItemLottie.framework */; };
 		C50A3F5B2540A59600465D01 /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3F412540A59500465D01 /* UIViewController+NavigationBar.m */; };
 		C50A3F5C2540A59600465D01 /* UIViewController+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3F422540A59500465D01 /* UIViewController+BackBtn.m */; };
@@ -212,7 +212,8 @@
 		2460135C339399839C459CA6 /* Pods_TabbarItemLottieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbarItemLottieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CDA1838778656E499C43E5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie-TabbarItemLottieUITests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		429277DC5436DCDBB16C080D /* Pods-TabbarItemLottieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.debug.xcconfig"; sourceTree = "<group>"; };
-		93F5847BDB35988196F95FA2 /* Pods_TabbarItemLottie_TabbarItemLottieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbarItemLottie_TabbarItemLottieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57260D0F9F8BBBE6677D1EC7 /* Pods-TabbarItemLottieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieUITests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieUITests/Pods-TabbarItemLottieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8201359AEAA6251D60A5A9F7 /* Pods-TabbarItemLottieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieUITests/Pods-TabbarItemLottieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAA8B8784FF6DA80D6DA377A /* Pods_TabbarItemLottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbarItemLottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021345D8916F36EBDA7A9A5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E031382E7854441CBCBECE /* Pods-TabbarItemLottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.release.xcconfig"; sourceTree = "<group>"; };
@@ -469,6 +470,7 @@
 		C5AEEAB425383E8F000E1C5F /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5AEEAB525383E8F000E1C5F /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C5AEEABA25383FB9000E1C5F /* AABlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
+		D3B5BA36CFF37230E981C65B /* Pods_TabbarItemLottieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbarItemLottieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A8DBBFFD53ADED663AF9F3 /* Pods-TabbarItemLottieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.release.xcconfig"; sourceTree = "<group>"; };
 		F49C4681F019908A768FD50F /* Pods-TabbarItemLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottie.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -494,7 +496,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B142EFB9F5D2457D52B38870 /* Pods_TabbarItemLottie_TabbarItemLottieUITests.framework in Frameworks */,
+				AD0C530723EBCED7095B6DF2 /* Pods_TabbarItemLottieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,6 +1126,8 @@
 				26CDA1838778656E499C43E5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.release.xcconfig */,
 				429277DC5436DCDBB16C080D /* Pods-TabbarItemLottieTests.debug.xcconfig */,
 				F3A8DBBFFD53ADED663AF9F3 /* Pods-TabbarItemLottieTests.release.xcconfig */,
+				8201359AEAA6251D60A5A9F7 /* Pods-TabbarItemLottieUITests.debug.xcconfig */,
+				57260D0F9F8BBBE6677D1EC7 /* Pods-TabbarItemLottieUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1132,8 +1136,8 @@
 			isa = PBXGroup;
 			children = (
 				AAA8B8784FF6DA80D6DA377A /* Pods_TabbarItemLottie.framework */,
-				93F5847BDB35988196F95FA2 /* Pods_TabbarItemLottie_TabbarItemLottieUITests.framework */,
 				2460135C339399839C459CA6 /* Pods_TabbarItemLottieTests.framework */,
+				D3B5BA36CFF37230E981C65B /* Pods_TabbarItemLottieUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1149,7 +1153,7 @@
 				C5AEE88625373580000E1C5F /* Sources */,
 				C5AEE88725373580000E1C5F /* Frameworks */,
 				C5AEE88825373580000E1C5F /* Resources */,
-				CD7626CB896B1D363C3A38DF /* [CP] Embed Pods Frameworks */,
+				7AF6F7310972214FD5CE02E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1187,7 +1191,6 @@
 				C5AEE8AF25373581000E1C5F /* Sources */,
 				C5AEE8B025373581000E1C5F /* Frameworks */,
 				C5AEE8B125373581000E1C5F /* Resources */,
-				4A8211BB4B34C14E7495C5A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1405,21 +1408,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A8211BB4B34C14E7495C5A1 /* [CP] Embed Pods Frameworks */ = {
+		7AF6F7310972214FD5CE02E9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie-TabbarItemLottieUITests/Pods-TabbarItemLottie-TabbarItemLottieUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE28D46019B2FC6833F48C01 /* [CP] Check Pods Manifest.lock */ = {
@@ -1459,28 +1460,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TabbarItemLottie-TabbarItemLottieUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TabbarItemLottieUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD7626CB896B1D363C3A38DF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TabbarItemLottie/Pods-TabbarItemLottie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1799,7 +1783,7 @@
 		};
 		C5AEE8C325373581000E1C5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B021345D8916F36EBDA7A9A5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.debug.xcconfig */;
+			baseConfigurationReference = 8201359AEAA6251D60A5A9F7 /* Pods-TabbarItemLottieUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
@@ -1818,7 +1802,7 @@
 		};
 		C5AEE8C425373581000E1C5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26CDA1838778656E499C43E5 /* Pods-TabbarItemLottie-TabbarItemLottieUITests.release.xcconfig */;
+			baseConfigurationReference = 57260D0F9F8BBBE6677D1EC7 /* Pods-TabbarItemLottieUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
