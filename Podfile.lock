@@ -14,6 +14,7 @@ PODS:
   - GKNavigationBar (1.1.8)
   - JPImageresizerView (1.7.7)
   - JXCategoryView (1.5.7)
+  - JXPagingView/Pager (2.0.13)
   - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - MJExtension (3.2.3)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - GKNavigationBar
   - JPImageresizerView
   - JXCategoryView
+  - JXPagingView/Pager
   - lottie-ios (~> 2.5.3)
   - Masonry
   - MJExtension
@@ -49,6 +51,7 @@ SPEC REPOS:
     - GKNavigationBar
     - JPImageresizerView
     - JXCategoryView
+    - JXPagingView
     - lottie-ios
     - Masonry
     - MJExtension
@@ -65,6 +68,7 @@ SPEC CHECKSUMS:
   GKNavigationBar: b68d31d24fc14a297b109e71280187dc311e0794
   JPImageresizerView: ba2301b87ad03f7a7976deec4ccc75085d29f6c1
   JXCategoryView: fca2146e87eeaf014c71041337cb07bd4de5830b
+  JXPagingView: 821ed274f09eaf2843a96c3a74e9d138e27d9730
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: a6fd35a527dafd7f3f1259017ee57551d58b3bb8
@@ -76,6 +80,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 6685e6d81b8fd5453e80ba369dd4ebd6e97276ee
   WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
 
-PODFILE CHECKSUM: e3db85570f04d8fc7cec41a8aa31f83186eae7d0
+PODFILE CHECKSUM: 610d7c7d8f6105ade1a02a54d6aa8b19a7c6d804
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

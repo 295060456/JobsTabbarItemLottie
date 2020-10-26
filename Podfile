@@ -26,6 +26,7 @@ def func
   pod 'BRPickerView'
   pod 'GKNavigationBar'
   pod 'JXCategoryView' # https://github.com/pujiaxin33/JXCategoryView
+  pod 'JXPagingView/Pager' # https://github.com/pujiaxin33/JXPagingView NO_SMP
   pod 'MJRefresh'
   pod 'MJExtension'
   pod 'TZImagePickerController'
