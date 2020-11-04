@@ -7,8 +7,11 @@
 //
 
 #import "VC@1.h"
+#import "UIButton+CountDownBtn.h"
 
 @interface VC_1 ()
+
+@property(nonatomic,strong)UIButton *midView_Style1;
 
 @end
 
@@ -22,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kCyanColor;//RandomColor;
+    self.midView_Style1.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -45,6 +49,33 @@
                      requestParams:@""
                            success:^(id data) {}
                           animated:YES];
+}
+
+-(UIButton *)midView_Style1{
+    if (!_midView_Style1) {
+        _midView_Style1 = [[UIButton alloc] initWithType:CountDownBtnType_countDown
+                                                          runType:CountDownBtnRunType_auto
+                                                 layerBorderWidth:1
+                                                layerCornerRadius:1
+                                                 layerBorderColor:kClearColor
+                                                       titleColor:kWhiteColor
+                                                    titleBeginStr:@""
+                                                   titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+        
+        _midView_Style1.titleRuningStr = @"开始倒计时\n";
+        _midView_Style1.showTimeType = ShowTimeType_HHMMSS;
+        _midView_Style1.bgCountDownColor = kCyanColor;
+        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
+        
+        [_midView_Style1 timeFailBeginFrom:9999];
+
+        [self.view addSubview:_midView_Style1];
+        [_midView_Style1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(200, 100));
+            make.top.left.equalTo(self.view).offset(200);
+        }];
+
+    }return _midView_Style1;
 }
 
 
