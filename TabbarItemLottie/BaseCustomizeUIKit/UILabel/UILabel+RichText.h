@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (RichText)
 
--(void)makeRichTextWithDataStr:(NSString *_Nonnull)dataStr
+-(NSAttributedString *)makeRichTextWithDataStr:(NSString *_Nonnull)dataStr
                 richLabelFonts:(NSArray <RichLabelFontModel *>*_Nullable)richLabelFonts
              richLabelTextCors:(NSArray <RichLabelTextCorModel *>*_Nullable)richLabelTextCors
            richLabelUnderlines:(NSArray <RichLabelUnderlineModel *>*_Nullable)richLabelUnderlines

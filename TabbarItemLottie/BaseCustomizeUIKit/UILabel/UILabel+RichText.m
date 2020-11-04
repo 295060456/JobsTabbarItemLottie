@@ -53,12 +53,16 @@
 
 @implementation UILabel (RichText)
 
--(void)makeRichTextWithDataStr:(NSString * _Nonnull)dataStr
+-(NSAttributedString *)makeRichTextWithDataStr:(NSString * _Nonnull)dataStr
                 richLabelFonts:(NSArray <RichLabelFontModel *>* _Nullable)richLabelFonts
              richLabelTextCors:(NSArray <RichLabelTextCorModel *>* _Nullable)richLabelTextCors
            richLabelUnderlines:(NSArray <RichLabelUnderlineModel *>* _Nullable)richLabelUnderlines
       richLabelParagraphStyles:(NSArray <RichLabelParagraphStyleModel *>* _Nullable)richLabelParagraphStyles
                  richLabelURLs:(NSArray <RichLabelURLModel *>* _Nullable)richLabelURLs{
+    
+    if (!dataStr) {
+        dataStr = @"";
+    }
     
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:dataStr];
     
@@ -94,6 +98,8 @@
     }
     
     self.attributedText = attrStr;
+    
+    return self.attributedText;
 }
 
 @end

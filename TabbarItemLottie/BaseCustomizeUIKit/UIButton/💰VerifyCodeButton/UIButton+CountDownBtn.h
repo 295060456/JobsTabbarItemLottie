@@ -70,10 +70,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)BOOL isCountDownClockFinished;//倒计时是否结束
 @property(nonatomic,assign)BOOL isCountDownClockOpen;//倒计时是否开始
 
-@property(nonatomic,strong)NSString *countStr;
-@property(nonatomic,strong)NSString *str;
-@property(nonatomic,strong)NSMutableParagraphStyle *mps;
-@property(nonatomic,strong)NSMutableAttributedString *mas;
+@property(nonatomic,strong)NSString *formatTimeStr;//根据ShowTimeType格式化以后的时间
+@property(nonatomic,strong)NSString *finalTitleStr;//最终的title
+//富文本
+@property(nonatomic,strong)NSMutableArray <RichLabelFontModel *>*richLabelFontsMutArr;
+@property(nonatomic,strong)NSMutableArray <RichLabelTextCorModel *>*richLabelTextCorsMutArr;
+@property(nonatomic,strong)NSMutableArray <RichLabelUnderlineModel *>*richLabelUnderlinesMutArr;
+@property(nonatomic,strong)NSMutableArray <RichLabelParagraphStyleModel *>*richLabelParagraphStylesMutArr;
+@property(nonatomic,strong)NSMutableArray <RichLabelURLModel *>*richLabelURLsMutArr;
 
 -(void)actionCountDownBlock:(MKDataBlock _Nullable)countDownBlock;//倒计时需要触发调用的方法：倒计时的时候外面同时干的事，随着定时器走，可以不实现
 -(void)actionCountDownClickEventBlock:(MKDataBlock _Nullable)countDownClickEventBlock;//点击事件回调，就不要用系统的addTarget/action/forControlEvents
@@ -81,6 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)timerDestroy;//可以不结束直接掐死
 
 ///用这个初始化方法
+//不使用富文本
 - (instancetype)initWithType:(CountDownBtnType)countDownBtnType
                      runType:(CountDownBtnRunType)runType
             layerBorderWidth:(CGFloat)layerBorderWidth
@@ -89,6 +94,20 @@ NS_ASSUME_NONNULL_BEGIN
                   titleColor:(UIColor *_Nullable)titleColor
                titleBeginStr:(NSString *_Nullable)titleBeginStr
               titleLabelFont:(UIFont *_Nullable)titleLabelFont;
+//使用富文本
+-(instancetype)initWithType:(CountDownBtnType)countDownBtnType
+                    runType:(CountDownBtnRunType)runType
+           layerBorderWidth:(CGFloat)layerBorderWidth
+          layerCornerRadius:(CGFloat)layerCornerRadius
+           layerBorderColor:(UIColor *_Nullable)layerBorderColor
+                 titleColor:(UIColor *_Nullable)titleColor
+              titleBeginStr:(NSString *_Nullable)titleBeginStr
+             titleLabelFont:(UIFont *_Nullable)titleLabelFont
+             richLabelFonts:(NSArray <RichLabelFontModel *>* _Nullable)richLabelFonts
+          richLabelTextCors:(NSArray <RichLabelTextCorModel *>* _Nullable)richLabelTextCors
+        richLabelUnderlines:(NSArray <RichLabelParagraphStyleModel *>* _Nullable)richLabelParagraphStyles
+   richLabelParagraphStyles:(NSArray <RichLabelUnderlineModel *>* _Nullable)richLabelUnderlines
+              richLabelURLs:(NSArray <RichLabelURLModel *>* _Nullable)richLabelURLs;
 
 @end
 
