@@ -129,6 +129,8 @@
 		C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */; };
 		C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9702552C1EF004F5CC9 /* Nanosecond_TimerManager.m */; };
 		C572F9782552C1EF004F5CC9 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9732552C1EF004F5CC9 /* CADisplayLink_TimerManager.m */; };
+		C572F9D52552C683004F5CC9 /* UILabel+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9D12552C683004F5CC9 /* UILabel+RichText.m */; };
+		C572F9D62552C683004F5CC9 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9D42552C683004F5CC9 /* UILabel+Extra.m */; };
 		C5766FAE2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5766FAC2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C579F8472539D25100846814 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F83F2539D25100846814 /* SuspendBtn.m */; };
 		C579F8482539D25100846814 /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F8432539D25100846814 /* SuspendLab.m */; };
@@ -386,6 +388,10 @@
 		C572F9712552C1EF004F5CC9 /* Nanosecond_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanosecond_TimerManager.h; sourceTree = "<group>"; };
 		C572F9732552C1EF004F5CC9 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C572F9742552C1EF004F5CC9 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
+		C572F9D12552C683004F5CC9 /* UILabel+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RichText.m"; sourceTree = "<group>"; };
+		C572F9D22552C683004F5CC9 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
+		C572F9D32552C683004F5CC9 /* UILabel+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RichText.h"; sourceTree = "<group>"; };
+		C572F9D42552C683004F5CC9 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C5766FAC2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
 		C5766FAD2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C579F83F2539D25100846814 /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
@@ -576,6 +582,7 @@
 		C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C572F9D02552C683004F5CC9 /* UILabel */,
 				C572F9432552C184004F5CC9 /* UIButton */,
 				C54B3C1C25525FE2003BE195 /* UIFont */,
 				C50A3F6E2540A5A600465D01 /* UINavigationBar */,
@@ -853,6 +860,17 @@
 				C572F9742552C1EF004F5CC9 /* CADisplayLink_TimerManager.h */,
 			);
 			path = CADisplayLink_TimerManager;
+			sourceTree = "<group>";
+		};
+		C572F9D02552C683004F5CC9 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				C572F9D22552C683004F5CC9 /* UILabel+Extra.h */,
+				C572F9D42552C683004F5CC9 /* UILabel+Extra.m */,
+				C572F9D32552C683004F5CC9 /* UILabel+RichText.h */,
+				C572F9D12552C683004F5CC9 /* UILabel+RichText.m */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		C5766FAA2546B8B100C382C8 /* UIViewController+JXCategory */ = {
@@ -1639,6 +1657,8 @@
 				C50A3F632540A59600465D01 /* UIViewController+TZImagePickerController.m in Sources */,
 				C5AEE93F25373638000E1C5F /* NSString+Extras.m in Sources */,
 				C50A3F612540A59600465D01 /* UIViewController+JPImageresizerView.m in Sources */,
+				C572F9D52552C683004F5CC9 /* UILabel+RichText.m in Sources */,
+				C572F9D62552C683004F5CC9 /* UILabel+Extra.m in Sources */,
 				C5AEE94325373638000E1C5F /* TabbarVC.m in Sources */,
 				C50A3F752540A5A600465D01 /* BaseNavigationVC.m in Sources */,
 				C50A3F882540A68300465D01 /* BWItemCollectionViewCell.m in Sources */,
