@@ -73,6 +73,15 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 //不使用富文本
+/// 有些默认的button属性最好还是在初始化进行传入，如果后续传入，不太好把控其生命周期导致赋值失败
+/// @param countDownBtnType 定时器是顺时针旋转还是逆时针旋转
+/// @param runType 定时器是自动触发还是用户自己触发
+/// @param layerBorderWidth 描边的线框
+/// @param layerCornerRadius 圆切角
+/// @param layerBorderColor 描边颜色
+/// @param titleColor 不使用富文本的情况下，正常的title颜色
+/// @param titleBeginStr 不使用富文本的情况下，正常的title，不是定时器运行的时候的title，注意加以区分
+/// @param titleLabelFont 不使用富文本的情况下，正常的title的字体
 - (instancetype)initWithType:(CountDownBtnType)countDownBtnType
                      runType:(CountDownBtnRunType)runType
             layerBorderWidth:(CGFloat)layerBorderWidth
@@ -92,6 +101,8 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
         self.titleLabelFont = titleLabelFont;
         self.layerBorderWidth = layerBorderWidth;
         self.titleColor = titleColor;
+        
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
         
         [self setTitle:self.titleBeginStr
               forState:UIControlStateNormal];
@@ -136,6 +147,20 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
     }return self;
 }
 //使用富文本
+/// 富文本和一般的标题不是一回事，所以隔离出来进行分析讨论
+/// @param countDownBtnType 定时器是顺时针旋转还是逆时针旋转
+/// @param runType  定时器是自动触发还是用户自己触发
+/// @param layerBorderWidth  描边的线框
+/// @param layerCornerRadius  圆切角
+/// @param layerBorderColor 描边颜色
+/// @param titleColor 不使用富文本的情况下，正常的title颜色
+/// @param titleBeginStr 不使用富文本的情况下，正常的title，不是定时器运行的时候的title，注意加以区分
+/// @param titleLabelFont 不使用富文本的情况下，正常的title的字体
+/// @param richLabelFonts 富文本相关属性——指定位置上的富文本字体
+/// @param richLabelTextCors 富文本相关属性——指定位置上的富文本颜色
+/// @param richLabelParagraphStyles  富文本相关属性——指定位置上的富文本自定义段落款式
+/// @param richLabelUnderlines 富文本相关属性——指定位置上的富文本下划线
+/// @param richLabelURLs 富文本相关属性——指定位置上的富文本点击跳转链接
 -(instancetype)initWithType:(CountDownBtnType)countDownBtnType
                     runType:(CountDownBtnRunType)runType
            layerBorderWidth:(CGFloat)layerBorderWidth
@@ -164,7 +189,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
         self.richLabelParagraphStylesMutArr = (NSMutableArray *)richLabelParagraphStyles;
         self.richLabelURLsMutArr = (NSMutableArray *)richLabelURLs;
         //富文本
-        NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.titleBeginStr
+        NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.titleBeginStr//这里自己加 \n
                                                                          richLabelFonts:self.richLabelFontsMutArr
                                                                       richLabelTextCors:self.richLabelTextCorsMutArr
                                                                     richLabelUnderlines:self.richLabelUnderlinesMutArr
@@ -191,7 +216,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                           forState:UIControlStateNormal];
                 }break;
                 case CountDownBtnNewLineType_newLine:{
-                    self.finalTitleStr = self.titleBeginStr;
+                    self.finalTitleStr = [self.titleBeginStr stringByAppendingString:@"\n"];
                     NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
                     //富文本
                     NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
@@ -212,27 +237,28 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
 }
 //倒计时方法:
 - (void)timeFailBeginFrom:(NSInteger)timeCount {
+    
     switch (self.countDownBtnNewLineType) {
         case CountDownBtnNewLineType_normal:{
             [self setTitle:self.titleBeginStr
                   forState:UIControlStateNormal];
         }break;
         case CountDownBtnNewLineType_newLine:{
-            self.finalTitleStr = self.titleBeginStr;
+            self.finalTitleStr = [self.titleBeginStr stringByAppendingString:@"\n"];
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
-            //富文本
-            NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
-                                                                             richLabelFonts:self.richLabelFontsMutArr
-                                                                          richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                        richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                                   richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                              richLabelURLs:self.richLabelURLsMutArr];
-//            self.titleLabel.numberOfLines = 0;
-            [self setAttributedTitle:attributedString forState:UIControlStateNormal];
         }break;
         default:
             break;
     }
+    //富文本
+    NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
+                                                                     richLabelFonts:self.richLabelFontsMutArr
+                                                                  richLabelTextCors:self.richLabelTextCorsMutArr
+                                                                richLabelUnderlines:self.richLabelUnderlinesMutArr
+                                                           richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
+                                                                      richLabelURLs:self.richLabelURLsMutArr];
+//            self.titleLabel.numberOfLines = 0;
+    [self setAttributedTitle:attributedString forState:UIControlStateNormal];
     
     self.countDownBtnType = CountDownBtnType_countDown;
     self.count = timeCount;
@@ -247,6 +273,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
 //
 - (void)timerRuning:(long)currentTime {
     self.enabled = NO;//倒计时期间，不接受任何的点击事件  🇨🇳
+    // 显示的时间格式
     switch (self.showTimeType) {
         case ShowTimeType_SS:{
             self.formatTimeStr = [NSString stringWithFormat:@"%ld秒",(long)currentTime];
@@ -261,13 +288,25 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
             self.formatTimeStr = @"异常值";
             break;
     }
-
+    //字符串拼接
     switch (self.cequenceForShowTitleRuningStrType) {
         case CequenceForShowTitleRuningStrType_front:{
-            self.finalTitleStr = [self.titleRuningStr stringByAppendingString:self.formatTimeStr];
+            
+            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_normal) {
+                self.finalTitleStr = [self.titleRuningStr stringByAppendingString:[NSString stringWithFormat:@"%@",self.formatTimeStr]];
+            }else if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine){
+                self.finalTitleStr = [self.titleRuningStr stringByAppendingString:[NSString stringWithFormat:@"\n%@",self.formatTimeStr]];
+            }else{}
+            
         }break;
         case CequenceForShowTitleRuningStrType_tail:{
-            self.finalTitleStr = [self.formatTimeStr stringByAppendingString:self.titleRuningStr];
+           
+            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_normal) {
+                self.finalTitleStr = [self.formatTimeStr stringByAppendingString:[NSString stringWithFormat:@"%@",self.titleRuningStr]];
+            }else if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine){
+                self.finalTitleStr = [self.formatTimeStr stringByAppendingString:[NSString stringWithFormat:@"\n%@",self.titleRuningStr]];
+            }else{}
+            
         }break;
         default:
             self.finalTitleStr = @"异常值";
@@ -276,6 +315,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
         
     switch (self.countDownBtnNewLineType) {
         case CountDownBtnNewLineType_normal:{
+            NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
             [self setTitle:self.finalTitleStr
                   forState:UIControlStateNormal];
         }break;
@@ -289,10 +329,10 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                                                                         richLabelUnderlines:self.richLabelUnderlinesMutArr
                                                                    richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
                                                                               richLabelURLs:self.richLabelURLsMutArr];
-//            self.titleLabel.numberOfLines = 0;
+            self.titleLabel.numberOfLines = 0;
             [self setAttributedTitle:attributedString forState:UIControlStateNormal];
         }break;
-            
+
         default:
             break;
     }
@@ -309,7 +349,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                   forState:UIControlStateNormal];
         }break;
         case CountDownBtnNewLineType_newLine:{
-            self.finalTitleStr = self.titleEndStr;
+            self.finalTitleStr = [self.titleEndStr stringByAppendingString:@"\n"];
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
             //富文本
             NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
@@ -373,6 +413,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
     @weakify(self)
     //倒计时启动
     [timerManager actionNSTimerManagerRunningBlock:^(id data) {
+        NSLog(@"正在倒计时...");
         self.isCountDownClockOpen = YES;
         @strongify(self)
         if ([data isKindOfClass:NSTimerManager.class]) {

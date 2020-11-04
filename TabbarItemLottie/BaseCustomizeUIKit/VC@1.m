@@ -83,10 +83,11 @@
                                 richLabelParagraphStyles:nil
                                            richLabelURLs:nil];
         
-        _midView_Style1.titleRuningStr = @"开始倒计时了\n";
+        _midView_Style1.titleRuningStr = @"开始倒计时了";
         _midView_Style1.showTimeType = ShowTimeType_HHMMSS;
         _midView_Style1.bgCountDownColor = kCyanColor;
-        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
+        _midView_Style1.cequenceForShowTitleRuningStrType = CequenceForShowTitleRuningStrType_tail;
+//        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
         [_midView_Style1 timeFailBeginFrom:9999];
 
