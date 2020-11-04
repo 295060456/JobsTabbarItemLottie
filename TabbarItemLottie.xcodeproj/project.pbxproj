@@ -34,6 +34,7 @@
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40262540AAB100465D01 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A40252540AAB100465D01 /* UIButton+ImageTitleSpacing.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
+		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
 		C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */; };
 		C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D414C2539750E00CFCF73 /* UITabBar+TLAnimation.m */; };
 		C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D41512539752300CFCF73 /* UITabBarItem+TLAnimation.m */; };
@@ -270,6 +271,8 @@
 		C50A40242540AAB100465D01 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C50A40252540AAB100465D01 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
+		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
+		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
 		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
@@ -554,6 +557,7 @@
 		C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C54B3C1C25525FE2003BE195 /* UIFont */,
 				C50A3F6E2540A5A600465D01 /* UINavigationBar */,
 				C50A3F712540A5A600465D01 /* UINavigationController */,
 				C50A3FEC2540A90600465D01 /* UIImage */,
@@ -640,6 +644,15 @@
 				C50A40252540AAB100465D01 /* UIButton+ImageTitleSpacing.m */,
 			);
 			path = "高度自定义的按钮";
+			sourceTree = "<group>";
+		};
+		C54B3C1C25525FE2003BE195 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */,
+				C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		C559D4042539E83B00D99C3A /* 静态图轮播 */ = {
@@ -1551,6 +1564,7 @@
 				C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */,
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
 				C5AEE89225373580000E1C5F /* SceneDelegate.m in Sources */,
+				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
 				C5AEE94425373638000E1C5F /* VC@1.m in Sources */,
 				C50A3F642540A59600465D01 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
