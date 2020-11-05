@@ -31,7 +31,7 @@
     self.view.backgroundColor = kCyanColor;//RandomColor;
     self.titleStr_1 = @"开始";
     self.titleStr_2 = @"倒计时";
-//    self.midView_Style1.alpha = 1;
+    self.midView_Style1.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -46,16 +46,16 @@
         make.top.left.equalTo(self.view).offset(100);
     }];
     
-    UILabel *lab = UILabel.new;
-    
-    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
-    
-    [self.view addSubview:lab];
-    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(300, 100));
-        make.top.equalTo(self.view).offset(200);
-        make.left.equalTo(self.view).offset(50);
-    }];
+//    UILabel *lab = UILabel.new;
+//    
+//    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
+//    
+//    [self.view addSubview:lab];
+//    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(300, 100));
+//        make.top.equalTo(self.view).offset(200);
+//        make.left.equalTo(self.view).offset(50);
+//    }];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

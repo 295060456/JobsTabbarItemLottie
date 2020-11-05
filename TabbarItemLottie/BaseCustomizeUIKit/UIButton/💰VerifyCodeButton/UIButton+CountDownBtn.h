@@ -73,6 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *formatTimeStr;//根据ShowTimeType格式化以后的时间
 @property(nonatomic,strong)NSString *finalTitleStr;//最终的title
 @property(nonatomic,strong)NSAttributedString *attributedString;//富文本
+@property(nonatomic,strong)NSMutableArray <RichLabelDataStringsModel *>*richTextRunningDataMutArr;
 
 -(void)actionCountDownBlock:(MKDataBlock _Nullable)countDownBlock;//倒计时需要触发调用的方法：倒计时的时候外面同时干的事，随着定时器走，可以不实现
 -(void)actionCountDownClickEventBlock:(MKDataBlock _Nullable)countDownClickEventBlock;//点击事件回调，就不要用系统的addTarget/action/forControlEvents

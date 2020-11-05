@@ -83,26 +83,31 @@
         RichLabelDataStringsModel *richLabelDataStringsModel = (RichLabelDataStringsModel *)richTextDataConfigMutArr[i];
         
         //添加字体 & 设置作用域
-        [attrString addAttribute:NSFontAttributeName
-                           value:richLabelDataStringsModel.richLabelFontModel.font
-                           range:richLabelDataStringsModel.richLabelFontModel.range];
+        if (richLabelDataStringsModel.richLabelFontModel.font) {
+            [attrString addAttribute:NSFontAttributeName
+                               value:richLabelDataStringsModel.richLabelFontModel.font
+                               range:richLabelDataStringsModel.richLabelFontModel.range];//NSMakeRange(0, 0)
+        }
         //添加文字颜色 & 设置作用域
-        [attrString addAttribute:NSForegroundColorAttributeName
-                           value:richLabelDataStringsModel.richLabelTextCorModel.cor
-                           range:richLabelDataStringsModel.richLabelTextCorModel.range];
+        if (richLabelDataStringsModel.richLabelTextCorModel.cor) {
+            [attrString addAttribute:NSForegroundColorAttributeName
+                               value:richLabelDataStringsModel.richLabelTextCorModel.cor
+                               range:richLabelDataStringsModel.richLabelTextCorModel.range];
+        }
         //添加下划线 & 设置作用域
         [attrString addAttribute:NSUnderlineStyleAttributeName
                         value:[NSNumber numberWithInteger:richLabelDataStringsModel.richLabelUnderlineModel.underlineStyle]
                         range:richLabelDataStringsModel.richLabelUnderlineModel.range];
         //添加段落样式 & 设置作用域
-        [attrString addAttribute:NSParagraphStyleAttributeName
-                           value:richLabelDataStringsModel.richLabelParagraphStyleModel.paragraphStyle
-                           range:richLabelDataStringsModel.richLabelParagraphStyleModel.range];
+        if (richLabelDataStringsModel.richLabelParagraphStyleModel.paragraphStyle) {
+            [attrString addAttribute:NSParagraphStyleAttributeName
+                               value:richLabelDataStringsModel.richLabelParagraphStyleModel.paragraphStyle
+                               range:richLabelDataStringsModel.richLabelParagraphStyleModel.range];
+        }
         //添加链接 & 设置作用域
         [attrString addAttribute:NSParagraphStyleAttributeName
                            value:[NSURL URLWithString:richLabelDataStringsModel.richLabelURLModel.urlStr]
                            range:richLabelDataStringsModel.richLabelURLModel.range];
-
     }
     
     self.attributedText = attrString;

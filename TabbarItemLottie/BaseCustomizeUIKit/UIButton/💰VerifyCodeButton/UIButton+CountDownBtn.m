@@ -35,6 +35,7 @@ static char *UIButton_CountDownBtn_countStr = "UIButton_CountDownBtn_countStr";
 static char *UIButton_CountDownBtn_str = "UIButton_CountDownBtn_str";
 static char *UIButton_CountDownBtn_btnRunType = "UIButton_CountDownBtn_btnRunType";
 static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_attributedString";
+static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDownBtn_richTextRunningDataMutArr";
 
 @dynamic nsTimerManager;
 @dynamic titleBeginStr;
@@ -60,6 +61,7 @@ static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_att
 @dynamic finalTitleStr;
 @dynamic btnRunType;
 @dynamic attributedString;
+@dynamic richTextRunningDataMutArr;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"
@@ -157,7 +159,8 @@ static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_att
                     titleBeginStr:titleBeginStr
                    titleLabelFont:titleLabelFont]) {
         
-        self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:richTextRunningDataMutArr];
+        self.richTextRunningDataMutArr = (NSMutableArray *)richTextRunningDataMutArr;
+        self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:self.richTextRunningDataMutArr];
         //            self.titleLabel.numberOfLines = 0;
         [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
     }return self;
@@ -272,9 +275,42 @@ static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_att
         case CountDownBtnNewLineType_newLine:{
             NSLog(@"%@",self.formatTimeStr);
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
-            //富文本
-            self.titleLabel.numberOfLines = 0;
+            
+            //富文本 每一次时间触发方法都刷新数据并赋值
+            NSMutableArray *tempDataMutArr = NSMutableArray.array;
+            
+            for (int i = 0; i < self.richTextRunningDataMutArr.count; i ++) {
+                RichLabelDataStringsModel *richLabelDataStringsModel = self.richTextRunningDataMutArr[i];
+                RichLabelDataStringsModel *formatTimeModel = RichLabelDataStringsModel.new;
+                RichLabelDataStringsModel *titleRuningModel = RichLabelDataStringsModel.new;
+                if (i == 0) {
+                    formatTimeModel.dataString = self.titleRuningStr;
+                    formatTimeModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
+                    formatTimeModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
+                    formatTimeModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
+                    formatTimeModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
+                    formatTimeModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
+                }else if (i == 1){
+                    titleRuningModel.dataString = self.formatTimeStr;
+                    titleRuningModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
+                    titleRuningModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
+                    titleRuningModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
+                    titleRuningModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
+                    titleRuningModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
+                }else{}
+                    
+                if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_front) {
+                    [tempDataMutArr addObject:titleRuningModel];
+                    [tempDataMutArr addObject:formatTimeModel];
+                }else if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_tail){
+                    [tempDataMutArr addObject:formatTimeModel];
+                    [tempDataMutArr addObject:titleRuningModel];
+                }
+            }
+
+            self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:tempDataMutArr];
             [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
+//            self.titleLabel.numberOfLines = 0;
         }break;
 
         default:
@@ -697,5 +733,18 @@ static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_att
                              attributedString,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelDataStringsModel *>*richTextRunningDataMutArr;
+-(NSMutableArray<RichLabelDataStringsModel *> *)richTextRunningDataMutArr{
+    NSMutableArray *RichTextRunningDataMutArr = objc_getAssociatedObject(self, UIButton_CountDownBtn_richTextRunningDataMutArr);
+    return RichTextRunningDataMutArr;
+}
+
+-(void)setRichTextRunningDataMutArr:(NSMutableArray<RichLabelDataStringsModel *> *)richTextRunningDataMutArr{
+    objc_setAssociatedObject(self,
+                             UIButton_CountDownBtn_richTextRunningDataMutArr,
+                             richTextRunningDataMutArr,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end
