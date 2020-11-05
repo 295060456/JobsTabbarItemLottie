@@ -161,7 +161,6 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
         
         self.richTextRunningDataMutArr = (NSMutableArray *)richTextRunningDataMutArr;
         self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:self.richTextRunningDataMutArr];
-        //            self.titleLabel.numberOfLines = 0;
         [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
     }return self;
 }
@@ -210,7 +209,6 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
             break;
     }
     //富文本
-//            self.titleLabel.numberOfLines = 0;
     [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
     
     self.countDownBtnType = CountDownBtnType_countDown;
@@ -243,79 +241,70 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
     }
     //字符串拼接
     switch (self.cequenceForShowTitleRuningStrType) {
-        case CequenceForShowTitleRuningStrType_front:{
+        case CequenceForShowTitleRuningStrType_front:{//首在前
+            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine){//提行
+                self.titleRuningStr = [self.titleRuningStr stringByAppendingString:@"\n"];
+            }
             
-            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_normal) {
-                self.finalTitleStr = [self.titleRuningStr stringByAppendingString:[NSString stringWithFormat:@"%@",self.formatTimeStr]];
-            }else if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine){
-                self.finalTitleStr = [self.titleRuningStr stringByAppendingString:[NSString stringWithFormat:@"\n%@",self.formatTimeStr]];
-            }else{}
-            
+            self.finalTitleStr = [self.titleRuningStr stringByAppendingString:self.formatTimeStr];
         }break;
-        case CequenceForShowTitleRuningStrType_tail:{
-           
-            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_normal) {
-                self.finalTitleStr = [self.formatTimeStr stringByAppendingString:[NSString stringWithFormat:@"%@",self.titleRuningStr]];
-            }else if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine){
-                self.finalTitleStr = [self.formatTimeStr stringByAppendingString:[NSString stringWithFormat:@"\n%@",self.titleRuningStr]];
-            }else{}
+        case CequenceForShowTitleRuningStrType_tail:{//首在后
+            if (self.countDownBtnNewLineType == CountDownBtnNewLineType_newLine) {//提行
+                self.formatTimeStr = [self.formatTimeStr stringByAppendingString:@"\n"];
+            }
             
+            self.finalTitleStr = [self.formatTimeStr stringByAppendingString:self.titleRuningStr];
         }break;
         default:
             self.finalTitleStr = @"异常值";
             break;
     }
-        
-    switch (self.countDownBtnNewLineType) {
-        case CountDownBtnNewLineType_normal:{
-            NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
-            [self setTitle:self.finalTitleStr
-                  forState:UIControlStateNormal];
-        }break;
-        case CountDownBtnNewLineType_newLine:{
-            NSLog(@"%@",self.formatTimeStr);
-            NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
-            
-            //富文本 每一次时间触发方法都刷新数据并赋值
-            NSMutableArray *tempDataMutArr = NSMutableArray.array;
-            
-            for (int i = 0; i < self.richTextRunningDataMutArr.count; i ++) {
-                RichLabelDataStringsModel *richLabelDataStringsModel = self.richTextRunningDataMutArr[i];
-                RichLabelDataStringsModel *formatTimeModel = RichLabelDataStringsModel.new;
-                RichLabelDataStringsModel *titleRuningModel = RichLabelDataStringsModel.new;
-                if (i == 0) {
-                    formatTimeModel.dataString = self.titleRuningStr;
-                    formatTimeModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
-                    formatTimeModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
-                    formatTimeModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
-                    formatTimeModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
-                    formatTimeModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
-                }else if (i == 1){
-                    titleRuningModel.dataString = self.formatTimeStr;
-                    titleRuningModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
-                    titleRuningModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
-                    titleRuningModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
-                    titleRuningModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
-                    titleRuningModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
-                }else{}
-                    
-                if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_front) {
-                    [tempDataMutArr addObject:titleRuningModel];
-                    [tempDataMutArr addObject:formatTimeModel];
-                }else if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_tail){
-                    [tempDataMutArr addObject:formatTimeModel];
-                    [tempDataMutArr addObject:titleRuningModel];
-                }
-            }
+    
+    NSLog(@"%@",self.formatTimeStr);
+    NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
+    
+    [self setTitle:self.finalTitleStr
+          forState:UIControlStateNormal];
+    
+    //富文本 每一次时间触发方法都刷新数据并赋值
+    NSMutableArray *tempDataMutArr = NSMutableArray.array;
+    RichLabelDataStringsModel *formatTimeModel = RichLabelDataStringsModel.new;
+    RichLabelDataStringsModel *titleRuningModel = RichLabelDataStringsModel.new;
+    
+    NSMutableArray *dd = self.richTextRunningDataMutArr;
+    for (int i = 0; i < self.richTextRunningDataMutArr.count; i ++) {
+        RichLabelDataStringsModel *richLabelDataStringsModel = self.richTextRunningDataMutArr[i];
 
-            self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:tempDataMutArr];
-            [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
-//            self.titleLabel.numberOfLines = 0;
-        }break;
-
-        default:
-            break;
+        if (i == 0) {
+            formatTimeModel.dataString = self.formatTimeStr;
+            formatTimeModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
+            formatTimeModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
+            formatTimeModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
+            formatTimeModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
+            formatTimeModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
+        }else if (i == 1){
+            titleRuningModel.dataString = self.titleRuningStr;
+            titleRuningModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
+            titleRuningModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
+            titleRuningModel.richLabelUnderlineModel = richLabelDataStringsModel.richLabelUnderlineModel;
+            titleRuningModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
+            titleRuningModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
+        }else{}
     }
+    
+    if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_front) {
+        [tempDataMutArr addObject:titleRuningModel];
+        [tempDataMutArr addObject:formatTimeModel];
+        
+        
+    }else if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_tail){
+        [tempDataMutArr addObject:formatTimeModel];
+        [tempDataMutArr addObject:titleRuningModel];
+        
+    }
+
+    self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:tempDataMutArr];
+    [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
 
     self.backgroundColor = self.bgCountDownColor;
 }
@@ -332,7 +321,6 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
             self.finalTitleStr = [self.titleEndStr stringByAppendingString:@"\n"];
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
             //富文本
-//            self.titleLabel.numberOfLines = 0;
             [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
         }break;
         default:

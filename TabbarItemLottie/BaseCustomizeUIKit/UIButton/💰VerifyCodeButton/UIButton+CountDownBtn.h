@@ -27,8 +27,8 @@ typedef enum : NSUInteger {
 } CountDownBtnNewLineType;
 
 typedef enum : NSUInteger {
-    CequenceForShowTitleRuningStrType_front = 0,//TitleRuningStr（固定值） 相对于 currentTime（浮动值）在前面
-    CequenceForShowTitleRuningStrType_tail//TitleRuningStr（固定值） 相对于 currentTime（浮动值）在后面
+    CequenceForShowTitleRuningStrType_front = 0,//TitleRuningStr（固定值） 相对于 currentTime（浮动值）在前面 | 首在前
+    CequenceForShowTitleRuningStrType_tail//TitleRuningStr（固定值） 相对于 currentTime（浮动值）在后面 | 首在后
 } CequenceForShowTitleRuningStrType;
 
 typedef enum : NSUInteger {

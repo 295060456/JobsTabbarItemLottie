@@ -73,6 +73,7 @@
     for (RichLabelDataStringsModel *model in richTextDataConfigMutArr) {
         if (model.dataString) {
             resultString = [resultString stringByAppendingString:model.dataString];
+            NSLog(@"resultString = %@",resultString);
         }
     }
     

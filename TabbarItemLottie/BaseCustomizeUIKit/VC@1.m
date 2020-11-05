@@ -93,7 +93,7 @@
         _midView_Style1.showTimeType = ShowTimeType_HHMMSS;
         _midView_Style1.bgCountDownColor = kCyanColor;
         _midView_Style1.cequenceForShowTitleRuningStrType = CequenceForShowTitleRuningStrType_tail;
-        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
+//        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
         [_midView_Style1 timeFailBeginFrom:9999];
 
@@ -126,6 +126,7 @@
         RichLabelTextCorModel *richLabelTextCorModel_2 = RichLabelTextCorModel.new;
         richLabelTextCorModel_2.cor = KGreenColor;
         richLabelTextCorModel_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
+        //////
         
         RichLabelDataStringsModel *richLabelDataStringsModel_1 = RichLabelDataStringsModel.new;
         richLabelDataStringsModel_1.dataString = self.titleStr_1;
