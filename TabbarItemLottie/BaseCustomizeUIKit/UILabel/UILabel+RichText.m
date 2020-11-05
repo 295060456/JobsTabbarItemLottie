@@ -51,7 +51,6 @@
 
 @end
 
-
 @implementation RichLabelDataStringsModel
 
 #pragma mark —— default
