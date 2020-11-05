@@ -1,4 +1,4 @@
-# 倒计时按钮  &&  UITabbarCtr的封装
+# iOS 倒计时按钮  &&  UITabbarCtr的封装
 
 https://github.com/295060456/TabbarItemLottie
 ## 关于验证码倒计时按钮的封装，此框架推到重来无数次，我个人认为已经达到顶峰
