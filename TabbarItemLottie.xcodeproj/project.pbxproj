@@ -374,6 +374,7 @@
 		C55D42842539886900CFCF73 /* TabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerConfig.m; sourceTree = "<group>"; };
 		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
+		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C572F9452552C184004F5CC9 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
@@ -980,6 +981,7 @@
 		C5AEE88125373580000E1C5F = {
 			isa = PBXGroup;
 			children = (
+				C5620B8D2554047300FE435F /* README.md */,
 				C579F84D2539D28C00846814 /* 旋转.png */,
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
 				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
