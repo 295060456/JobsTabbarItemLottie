@@ -15,8 +15,7 @@
 
 @property(nonatomic,strong)NSString *titleStr_1;
 @property(nonatomic,strong)NSString *titleStr_2;
-@property(nonatomic,strong)NSMutableArray <RichLabelFontModel *>*richLabelFontsMutArr;
-@property(nonatomic,strong)NSMutableArray <RichLabelTextCorModel *>*richLabelTextCorsMutArr;
+@property(nonatomic,strong)NSMutableArray <RichLabelDataStringsModel *>*richLabelDataStringsMutArr;
 
 @end
 
@@ -30,9 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kCyanColor;//RandomColor;
-    self.titleStr_1 = @"韩国K联 第26轮";
-    self.titleStr_2 = @"2020/09/09 18:00";
-    self.midView_Style1.alpha = 1;
+    self.titleStr_1 = @"开始";
+    self.titleStr_2 = @"倒计时";
+//    self.midView_Style1.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -45,6 +44,17 @@
     [ff mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 100));
         make.top.left.equalTo(self.view).offset(100);
+    }];
+    
+    UILabel *lab = UILabel.new;
+    
+    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
+    
+    [self.view addSubview:lab];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(300, 100));
+        make.top.equalTo(self.view).offset(200);
+        make.left.equalTo(self.view).offset(50);
     }];
 }
 
@@ -69,25 +79,21 @@
 //                                                    titleBeginStr:@""
 //                                                   titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
         
-        _midView_Style1 = [[UIButton alloc] initWithType:CountDownBtnType_countDown
-                                                 runType:CountDownBtnRunType_auto
-                                        layerBorderWidth:1
-                                       layerCornerRadius:1
-                                        layerBorderColor:kClearColor
-                                              titleColor:kWhiteColor
-                                           titleBeginStr:@"开始倒计时"
-                                          titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]
-                                          richLabelFonts:self.richLabelFontsMutArr
-                                       richLabelTextCors:self.richLabelTextCorsMutArr
-                                     richLabelUnderlines:nil
-                                richLabelParagraphStyles:nil
-                                           richLabelURLs:nil];
-        
+        _midView_Style1 = [[UIButton alloc] initWithRichTextRunningDataMutArr:self.richLabelDataStringsMutArr
+                                                             countDownBtnType:CountDownBtnType_countDown
+                                                                      runType:CountDownBtnRunType_auto
+                                                             layerBorderWidth:1
+                                                            layerCornerRadius:1
+                                                             layerBorderColor:kClearColor
+                                                                   titleColor:kWhiteColor
+                                                                titleBeginStr:@""
+                                                               titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+
         _midView_Style1.titleRuningStr = @"开始倒计时了";
         _midView_Style1.showTimeType = ShowTimeType_HHMMSS;
         _midView_Style1.bgCountDownColor = kCyanColor;
         _midView_Style1.cequenceForShowTitleRuningStrType = CequenceForShowTitleRuningStrType_tail;
-//        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
+        _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
         
         [_midView_Style1 timeFailBeginFrom:9999];
 
@@ -101,40 +107,40 @@
     }return _midView_Style1;
 }
 
--(NSMutableArray<RichLabelFontModel *> *)richLabelFontsMutArr{
-    if (!_richLabelFontsMutArr) {
-        _richLabelFontsMutArr = NSMutableArray.array;
+-(NSMutableArray<RichLabelDataStringsModel *> *)richLabelDataStringsMutArr{
+    if (!_richLabelDataStringsMutArr) {
+        _richLabelDataStringsMutArr = NSMutableArray.array;
         
-        RichLabelFontModel *model_1 = RichLabelFontModel.new;
-        model_1.font = [UIFont systemFontOfSize:14 weight:UIFontWeightMedium];
-        model_1.range = NSMakeRange(0, self.titleStr_1.length);
+        RichLabelFontModel *richLabelFontModel_1 = RichLabelFontModel.new;
+        richLabelFontModel_1.font = [UIFont systemFontOfSize:14 weight:UIFontWeightMedium];
+        richLabelFontModel_1.range = NSMakeRange(0, self.titleStr_1.length);
         
-        RichLabelFontModel *model_2 = RichLabelFontModel.new;
-        model_2.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
-        model_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
-
-        [_richLabelFontsMutArr addObject:model_1];
-        [_richLabelFontsMutArr addObject:model_2];
+        RichLabelFontModel *richLabelFontModel_2 = RichLabelFontModel.new;
+        richLabelFontModel_2.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
+        richLabelFontModel_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
         
-    }return _richLabelFontsMutArr;
-}
-
--(NSMutableArray<RichLabelTextCorModel *> *)richLabelTextCorsMutArr{
-    if (!_richLabelTextCorsMutArr) {
-        _richLabelTextCorsMutArr = NSMutableArray.array;
+        RichLabelTextCorModel *richLabelTextCorModel_1 = RichLabelTextCorModel.new;
+        richLabelTextCorModel_1.cor = kBlueColor;
+        richLabelTextCorModel_1.range = NSMakeRange(0, self.titleStr_1.length);
         
-        RichLabelTextCorModel *model_1 = RichLabelTextCorModel.new;
-        model_1.cor = kBlueColor;
-        model_1.range = NSMakeRange(0, self.titleStr_1.length);
+        RichLabelTextCorModel *richLabelTextCorModel_2 = RichLabelTextCorModel.new;
+        richLabelTextCorModel_2.cor = KGreenColor;
+        richLabelTextCorModel_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
         
-        RichLabelTextCorModel *model_2 = RichLabelTextCorModel.new;
-        model_2.cor = KGreenColor;
-        model_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
+        RichLabelDataStringsModel *richLabelDataStringsModel_1 = RichLabelDataStringsModel.new;
+        richLabelDataStringsModel_1.dataString = self.titleStr_1;
+        richLabelDataStringsModel_1.richLabelFontModel = richLabelFontModel_1;
+        richLabelDataStringsModel_1.richLabelTextCorModel = richLabelTextCorModel_1;
         
-        [_richLabelTextCorsMutArr addObject:model_1];
-        [_richLabelTextCorsMutArr addObject:model_2];
+        RichLabelDataStringsModel *richLabelDataStringsModel_2 = RichLabelDataStringsModel.new;
+        richLabelDataStringsModel_2.dataString = self.titleStr_2;
+        richLabelDataStringsModel_2.richLabelFontModel = richLabelFontModel_2;
+        richLabelDataStringsModel_2.richLabelTextCorModel = richLabelTextCorModel_2;
         
-    }return _richLabelTextCorsMutArr;
+        [_richLabelDataStringsMutArr addObject:richLabelDataStringsModel_1];
+        [_richLabelDataStringsMutArr addObject:richLabelDataStringsModel_2];
+        
+    }return _richLabelDataStringsMutArr;
 }
 
 

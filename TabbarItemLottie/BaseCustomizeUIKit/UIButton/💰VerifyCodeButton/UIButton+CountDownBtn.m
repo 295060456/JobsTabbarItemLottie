@@ -34,11 +34,7 @@ static char *UIButton_CountDownBtn_cequenceForShowTitleRuningStrType = "UIButton
 static char *UIButton_CountDownBtn_countStr = "UIButton_CountDownBtn_countStr";
 static char *UIButton_CountDownBtn_str = "UIButton_CountDownBtn_str";
 static char *UIButton_CountDownBtn_btnRunType = "UIButton_CountDownBtn_btnRunType";
-static char *UIButton_richLabelFontsMutArr = "UIButton_CountDownBtn_btnRunType";
-static char *UIButton_richLabelTextCorsMutArr = "UIButton_CountDownBtn_btnRunType";
-static char *UIButton_richLabelUnderlinesMutArr = "UIButton_CountDownBtn_btnRunType";
-static char *UIButton_richLabelParagraphStylesMutArr = "UIButton_CountDownBtn_btnRunType";
-static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
+static char *UIButton_CountDownBtn_attributedString = "UIButton_CountDownBtn_attributedString";
 
 @dynamic nsTimerManager;
 @dynamic titleBeginStr;
@@ -63,12 +59,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
 @dynamic formatTimeStr;
 @dynamic finalTitleStr;
 @dynamic btnRunType;
-
-@dynamic richLabelFontsMutArr;
-@dynamic richLabelTextCorsMutArr;
-@dynamic richLabelUnderlinesMutArr;
-@dynamic richLabelParagraphStylesMutArr;
-@dynamic richLabelURLsMutArr;
+@dynamic attributedString;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"
@@ -147,33 +138,16 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
     }return self;
 }
 //使用富文本
-/// 富文本和一般的标题不是一回事，所以隔离出来进行分析讨论
-/// @param countDownBtnType 定时器是顺时针旋转还是逆时针旋转
-/// @param runType  定时器是自动触发还是用户自己触发
-/// @param layerBorderWidth  描边的线框
-/// @param layerCornerRadius  圆切角
-/// @param layerBorderColor 描边颜色
-/// @param titleColor 不使用富文本的情况下，正常的title颜色
-/// @param titleBeginStr 不使用富文本的情况下，正常的title，不是定时器运行的时候的title，注意加以区分
-/// @param titleLabelFont 不使用富文本的情况下，正常的title的字体
-/// @param richLabelFonts 富文本相关属性——指定位置上的富文本字体
-/// @param richLabelTextCors 富文本相关属性——指定位置上的富文本颜色
-/// @param richLabelParagraphStyles  富文本相关属性——指定位置上的富文本自定义段落款式
-/// @param richLabelUnderlines 富文本相关属性——指定位置上的富文本下划线
-/// @param richLabelURLs 富文本相关属性——指定位置上的富文本点击跳转链接
--(instancetype)initWithType:(CountDownBtnType)countDownBtnType
-                    runType:(CountDownBtnRunType)runType
-           layerBorderWidth:(CGFloat)layerBorderWidth
-          layerCornerRadius:(CGFloat)layerCornerRadius
-           layerBorderColor:(UIColor *_Nullable)layerBorderColor
-                 titleColor:(UIColor *_Nullable)titleColor
-              titleBeginStr:(NSString *_Nullable)titleBeginStr
-             titleLabelFont:(UIFont *_Nullable)titleLabelFont
-             richLabelFonts:(NSArray <RichLabelFontModel *>* _Nullable)richLabelFonts
-          richLabelTextCors:(NSArray <RichLabelTextCorModel *>* _Nullable)richLabelTextCors
-        richLabelUnderlines:(NSArray <RichLabelParagraphStyleModel *>* _Nullable)richLabelParagraphStyles
-   richLabelParagraphStyles:(NSArray <RichLabelUnderlineModel *>* _Nullable)richLabelUnderlines
-              richLabelURLs:(NSArray <RichLabelURLModel *>* _Nullable)richLabelURLs{
+-(instancetype)initWithRichTextRunningDataMutArr:(NSArray <RichLabelDataStringsModel *>*_Nonnull)richTextRunningDataMutArr
+                                countDownBtnType:(CountDownBtnType)countDownBtnType
+                                         runType:(CountDownBtnRunType)runType
+                                layerBorderWidth:(CGFloat)layerBorderWidth
+                               layerCornerRadius:(CGFloat)layerCornerRadius
+                                layerBorderColor:(UIColor *_Nullable)layerBorderColor
+                                      titleColor:(UIColor *_Nullable)titleColor
+                                   titleBeginStr:(NSString *_Nullable)titleBeginStr
+                                  titleLabelFont:(UIFont *_Nullable)titleLabelFont{
+    
     if (self = [self initWithType:countDownBtnType
                           runType:runType
                  layerBorderWidth:layerBorderWidth
@@ -183,20 +157,9 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                     titleBeginStr:titleBeginStr
                    titleLabelFont:titleLabelFont]) {
         
-        self.richLabelFontsMutArr = (NSMutableArray *)richLabelFonts;
-        self.richLabelTextCorsMutArr = (NSMutableArray *)richLabelTextCors;
-        self.richLabelUnderlinesMutArr = (NSMutableArray *)richLabelUnderlines;
-        self.richLabelParagraphStylesMutArr = (NSMutableArray *)richLabelParagraphStyles;
-        self.richLabelURLsMutArr = (NSMutableArray *)richLabelURLs;
-        //富文本
-        NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.titleBeginStr//这里自己加 \n
-                                                                         richLabelFonts:self.richLabelFontsMutArr
-                                                                      richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                    richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                               richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                          richLabelURLs:self.richLabelURLsMutArr];
-//            self.titleLabel.numberOfLines = 0;
-        [self setAttributedTitle:attributedString forState:UIControlStateNormal];
+        self.attributedString = [self.titleLabel makeRichTextWithDataConfigMutArr:richTextRunningDataMutArr];
+        //            self.titleLabel.numberOfLines = 0;
+        [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
     }return self;
 }
 #pragma clang diagnostic pop
@@ -219,14 +182,7 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                     self.finalTitleStr = [self.titleBeginStr stringByAppendingString:@"\n"];
                     NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
                     //富文本
-                    NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
-                                                                                     richLabelFonts:self.richLabelFontsMutArr
-                                                                                  richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                                richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                                           richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                                      richLabelURLs:self.richLabelURLsMutArr];
-        //            self.titleLabel.numberOfLines = 0;
-                    [self setAttributedTitle:attributedString forState:UIControlStateNormal];
+                    [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
                 }break;
                     
                 default:
@@ -251,14 +207,8 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
             break;
     }
     //富文本
-    NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
-                                                                     richLabelFonts:self.richLabelFontsMutArr
-                                                                  richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                           richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                      richLabelURLs:self.richLabelURLsMutArr];
 //            self.titleLabel.numberOfLines = 0;
-    [self setAttributedTitle:attributedString forState:UIControlStateNormal];
+    [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
     
     self.countDownBtnType = CountDownBtnType_countDown;
     self.count = timeCount;
@@ -323,14 +273,8 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
             NSLog(@"%@",self.formatTimeStr);
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
             //富文本
-            NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
-                                                                             richLabelFonts:self.richLabelFontsMutArr
-                                                                          richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                        richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                                   richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                              richLabelURLs:self.richLabelURLsMutArr];
             self.titleLabel.numberOfLines = 0;
-            [self setAttributedTitle:attributedString forState:UIControlStateNormal];
+            [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
         }break;
 
         default:
@@ -352,14 +296,8 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
             self.finalTitleStr = [self.titleEndStr stringByAppendingString:@"\n"];
             NSLog(@"self.finalTitleStr = %@",self.finalTitleStr);
             //富文本
-            NSAttributedString *attributedString = [self.titleLabel makeRichTextWithDataStr:self.finalTitleStr
-                                                                             richLabelFonts:self.richLabelFontsMutArr
-                                                                          richLabelTextCors:self.richLabelTextCorsMutArr
-                                                                        richLabelUnderlines:self.richLabelUnderlinesMutArr
-                                                                   richLabelParagraphStyles:self.richLabelParagraphStylesMutArr
-                                                                              richLabelURLs:self.richLabelURLsMutArr];
 //            self.titleLabel.numberOfLines = 0;
-            [self setAttributedTitle:attributedString forState:UIControlStateNormal];
+            [self setAttributedTitle:self.attributedString forState:UIControlStateNormal];
         }break;
         default:
             break;
@@ -747,81 +685,17 @@ static char *UIButton_richLabelURLsMutArr = "UIButton_CountDownBtn_btnRunType";
                              str,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelFontModel *>*richLabelFontsMutArr;
--(NSMutableArray<RichLabelFontModel *> *)richLabelFontsMutArr{
-    NSMutableArray *RichLabelFontsMutArr = objc_getAssociatedObject(self, UIButton_richLabelFontsMutArr);
-    if (!RichLabelFontsMutArr) {
-        RichLabelFontsMutArr = NSMutableArray.array;
-    }
-    return RichLabelFontsMutArr;
+#pragma mark —— @property(nonatomic,strong)NSAttributedString *attributedString;//富文本
+-(NSString *)attributedString{
+    NSString *AttributedString = objc_getAssociatedObject(self, UIButton_CountDownBtn_attributedString);
+    return AttributedString;
 }
 
--(void)setRichLabelFontsMutArr:(NSMutableArray<RichLabelFontModel *> *)richLabelFontsMutArr{
+-(void)setAttributedString:(NSAttributedString *)attributedString{
     objc_setAssociatedObject(self,
-                             UIButton_richLabelFontsMutArr,
-                             richLabelFontsMutArr,
+                             UIButton_CountDownBtn_attributedString,
+                             attributedString,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelTextCorModel *>*richLabelTextCorsMutArr;
--(NSMutableArray<RichLabelTextCorModel *> *)richLabelTextCorsMutArr{
-    NSMutableArray *RichLabelTextCorsMutArr = objc_getAssociatedObject(self, UIButton_richLabelTextCorsMutArr);
-    if (!RichLabelTextCorsMutArr) {
-        RichLabelTextCorsMutArr = NSMutableArray.array;
-    }
-    return RichLabelTextCorsMutArr;
-}
-
--(void)setRichLabelTextCorsMutArr:(NSMutableArray<RichLabelTextCorModel *> *)richLabelTextCorsMutArr{
-    objc_setAssociatedObject(self,
-                             UIButton_richLabelTextCorsMutArr,
-                             richLabelTextCorsMutArr,
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelUnderlineModel *>*richLabelUnderlinesMutArr;
--(NSMutableArray<RichLabelUnderlineModel *> *)richLabelUnderlinesMutArr{
-    NSMutableArray *RichLabelUnderlinesMutArr = objc_getAssociatedObject(self, UIButton_richLabelUnderlinesMutArr);
-    if (!RichLabelUnderlinesMutArr) {
-        RichLabelUnderlinesMutArr = NSMutableArray.array;
-    }
-    return RichLabelUnderlinesMutArr;
-}
-
--(void)setRichLabelUnderlinesMutArr:(NSMutableArray<RichLabelUnderlineModel *> *)richLabelUnderlinesMutArr{
-    objc_setAssociatedObject(self,
-                             UIButton_richLabelUnderlinesMutArr,
-                             richLabelUnderlinesMutArr,
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelParagraphStyleModel *>*richLabelParagraphStylesMutArr;
--(NSMutableArray<RichLabelParagraphStyleModel *> *)richLabelParagraphStylesMutArr{
-    NSMutableArray *RichLabelParagraphStylesMutArr = objc_getAssociatedObject(self, UIButton_richLabelParagraphStylesMutArr);
-    if (!RichLabelParagraphStylesMutArr) {
-        RichLabelParagraphStylesMutArr = NSMutableArray.array;
-    }
-    return RichLabelParagraphStylesMutArr;
-}
-
--(void)setRichLabelParagraphStylesMutArr:(NSMutableArray<RichLabelParagraphStyleModel *> *)richLabelParagraphStylesMutArr{
-    objc_setAssociatedObject(self,
-                             UIButton_richLabelParagraphStylesMutArr,
-                             richLabelParagraphStylesMutArr,
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-#pragma mark —— @property(nonatomic,strong)NSMutableArray <RichLabelURLModel *>*richLabelURLsMutArr;
--(NSMutableArray<RichLabelURLModel *> *)richLabelURLsMutArr{
-    NSMutableArray *RichLabelURLsMutArr = objc_getAssociatedObject(self, UIButton_richLabelURLsMutArr);
-    if (!RichLabelURLsMutArr) {
-        RichLabelURLsMutArr = NSMutableArray.array;
-    }
-    return RichLabelURLsMutArr;
-}
-
--(void)setRichLabelURLsMutArr:(NSMutableArray<RichLabelURLModel *> *)richLabelURLsMutArr{
-    objc_setAssociatedObject(self,
-                             UIButton_richLabelURLsMutArr,
-                             richLabelURLsMutArr,
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 
 @end
