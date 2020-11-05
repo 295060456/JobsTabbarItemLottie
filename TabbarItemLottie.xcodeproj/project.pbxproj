@@ -124,7 +124,6 @@
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
 		C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */; };
-		C572F94D2552C184004F5CC9 /* 验证码按钮单例封装 in Resources */ = {isa = PBXBuildFile; fileRef = C572F9492552C184004F5CC9 /* 验证码按钮单例封装 */; };
 		C572F9752552C1EF004F5CC9 /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F96A2552C1EF004F5CC9 /* NSTimerManager.m */; };
 		C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */; };
 		C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9702552C1EF004F5CC9 /* Nanosecond_TimerManager.m */; };
@@ -373,10 +372,11 @@
 		C55D427D2539776500CFCF73 /* drop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop@3x.png"; sourceTree = "<group>"; };
 		C55D42832539886900CFCF73 /* TabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConfig.h; sourceTree = "<group>"; };
 		C55D42842539886900CFCF73 /* TabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerConfig.m; sourceTree = "<group>"; };
+		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
+		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C572F9452552C184004F5CC9 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
-		C572F9492552C184004F5CC9 /* 验证码按钮单例封装 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "验证码按钮单例封装"; sourceTree = "<group>"; };
 		C572F94A2552C184004F5CC9 /* UIButton+CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDownBtn.h"; sourceTree = "<group>"; };
 		C572F9672552C1EF004F5CC9 /* TimerManager_DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager_DefineStructure.h; sourceTree = "<group>"; };
 		C572F9692552C1EF004F5CC9 /* NSTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerManager.h; sourceTree = "<group>"; };
@@ -799,6 +799,7 @@
 		C572F9442552C184004F5CC9 /* 高度自定义的按钮 */ = {
 			isa = PBXGroup;
 			children = (
+				C56208362553FF5E00FE435F /* 高度自定义的按钮.md */,
 				C572F9452552C184004F5CC9 /* UIButton+ImageTitleSpacing.h */,
 				C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */,
 			);
@@ -808,7 +809,7 @@
 		C572F9472552C184004F5CC9 /* 💰VerifyCodeButton */ = {
 			isa = PBXGroup;
 			children = (
-				C572F9492552C184004F5CC9 /* 验证码按钮单例封装 */,
+				C56207132553FE5100FE435F /* 验证码按钮单例封装.md */,
 				C572F94A2552C184004F5CC9 /* UIButton+CountDownBtn.h */,
 				C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */,
 			);
@@ -1405,7 +1406,6 @@
 				C55D425A2539770B00CFCF73 /* Tools_00063@3x.png in Resources */,
 				C55D41802539767600CFCF73 /* Tools_00032@2x.png in Resources */,
 				C55D41C0253976A200CFCF73 /* Tools_00041@3x.png in Resources */,
-				C572F94D2552C184004F5CC9 /* 验证码按钮单例封装 in Resources */,
 				C55D427F2539776500CFCF73 /* drop@3x.png in Resources */,
 				C55D4236253976F600CFCF73 /* Tools_00058@2x.png in Resources */,
 				C55D416C2539765A00CFCF73 /* Tools_00029@3x.png in Resources */,
