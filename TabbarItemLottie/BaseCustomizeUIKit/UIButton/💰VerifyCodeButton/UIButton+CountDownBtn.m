@@ -270,12 +270,27 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
     NSMutableArray *tempDataMutArr = NSMutableArray.array;
     RichLabelDataStringsModel *formatTimeModel = RichLabelDataStringsModel.new;
     RichLabelDataStringsModel *titleRuningModel = RichLabelDataStringsModel.new;
-    
-    NSMutableArray *dd = self.richTextRunningDataMutArr;
+
     for (int i = 0; i < self.richTextRunningDataMutArr.count; i ++) {
         RichLabelDataStringsModel *richLabelDataStringsModel = self.richTextRunningDataMutArr[i];
 
         if (i == 0) {
+            
+            //修改range
+            if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_front) {
+                richLabelDataStringsModel.richLabelFontModel.range = NSMakeRange(0, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelTextCorModel.range = NSMakeRange(0, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelUnderlineModel.range = NSMakeRange(0, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelParagraphStyleModel.range = NSMakeRange(0, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelURLModel.range = NSMakeRange(0, self.titleRuningStr.length);
+            }else if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_tail){
+                richLabelDataStringsModel.richLabelFontModel.range = NSMakeRange(0, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelTextCorModel.range = NSMakeRange(0, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelUnderlineModel.range = NSMakeRange(0, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelParagraphStyleModel.range = NSMakeRange(0, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelURLModel.range = NSMakeRange(0, self.formatTimeStr.length);
+            }else{}
+            
             formatTimeModel.dataString = self.formatTimeStr;
             formatTimeModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
             formatTimeModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;
@@ -283,6 +298,22 @@ static char *UIButton_CountDownBtn_richTextRunningDataMutArr = "UIButton_CountDo
             formatTimeModel.richLabelParagraphStyleModel = richLabelDataStringsModel.richLabelParagraphStyleModel;
             formatTimeModel.richLabelURLModel = richLabelDataStringsModel.richLabelURLModel;
         }else if (i == 1){
+            
+            //修改range
+            if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_front) {
+                richLabelDataStringsModel.richLabelFontModel.range = NSMakeRange(self.titleRuningStr.length, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelTextCorModel.range = NSMakeRange(self.titleRuningStr.length, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelUnderlineModel.range = NSMakeRange(self.titleRuningStr.length, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelParagraphStyleModel.range = NSMakeRange(self.titleRuningStr.length, self.formatTimeStr.length);
+                richLabelDataStringsModel.richLabelURLModel.range = NSMakeRange(self.titleRuningStr.length, self.formatTimeStr.length);
+            }else if (self.cequenceForShowTitleRuningStrType == CequenceForShowTitleRuningStrType_tail){
+                richLabelDataStringsModel.richLabelFontModel.range = NSMakeRange(self.formatTimeStr.length, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelTextCorModel.range = NSMakeRange(self.formatTimeStr.length, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelUnderlineModel.range = NSMakeRange(self.formatTimeStr.length, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelParagraphStyleModel.range = NSMakeRange(self.formatTimeStr.length, self.titleRuningStr.length);
+                richLabelDataStringsModel.richLabelURLModel.range = NSMakeRange(self.formatTimeStr.length, self.titleRuningStr.length);
+            }else{}
+            
             titleRuningModel.dataString = self.titleRuningStr;
             titleRuningModel.richLabelFontModel = richLabelDataStringsModel.richLabelFontModel;
             titleRuningModel.richLabelTextCorModel = richLabelDataStringsModel.richLabelTextCorModel;

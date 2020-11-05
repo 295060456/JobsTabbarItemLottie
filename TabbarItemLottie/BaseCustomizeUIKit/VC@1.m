@@ -70,27 +70,27 @@
 
 -(UIButton *)midView_Style1{
     if (!_midView_Style1) {
-        _midView_Style1 = [[UIButton alloc] initWithType:CountDownBtnType_countDown
-                                                          runType:CountDownBtnRunType_auto
-                                                 layerBorderWidth:1
-                                                layerCornerRadius:1
-                                                 layerBorderColor:kClearColor
-                                                       titleColor:kWhiteColor
-                                                    titleBeginStr:@""
-                                                   titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+//        _midView_Style1 = [[UIButton alloc] initWithType:CountDownBtnType_countDown
+//                                                          runType:CountDownBtnRunType_auto
+//                                                 layerBorderWidth:1
+//                                                layerCornerRadius:1
+//                                                 layerBorderColor:kClearColor
+//                                                       titleColor:kWhiteColor
+//                                                    titleBeginStr:@""
+//                                                   titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
         
-//        _midView_Style1 = [[UIButton alloc] initWithRichTextRunningDataMutArr:self.richLabelDataStringsMutArr
-//                                                             countDownBtnType:CountDownBtnType_countDown
-//                                                                      runType:CountDownBtnRunType_auto
-//                                                             layerBorderWidth:1
-//                                                            layerCornerRadius:1
-//                                                             layerBorderColor:kClearColor
-//                                                                   titleColor:kWhiteColor
-//                                                                titleBeginStr:@""
-//                                                               titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+        _midView_Style1 = [[UIButton alloc] initWithRichTextRunningDataMutArr:self.richLabelDataStringsMutArr
+                                                             countDownBtnType:CountDownBtnType_countDown
+                                                                      runType:CountDownBtnRunType_auto
+                                                             layerBorderWidth:1
+                                                            layerCornerRadius:1
+                                                             layerBorderColor:kClearColor
+                                                                   titleColor:kWhiteColor
+                                                                titleBeginStr:@""
+                                                               titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
 
         _midView_Style1.titleRuningStr = @"开始倒计时了";
-        _midView_Style1.showTimeType = ShowTimeType_HHMMSS;
+        _midView_Style1.showTimeType = ShowTimeType_MMSS;
         _midView_Style1.bgCountDownColor = kCyanColor;
         _midView_Style1.cequenceForShowTitleRuningStrType = CequenceForShowTitleRuningStrType_tail;
         _midView_Style1.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
@@ -124,7 +124,7 @@
         richLabelTextCorModel_1.range = NSMakeRange(0, self.titleStr_1.length);
         
         RichLabelTextCorModel *richLabelTextCorModel_2 = RichLabelTextCorModel.new;
-        richLabelTextCorModel_2.cor = KGreenColor;
+        richLabelTextCorModel_2.cor = kRedColor;
         richLabelTextCorModel_2.range = NSMakeRange(self.titleStr_1.length, self.titleStr_2.length);
         //////
         
