@@ -17,7 +17,7 @@ API_AVAILABLE(ios(13.0))
 @implementation SceneDelegate
 
 static SceneDelegate *static_sceneDelegate = nil;
-+(SceneDelegate *)sharedInstance{
++(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_sceneDelegate) {
             static_sceneDelegate = SceneDelegate.new;
@@ -30,6 +30,7 @@ static SceneDelegate *static_sceneDelegate = nil;
         static_sceneDelegate = self;
     }return self;
 }
+
 - (void)scene:(UIScene *)scene
 willConnectToSession:(UISceneSession *)session
       options:(UISceneConnectionOptions *)connectionOptions {
@@ -65,7 +66,6 @@ willConnectToSession:(UISceneSession *)session
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }
-#pragma mark —— lazyLoad
 #pragma mark —— lazyLoad
 -(UIWindow *)window{
     [_window setRootViewController:AppDelegate.sharedInstance.tabbarVC];
