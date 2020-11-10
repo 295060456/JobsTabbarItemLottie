@@ -982,14 +982,9 @@
 			isa = PBXGroup;
 			children = (
 				C5620B8D2554047300FE435F /* README.md */,
-				C579F84D2539D28C00846814 /* 旋转.png */,
-				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
-				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
-				C50A401B2540AA3000465D01 /* 各项宏定义 */,
-				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
-				C5AEE8CC25373609000E1C5F /* Others */,
-				C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */,
 				C5AEE88C25373580000E1C5F /* TabbarItemLottie */,
+				C5AEE8AB25373581000E1C5F /* TabbarItemLottieTests */,
+				C5AEE8B625373581000E1C5F /* TabbarItemLottieUITests */,
 				D1972A22E2348091360E3370 /* Pods */,
 				F00E88714FCA06A5D131158D /* Frameworks */,
 			);
@@ -1009,6 +1004,10 @@
 		C5AEE88C25373580000E1C5F /* TabbarItemLottie */ = {
 			isa = PBXGroup;
 			children = (
+				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
+				C5C4FC24255A5C42002F407A /* 🌹Macro */,
+				C5AEE8CC25373609000E1C5F /* Others */,
+				C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */,
 				C572F9662552C1EF004F5CC9 /* TimerManager */,
 				C50A3FAD2540A76800465D01 /* ECAuthorizationTools */,
 				C50A3F7D2540A68300465D01 /* 分享控件 */,
@@ -1057,8 +1056,6 @@
 				C5AEE89625373580000E1C5F /* Main.storyboard */,
 				C5AEE88B25373580000E1C5F /* Products */,
 				C5AEE89925373580000E1C5F /* TabbarItemLottie.xcdatamodeld */,
-				C5AEE8AB25373581000E1C5F /* TabbarItemLottieTests */,
-				C5AEE8B625373581000E1C5F /* TabbarItemLottieUITests */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1186,6 +1183,7 @@
 		C5AEE92425373638000E1C5F /* UITabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				C579F84D2539D28C00846814 /* 旋转.png */,
 				C5AEE92525373638000E1C5F /* TabbarVC.h */,
 				C5AEE92625373638000E1C5F /* TabbarVC.m */,
 			);
@@ -1258,6 +1256,16 @@
 				C5AEEAA9253832EC000E1C5F /* JobsPullListTBVCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C5C4FC24255A5C42002F407A /* 🌹Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
+				C50A401B2540AA3000465D01 /* 各项宏定义 */,
+				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
+			);
+			path = "🌹Macro";
 			sourceTree = "<group>";
 		};
 		D1972A22E2348091360E3370 /* Pods */ = {
@@ -1859,7 +1867,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = TabbarItemLottie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1879,7 +1887,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = TabbarItemLottie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
