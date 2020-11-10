@@ -1,26 +1,26 @@
 //
-//  SceneDelegate.m
+//  TabbarItemLottieSceneDelegate.m
 //  TabbarItemLottie
 //
 //  Created by Jobs on 2020/10/14.
 //
 
-#import "SceneDelegate.h"
-#import "AppDelegate.h"
+#import "TabbarItemLottieSceneDelegate.h"
+#import "TabbarItemLottieAppDelegate.h"
 
 API_AVAILABLE(ios(13.0))
 
-@interface SceneDelegate ()
+@interface TabbarItemLottieSceneDelegate ()
 
 @end
 
-@implementation SceneDelegate
+@implementation TabbarItemLottieSceneDelegate
 
-static SceneDelegate *static_sceneDelegate = nil;
+static TabbarItemLottieSceneDelegate *static_sceneDelegate = nil;
 +(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_sceneDelegate) {
-            static_sceneDelegate = SceneDelegate.new;
+            static_sceneDelegate = TabbarItemLottieSceneDelegate.new;
         }
     }return static_sceneDelegate;
 }
@@ -64,11 +64,11 @@ willConnectToSession:(UISceneSession *)session
 
 - (void)sceneDidEnterBackground:(UIScene *)scene {
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
-    [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+    [(TabbarItemLottieAppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }
 #pragma mark —— lazyLoad
 -(UIWindow *)window{
-    [_window setRootViewController:AppDelegate.sharedInstance.tabbarVC];
+    [_window setRootViewController:TabbarItemLottieAppDelegate.sharedInstance.tabbarVC];
     [_window makeKeyAndVisible];
     return _window;
 }

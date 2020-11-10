@@ -138,8 +138,8 @@
 		C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F8592539D4A000846814 /* UIView+SuspendView.m */; };
 		C579F9852539DACD00846814 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9812539DACC00846814 /* TransitionController.m */; };
 		C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9832539DACC00846814 /* TransitionAnimation.m */; };
-		C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE88E25373580000E1C5F /* AppDelegate.m */; };
-		C5AEE89225373580000E1C5F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* SceneDelegate.m */; };
+		C5AEE88F25373580000E1C5F /* TabbarItemLottieAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */; };
+		C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */; };
 		C5AEE89825373580000E1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89625373580000E1C5F /* Main.storyboard */; };
 		C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89925373580000E1C5F /* TabbarItemLottie.xcdatamodeld */; };
 		C5AEE89D25373581000E1C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89C25373581000E1C5F /* Assets.xcassets */; };
@@ -411,10 +411,10 @@
 		C579F98B2539DBDF00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "功能性动效：手势横向滚动子VC联动Tabbar切换"; sourceTree = "<group>"; };
 		C579F9982539DC9C00846814 /* 参考demo */ = {isa = PBXFileReference; lastKnownFileType = text; path = "参考demo"; sourceTree = "<group>"; };
 		C5AEE88A25373580000E1C5F /* TabbarItemLottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarItemLottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5AEE88D25373580000E1C5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C5AEE88E25373580000E1C5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C5AEE89025373580000E1C5F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		C5AEE89125373580000E1C5F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C5AEE88D25373580000E1C5F /* TabbarItemLottieAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarItemLottieAppDelegate.h; sourceTree = "<group>"; };
+		C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarItemLottieAppDelegate.m; sourceTree = "<group>"; };
+		C5AEE89025373580000E1C5F /* TabbarItemLottieSceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarItemLottieSceneDelegate.h; sourceTree = "<group>"; };
+		C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarItemLottieSceneDelegate.m; sourceTree = "<group>"; };
 		C5AEE89725373580000E1C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5AEE89A25373580000E1C5F /* TabbarItemLottie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TabbarItemLottie.xcdatamodel; sourceTree = "<group>"; };
 		C5AEE89C25373581000E1C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -773,8 +773,8 @@
 		C57278CB25409846002373D7 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE88D25373580000E1C5F /* AppDelegate.h */,
-				C5AEE88E25373580000E1C5F /* AppDelegate.m */,
+				C5AEE88D25373580000E1C5F /* TabbarItemLottieAppDelegate.h */,
+				C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -782,8 +782,8 @@
 		C57278CC2540984E002373D7 /* SceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE89025373580000E1C5F /* SceneDelegate.h */,
-				C5AEE89125373580000E1C5F /* SceneDelegate.m */,
+				C5AEE89025373580000E1C5F /* TabbarItemLottieSceneDelegate.h */,
+				C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */,
 			);
 			path = SceneDelegate;
 			sourceTree = "<group>";
@@ -1657,7 +1657,7 @@
 				C50A3F5C2540A59600465D01 /* UIViewController+BackBtn.m in Sources */,
 				C50A3F622540A59600465D01 /* UIViewController+BRPickerView.m in Sources */,
 				C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */,
-				C5AEE88F25373580000E1C5F /* AppDelegate.m in Sources */,
+				C5AEE88F25373580000E1C5F /* TabbarItemLottieAppDelegate.m in Sources */,
 				C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */,
 				C5AEE94825373638000E1C5F /* VC@6.m in Sources */,
 				C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */,
@@ -1686,7 +1686,7 @@
 				C50A3FB02540A76800465D01 /* ECAuthorizationTools.m in Sources */,
 				C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */,
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
-				C5AEE89225373580000E1C5F /* SceneDelegate.m in Sources */,
+				C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */,
 				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
 				C5AEE94425373638000E1C5F /* VC@1.m in Sources */,

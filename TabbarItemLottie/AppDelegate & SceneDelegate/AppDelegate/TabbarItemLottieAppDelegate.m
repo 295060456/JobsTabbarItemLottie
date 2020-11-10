@@ -1,23 +1,23 @@
 //
-//  AppDelegate.m
+//  TabbarItemLottieAppDelegate.m
 //  TabbarItemLottie
 //
 //  Created by Jobs on 2020/10/14.
 //
 
-#import "AppDelegate.h"
+#import "TabbarItemLottieAppDelegate.h"
 
-@interface AppDelegate ()
+@interface TabbarItemLottieAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation TabbarItemLottieAppDelegate
 
-static AppDelegate *static_appDelegate = nil;
+static TabbarItemLottieAppDelegate *static_appDelegate = nil;
 +(instancetype)sharedInstance{
     @synchronized(self){
         if (!static_appDelegate) {
-            static_appDelegate = AppDelegate.new;
+            static_appDelegate = TabbarItemLottieAppDelegate.new;
         }
     }return static_appDelegate;
 }
