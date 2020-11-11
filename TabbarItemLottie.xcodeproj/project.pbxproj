@@ -34,6 +34,9 @@
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
+		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
+		C5569633255BFCB1005C1361 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569630255BFCB1005C1361 /* NSString+Time.m */; };
+		C5569634255BFCB1005C1361 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569631255BFCB1005C1361 /* TimeModel.m */; };
 		C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */; };
 		C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D414C2539750E00CFCF73 /* UITabBar+TLAnimation.m */; };
 		C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D41512539752300CFCF73 /* UITabBarItem+TLAnimation.m */; };
@@ -178,7 +181,6 @@
 		C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91425373638000E1C5F /* UIView+Chain.m */; };
 		C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91525373638000E1C5F /* UIView+Measure.m */; };
 		C5AEE93E25373638000E1C5F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91625373638000E1C5F /* UIView+Animation.m */; };
-		C5AEE93F25373638000E1C5F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91C25373638000E1C5F /* NSString+Extras.m */; };
 		C5AEE94025373638000E1C5F /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE92025373638000E1C5F /* Sound.wav */; };
 		C5AEE94125373638000E1C5F /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92125373638000E1C5F /* NSObject+Sound.m */; };
 		C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92325373638000E1C5F /* NSObject+Extras.m */; };
@@ -278,6 +280,12 @@
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
+		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
+		C556962D255BFCB1005C1361 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
+		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		C556962F255BFCB1005C1361 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
+		C5569630255BFCB1005C1361 /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
+		C5569631255BFCB1005C1361 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
@@ -465,8 +473,6 @@
 		C5AEE91825373638000E1C5F /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		C5AEE91925373638000E1C5F /* UIView+Measure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Measure.h"; sourceTree = "<group>"; };
 		C5AEE91A25373638000E1C5F /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
-		C5AEE91C25373638000E1C5F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
-		C5AEE91D25373638000E1C5F /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C5AEE91F25373638000E1C5F /* NSObject+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extras.h"; sourceTree = "<group>"; };
 		C5AEE92025373638000E1C5F /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
 		C5AEE92125373638000E1C5F /* NSObject+Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sound.m"; sourceTree = "<group>"; };
@@ -1174,8 +1180,12 @@
 		C5AEE91B25373638000E1C5F /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE91D25373638000E1C5F /* NSString+Extras.h */,
-				C5AEE91C25373638000E1C5F /* NSString+Extras.m */,
+				C556962E255BFCB1005C1361 /* NSString+Extras.h */,
+				C556962C255BFCB1005C1361 /* NSString+Extras.m */,
+				C556962D255BFCB1005C1361 /* NSString+Time.h */,
+				C5569630255BFCB1005C1361 /* NSString+Time.m */,
+				C556962F255BFCB1005C1361 /* TimeModel.h */,
+				C5569631255BFCB1005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -1643,6 +1653,7 @@
 				C50A3F862540A68300465D01 /* BWShareView.m in Sources */,
 				C5AEEAB625383E8F000E1C5F /* UIView+Extras.m in Sources */,
 				C579F8482539D25100846814 /* SuspendLab.m in Sources */,
+				C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */,
 				C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */,
 				C5AEE93E25373638000E1C5F /* UIView+Animation.m in Sources */,
 				C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */,
@@ -1662,10 +1673,10 @@
 				C5AEE94825373638000E1C5F /* VC@6.m in Sources */,
 				C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */,
 				C579F8472539D25100846814 /* SuspendBtn.m in Sources */,
+				C5569634255BFCB1005C1361 /* TimeModel.m in Sources */,
 				C50A3F5B2540A59600465D01 /* UIViewController+NavigationBar.m in Sources */,
 				C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */,
 				C50A3F632540A59600465D01 /* UIViewController+TZImagePickerController.m in Sources */,
-				C5AEE93F25373638000E1C5F /* NSString+Extras.m in Sources */,
 				C50A3F612540A59600465D01 /* UIViewController+JPImageresizerView.m in Sources */,
 				C572F9D52552C683004F5CC9 /* UILabel+RichText.m in Sources */,
 				C572F9D62552C683004F5CC9 /* UILabel+Extra.m in Sources */,
@@ -1683,6 +1694,7 @@
 				C579F8492539D25100846814 /* SuspendView.m in Sources */,
 				C50A3F5E2540A59600465D01 /* UIViewController+TZLocationManager.m in Sources */,
 				C50A3F602540A59600465D01 /* UIViewController+TZImagePickerControllerDelegate.m in Sources */,
+				C5569633255BFCB1005C1361 /* NSString+Time.m in Sources */,
 				C50A3FB02540A76800465D01 /* ECAuthorizationTools.m in Sources */,
 				C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */,
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
