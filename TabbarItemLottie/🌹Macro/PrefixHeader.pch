@@ -25,7 +25,11 @@
 #import <CoreTelephony/CTCarrier.h>
 //来自于Pods
 
-#import <ReactiveObjC.h>
+#if __has_include(<ReactiveObjC/ReactiveObjC.h>)
+#import <ReactiveObjC/ReactiveObjC.h>
+#else
+#import "ReactiveObjC.h"
+#endif
 
 #if __has_include(<Masonry/Masonry.h>)
 #import <Masonry/Masonry.h>
@@ -45,15 +49,59 @@
 #import "PPBadgeView.h"
 #endif
 
-#import "SDWebImage-umbrella.h"//不支持图片后处理
-#import "JXCategoryView.h"
-#import "SPAlertController.h"
-#import "GKNavigationBar.h"
-#import "MJExtension.h"
-#import "MJRefresh.h"
-#import "BRPickerView.h"
-#import "JPImageresizerView-umbrella.h"
+#if __has_include(<WHToast/WHToast.h>)
+#import <WHToast/WHToast.h>
+#else
 #import "WHToast.h"
+#endif
+
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
+#import "SDWebImage.h"
+#endif
+
+#if __has_include(<JXCategoryView/JXCategoryView.h>)
+#import <JXCategoryView/JXCategoryView.h>
+#else
+#import "JXCategoryView.h"
+#endif
+
+#if __has_include(<SPAlertController/SPAlertController.h>)
+#import <SPAlertController/SPAlertController.h>
+#else
+#import "SPAlertController.h"
+#endif
+
+#if __has_include(<GKNavigationBar/GKNavigationBar.h>)
+#import <GKNavigationBar/GKNavigationBar.h>
+#else
+#import "GKNavigationBar.h"
+#endif
+
+#if __has_include(<MJExtension/MJExtension.h>)
+#import <MJExtension/MJExtension.h>
+#else
+#import "MJExtension.h"
+#endif
+
+#if __has_include(<MJRefresh/MJRefresh.h>)
+#import <MJRefresh/MJRefresh.h>
+#else
+#import "MJRefresh.h"
+#endif
+
+#if __has_include(<BRPickerView/BRPickerView.h>)
+#import <BRPickerView/BRPickerView.h>
+#else
+#import "BRPickerView.h"
+#endif
+
+#if __has_include(<JPImageresizerView/JPImageresizerView.h>)
+#import <JPImageresizerView/JPImageresizerView.h>
+#else
+#import "JPImageresizerView.h"
+#endif
 
 //Pod 不进去的
 #import "BRPickerView.h"
