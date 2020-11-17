@@ -145,7 +145,6 @@
 		C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */; };
 		C5AEE89825373580000E1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89625373580000E1C5F /* Main.storyboard */; };
 		C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89925373580000E1C5F /* TabbarItemLottie.xcdatamodeld */; };
-		C5AEE89D25373581000E1C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89C25373581000E1C5F /* Assets.xcassets */; };
 		C5AEE8A025373581000E1C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89E25373581000E1C5F /* LaunchScreen.storyboard */; };
 		C5AEE8A325373581000E1C5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE8A225373581000E1C5F /* main.m */; };
 		C5AEE8AD25373581000E1C5F /* TabbarItemLottieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE8AC25373581000E1C5F /* TabbarItemLottieTests.m */; };
@@ -418,6 +417,7 @@
 		C579F9842539DACD00846814 /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
 		C579F98B2539DBDF00846814 /* 功能性动效：手势横向滚动子VC联动Tabbar切换 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "功能性动效：手势横向滚动子VC联动Tabbar切换"; sourceTree = "<group>"; };
 		C579F9982539DC9C00846814 /* 参考demo */ = {isa = PBXFileReference; lastKnownFileType = text; path = "参考demo"; sourceTree = "<group>"; };
+		C591EF892563C88B005B78CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5AEE88A25373580000E1C5F /* TabbarItemLottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarItemLottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AEE88D25373580000E1C5F /* TabbarItemLottieAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarItemLottieAppDelegate.h; sourceTree = "<group>"; };
 		C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarItemLottieAppDelegate.m; sourceTree = "<group>"; };
@@ -425,7 +425,6 @@
 		C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarItemLottieSceneDelegate.m; sourceTree = "<group>"; };
 		C5AEE89725373580000E1C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5AEE89A25373580000E1C5F /* TabbarItemLottie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TabbarItemLottie.xcdatamodel; sourceTree = "<group>"; };
-		C5AEE89C25373581000E1C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5AEE89F25373581000E1C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5AEE8A125373581000E1C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5AEE8A225373581000E1C5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -984,6 +983,28 @@
 			path = "悬浮小球，可旋转可停止";
 			sourceTree = "<group>";
 		};
+		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
+				C572F9662552C1EF004F5CC9 /* TimerManager */,
+				C50A3FAD2540A76800465D01 /* ECAuthorizationTools */,
+				C50A3F7D2540A68300465D01 /* 分享控件 */,
+			);
+			path = "Manual_Add_ThirdParty ";
+			sourceTree = "<group>";
+		};
+		C591EF8A2563C894005B78CC /* 资源文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C5AEE8D22537362C000E1C5F /* PIC */,
+				C5AEE8E52537362C000E1C5F /* JsonForLottie */,
+				C591EF892563C88B005B78CC /* Assets.xcassets */,
+				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
+			);
+			path = "资源文件";
+			sourceTree = "<group>";
+		};
 		C5AEE88125373580000E1C5F = {
 			isa = PBXGroup;
 			children = (
@@ -1010,18 +1031,14 @@
 		C5AEE88C25373580000E1C5F /* TabbarItemLottie */ = {
 			isa = PBXGroup;
 			children = (
-				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
+				C5AEE8A125373581000E1C5F /* Info.plist */,
+				C591EF8A2563C894005B78CC /* 资源文件 */,
 				C5C4FC24255A5C42002F407A /* 🌹Macro */,
+				C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */,
+				C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */,
+				C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */,
 				C5AEE8CC25373609000E1C5F /* Others */,
 				C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */,
-				C572F9662552C1EF004F5CC9 /* TimerManager */,
-				C50A3FAD2540A76800465D01 /* ECAuthorizationTools */,
-				C50A3F7D2540A68300465D01 /* 分享控件 */,
-				C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */,
-				C5AEE8D12537362C000E1C5F /* DATA */,
-				C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */,
-				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
-				C5AEE8A125373581000E1C5F /* Info.plist */,
 			);
 			path = TabbarItemLottie;
 			sourceTree = "<group>";
@@ -1056,23 +1073,13 @@
 		C5AEE8CC25373609000E1C5F /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE89C25373581000E1C5F /* Assets.xcassets */,
+				C5AEE88B25373580000E1C5F /* Products */,
 				C5AEE89E25373581000E1C5F /* LaunchScreen.storyboard */,
 				C5AEE8A225373581000E1C5F /* main.m */,
 				C5AEE89625373580000E1C5F /* Main.storyboard */,
-				C5AEE88B25373580000E1C5F /* Products */,
 				C5AEE89925373580000E1C5F /* TabbarItemLottie.xcdatamodeld */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		C5AEE8D12537362C000E1C5F /* DATA */ = {
-			isa = PBXGroup;
-			children = (
-				C5AEE8D22537362C000E1C5F /* PIC */,
-				C5AEE8E52537362C000E1C5F /* JsonForLottie */,
-			);
-			path = DATA;
 			sourceTree = "<group>";
 		};
 		C5AEE8D22537362C000E1C5F /* PIC */ = {
@@ -1271,8 +1278,8 @@
 		C5C4FC24255A5C42002F407A /* 🌹Macro */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
 				C50A401B2540AA3000465D01 /* 各项宏定义 */,
+				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
 			);
 			path = "🌹Macro";
@@ -1491,7 +1498,6 @@
 				C55D4214253976DC00CFCF73 /* Tools_00053@2x.png in Resources */,
 				C55D41E2253976BB00CFCF73 /* Tools_00046@3x.png in Resources */,
 				C55D41C7253976AC00CFCF73 /* Tools_00042@2x.png in Resources */,
-				C5AEE89D25373581000E1C5F /* Assets.xcassets in Resources */,
 				C55D41CE253976AF00CFCF73 /* Tools_00043@2x.png in Resources */,
 				C55D41F1253976C400CFCF73 /* Tools_00048@3x.png in Resources */,
 				C5AEE8F52537362C000E1C5F /* My_selected@3x.png in Resources */,
