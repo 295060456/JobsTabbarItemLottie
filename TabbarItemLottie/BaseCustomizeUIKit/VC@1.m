@@ -31,9 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kCyanColor;//RandomColor;
-//    self.titleStr_1 = @"开始";
-//    self.titleStr_2 = @"倒计时";
-//    self.midView_Style1.alpha = 1;
+    self.titleStr_1 = @"开始";
+    self.titleStr_2 = @"倒计时";
+    self.midView_Style1.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -48,23 +48,22 @@
         make.top.left.equalTo(self.view).offset(100);
     }];
     
-//    UILabel *lab = UILabel.new;
-//    
-//    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
-//    
-//    [self.view addSubview:lab];
-//    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.mas_equalTo(CGSizeMake(300, 100));
-//        make.top.equalTo(self.view).offset(200);
-//        make.left.equalTo(self.view).offset(50);
-//    }];
+    UILabel *lab = UILabel.new;
+    
+    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
+    
+    [self.view addSubview:lab];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(300, 100));
+        make.top.equalTo(self.view).offset(200);
+        make.left.equalTo(self.view).offset(50);
+    }];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    NSLog(@"%@",[self whatDayOfWeekDistanceNow:0]);
-    
-    return;
+    NSLog(@"%@",[TimeModel whatDayOfWeekDistanceNow:0]);
+
     [UIViewController comingFromVC:self
                               toVC:VC_9.new
                        comingStyle:ComingStyle_PUSH
@@ -72,58 +71,6 @@
                      requestParams:@""
                            success:^(id data) {}
                           animated:YES];
-}
-
-//以当前手机系统时间（包含了时区）为基准，给定一个日期偏移值（正值代表未来，负值代表过去，0代表现在），返回字符串特定格式的“星期几”
--(NSString *)whatDayOfWeekDistanceNow:(NSInteger)offsetDay{
-    TimeModel *timeModel = TimeModel.new;
-    [timeModel makeSpecificTime];
-    
-    NSInteger currentWeekday = timeModel.currentWeekday;//当前时间是周几？1代表周日 2代表周一 7代表周六
-    NSInteger offsetResDay = currentWeekday + offsetDay;//偏移量以后的值，对这个值进行分析和讨论
-    NSInteger resResWeekDay = 0;//处理的结果落在0~6
-    
-    if (offsetDay > 0) {//未来
-        resResWeekDay = offsetResDay % 7;
-    }else if (offsetDay < 0){//昨天
-        if (offsetResDay > 0) {
-            resResWeekDay = offsetResDay % 7;
-        }else if (offsetResDay < 0){
-            resResWeekDay = (7 + offsetResDay % 7) % 7;//核心算法
-        }else{// offsetResDay == 0
-            resResWeekDay = currentWeekday;
-        }
-    }else{// offsetDay == 0 现在
-        resResWeekDay = currentWeekday;
-    }
-
-    switch (resResWeekDay) {
-        case 0:{
-            return @"星期六";
-        }break;
-        case 1:{
-            return @"星期日";
-        }break;
-        case 2:{
-            return @"星期一";
-        }break;
-        case 3:{
-            return @"星期二";
-        }break;
-        case 4:{
-            return @"星期三";
-        }break;
-        case 5:{
-            return @"星期四";
-        }break;
-        case 6:{
-            return @"星期五";
-        }break;
-            
-        default:
-            return @"异常数据";
-            break;
-    }
 }
 
 -(UIButton *)midView_Style1{
