@@ -2,6 +2,14 @@
 
 https://github.com/295060456/TabbarItemLottie
 
+![TabbarItemLottie 【Outlines 01】](https://user-images.githubusercontent.com/13795605/99761303-559d7200-2b28-11eb-9dc1-e0f1916a4f35.png)
+![TabbarItemLottie 【Outlines 02】](https://user-images.githubusercontent.com/13795605/99761306-57673580-2b28-11eb-83c9-137d514f763e.png)
+![TabbarItemLottie 【Outlines 03】](https://user-images.githubusercontent.com/13795605/99761309-58986280-2b28-11eb-8745-714743cfbd4f.png)
+![TabbarItemLottie 【Outlines 04】](https://user-images.githubusercontent.com/13795605/99761310-5930f900-2b28-11eb-8819-b8d3f82ce717.png)
+![TabbarItemLottie 【Outlines 05】](https://user-images.githubusercontent.com/13795605/99761311-5930f900-2b28-11eb-93a3-4dc5c8c233b8.png)
+![TabbarItemLottie 【Outlines 06】](https://user-images.githubusercontent.com/13795605/99761312-59c98f80-2b28-11eb-9df3-f266d659f78e.png)
+![TabbarItemLottie 【Outlines 07】](https://user-images.githubusercontent.com/13795605/99761313-5a622600-2b28-11eb-8c1c-1ed263ee7b52.png)
+
 ## 关于验证码倒计时按钮的封装，此框架推到重来无数次，我个人认为已经达到顶峰
 ### 1、重新梳理业务逻辑，优化代码；
 ### 2、加入对富文本的支持；
