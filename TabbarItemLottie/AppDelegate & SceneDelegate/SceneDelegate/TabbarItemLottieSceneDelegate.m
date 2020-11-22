@@ -68,7 +68,7 @@ willConnectToSession:(UISceneSession *)session
 }
 #pragma mark —— lazyLoad
 -(UIWindow *)window{
-    [_window setRootViewController:TabbarItemLottieAppDelegate.sharedInstance.tabbarVC];
+    [_window setRootViewController:TabbarItemLottieAppDelegate.sharedInstance.tabBarVC];
     [_window makeKeyAndVisible];
     return _window;
 }

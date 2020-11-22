@@ -21,8 +21,8 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
-    extern TabbarVC *tabbarVC;
-    for (UITabBarItem *item in tabbarVC.myTabBar.items) {
+    extern TabbarVC *tabBarVC;
+    for (UITabBarItem *item in tabBarVC.myTabBar.items) {
         if ([item.title isEqualToString:@"首页"]) {
             [item pp_increase];
         }
