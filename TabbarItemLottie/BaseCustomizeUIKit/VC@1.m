@@ -50,7 +50,7 @@
     
     UILabel *lab = UILabel.new;
     
-    [lab makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
+    [NSObject makeRichTextWithDataConfigMutArr:self.richLabelDataStringsMutArr];
     
     [self.view addSubview:lab];
     [lab mas_makeConstraints:^(MASConstraintMaker *make) {

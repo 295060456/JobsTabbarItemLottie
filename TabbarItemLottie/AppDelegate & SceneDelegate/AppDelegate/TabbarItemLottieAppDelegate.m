@@ -112,11 +112,11 @@ connectingSceneSession options:(UISceneConnectionOptions *)options {
 }
 
 -(TabbarVC *)tabBarVC{
-    if (!_tabbarVC) {
-        _tabbarVC = TabbarVC.new;
+    if (!_tabBarVC) {
+        _tabBarVC = TabbarVC.new;
 //        _tabbarVC.isOpenScrollTabbar = NO;
-        _tabbarVC.myTabBar.offsetHeight = 5;
-        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_1.new,
+        _tabBarVC.myTabBar.offsetHeight = 5;
+        [_tabBarVC.childMutArr addObject:childViewController_customStyle(VC_1.new,
                                                                          @"首页",
                                                                          KIMG(@"community_selected"),
                                                                          KIMG(@"community_unselected"),
@@ -124,7 +124,7 @@ connectingSceneSession options:(UISceneConnectionOptions *)options {
                                                                          @"home_priase_animation",
                                                                          1)];
         
-        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_2.new,
+        [_tabBarVC.childMutArr addObject:childViewController_customStyle(VC_2.new,
                                                                          @"精彩生活",
                                                                          KIMG(@"post_selected"),
                                                                          KIMG(@"post_unselected"),
@@ -132,14 +132,14 @@ connectingSceneSession options:(UISceneConnectionOptions *)options {
                                                                          @"music_animation",
                                                                          1)];
         
-        [_tabbarVC.childMutArr addObject:childViewController_customStyle(VC_3.new,
+        [_tabBarVC.childMutArr addObject:childViewController_customStyle(VC_3.new,
                                                                          @"发现",
                                                                          KIMG(@"My_selected"),
                                                                          KIMG(@"My_unselected"),
                                                                          0,
                                                                          @"record_change",
                                                                          1)];
-    }return _tabbarVC;
+    }return _tabBarVC;
 }
 
 @end
