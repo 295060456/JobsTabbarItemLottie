@@ -61,16 +61,18 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
     NSLog(@"%@",[TimeModel whatDayOfWeekDistanceNow:0]);
 
     [UIViewController comingFromVC:self
                               toVC:VC_9.new
                        comingStyle:ComingStyle_PUSH
-                 presentationStyle:UIModalPresentationAutomatic
+                 presentationStyle:[UIDevice currentDevice].systemVersion.doubleValue >= 13.0 ? UIModalPresentationAutomatic : UIModalPresentationFullScreen
                      requestParams:@""
-                           success:^(id data) {}
-                          animated:YES];
+          hidesBottomBarWhenPushed:YES
+                          animated:YES
+                           success:^(id data) {
+        
+    }];
 }
 
 -(UIButton *)midView_Style1{

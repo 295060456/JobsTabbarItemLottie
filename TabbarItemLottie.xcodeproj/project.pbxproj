@@ -34,6 +34,7 @@
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
+		C54FE2D82576725600937C11 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FE2D72576725600937C11 /* BaseViewController.m */; };
 		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
 		C5569633255BFCB1005C1361 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569630255BFCB1005C1361 /* NSString+Time.m */; };
 		C5569634255BFCB1005C1361 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569631255BFCB1005C1361 /* TimeModel.m */; };
@@ -279,6 +280,8 @@
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
+		C54FE2D62576725600937C11 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C54FE2D72576725600937C11 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C556962D255BFCB1005C1361 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
 		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
@@ -543,26 +546,8 @@
 		C50A3F402540A58C00465D01 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C5766FAA2546B8B100C382C8 /* UIViewController+JXCategory */,
-				C5766FAB2546B8BC00C382C8 /* UIViewController+TZImagePickerController */,
-				C50A3F452540A59500465D01 /* UIViewController+BackBtn.h */,
-				C50A3F422540A59500465D01 /* UIViewController+BackBtn.m */,
-				C50A3F572540A59600465D01 /* UIViewController+BaseVC.h */,
-				C50A3F5A2540A59600465D01 /* UIViewController+BaseVC.m */,
-				C50A3F522540A59600465D01 /* UIViewController+BRPickerView.h */,
-				C50A3F4D2540A59500465D01 /* UIViewController+BRPickerView.m */,
-				C50A3F552540A59600465D01 /* UIViewController+BWShareView.h */,
-				C50A3F582540A59600465D01 /* UIViewController+BWShareView.m */,
-				C50A3F542540A59600465D01 /* UIViewController+GifImageView.h */,
-				C50A3F432540A59500465D01 /* UIViewController+GifImageView.m */,
-				C50A3F592540A59600465D01 /* UIViewController+JPImageresizerView.h */,
-				C50A3F4B2540A59500465D01 /* UIViewController+JPImageresizerView.m */,
-				C50A3F442540A59500465D01 /* UIViewController+MJRefresh.h */,
-				C50A3F562540A59600465D01 /* UIViewController+MJRefresh.m */,
-				C50A3F492540A59500465D01 /* UIViewController+NavigationBar.h */,
-				C50A3F412540A59500465D01 /* UIViewController+NavigationBar.m */,
-				C50A3F4F2540A59600465D01 /* UIViewController+Shake.h */,
-				C50A3F482540A59500465D01 /* UIViewController+Shake.m */,
+				C54FE2D52576725000937C11 /* BaseViewController */,
+				C54FE2D42576724300937C11 /* UIViewController+Category */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -681,6 +666,42 @@
 				C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		C54FE2D42576724300937C11 /* UIViewController+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C5766FAA2546B8B100C382C8 /* UIViewController+JXCategory */,
+				C5766FAB2546B8BC00C382C8 /* UIViewController+TZImagePickerController */,
+				C50A3F452540A59500465D01 /* UIViewController+BackBtn.h */,
+				C50A3F422540A59500465D01 /* UIViewController+BackBtn.m */,
+				C50A3F572540A59600465D01 /* UIViewController+BaseVC.h */,
+				C50A3F5A2540A59600465D01 /* UIViewController+BaseVC.m */,
+				C50A3F522540A59600465D01 /* UIViewController+BRPickerView.h */,
+				C50A3F4D2540A59500465D01 /* UIViewController+BRPickerView.m */,
+				C50A3F552540A59600465D01 /* UIViewController+BWShareView.h */,
+				C50A3F582540A59600465D01 /* UIViewController+BWShareView.m */,
+				C50A3F542540A59600465D01 /* UIViewController+GifImageView.h */,
+				C50A3F432540A59500465D01 /* UIViewController+GifImageView.m */,
+				C50A3F592540A59600465D01 /* UIViewController+JPImageresizerView.h */,
+				C50A3F4B2540A59500465D01 /* UIViewController+JPImageresizerView.m */,
+				C50A3F442540A59500465D01 /* UIViewController+MJRefresh.h */,
+				C50A3F562540A59600465D01 /* UIViewController+MJRefresh.m */,
+				C50A3F492540A59500465D01 /* UIViewController+NavigationBar.h */,
+				C50A3F412540A59500465D01 /* UIViewController+NavigationBar.m */,
+				C50A3F4F2540A59600465D01 /* UIViewController+Shake.h */,
+				C50A3F482540A59500465D01 /* UIViewController+Shake.m */,
+			);
+			path = "UIViewController+Category";
+			sourceTree = "<group>";
+		};
+		C54FE2D52576725000937C11 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C54FE2D62576725600937C11 /* BaseViewController.h */,
+				C54FE2D72576725600937C11 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		C559D4042539E83B00D99C3A /* 静态图轮播 */ = {
@@ -1703,6 +1724,7 @@
 				C5569633255BFCB1005C1361 /* NSString+Time.m in Sources */,
 				C50A3FB02540A76800465D01 /* ECAuthorizationTools.m in Sources */,
 				C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */,
+				C54FE2D82576725600937C11 /* BaseViewController.m in Sources */,
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
 				C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */,
 				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
