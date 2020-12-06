@@ -13,7 +13,8 @@
 
 @interface VC_1 ()
 
-@property(nonatomic,strong)UIButton *midView_Style1;
+@property(nonatomic,strong)UIButton *midView_Style1;//自启动模式
+@property(nonatomic,strong)UIButton *midView_Style2;//手动启动模式
 
 @property(nonatomic,strong)NSString *titleStr_1;
 @property(nonatomic,strong)NSString *titleStr_2;
@@ -34,6 +35,7 @@
     self.titleStr_1 = @"开始";
     self.titleStr_2 = @"倒计时";
     self.midView_Style1.alpha = 1;
+    self.midView_Style2.alpha = 1;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -61,18 +63,18 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@",[TimeModel whatDayOfWeekDistanceNow:0]);
-
-    [UIViewController comingFromVC:self
-                              toVC:VC_9.new
-                       comingStyle:ComingStyle_PUSH
-                 presentationStyle:[UIDevice currentDevice].systemVersion.doubleValue >= 13.0 ? UIModalPresentationAutomatic : UIModalPresentationFullScreen
-                     requestParams:@""
-          hidesBottomBarWhenPushed:YES
-                          animated:YES
-                           success:^(id data) {
-        
-    }];
+//    NSLog(@"%@",[TimeModel whatDayOfWeekDistanceNow:0]);
+//
+//    [UIViewController comingFromVC:self
+//                              toVC:VC_9.new
+//                       comingStyle:ComingStyle_PUSH
+//                 presentationStyle:[UIDevice currentDevice].systemVersion.doubleValue >= 13.0 ? UIModalPresentationAutomatic : UIModalPresentationFullScreen
+//                     requestParams:@""
+//          hidesBottomBarWhenPushed:YES
+//                          animated:YES
+//                           success:^(id data) {
+//
+//    }];
 }
 
 -(UIButton *)midView_Style1{
@@ -108,6 +110,44 @@
         [_midView_Style1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(300, 100));
             make.top.equalTo(self.view).offset(200);
+            make.left.equalTo(self.view).offset(50);
+        }];
+
+    }return _midView_Style1;
+}
+
+-(UIButton *)midView_Style2{
+    if (!_midView_Style2) {
+//        _midView_Style2 = [[UIButton alloc] initWithType:CountDownBtnType_countDown
+//                                                          runType:CountDownBtnRunType_auto
+//                                                 layerBorderWidth:1
+//                                                layerCornerRadius:1
+//                                                 layerBorderColor:kClearColor
+//                                                       titleColor:kWhiteColor
+//                                                    titleBeginStr:@""
+//                                                   titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+        
+        _midView_Style2 = [[UIButton alloc] initWithRichTextRunningDataMutArr:self.richLabelDataStringsMutArr
+                                                             countDownBtnType:CountDownBtnType_countDown
+                                                                      runType:CountDownBtnRunType_manual
+                                                             layerBorderWidth:1
+                                                            layerCornerRadius:1
+                                                             layerBorderColor:kClearColor
+                                                                   titleColor:kWhiteColor
+                                                                titleBeginStr:@""
+                                                               titleLabelFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
+
+        _midView_Style2.titleRuningStr = @"开始倒计时了";
+        _midView_Style2.count = 60;
+        _midView_Style2.showTimeType = ShowTimeType_SS;
+        _midView_Style2.bgCountDownColor = kCyanColor;
+        _midView_Style2.cequenceForShowTitleRuningStrType = CequenceForShowTitleRuningStrType_tail;
+        _midView_Style2.countDownBtnNewLineType = CountDownBtnNewLineType_newLine;
+
+        [self.view addSubview:_midView_Style2];
+        [_midView_Style2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(300, 100));
+            make.top.equalTo(self.midView_Style1).offset(200);
             make.left.equalTo(self.view).offset(50);
         }];
 
