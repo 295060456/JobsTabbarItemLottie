@@ -613,6 +613,7 @@
 		C50A3FB72540A7D900465D01 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				C55567632580A574004DB33A /* TimeModel */,
 				C50A3FB82540A7E400465D01 /* NSObject+Alert */,
 				C534E7A8257F907E00DBC3CE /* NSObject+Others */,
 			);
@@ -622,11 +623,6 @@
 		C50A3FB82540A7E400465D01 /* NSObject+Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C5AEE91F25373638000E1C5F /* NSObject+Extras.h */,
-				C5AEE92325373638000E1C5F /* NSObject+Extras.m */,
-				C5AEE92225373638000E1C5F /* NSObject+Sound.h */,
-				C5AEE92125373638000E1C5F /* NSObject+Sound.m */,
-				C5AEE92025373638000E1C5F /* Sound.wav */,
 				C50A3FBB2540A7E400465D01 /* NSObject+SPAlertController.h */,
 				C50A3FB92540A7E400465D01 /* NSObject+SPAlertController.m */,
 				C50A3FBC2540A7E400465D01 /* NSObject+SYSAlertController.h */,
@@ -657,6 +653,11 @@
 		C534E7A8257F907E00DBC3CE /* NSObject+Others */ = {
 			isa = PBXGroup;
 			children = (
+				C5AEE92025373638000E1C5F /* Sound.wav */,
+				C5AEE91F25373638000E1C5F /* NSObject+Extras.h */,
+				C5AEE92325373638000E1C5F /* NSObject+Extras.m */,
+				C5AEE92225373638000E1C5F /* NSObject+Sound.h */,
+				C5AEE92125373638000E1C5F /* NSObject+Sound.m */,
 				C572F9D32552C683004F5CC9 /* NSObject+RichText.h */,
 				C572F9D12552C683004F5CC9 /* NSObject+RichText.m */,
 				C50A3FE62540A8C400465D01 /* NSObject+Shake.h */,
@@ -691,6 +692,15 @@
 				C54FE2D72576725600937C11 /* BaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		C55567632580A574004DB33A /* TimeModel */ = {
+			isa = PBXGroup;
+			children = (
+				C556962F255BFCB1005C1361 /* TimeModel.h */,
+				C5569631255BFCB1005C1361 /* TimeModel.m */,
+			);
+			path = TimeModel;
 			sourceTree = "<group>";
 		};
 		C559D4042539E83B00D99C3A /* 静态图轮播 */ = {
@@ -1201,8 +1211,6 @@
 				C556962C255BFCB1005C1361 /* NSString+Extras.m */,
 				C556962D255BFCB1005C1361 /* NSString+Time.h */,
 				C5569630255BFCB1005C1361 /* NSString+Time.m */,
-				C556962F255BFCB1005C1361 /* TimeModel.h */,
-				C5569631255BFCB1005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
