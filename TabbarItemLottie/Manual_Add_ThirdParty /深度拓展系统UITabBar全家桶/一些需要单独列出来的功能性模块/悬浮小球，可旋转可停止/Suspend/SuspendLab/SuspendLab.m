@@ -16,15 +16,18 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.backgroundColor = self.backgroundColor ? :[UIColor blackColor];
-        self.text = [NSString ensureNonnullString:self.text ReplaceStr:@"暂无数据"];
+        self.backgroundColor = self.backgroundColor ? :kBlackColor;
+        self.text = [NSString ensureNonnullString:self.text
+                                       ReplaceStr:@"暂无数据"];
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
     self.panRcognize.enabled = self.isAllowDrag;
+    self.userInteractionEnabled = self.isAllowDrag;
 }
 
 -(void)actionSuspendViewBlock:(MKDataBlock _Nullable)suspendLabBlock{

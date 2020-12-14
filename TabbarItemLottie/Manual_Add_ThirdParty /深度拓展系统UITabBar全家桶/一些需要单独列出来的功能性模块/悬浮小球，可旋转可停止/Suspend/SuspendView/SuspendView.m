@@ -16,13 +16,14 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.backgroundColor = self.backgroundColor ? :[UIColor blackColor];
+        self.backgroundColor = self.backgroundColor ? :kBlackColor;
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
     }return self;
 }
 
 -(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
     self.panRcognize.enabled = self.isAllowDrag;
 }
 

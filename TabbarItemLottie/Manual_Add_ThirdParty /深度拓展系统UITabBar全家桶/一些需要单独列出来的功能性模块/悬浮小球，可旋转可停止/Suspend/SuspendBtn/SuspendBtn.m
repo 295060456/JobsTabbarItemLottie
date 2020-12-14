@@ -17,7 +17,7 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.backgroundColor = self.backgroundColor ? :[UIColor blackColor];
+        self.backgroundColor = self.backgroundColor ? :kBlackColor;
         [self addTarget:self
                  action:@selector(addEvent:)
        forControlEvents:UIControlEventTouchUpInside];
@@ -27,6 +27,7 @@
 }
 
 -(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
     self.panRcognize.enabled = self.isAllowDrag;
 }
 
