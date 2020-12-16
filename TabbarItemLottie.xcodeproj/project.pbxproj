@@ -588,10 +588,10 @@
 		C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				C56BBC7925879AB30043C977 /* UIControl */,
 				C50A3FB72540A7D900465D01 /* NSObject */,
 				C5AEE91B25373638000E1C5F /* NSString */,
 				C572F9432552C184004F5CC9 /* UIButton */,
+				C56BBC7925879AB30043C977 /* UIControl */,
 				C54B3C1C25525FE2003BE195 /* UIFont */,
 				C50A3FEC2540A90600465D01 /* UIImage */,
 				C572F9D02552C683004F5CC9 /* UILabel */,
@@ -905,9 +905,9 @@
 		C56BBC7925879AB30043C977 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
+				C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */,
 				C56BBC7A25879AB30043C977 /* UIControl+XY.h */,
 				C56BBC7B25879AB30043C977 /* UIControl+XY.m */,
-				C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -933,9 +933,9 @@
 		C572F9432552C184004F5CC9 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				C5D0BB0925878F07002CA224 /* SoundBtn */,
-				C572F9442552C184004F5CC9 /* 高度自定义的按钮 */,
 				C572F9472552C184004F5CC9 /* 💰VerifyCodeButton */,
+				C572F9442552C184004F5CC9 /* 高度自定义的按钮 */,
+				C5D0BB0925878F07002CA224 /* SoundBtn */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1517,8 +1517,8 @@
 		C5D6DCA525860F4500029AFF /* NSObject (Time) */ = {
 			isa = PBXGroup;
 			children = (
-				C5D6DCA625860F4500029AFF /* TimeModel.m */,
 				C5D6DCA725860F4500029AFF /* TimeModel.h */,
+				C5D6DCA625860F4500029AFF /* TimeModel.m */,
 			);
 			path = "NSObject (Time)";
 			sourceTree = "<group>";
@@ -1535,15 +1535,15 @@
 		C5D78ACE257F7AA50087FC92 /* UIViewController+Others */ = {
 			isa = PBXGroup;
 			children = (
+				C544BE31258373F700C6CF2A /* UIViewController+BackBtn */,
+				C544BE3B2583740000C6CF2A /* UIViewController+BaseVC */,
+				C544BE3C2583740B00C6CF2A /* UIViewController+BRPickerView */,
+				C544BE3D2583741400C6CF2A /* UIViewController+BWShareView */,
+				C544BE3E2583741D00C6CF2A /* UIViewController+GifImageView */,
+				C544BE3F2583742400C6CF2A /* UIViewController+JPImageresizerView */,
+				C544BE402583742E00C6CF2A /* UIViewController+MJRefresh */,
 				C544BE422583744100C6CF2A /* UIViewController+NavigationBar */,
 				C544BE412583743500C6CF2A /* UIViewController+Shake */,
-				C544BE402583742E00C6CF2A /* UIViewController+MJRefresh */,
-				C544BE3F2583742400C6CF2A /* UIViewController+JPImageresizerView */,
-				C544BE3E2583741D00C6CF2A /* UIViewController+GifImageView */,
-				C544BE3D2583741400C6CF2A /* UIViewController+BWShareView */,
-				C544BE3C2583740B00C6CF2A /* UIViewController+BRPickerView */,
-				C544BE3B2583740000C6CF2A /* UIViewController+BaseVC */,
-				C544BE31258373F700C6CF2A /* UIViewController+BackBtn */,
 			);
 			path = "UIViewController+Others";
 			sourceTree = "<group>";
