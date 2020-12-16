@@ -36,6 +36,7 @@
 		C544C1DA258375D200C6CF2A /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C544C1D6258375D200C6CF2A /* JsonRes.bundle */; };
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
 		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
+		C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C558F3EE258A30F60078DB8F /* NotificationManager.m */; };
 		C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */; };
 		C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D414C2539750E00CFCF73 /* UITabBar+TLAnimation.m */; };
 		C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D41512539752300CFCF73 /* UITabBarItem+TLAnimation.m */; };
@@ -289,6 +290,16 @@
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		C55801BA258A40F40078DB8F /* Others.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Others.h; sourceTree = "<group>"; };
+		C558E7DF258A22010078DB8F /* TabbarItemLottie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbarItemLottie-Bridging-Header.h"; sourceTree = "<group>"; };
+		C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manual_Add_ThirdParty.h; sourceTree = "<group>"; };
+		C558E847258A24250078DB8F /* Pods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pods.h; sourceTree = "<group>"; };
+		C558E849258A24630078DB8F /* PodsManual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodsManual.h; sourceTree = "<group>"; };
+		C558F3EE258A30F60078DB8F /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		C558F3EF258A30F60078DB8F /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		C558F3F5258A31010078DB8F /* DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineStructure.h; sourceTree = "<group>"; };
+		C558F3F6258A31010078DB8F /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		C558F3F7258A31010078DB8F /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
 		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
@@ -508,7 +519,6 @@
 		C5AEEAA9253832EC000E1C5F /* JobsPullListTBVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobsPullListTBVCell.m; sourceTree = "<group>"; };
 		C5AEEAB425383E8F000E1C5F /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5AEEAB525383E8F000E1C5F /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
-		C5AEEABA25383FB9000E1C5F /* AABlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
 		C5D0BB0A25878F07002CA224 /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
 		C5D0BB0B25878F07002CA224 /* 带有按键音的按钮.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "带有按键音的按钮.md"; sourceTree = "<group>"; };
 		C5D0BB0C25878F07002CA224 /* SoundBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBtn.m; sourceTree = "<group>"; };
@@ -806,6 +816,93 @@
 				C5D602C32586324D00029AFF /* BaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		C5580613258A468D0078DB8F /* PodsManual */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PodsManual;
+			sourceTree = "<group>";
+		};
+		C558E783258A21BF0078DB8F /* 第三方头文件管理 */ = {
+			isa = PBXGroup;
+			children = (
+				C558E845258A23690078DB8F /* Pods */,
+				C558E844258A23630078DB8F /* 手动导入的第三方 */,
+			);
+			path = "第三方头文件管理";
+			sourceTree = "<group>";
+		};
+		C558E784258A21CB0078DB8F /* 各项全局定义 */ = {
+			isa = PBXGroup;
+			children = (
+				C50A401B2540AA3000465D01 /* 各项宏定义 */,
+				C558F3F4258A31010078DB8F /* 其他的一些全局定义文件 */,
+				C558F3ED258A30F60078DB8F /* NotificationManager */,
+			);
+			path = "各项全局定义";
+			sourceTree = "<group>";
+		};
+		C558E785258A21D30078DB8F /* 其他杂项 */ = {
+			isa = PBXGroup;
+			children = (
+				C55801BA258A40F40078DB8F /* Others.h */,
+			);
+			path = "其他杂项";
+			sourceTree = "<group>";
+		};
+		C558E7DE258A21F00078DB8F /* Swift-OC桥接头文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C558E7DF258A22010078DB8F /* TabbarItemLottie-Bridging-Header.h */,
+			);
+			path = "Swift-OC桥接头文件";
+			sourceTree = "<group>";
+		};
+		C558E844258A23630078DB8F /* 手动导入的第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */,
+			);
+			path = "手动导入的第三方";
+			sourceTree = "<group>";
+		};
+		C558E845258A23690078DB8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C558E847258A24250078DB8F /* Pods.h */,
+				C558E849258A24630078DB8F /* PodsManual.h */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C558F3EC258A30C60078DB8F /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */,
+				C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		C558F3ED258A30F60078DB8F /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				C558F3EF258A30F60078DB8F /* NotificationManager.h */,
+				C558F3EE258A30F60078DB8F /* NotificationManager.m */,
+			);
+			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		C558F3F4258A31010078DB8F /* 其他的一些全局定义文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C558F3F5258A31010078DB8F /* DefineStructure.h */,
+				C558F3F6258A31010078DB8F /* APIKey.h */,
+				C558F3F7258A31010078DB8F /* AABlock.h */,
+			);
+			path = "其他的一些全局定义文件";
 			sourceTree = "<group>";
 		};
 		C559D4042539E83B00D99C3A /* 静态图轮播 */ = {
@@ -1184,8 +1281,9 @@
 				C5AEE88C25373580000E1C5F /* TabbarItemLottie */,
 				C5AEE8AB25373581000E1C5F /* TabbarItemLottieTests */,
 				C5AEE8B625373581000E1C5F /* TabbarItemLottieUITests */,
-				D1972A22E2348091360E3370 /* Pods */,
 				F00E88714FCA06A5D131158D /* Frameworks */,
+				D1972A22E2348091360E3370 /* Pods */,
+				C5580613258A468D0078DB8F /* PodsManual */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1204,11 +1302,9 @@
 			isa = PBXGroup;
 			children = (
 				C5AEE8A125373581000E1C5F /* Info.plist */,
-				C591EF8A2563C894005B78CC /* 资源文件 */,
-				C5C4FC24255A5C42002F407A /* 🌹Macro */,
-				C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */,
-				C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */,
 				C5AEE8C8253735E6000E1C5F /* AppDelegate & SceneDelegate */,
+				C558F3EC258A30C60078DB8F /* 3rd */,
+				C5C4FC24255A5C42002F407A /* 🌹Macro */,
 				C5AEE8CC25373609000E1C5F /* Others */,
 				C5AEE92725373638000E1C5F /* 外部挂载的VC，用户自定义 */,
 			);
@@ -1245,6 +1341,7 @@
 		C5AEE8CC25373609000E1C5F /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C591EF8A2563C894005B78CC /* 资源文件 */,
 				C5AEE88B25373580000E1C5F /* Products */,
 				C5AEE89E25373581000E1C5F /* LaunchScreen.storyboard */,
 				C5AEE8A225373581000E1C5F /* main.m */,
@@ -1442,9 +1539,11 @@
 		C5C4FC24255A5C42002F407A /* 🌹Macro */ = {
 			isa = PBXGroup;
 			children = (
-				C50A401B2540AA3000465D01 /* 各项宏定义 */,
-				C5AEEABA25383FB9000E1C5F /* AABlock.h */,
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
+				C558E783258A21BF0078DB8F /* 第三方头文件管理 */,
+				C558E784258A21CB0078DB8F /* 各项全局定义 */,
+				C558E785258A21D30078DB8F /* 其他杂项 */,
+				C558E7DE258A21F00078DB8F /* Swift-OC桥接头文件 */,
 			);
 			path = "🌹Macro";
 			sourceTree = "<group>";
@@ -1643,6 +1742,7 @@
 				TargetAttributes = {
 					C5AEE88925373580000E1C5F = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1230;
 					};
 					C5AEE8A725373581000E1C5F = {
 						CreatedOnToolsVersion = 12.2;
@@ -1914,6 +2014,7 @@
 				C544C1D8258375D200C6CF2A /* MJRefreshConfigModel.m in Sources */,
 				C5AEE8A325373581000E1C5F /* main.m in Sources */,
 				C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */,
+				C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */,
 				C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */,
 				C50A3F742540A5A600465D01 /* NavigationBar.m in Sources */,
 				C50A3F5D2540A59600465D01 /* UIViewController+GifImageView.m in Sources */,
@@ -2151,6 +2252,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
@@ -2161,6 +2263,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UBallLive.TabbarItemLottie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TabbarItemLottie/🌹Macro/TabbarItemLottie-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2171,6 +2276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K92UCMVH8G;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
@@ -2181,6 +2287,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UBallLive.TabbarItemLottie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TabbarItemLottie/🌹Macro/TabbarItemLottie-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

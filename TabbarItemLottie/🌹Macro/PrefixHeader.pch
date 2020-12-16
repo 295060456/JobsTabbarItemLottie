@@ -9,13 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import <objc/runtime.h>
-
-#import "MacroDef_Sys.h"
-#import "MacroDef_Cor.h"
-#import "MacroDef_Size.h"
-#import "MacroDef_Func.h"
-
 //系统SDK
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
@@ -23,158 +16,32 @@
 #import <UIKit/UIKit.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
-//来自于Pods
+#import <VideoToolbox/VideoToolbox.h>//FFmpeg 需要
 
-#if __has_include(<ReactiveObjC/ReactiveObjC.h>)
-#import <ReactiveObjC/ReactiveObjC.h>
-#else
-#import "ReactiveObjC.h"
-#endif
+#pragma mark —— 第三方头文件管理
+/// Pods
+#import "Pods.h"
+#import "PodsManual.h"
+/// 手动导入的第三方
+#import "Manual_Add_ThirdParty.h"
 
-#if __has_include(<Masonry/Masonry.h>)
-#import <Masonry/Masonry.h>
-#else
-#import "Masonry.h"
-#endif
-
-#if __has_include(<lottie-ios/Lottie.h>)
-#import <lottie-ios/Lottie.h>
-#else
-#import "Lottie.h"
-#endif
-
-#if __has_include(<PPBadgeView/PPBadgeView.h>)
-#import <PPBadgeView/PPBadgeView.h>
-#else
-#import "PPBadgeView.h"
-#endif
-
-#if __has_include(<WHToast/WHToast.h>)
-#import <WHToast/WHToast.h>
-#else
-#import "WHToast.h"
-#endif
-
-#if __has_include(<SDWebImage/SDWebImage.h>)
-#import <SDWebImage/SDWebImage.h>
-#else
-#import "SDWebImage.h"
-#endif
-
-#if __has_include(<JXCategoryView/JXCategoryView.h>)
-#import <JXCategoryView/JXCategoryView.h>
-#else
-#import "JXCategoryView.h"
-#endif
-
-#if __has_include(<SPAlertController/SPAlertController.h>)
-#import <SPAlertController/SPAlertController.h>
-#else
-#import "SPAlertController.h"
-#endif
-
-#if __has_include(<GKNavigationBar/GKNavigationBar.h>)
-#import <GKNavigationBar/GKNavigationBar.h>
-#else
-#import "GKNavigationBar.h"
-#endif
-
-#if __has_include(<MJExtension/MJExtension.h>)
-#import <MJExtension/MJExtension.h>
-#else
-#import "MJExtension.h"
-#endif
-
-#if __has_include(<MJRefresh/MJRefresh.h>)
-#import <MJRefresh/MJRefresh.h>
-#else
-#import "MJRefresh.h"
-#endif
-
-#if __has_include(<BRPickerView/BRPickerView.h>)
-#import <BRPickerView/BRPickerView.h>
-#else
-#import "BRPickerView.h"
-#endif
-
-#if __has_include(<JPImageresizerView/JPImageresizerView.h>)
-#import <JPImageresizerView/JPImageresizerView.h>
-#else
-#import "JPImageresizerView.h"
-#endif
-
-//Pod 不进去的
-#import "BRPickerView.h"
-
-//我自己的定义的
+#pragma mark —— 各项全局定义
+/// 各项宏定义
+#import "MacroDef_Sys.h"
+#import "MacroDef_Cor.h"
+#import "MacroDef_Size.h"
+#import "MacroDef_Func.h"
+/// 其他的一些全局定义文件
+#import "DefineStructure.h"
+#import "APIKey.h"
 #import "AABlock.h"
-#import "LoadingImage.h"
-#import "NSObject+Sound.h"
-#import "NSObject+Extras.h"
-#import "UIView+Measure.h"
-#import "UIView+Extras.h"
-#import "UIView+Animation.h"
-#import "UIView+SuspendView.h"
-#import "SuspendBtn.h"
-#import "ECAuthorizationTools.h"
-#import "UIButton+ImageTitleSpacing.h"
+/// NotificationManager
+#import "NotificationManager.h"
 
-#import "TabbarControllerSysEx.h"
+#pragma mark —— 其他杂项
+#import "Others.h"
 
-//UIViewController
-#import "UIViewController+BaseVC.h"
-#import "UIViewController+BackBtn.h"
-#import "UIViewController+BRPickerView.h"
-#import "UIViewController+BWShareView.h"
-#import "UIViewController+GifImageView.h"
-#import "UIViewController+JPImageresizerView.h"
-#import "UIViewController+JXCategoryListContentViewDelegate.h"
-#import "UIViewController+JXPagerViewListViewDelegate.h"
-#import "UIViewController+MJRefresh.h"
-#import "UIViewController+Shake.h"
-#import "UIViewController+TZImagePickerController.h"
-#import "UIViewController+TZImagePickerControllerDelegate.h"
-#import "UIViewController+TZLocationManager.h"
-#import "UIViewController+NavigationBar.h"
-//UINavigationController
-#import "BaseNavigationVC.h"
-//UINavigationBar
-#import "NavigationBar.h"
-//NSObject
-#import "NSObject+Shake.h"
-
-#define HDDevice [UIDevice currentDevice]
-#define HDDeviceSystemVersion HDDevice.systemVersion         // 系统版本
-
-// 屏幕大小、宽、高
-#ifndef SCREEN_BOUNDS
-#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
-#endif
-#ifndef SCREEN_WIDTH
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-#endif
-#ifndef SCREEN_HEIGHT
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-#endif
-
-#define ReuseIdentifier NSStringFromClass ([self class])
-
-///随机颜色
-#define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 \
-green:arc4random_uniform(256) / 255.0 \
-blue:arc4random_uniform(256) / 255.0 \
-alpha:1] \
-
-#define StringFormat(format,...) [NSString stringWithFormat:format, ##__VA_ARGS__]
-
-#import "VC@1.h"
-#import "VC@2.h"
-#import "VC@3.h"
-#import "VC@4.h"
-#import "VC@5.h"
-#import "VC@6.h"
-#import "VC@7.h"
-#import "VC@8.h"
-#import "VC@9.h"
+#pragma mark —— Swift-OC桥接头文件
+#import "TabbarItemLottie-Bridging-Header.h"
 
 #endif /* PrefixHeader_pch */
