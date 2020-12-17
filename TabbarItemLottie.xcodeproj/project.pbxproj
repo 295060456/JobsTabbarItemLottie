@@ -199,6 +199,8 @@
 		C5D0BB0E25878F07002CA224 /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BB0A25878F07002CA224 /* Sound.wav */; };
 		C5D0BB1025878F07002CA224 /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BB0C25878F07002CA224 /* SoundBtn.m */; };
 		C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BB1A25878F34002CA224 /* NSObject+Sound.m */; };
+		C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1C118258B20E100784D2F /* UIViewController+EmptyData.m */; };
+		C5D1C120258B20EF00784D2F /* UIView+EmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1C11E258B20EF00784D2F /* UIView+EmptyData.m */; };
 		C5D602C52586324D00029AFF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602C32586324D00029AFF /* BaseViewController.m */; };
 		C5D602CE2586325C00029AFF /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602CC2586325C00029AFF /* UIViewController+NavigationBar.m */; };
 		C5D6DCA825860F4500029AFF /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCA425860F4500029AFF /* NSObject+Time.m */; };
@@ -525,6 +527,10 @@
 		C5D0BB0D25878F07002CA224 /* SoundBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundBtn.h; sourceTree = "<group>"; };
 		C5D0BB1A25878F34002CA224 /* NSObject+Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sound.m"; sourceTree = "<group>"; };
 		C5D0BB1B25878F34002CA224 /* NSObject+Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sound.h"; sourceTree = "<group>"; };
+		C5D1C117258B20E100784D2F /* UIViewController+EmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EmptyData.h"; sourceTree = "<group>"; };
+		C5D1C118258B20E100784D2F /* UIViewController+EmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EmptyData.m"; sourceTree = "<group>"; };
+		C5D1C11E258B20EF00784D2F /* UIView+EmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EmptyData.m"; sourceTree = "<group>"; };
+		C5D1C11F258B20EF00784D2F /* UIView+EmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EmptyData.h"; sourceTree = "<group>"; };
 		C5D602C32586324D00029AFF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C5D602C42586324D00029AFF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		C5D602CC2586325C00029AFF /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
@@ -1439,6 +1445,7 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
 				C595BE7325864274002A4531 /* UIView+Extras */,
@@ -1559,6 +1566,24 @@
 			path = SoundBtn;
 			sourceTree = "<group>";
 		};
+		C5D1BC6D258B0D3200784D2F /* UIViewController+EmptyData */ = {
+			isa = PBXGroup;
+			children = (
+				C5D1C117258B20E100784D2F /* UIViewController+EmptyData.h */,
+				C5D1C118258B20E100784D2F /* UIViewController+EmptyData.m */,
+			);
+			path = "UIViewController+EmptyData";
+			sourceTree = "<group>";
+		};
+		C5D1C11D258B20EF00784D2F /* UIView+EmptyData */ = {
+			isa = PBXGroup;
+			children = (
+				C5D1C11F258B20EF00784D2F /* UIView+EmptyData.h */,
+				C5D1C11E258B20EF00784D2F /* UIView+EmptyData.m */,
+			);
+			path = "UIView+EmptyData";
+			sourceTree = "<group>";
+		};
 		C5D6CA152585F43400029AFF /* NSObject+Extras */ = {
 			isa = PBXGroup;
 			children = (
@@ -1638,6 +1663,7 @@
 				C544BE3B2583740000C6CF2A /* UIViewController+BaseVC */,
 				C544BE3C2583740B00C6CF2A /* UIViewController+BRPickerView */,
 				C544BE3D2583741400C6CF2A /* UIViewController+BWShareView */,
+				C5D1BC6D258B0D3200784D2F /* UIViewController+EmptyData */,
 				C544BE3E2583741D00C6CF2A /* UIViewController+GifImageView */,
 				C544BE3F2583742400C6CF2A /* UIViewController+JPImageresizerView */,
 				C544BE402583742E00C6CF2A /* UIViewController+MJRefresh */,
@@ -2006,6 +2032,7 @@
 			files = (
 				C534CE5125875A47001369FD /* BWShareView.m in Sources */,
 				C5AEE94C25373638000E1C5F /* VC@4.m in Sources */,
+				C5D1C120258B20EF00784D2F /* UIView+EmptyData.m in Sources */,
 				C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */,
 				C579F9852539DACD00846814 /* TransitionController.m in Sources */,
 				C5766FAE2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
@@ -2019,6 +2046,7 @@
 				C50A3F742540A5A600465D01 /* NavigationBar.m in Sources */,
 				C50A3F5D2540A59600465D01 /* UIViewController+GifImageView.m in Sources */,
 				C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */,
+				C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */,
 				C50A3FBD2540A7E400465D01 /* NSObject+SPAlertController.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,

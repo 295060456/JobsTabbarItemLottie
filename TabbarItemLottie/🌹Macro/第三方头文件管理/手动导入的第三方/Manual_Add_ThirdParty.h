@@ -17,6 +17,7 @@
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
 #import "UIView+SuspendView.h"
+#import "UIView+EmptyData.h"
 /// UIButton
 #import "UIButton+ImageTitleSpacing.h"
 /// UIImage
@@ -36,6 +37,7 @@
 #import "UIViewController+TZImagePickerControllerDelegate.h"
 #import "UIViewController+TZLocationManager.h"
 #import "UIViewController+NavigationBar.h"
+#import "UIViewController+EmptyData.h"
 /// UINavigationController
 #import "BaseNavigationVC.h"
 /// UINavigationBar
