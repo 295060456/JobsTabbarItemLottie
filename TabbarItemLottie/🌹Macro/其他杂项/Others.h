@@ -8,6 +8,9 @@
 #ifndef Others_h
 #define Others_h
 
+#import "TabbarItemLottieSceneDelegate.h"
+#import "TabbarItemLottieAppDelegate.h"
+
 #import "VC@1.h"
 #import "VC@2.h"
 #import "VC@3.h"

@@ -34,6 +34,7 @@
 		C544C1D8258375D200C6CF2A /* MJRefreshConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1D2258375D200C6CF2A /* MJRefreshConfigModel.m */; };
 		C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1D4258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m */; };
 		C544C1DA258375D200C6CF2A /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C544C1D6258375D200C6CF2A /* JsonRes.bundle */; };
+		C5461041258C8F9B0008928C /* UIView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = C546103F258C8F9B0008928C /* UIView+AOP.m */; };
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
 		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
 		C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C558F3EE258A30F60078DB8F /* NotificationManager.m */; };
@@ -288,6 +289,8 @@
 		C544C1D4258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationMJRefreshHeader.m; sourceTree = "<group>"; };
 		C544C1D5258375D200C6CF2A /* LOTAnimationMJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTAnimationMJRefreshHeader.h; sourceTree = "<group>"; };
 		C544C1D6258375D200C6CF2A /* JsonRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JsonRes.bundle; sourceTree = "<group>"; };
+		C546103F258C8F9B0008928C /* UIView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AOP.m"; sourceTree = "<group>"; };
+		C5461040258C8F9B0008928C /* UIView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AOP.h"; sourceTree = "<group>"; };
 		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
@@ -794,6 +797,15 @@
 				C544C1D6258375D200C6CF2A /* JsonRes.bundle */,
 			);
 			path = LOTAnimationMJRefreshHeader;
+			sourceTree = "<group>";
+		};
+		C546103E258C8F9B0008928C /* UIView+AOP */ = {
+			isa = PBXGroup;
+			children = (
+				C5461040258C8F9B0008928C /* UIView+AOP.h */,
+				C546103F258C8F9B0008928C /* UIView+AOP.m */,
+			);
+			path = "UIView+AOP";
 			sourceTree = "<group>";
 		};
 		C54B3C1C25525FE2003BE195 /* UIFont */ = {
@@ -1445,9 +1457,10 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
+				C546103E258C8F9B0008928C /* UIView+AOP */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
+				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
 				C595BE7325864274002A4531 /* UIView+Extras */,
 				C595BE742586427B002A4531 /* UIView+Measure */,
 				C595BE7525864284002A4531 /* UIView+SuspendView */,
@@ -2038,6 +2051,7 @@
 				C5766FAE2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
 				C5AEE94525373638000E1C5F /* VC@5.m in Sources */,
 				C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */,
+				C5461041258C8F9B0008928C /* UIView+AOP.m in Sources */,
 				C544C1D8258375D200C6CF2A /* MJRefreshConfigModel.m in Sources */,
 				C5AEE8A325373581000E1C5F /* main.m in Sources */,
 				C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */,
