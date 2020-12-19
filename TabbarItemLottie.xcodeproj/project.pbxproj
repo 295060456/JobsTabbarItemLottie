@@ -142,6 +142,8 @@
 		C595D51F258714C6002A4531 /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D518258714C5002A4531 /* SuspendLab.m */; };
 		C595D520258714C6002A4531 /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D51A258714C6002A4531 /* SuspendView.m */; };
 		C595D521258714C6002A4531 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D51D258714C6002A4531 /* SuspendBtn.m */; };
+		C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59A3ED6258DD240005F6260 /* UserDefaultModel.m */; };
+		C59A3ED9258DD240005F6260 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59A3ED7258DD240005F6260 /* UserDefaultManager.m */; };
 		C5AEE88F25373580000E1C5F /* TabbarItemLottieAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */; };
 		C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE89125373580000E1C5F /* TabbarItemLottieSceneDelegate.m */; };
 		C5AEE89825373580000E1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AEE89625373580000E1C5F /* Main.storyboard */; };
@@ -439,6 +441,10 @@
 		C595D51B258714C6002A4531 /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
 		C595D51D258714C6002A4531 /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
 		C595D51E258714C6002A4531 /* SuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendBtn.h; sourceTree = "<group>"; };
+		C59A3ED4258DD240005F6260 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
+		C59A3ED5258DD240005F6260 /* UserDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultModel.h; sourceTree = "<group>"; };
+		C59A3ED6258DD240005F6260 /* UserDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultModel.m; sourceTree = "<group>"; };
+		C59A3ED7258DD240005F6260 /* UserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
 		C5AEE88A25373580000E1C5F /* TabbarItemLottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarItemLottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AEE88D25373580000E1C5F /* TabbarItemLottieAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarItemLottieAppDelegate.h; sourceTree = "<group>"; };
 		C5AEE88E25373580000E1C5F /* TabbarItemLottieAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarItemLottieAppDelegate.m; sourceTree = "<group>"; };
@@ -1205,6 +1211,7 @@
 				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
 				C50A3FAD2540A76800465D01 /* ECAuthorizationTools */,
 				C572F9662552C1EF004F5CC9 /* TimerManager */,
+				C59A3ED3258DD240005F6260 /* UserDefaultManager */,
 			);
 			path = "Manual_Add_ThirdParty ";
 			sourceTree = "<group>";
@@ -1290,6 +1297,17 @@
 				C595D51E258714C6002A4531 /* SuspendBtn.h */,
 			);
 			path = SuspendBtn;
+			sourceTree = "<group>";
+		};
+		C59A3ED3258DD240005F6260 /* UserDefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				C59A3ED4258DD240005F6260 /* UserDefaultManager.h */,
+				C59A3ED5258DD240005F6260 /* UserDefaultModel.h */,
+				C59A3ED6258DD240005F6260 /* UserDefaultModel.m */,
+				C59A3ED7258DD240005F6260 /* UserDefaultManager.m */,
+			);
+			path = UserDefaultManager;
 			sourceTree = "<group>";
 		};
 		C5AEE88125373580000E1C5F = {
@@ -2061,6 +2079,7 @@
 				C50A3F5D2540A59600465D01 /* UIViewController+GifImageView.m in Sources */,
 				C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */,
 				C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */,
+				C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */,
 				C50A3FBD2540A7E400465D01 /* NSObject+SPAlertController.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
@@ -2096,6 +2115,7 @@
 				C50A3F632540A59600465D01 /* UIViewController+TZImagePickerController.m in Sources */,
 				C50A3F612540A59600465D01 /* UIViewController+JPImageresizerView.m in Sources */,
 				C572F9D52552C683004F5CC9 /* NSObject+RichText.m in Sources */,
+				C59A3ED9258DD240005F6260 /* UserDefaultManager.m in Sources */,
 				C5D602C52586324D00029AFF /* BaseViewController.m in Sources */,
 				C572F9D62552C683004F5CC9 /* UILabel+Extra.m in Sources */,
 				C5AEE94325373638000E1C5F /* TabbarVC.m in Sources */,
