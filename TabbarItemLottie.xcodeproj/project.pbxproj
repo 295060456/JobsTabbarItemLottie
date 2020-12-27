@@ -30,6 +30,8 @@
 		C534CE4E25875A47001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4725875A47001369FD /* BWItemModel.m */; };
 		C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE5125875A47001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4D25875A47001369FD /* BWShareView.m */; };
+		C53D39BB2598C83000B48431 /* XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D39B82598C83000B48431 /* XLBubbleTransition.m */; };
+		C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D39B92598C83000B48431 /* UIViewController+XLBubbleTransition.m */; };
 		C544C1D7258375D200C6CF2A /* UIViewController+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1CF258375D200C6CF2A /* UIViewController+MJRefresh.m */; };
 		C544C1D8258375D200C6CF2A /* MJRefreshConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1D2258375D200C6CF2A /* MJRefreshConfigModel.m */; };
 		C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1D4258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m */; };
@@ -284,6 +286,11 @@
 		C534CE4B25875A47001369FD /* 分享控件的用法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "分享控件的用法.md"; sourceTree = "<group>"; };
 		C534CE4C25875A47001369FD /* BWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemModel.h; sourceTree = "<group>"; };
 		C534CE4D25875A47001369FD /* BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWShareView.m; sourceTree = "<group>"; };
+		C53D39B62598C83000B48431 /* XLBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBubbleTransition.h; sourceTree = "<group>"; };
+		C53D39B72598C83000B48431 /* UIViewController+XLBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XLBubbleTransition.h"; sourceTree = "<group>"; };
+		C53D39B82598C83000B48431 /* XLBubbleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBubbleTransition.m; sourceTree = "<group>"; };
+		C53D39B92598C83000B48431 /* UIViewController+XLBubbleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XLBubbleTransition.m"; sourceTree = "<group>"; };
+		C53D39BA2598C83000B48431 /* 使用方法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "使用方法.md"; sourceTree = "<group>"; };
 		C544C1CB258375D200C6CF2A /* UIViewController+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJRefresh.h"; sourceTree = "<group>"; };
 		C544C1CF258375D200C6CF2A /* UIViewController+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJRefresh.m"; sourceTree = "<group>"; };
 		C544C1D1258375D200C6CF2A /* MJRefreshConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConfigModel.h; sourceTree = "<group>"; };
@@ -703,6 +710,18 @@
 			path = "NSObject+Others";
 			sourceTree = "<group>";
 		};
+		C53D39B52598C83000B48431 /* UIViewController+XLBubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				C53D39BA2598C83000B48431 /* 使用方法.md */,
+				C53D39B72598C83000B48431 /* UIViewController+XLBubbleTransition.h */,
+				C53D39B92598C83000B48431 /* UIViewController+XLBubbleTransition.m */,
+				C53D39B62598C83000B48431 /* XLBubbleTransition.h */,
+				C53D39B82598C83000B48431 /* XLBubbleTransition.m */,
+			);
+			path = "UIViewController+XLBubbleTransition";
+			sourceTree = "<group>";
+		};
 		C544BE31258373F700C6CF2A /* UIViewController+BackBtn */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +845,7 @@
 		C54FE2D42576724300937C11 /* UIViewController+Category */ = {
 			isa = PBXGroup;
 			children = (
+				C53D39B52598C83000B48431 /* UIViewController+XLBubbleTransition */,
 				C5766FAA2546B8B100C382C8 /* UIViewController+JXCategory */,
 				C5D78ACE257F7AA50087FC92 /* UIViewController+Others */,
 				C5766FAB2546B8BC00C382C8 /* UIViewController+TZImagePickerController */,
@@ -2073,6 +2093,7 @@
 				C544C1D8258375D200C6CF2A /* MJRefreshConfigModel.m in Sources */,
 				C5AEE8A325373581000E1C5F /* main.m in Sources */,
 				C579F85A2539D4A000846814 /* UIView+SuspendView.m in Sources */,
+				C53D39BB2598C83000B48431 /* XLBubbleTransition.m in Sources */,
 				C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */,
 				C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */,
 				C50A3F742540A5A600465D01 /* NavigationBar.m in Sources */,
@@ -2091,6 +2112,7 @@
 				C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */,
 				C5AEE94A25373638000E1C5F /* VC@3.m in Sources */,
 				C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */,
+				C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */,
 				C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */,
 				C5AEE94725373638000E1C5F /* VC@8.m in Sources */,
 				C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */,

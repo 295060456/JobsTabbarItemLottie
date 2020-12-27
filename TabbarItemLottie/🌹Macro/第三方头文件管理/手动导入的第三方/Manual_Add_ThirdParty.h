@@ -38,6 +38,7 @@
 #import "UIViewController+TZLocationManager.h"
 #import "UIViewController+NavigationBar.h"
 #import "UIViewController+EmptyData.h"
+#import "UIViewController+XLBubbleTransition.h"
 /// UINavigationController
 #import "BaseNavigationVC.h"
 /// UINavigationBar
