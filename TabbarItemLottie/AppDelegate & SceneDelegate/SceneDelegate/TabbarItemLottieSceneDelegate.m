@@ -9,6 +9,8 @@
 #import "TabbarItemLottieAppDelegate.h"
 
 API_AVAILABLE(ios(13.0))
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability-new"
 
 @interface TabbarItemLottieSceneDelegate ()
 
@@ -74,3 +76,5 @@ willConnectToSession:(UISceneSession *)session
 }
 
 @end
+
+#pragma clang diagnostic pop

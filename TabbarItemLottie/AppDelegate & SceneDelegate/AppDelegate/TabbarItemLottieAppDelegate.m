@@ -7,6 +7,9 @@
 
 #import "TabbarItemLottieAppDelegate.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability-new"
+
 @interface TabbarItemLottieAppDelegate ()
 
 @end
@@ -143,3 +146,5 @@ connectingSceneSession options:(UISceneConnectionOptions *)options {
 }
 
 @end
+
+#pragma clang diagnostic pop
