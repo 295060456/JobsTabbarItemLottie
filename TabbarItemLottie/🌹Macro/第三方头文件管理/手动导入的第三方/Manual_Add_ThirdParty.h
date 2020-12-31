@@ -49,10 +49,8 @@
 #pragma mark —— Manual_Add_ThirdParty_h
 #import "UserDefaultManager.h"
 #import "BWShareView.h"// 分享控件
-#import "TabbarControllerSysEx.h"// 深度拓展系统UITabBar全家桶
-#import "ECAuthorizationTools.h"
+#import "TabbarControllerSysEx.h"// 深度拓展系统UITabBar全家桶=
 #import "TimerManager.h"
 #import "SuspendBtn.h"
-#import "ECAuthorizationTools.h"
 
 #endif /* Manual_Add_ThirdParty_h */

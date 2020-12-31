@@ -11,21 +11,25 @@ PODS:
     - BRPickerView/Base
   - BRPickerView/StringPickerView (2.7.3):
     - BRPickerView/Base
-  - GKNavigationBar (1.1.8)
-  - JPImageresizerView (1.7.7)
-  - JXCategoryView (1.5.7)
+  - GKNavigationBar (1.4.0):
+    - GKNavigationBar/GestureHandle (= 1.4.0)
+    - GKNavigationBar/NavigationBar (= 1.4.0)
+  - GKNavigationBar/GestureHandle (1.4.0)
+  - GKNavigationBar/NavigationBar (1.4.0)
+  - JPImageresizerView (1.7.8)
+  - JXCategoryView (1.5.8)
   - JXPagingView/Pager (2.0.13)
   - lottie-ios (2.5.3)
   - Masonry (1.1.0)
-  - MJExtension (3.2.3)
+  - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
   - PPBadgeView (3.1.0)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.9.4):
-    - SDWebImage/Core (= 5.9.4)
-  - SDWebImage/Core (5.9.4)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
   - SPAlertController (4.0.0)
-  - TZImagePickerController (3.4.8)
+  - TZImagePickerController (3.5.8)
   - WHToast (0.0.7)
 
 DEPENDENCIES:
@@ -65,19 +69,19 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BRPickerView: 9cc11880ac79c4872d081ccb88f306224c1501d7
-  GKNavigationBar: b68d31d24fc14a297b109e71280187dc311e0794
-  JPImageresizerView: ba2301b87ad03f7a7976deec4ccc75085d29f6c1
-  JXCategoryView: fca2146e87eeaf014c71041337cb07bd4de5830b
+  GKNavigationBar: fe87990bde3fb2b7ece3f81014c6d4bc654bef06
+  JPImageresizerView: 34f4a1f2d2196ddf148443f26dc4c4a41cca5b06
+  JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
   JXPagingView: 821ed274f09eaf2843a96c3a74e9d138e27d9730
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: a6fd35a527dafd7f3f1259017ee57551d58b3bb8
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   PPBadgeView: b50a223638970fd0781e8753250385864b6dd2fe
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
-  TZImagePickerController: 6685e6d81b8fd5453e80ba369dd4ebd6e97276ee
+  TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
   WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
 
 PODFILE CHECKSUM: 610d7c7d8f6105ade1a02a54d6aa8b19a7c6d804
