@@ -198,9 +198,6 @@
 		C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEA9F25381CDA000E1C5F /* JobsPullListAutoSizeView.m */; };
 		C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEAA9253832EC000E1C5F /* JobsPullListTBVCell.m */; };
 		C5AEEAB625383E8F000E1C5F /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEEAB525383E8F000E1C5F /* UIView+Extras.m */; };
-		C5C6547B259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65476259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m */; };
-		C5C6547C259DF99D00FD2F99 /* UIViewController+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65478259DF99D00FD2F99 /* UIViewController+TZImagePickerController.m */; };
-		C5C6547D259DF99D00FD2F99 /* UIViewController+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65479259DF99D00FD2F99 /* UIViewController+TZLocationManager.m */; };
 		C5C654C7259DF9B600FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65484259DF9B600FD2F99 /* ECPrivacyCheckMicrophone.m */; };
 		C5C654C8259DF9B600FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65486259DF9B600FD2F99 /* ECPrivacyCheckHomeKit.m */; };
 		C5C654C9259DF9B600FD2F99 /* ECPrivacyCheckBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C65488259DF9B600FD2F99 /* ECPrivacyCheckBluetooth.m */; };
@@ -572,12 +569,6 @@
 		C5AEEAA9253832EC000E1C5F /* JobsPullListTBVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobsPullListTBVCell.m; sourceTree = "<group>"; };
 		C5AEEAB425383E8F000E1C5F /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5AEEAB525383E8F000E1C5F /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
-		C5C65475259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TZImagePickerControllerDelegate.h"; sourceTree = "<group>"; };
-		C5C65476259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
-		C5C65477259DF99D00FD2F99 /* UIViewController+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TZLocationManager.h"; sourceTree = "<group>"; };
-		C5C65478259DF99D00FD2F99 /* UIViewController+TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TZImagePickerController.m"; sourceTree = "<group>"; };
-		C5C65479259DF99D00FD2F99 /* UIViewController+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TZLocationManager.m"; sourceTree = "<group>"; };
-		C5C6547A259DF99D00FD2F99 /* UIViewController+TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TZImagePickerController.h"; sourceTree = "<group>"; };
 		C5C65483259DF9B600FD2F99 /* ECPrivacyCheckCalendars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckCalendars.h; sourceTree = "<group>"; };
 		C5C65484259DF9B600FD2F99 /* ECPrivacyCheckMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPrivacyCheckMicrophone.m; sourceTree = "<group>"; };
 		C5C65485259DF9B600FD2F99 /* ECPrivacyCheckMotionAndFitness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckMotionAndFitness.h; sourceTree = "<group>"; };
@@ -946,7 +937,6 @@
 				C53D39B52598C83000B48431 /* UIViewController+XLBubbleTransition */,
 				C5766FAA2546B8B100C382C8 /* UIViewController+JXCategory */,
 				C5D78ACE257F7AA50087FC92 /* UIViewController+Others */,
-				C5766FAB2546B8BC00C382C8 /* UIViewController+TZImagePickerController */,
 			);
 			path = "UIViewController+Category";
 			sourceTree = "<group>";
@@ -1258,19 +1248,6 @@
 				C50A3F512540A59600465D01 /* UIViewController+JXCategoryListContentViewDelegate.m */,
 			);
 			path = "UIViewController+JXCategory";
-			sourceTree = "<group>";
-		};
-		C5766FAB2546B8BC00C382C8 /* UIViewController+TZImagePickerController */ = {
-			isa = PBXGroup;
-			children = (
-				C5C6547A259DF99D00FD2F99 /* UIViewController+TZImagePickerController.h */,
-				C5C65478259DF99D00FD2F99 /* UIViewController+TZImagePickerController.m */,
-				C5C65475259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.h */,
-				C5C65476259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m */,
-				C5C65477259DF99D00FD2F99 /* UIViewController+TZLocationManager.h */,
-				C5C65479259DF99D00FD2F99 /* UIViewController+TZLocationManager.m */,
-			);
-			path = "UIViewController+TZImagePickerController";
 			sourceTree = "<group>";
 		};
 		C579F83D2539D25100846814 /* Suspend */ = {
@@ -2320,7 +2297,6 @@
 				C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */,
 				C579F9852539DACD00846814 /* TransitionController.m in Sources */,
 				C5766FAE2546B8CC00C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
-				C5C6547D259DF99D00FD2F99 /* UIViewController+TZLocationManager.m in Sources */,
 				C5C654CF259DF9B600FD2F99 /* ECPrivacyCheckMotionAndFitness.m in Sources */,
 				C5AEE94525373638000E1C5F /* VC@5.m in Sources */,
 				C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */,
@@ -2343,7 +2319,6 @@
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
 				C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */,
-				C5C6547C259DF99D00FD2F99 /* UIViewController+TZImagePickerController.m in Sources */,
 				C5AEEAB625383E8F000E1C5F /* UIView+Extras.m in Sources */,
 				C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */,
 				C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */,
@@ -2362,7 +2337,6 @@
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C534CE4E25875A47001369FD /* BWItemModel.m in Sources */,
 				C595D520258714C6002A4531 /* SuspendView.m in Sources */,
-				C5C6547B259DF99D00FD2F99 /* UIViewController+TZImagePickerControllerDelegate.m in Sources */,
 				C5C654CD259DF9B600FD2F99 /* ECPrivacyCheckCalendars.m in Sources */,
 				C5D6DCA925860F4500029AFF /* TimeModel.m in Sources */,
 				C50A3F5C2540A59600465D01 /* UIViewController+BackBtn.m in Sources */,
