@@ -29,6 +29,7 @@ PODS:
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
   - SPAlertController (4.0.0)
+  - TXFileOperation (1.0)
   - WHToast (0.0.7)
 
 DEPENDENCIES:
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage
   - SPAlertController
+  - TXFileOperation
   - WHToast
 
 SPEC REPOS:
@@ -62,6 +64,7 @@ SPEC REPOS:
     - ReactiveObjC
     - SDWebImage
     - SPAlertController
+    - TXFileOperation
     - WHToast
 
 SPEC CHECKSUMS:
@@ -78,8 +81,9 @@ SPEC CHECKSUMS:
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
+  TXFileOperation: 99bc7e3763678fdea8e8c407e2b87fb18038385f
   WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
 
-PODFILE CHECKSUM: 1c73736df73a36b3be04d619fb97ce6ac74d261e
+PODFILE CHECKSUM: 041ef55c02f029f4d73e78a7853176df1355f9dd
 
 COCOAPODS: 1.10.0

@@ -33,6 +33,7 @@ def func
   pod 'SPAlertController'# https://github.com/SPStore/SPAlertController 深度定制AlertController
   pod 'SDWebImage' # https://github.com/SDWebImage/SDWebImage
   pod 'WHToast' # https://github.com/remember17/WHToast 一个轻量级的提示控件，没有任何依赖
+  pod 'TXFileOperation' # 文件夹操作 https://github.com/xtzPioneer/TXFileOperation
   end
 
 # 基础的公共配置

@@ -27,6 +27,9 @@
 		C534CE4E25875A47001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4725875A47001369FD /* BWItemModel.m */; };
 		C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE5125875A47001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4D25875A47001369FD /* BWShareView.m */; };
+		C53C9F3225A1D0A70007F58F /* NSObject+DataSave.m in Sources */ = {isa = PBXBuildFile; fileRef = C53C9F3025A1D0A70007F58F /* NSObject+DataSave.m */; };
+		C53CA1C825A1D4730007F58F /* FileFolderHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CA1C725A1D4730007F58F /* FileFolderHandleTool.m */; };
+		C53CA20225A1D4F90007F58F /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CA20025A1D4F90007F58F /* UIImage+Extras.m */; };
 		C53D39BB2598C83000B48431 /* XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D39B82598C83000B48431 /* XLBubbleTransition.m */; };
 		C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D39B92598C83000B48431 /* UIViewController+XLBubbleTransition.m */; };
 		C544C1D7258375D200C6CF2A /* UIViewController+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C544C1CF258375D200C6CF2A /* UIViewController+MJRefresh.m */; };
@@ -318,6 +321,12 @@
 		C534CE4B25875A47001369FD /* 分享控件的用法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "分享控件的用法.md"; sourceTree = "<group>"; };
 		C534CE4C25875A47001369FD /* BWItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemModel.h; sourceTree = "<group>"; };
 		C534CE4D25875A47001369FD /* BWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWShareView.m; sourceTree = "<group>"; };
+		C53C9F3025A1D0A70007F58F /* NSObject+DataSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DataSave.m"; sourceTree = "<group>"; };
+		C53C9F3125A1D0A70007F58F /* NSObject+DataSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DataSave.h"; sourceTree = "<group>"; };
+		C53CA1C625A1D4730007F58F /* FileFolderHandleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFolderHandleTool.h; sourceTree = "<group>"; };
+		C53CA1C725A1D4730007F58F /* FileFolderHandleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFolderHandleTool.m; sourceTree = "<group>"; };
+		C53CA20025A1D4F90007F58F /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
+		C53CA20125A1D4F90007F58F /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
 		C53D39B62598C83000B48431 /* XLBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBubbleTransition.h; sourceTree = "<group>"; };
 		C53D39B72598C83000B48431 /* UIViewController+XLBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XLBubbleTransition.h"; sourceTree = "<group>"; };
 		C53D39B82598C83000B48431 /* XLBubbleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBubbleTransition.m; sourceTree = "<group>"; };
@@ -751,9 +760,10 @@
 			isa = PBXGroup;
 			children = (
 				C5D6DCA525860F4500029AFF /* NSObject (Time) */,
-				C5D6DCA225860F4500029AFF /* NSObject+Time */,
 				C50A3FB82540A7E400465D01 /* NSObject+Alert */,
+				C53C9F2F25A1D0A70007F58F /* NSObject+DataSave */,
 				C534E7A8257F907E00DBC3CE /* NSObject+Others */,
+				C5D6DCA225860F4500029AFF /* NSObject+Time */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -773,6 +783,7 @@
 			isa = PBXGroup;
 			children = (
 				C5AEE91A25373638000E1C5F /* LoadingImage.h */,
+				C53CA1FF25A1D4F90007F58F /* UIImage+Extras */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -797,6 +808,33 @@
 				C5D6CA152585F43400029AFF /* NSObject+Extras */,
 			);
 			path = "NSObject+Others";
+			sourceTree = "<group>";
+		};
+		C53C9F2F25A1D0A70007F58F /* NSObject+DataSave */ = {
+			isa = PBXGroup;
+			children = (
+				C53C9F3125A1D0A70007F58F /* NSObject+DataSave.h */,
+				C53C9F3025A1D0A70007F58F /* NSObject+DataSave.m */,
+			);
+			path = "NSObject+DataSave";
+			sourceTree = "<group>";
+		};
+		C53CA1C525A1D4730007F58F /* 文件夹操作 */ = {
+			isa = PBXGroup;
+			children = (
+				C53CA1C625A1D4730007F58F /* FileFolderHandleTool.h */,
+				C53CA1C725A1D4730007F58F /* FileFolderHandleTool.m */,
+			);
+			path = "文件夹操作";
+			sourceTree = "<group>";
+		};
+		C53CA1FF25A1D4F90007F58F /* UIImage+Extras */ = {
+			isa = PBXGroup;
+			children = (
+				C53CA20125A1D4F90007F58F /* UIImage+Extras.h */,
+				C53CA20025A1D4F90007F58F /* UIImage+Extras.m */,
+			);
+			path = "UIImage+Extras";
 			sourceTree = "<group>";
 		};
 		C53D39B52598C83000B48431 /* UIViewController+XLBubbleTransition */ = {
@@ -1303,6 +1341,7 @@
 		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C53CA1C525A1D4730007F58F /* 文件夹操作 */,
 				C50A3F7D2540A68300465D01 /* 分享控件 */,
 				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
 				C572F9662552C1EF004F5CC9 /* TimerManager */,
@@ -2313,9 +2352,11 @@
 				C5C654D0259DF9B600FD2F99 /* ECPrivacyCheckMediaAndAppleMusic.m in Sources */,
 				C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */,
 				C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */,
+				C53C9F3225A1D0A70007F58F /* NSObject+DataSave.m in Sources */,
 				C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */,
 				C5C654C8259DF9B600FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */,
 				C50A3FBD2540A7E400465D01 /* NSObject+SPAlertController.m in Sources */,
+				C53CA20225A1D4F90007F58F /* UIImage+Extras.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
 				C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */,
@@ -2344,6 +2385,7 @@
 				C5C654C7259DF9B600FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */,
 				C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */,
 				C595D521258714C6002A4531 /* SuspendBtn.m in Sources */,
+				C53CA1C825A1D4730007F58F /* FileFolderHandleTool.m in Sources */,
 				C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */,
 				C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */,

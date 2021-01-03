@@ -22,6 +22,7 @@
 #import "UIButton+ImageTitleSpacing.h"
 /// UIImage
 #import "LoadingImage.h"
+#import "UIImage+Extras.h"
 /// UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
@@ -42,6 +43,7 @@
 #import "NavigationBar.h"
 /// NSObject
 #import "NSObject+Shake.h"
+#import "NSObject+DataSave.h"
 
 #pragma mark —— Manual_Add_ThirdParty_h
 #import "UserDefaultManager.h"
@@ -49,5 +51,6 @@
 #import "TabbarControllerSysEx.h"// 深度拓展系统UITabBar全家桶=
 #import "TimerManager.h"
 #import "SuspendBtn.h"
+#import "FileFolderHandleTool.h"
 
 #endif /* Manual_Add_ThirdParty_h */
