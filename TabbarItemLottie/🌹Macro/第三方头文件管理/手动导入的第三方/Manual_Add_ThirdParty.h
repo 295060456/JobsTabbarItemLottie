@@ -18,6 +18,7 @@
 #import "UIView+Animation.h"
 #import "UIView+SuspendView.h"
 #import "UIView+EmptyData.h"
+#import "UIView+Gesture.h"
 /// UIButton
 #import "UIButton+ImageTitleSpacing.h"
 /// UIImage

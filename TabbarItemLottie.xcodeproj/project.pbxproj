@@ -24,6 +24,7 @@
 		C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FBA2540A7E400465D01 /* NSObject+SYSAlertController.m */; };
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
+		C51576EB25A351200074D945 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C51576EA25A351200074D945 /* UIView+Gesture.m */; };
 		C534CE4E25875A47001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4725875A47001369FD /* BWItemModel.m */; };
 		C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE5125875A47001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4D25875A47001369FD /* BWShareView.m */; };
@@ -314,6 +315,8 @@
 		C50A401E2540AA3800465D01 /* MacroDef_Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Size.h; sourceTree = "<group>"; };
 		C50A401F2540AA3800465D01 /* MacroDef_Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Func.h; sourceTree = "<group>"; };
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
+		C51576E925A351200074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
+		C51576EA25A351200074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
 		C534CE4725875A47001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE4825875A47001369FD /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
 		C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -797,6 +800,15 @@
 				C50A401D2540AA3800465D01 /* MacroDef_Sys.h */,
 			);
 			path = "各项宏定义";
+			sourceTree = "<group>";
+		};
+		C51576E825A351200074D945 /* UIView+Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				C51576E925A351200074D945 /* UIView+Gesture.h */,
+				C51576EA25A351200074D945 /* UIView+Gesture.m */,
+			);
+			path = "UIView+Gesture";
 			sourceTree = "<group>";
 		};
 		C534E7A8257F907E00DBC3CE /* NSObject+Others */ = {
@@ -1609,6 +1621,7 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C51576E825A351200074D945 /* UIView+Gesture */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C546103E258C8F9B0008928C /* UIView+AOP */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
@@ -2389,6 +2402,7 @@
 				C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */,
 				C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */,
+				C51576EB25A351200074D945 /* UIView+Gesture.m in Sources */,
 				C5AEE88F25373580000E1C5F /* TabbarItemLottieAppDelegate.m in Sources */,
 				C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */,
 				C5D0BB1025878F07002CA224 /* SoundBtn.m in Sources */,
