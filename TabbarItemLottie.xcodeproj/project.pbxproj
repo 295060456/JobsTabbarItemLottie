@@ -129,6 +129,7 @@
 		C55D427E2539776500CFCF73 /* drop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427C2539776500CFCF73 /* drop@2x.png */; };
 		C55D427F2539776500CFCF73 /* drop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427D2539776500CFCF73 /* drop@3x.png */; };
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
+		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
 		C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */; };
@@ -455,6 +456,9 @@
 		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVerticalArrangementLabsView.m; sourceTree = "<group>"; };
+		C565CBFB25A4386C00848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
+		C565CBFC25A4386C00848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
 		C56BBC7A25879AB30043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC7B25879AB30043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
@@ -1182,6 +1186,16 @@
 			path = "Tabbaritem点击动效";
 			sourceTree = "<group>";
 		};
+		C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */ = {
+			isa = PBXGroup;
+			children = (
+				C565CBFB25A4386C00848134 /* TwoVerticalArrangementLabsView.h */,
+				C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */,
+				C565CBFC25A4386C00848134 /* TwoVerticalArrangementLabsView.png */,
+			);
+			path = TwoVerticalArrangementLabsView;
+			sourceTree = "<group>";
+		};
 		C56BBC7925879AB30043C977 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -1353,6 +1367,7 @@
 		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */,
 				C53CA1C525A1D4730007F58F /* 文件夹操作 */,
 				C50A3F7D2540A68300465D01 /* 分享控件 */,
 				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
@@ -2402,6 +2417,7 @@
 				C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */,
 				C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */,
+				C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */,
 				C51576EB25A351200074D945 /* UIView+Gesture.m in Sources */,
 				C5AEE88F25373580000E1C5F /* TabbarItemLottieAppDelegate.m in Sources */,
 				C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */,
