@@ -20,11 +20,11 @@
 		C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3F5A2540A59600465D01 /* UIViewController+BaseVC.m */; };
 		C50A3F742540A5A600465D01 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3F6F2540A5A600465D01 /* NavigationBar.m */; };
 		C50A3F752540A5A600465D01 /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3F722540A5A600465D01 /* BaseNavigationVC.m */; };
-		C50A3FBD2540A7E400465D01 /* NSObject+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FB92540A7E400465D01 /* NSObject+SPAlertController.m */; };
-		C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FBA2540A7E400465D01 /* NSObject+SYSAlertController.m */; };
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
 		C51576EB25A351200074D945 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C51576EA25A351200074D945 /* UIView+Gesture.m */; };
+		C52F9B9B25A6DA0E00924990 /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F9B9825A6DA0E00924990 /* NSObject+SYSAlertController.m */; };
+		C52F9B9C25A6DA0E00924990 /* NSObject+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F9B9925A6DA0E00924990 /* NSObject+SPAlertController.m */; };
 		C534CE4E25875A47001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4725875A47001369FD /* BWItemModel.m */; };
 		C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE5125875A47001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4D25875A47001369FD /* BWShareView.m */; };
@@ -305,10 +305,6 @@
 		C50A3F702540A5A600465D01 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
 		C50A3F722540A5A600465D01 /* BaseNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationVC.m; sourceTree = "<group>"; };
 		C50A3F732540A5A600465D01 /* BaseNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationVC.h; sourceTree = "<group>"; };
-		C50A3FB92540A7E400465D01 /* NSObject+SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPAlertController.m"; sourceTree = "<group>"; };
-		C50A3FBA2540A7E400465D01 /* NSObject+SYSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SYSAlertController.m"; sourceTree = "<group>"; };
-		C50A3FBB2540A7E400465D01 /* NSObject+SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPAlertController.h"; sourceTree = "<group>"; };
-		C50A3FBC2540A7E400465D01 /* NSObject+SYSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SYSAlertController.h"; sourceTree = "<group>"; };
 		C50A3FE62540A8C400465D01 /* NSObject+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shake.h"; sourceTree = "<group>"; };
 		C50A3FE72540A8C400465D01 /* NSObject+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shake.m"; sourceTree = "<group>"; };
 		C50A401C2540AA3800465D01 /* MacroDef_Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_Cor.h; sourceTree = "<group>"; };
@@ -318,6 +314,10 @@
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C51576E925A351200074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
 		C51576EA25A351200074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
+		C52F9B9725A6DA0E00924990 /* NSObject+SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPAlertController.h"; sourceTree = "<group>"; };
+		C52F9B9825A6DA0E00924990 /* NSObject+SYSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SYSAlertController.m"; sourceTree = "<group>"; };
+		C52F9B9925A6DA0E00924990 /* NSObject+SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPAlertController.m"; sourceTree = "<group>"; };
+		C52F9B9A25A6DA0E00924990 /* NSObject+SYSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SYSAlertController.h"; sourceTree = "<group>"; };
 		C534CE4725875A47001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE4825875A47001369FD /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
 		C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -778,10 +778,10 @@
 		C50A3FB82540A7E400465D01 /* NSObject+Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C50A3FBB2540A7E400465D01 /* NSObject+SPAlertController.h */,
-				C50A3FB92540A7E400465D01 /* NSObject+SPAlertController.m */,
-				C50A3FBC2540A7E400465D01 /* NSObject+SYSAlertController.h */,
-				C50A3FBA2540A7E400465D01 /* NSObject+SYSAlertController.m */,
+				C52F9B9725A6DA0E00924990 /* NSObject+SPAlertController.h */,
+				C52F9B9925A6DA0E00924990 /* NSObject+SPAlertController.m */,
+				C52F9B9A25A6DA0E00924990 /* NSObject+SYSAlertController.h */,
+				C52F9B9825A6DA0E00924990 /* NSObject+SYSAlertController.m */,
 			);
 			path = "NSObject+Alert";
 			sourceTree = "<group>";
@@ -2383,7 +2383,6 @@
 				C53C9F3225A1D0A70007F58F /* NSObject+DataSave.m in Sources */,
 				C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */,
 				C5C654C8259DF9B600FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */,
-				C50A3FBD2540A7E400465D01 /* NSObject+SPAlertController.m in Sources */,
 				C53CA20225A1D4F90007F58F /* UIImage+Extras.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
@@ -2414,7 +2413,6 @@
 				C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */,
 				C595D521258714C6002A4531 /* SuspendBtn.m in Sources */,
 				C53CA1C825A1D4730007F58F /* FileFolderHandleTool.m in Sources */,
-				C50A3FBE2540A7E400465D01 /* NSObject+SYSAlertController.m in Sources */,
 				C544C1D9258375D200C6CF2A /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */,
 				C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */,
@@ -2445,12 +2443,14 @@
 				C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */,
 				C595D51F258714C6002A4531 /* SuspendLab.m in Sources */,
 				C5AEE93C25373638000E1C5F /* UIView+Chain.m in Sources */,
+				C52F9B9B25A6DA0E00924990 /* NSObject+SYSAlertController.m in Sources */,
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
 				C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */,
 				C5D6DCB625860F5900029AFF /* NSTimerManager.m in Sources */,
 				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
 				C5D602CE2586325C00029AFF /* UIViewController+NavigationBar.m in Sources */,
+				C52F9B9C25A6DA0E00924990 /* NSObject+SPAlertController.m in Sources */,
 				C5AEE94425373638000E1C5F /* VC@1.m in Sources */,
 				C50A3F642540A59600465D01 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C5C654D2259DF9B600FD2F99 /* ECPrivacyCheckContacts.m in Sources */,
