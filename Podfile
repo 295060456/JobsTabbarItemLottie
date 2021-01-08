@@ -25,6 +25,7 @@ def func
   
   pod 'BRPickerView'
   pod 'GKNavigationBar'
+  pod 'GKPhotoBrowser' # https://github.com/QuintGao/GKPhotoBrowser iOS仿微信、今日头条等图片浏览器 
   pod 'JXCategoryView' # https://github.com/pujiaxin33/JXCategoryView
   pod 'JXPagingView/Pager' # https://github.com/pujiaxin33/JXPagingView NO_SMP
   pod 'MJRefresh'
@@ -32,6 +33,7 @@ def func
   pod 'JPImageresizerView' # https://github.com/Rogue24/JPImageresizerView 一个专门裁剪图片、GIF、视频的轮子，简单易用，功能丰富（高自由度的参数设定、支持旋转和镜像翻转、蒙版、压缩等），能满足绝大部分裁剪的需求。
   pod 'SPAlertController'# https://github.com/SPStore/SPAlertController 深度定制AlertController
   pod 'SDWebImage' # https://github.com/SDWebImage/SDWebImage
+  pod 'YYImage'
   pod 'WHToast' # https://github.com/remember17/WHToast 一个轻量级的提示控件，没有任何依赖
   pod 'TXFileOperation' # 文件夹操作 https://github.com/xtzPioneer/TXFileOperation
   end

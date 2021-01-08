@@ -449,8 +449,35 @@
                                 endRange.location - startRange.location - startRange.length);
     return [self substringWithRange:range];
 }
+// 如果字符串为null 那么不走isEqualToString，无法比较都是空的情况
++(BOOL)isEqualStrA:(NSString *)stringA
+              strB:(NSString *)stringB{
+    if ([NSString isNullString:stringA] && [NSString isNullString:stringB]) {//双方都是null
+        return YES;
+    }else{
+        return [stringA isEqualToString:stringB];
+    }
+}
 
-
+// 根据字体大小 和宽度计算文字的高
++(float)textHitWithStirng:(NSString*)stingS
+                     font:(float)font
+                     widt:(float)wid{
+    if (!font) {
+        font = 14.0;
+    }
+    if (!stingS) {
+        stingS = @"";
+    }
+    if (!wid || wid == 0.0) {
+        wid = 20;
+    }
+    CGRect rect=[stingS boundingRectWithSize:CGSizeMake(wid, MAXFLOAT)
+                                     options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin
+                                  attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]}
+                                     context:nil];
+    return rect.size.height;
+}
 
 
 @end
