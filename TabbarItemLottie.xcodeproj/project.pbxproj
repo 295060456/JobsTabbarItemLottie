@@ -254,6 +254,7 @@
 		C5C654F1259DF9B600FD2F99 /* 文件和文件夹@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C654BC259DF9B600FD2F99 /* 文件和文件夹@3x.png */; };
 		C5C654F2259DF9B600FD2F99 /* 定位服务@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C654BD259DF9B600FD2F99 /* 定位服务@3x.png */; };
 		C5C654F3259DF9B600FD2F99 /* ECPrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C654C0259DF9B600FD2F99 /* ECPrivacyCheckGatherTool.m */; };
+		C5CF17A625AC7FD000381935 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF17A325AC7FD000381935 /* LYLUnicode.m */; };
 		C5D0BB0E25878F07002CA224 /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D0BB0A25878F07002CA224 /* Sound.wav */; };
 		C5D0BB1025878F07002CA224 /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BB0C25878F07002CA224 /* SoundBtn.m */; };
 		C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D0BB1A25878F34002CA224 /* NSObject+Sound.m */; };
@@ -675,6 +676,9 @@
 		C5C654C3259DF9B600FD2F99 /* ECPrivacyCheckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrivacyCheckTools.h; sourceTree = "<group>"; };
 		C5C654C5259DF9B600FD2F99 /* ECPrivacyCheckTools不用pod管理的情况说明.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "ECPrivacyCheckTools不用pod管理的情况说明.md"; sourceTree = "<group>"; };
 		C5C654C6259DF9B600FD2F99 /* ECAuthorizationTools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ECAuthorizationTools.md; sourceTree = "<group>"; };
+		C5CF17A325AC7FD000381935 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
+		C5CF17A425AC7FD000381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "解决打印日志对于Unicode编码不能正常显示中文的问题"; sourceTree = "<group>"; };
+		C5CF17A525AC7FD000381935 /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		C5D0BB0A25878F07002CA224 /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
 		C5D0BB0B25878F07002CA224 /* 带有按键音的按钮.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "带有按键音的按钮.md"; sourceTree = "<group>"; };
 		C5D0BB0C25878F07002CA224 /* SoundBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBtn.m; sourceTree = "<group>"; };
@@ -1387,6 +1391,7 @@
 		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5CF17A225AC7FD000381935 /* LYLUnicode */,
 				C5A43ABA25AAF8C2000F0CD2 /* 手势滑动返回 */,
 				C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */,
 				C53CA1C525A1D4730007F58F /* 文件夹操作 */,
@@ -1936,6 +1941,16 @@
 				C5C654C6259DF9B600FD2F99 /* ECAuthorizationTools.md */,
 			);
 			path = ReadMe;
+			sourceTree = "<group>";
+		};
+		C5CF17A225AC7FD000381935 /* LYLUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF17A425AC7FD000381935 /* 解决打印日志对于Unicode编码不能正常显示中文的问题 */,
+				C5CF17A525AC7FD000381935 /* LYLUnicode.h */,
+				C5CF17A325AC7FD000381935 /* LYLUnicode.m */,
+			);
+			path = LYLUnicode;
 			sourceTree = "<group>";
 		};
 		C5D0BB0925878F07002CA224 /* SoundBtn */ = {
@@ -2514,6 +2529,7 @@
 				C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */,
 				C5A4450825ABFC57000F0CD2 /* JXCategoryTimelineCellModel.m in Sources */,
 				C5C654CA259DF9B600FD2F99 /* ECPrivacyCheckCamera.m in Sources */,
+				C5CF17A625AC7FD000381935 /* LYLUnicode.m in Sources */,
 				C5AEE94A25373638000E1C5F /* VC@3.m in Sources */,
 				C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */,
 				C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */,
