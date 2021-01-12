@@ -37,6 +37,7 @@
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
 		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
 		C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C558F3EE258A30F60078DB8F /* NotificationManager.m */; };
+		C55BF54525AC904000A8347F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BF54425AC904000A8347F /* TabbarVC.m */; };
 		C55D4144253974E900CFCF73 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */; };
 		C55D414D2539750E00CFCF73 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D414C2539750E00CFCF73 /* UITabBar+TLAnimation.m */; };
 		C55D41532539752300CFCF73 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D41512539752300CFCF73 /* UITabBarItem+TLAnimation.m */; };
@@ -194,7 +195,6 @@
 		C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91525373638000E1C5F /* UIView+Measure.m */; };
 		C5AEE93E25373638000E1C5F /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE91625373638000E1C5F /* UIView+Animation.m */; };
 		C5AEE94225373638000E1C5F /* NSObject+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92325373638000E1C5F /* NSObject+Extras.m */; };
-		C5AEE94325373638000E1C5F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92625373638000E1C5F /* TabbarVC.m */; };
 		C5AEE94425373638000E1C5F /* VC@1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92825373638000E1C5F /* VC@1.m */; };
 		C5AEE94525373638000E1C5F /* VC@5.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92C25373638000E1C5F /* VC@5.m */; };
 		C5AEE94625373638000E1C5F /* VC@2.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AEE92E25373638000E1C5F /* VC@2.m */; };
@@ -364,6 +364,9 @@
 		C558F3F5258A31010078DB8F /* DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineStructure.h; sourceTree = "<group>"; };
 		C558F3F6258A31010078DB8F /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		C558F3F7258A31010078DB8F /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
+		C55BF53F25AC903200A8347F /* TabBarControllerConstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConstruction.h; sourceTree = "<group>"; };
+		C55BF54325AC904000A8347F /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
+		C55BF54425AC904000A8347F /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
 		C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarControllerSysEx.h; sourceTree = "<group>"; };
 		C55D4140253974CE00CFCF73 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		C55D4142253974E900CFCF73 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
@@ -582,8 +585,6 @@
 		C5AEE91A25373638000E1C5F /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
 		C5AEE91F25373638000E1C5F /* NSObject+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extras.h"; sourceTree = "<group>"; };
 		C5AEE92325373638000E1C5F /* NSObject+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extras.m"; sourceTree = "<group>"; };
-		C5AEE92525373638000E1C5F /* TabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarVC.h; sourceTree = "<group>"; };
-		C5AEE92625373638000E1C5F /* TabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarVC.m; sourceTree = "<group>"; };
 		C5AEE92825373638000E1C5F /* VC@1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VC@1.m"; sourceTree = "<group>"; };
 		C5AEE92925373638000E1C5F /* VC@7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VC@7.h"; sourceTree = "<group>"; };
 		C5AEE92A25373638000E1C5F /* VC@3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VC@3.h"; sourceTree = "<group>"; };
@@ -1374,6 +1375,7 @@
 		C579F9A02539DD9C00846814 /* 全局配置文件 */ = {
 			isa = PBXGroup;
 			children = (
+				C55BF53F25AC903200A8347F /* TabBarControllerConstruction.h */,
 				C55D42832539886900CFCF73 /* TabBarControllerConfig.h */,
 				C55D42842539886900CFCF73 /* TabBarControllerConfig.m */,
 			);
@@ -1750,9 +1752,9 @@
 		C5AEE92425373638000E1C5F /* UITabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				C55BF54325AC904000A8347F /* TabbarVC.h */,
+				C55BF54425AC904000A8347F /* TabbarVC.m */,
 				C579F84D2539D28C00846814 /* 旋转.png */,
-				C5AEE92525373638000E1C5F /* TabbarVC.h */,
-				C5AEE92625373638000E1C5F /* TabbarVC.m */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -2504,6 +2506,7 @@
 				C53D39BB2598C83000B48431 /* XLBubbleTransition.m in Sources */,
 				C5C654D4259DF9B600FD2F99 /* ECPrivacyCheckReminders.m in Sources */,
 				C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */,
+				C55BF54525AC904000A8347F /* TabbarVC.m in Sources */,
 				C5A4450425ABFC57000F0CD2 /* JXCategoryTitleBackgroundCellModel.m in Sources */,
 				C5A4450725ABFC57000F0CD2 /* JXCategoryTimelineView.m in Sources */,
 				C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */,
@@ -2566,7 +2569,6 @@
 				C59A3ED9258DD240005F6260 /* UserDefaultManager.m in Sources */,
 				C5D602C52586324D00029AFF /* BaseViewController.m in Sources */,
 				C572F9D62552C683004F5CC9 /* UILabel+Extra.m in Sources */,
-				C5AEE94325373638000E1C5F /* TabbarVC.m in Sources */,
 				C5DF45A925A89A2900E91985 /* LOTAnimationMJRefreshHeader.m in Sources */,
 				C50A3F752540A5A600465D01 /* BaseNavigationVC.m in Sources */,
 				C5AEE93A25373638000E1C5F /* UITabBar+Ex.m in Sources */,
