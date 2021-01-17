@@ -126,6 +126,7 @@
 		C55D427E2539776500CFCF73 /* drop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427C2539776500CFCF73 /* drop@2x.png */; };
 		C55D427F2539776500CFCF73 /* drop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427D2539776500CFCF73 /* drop@3x.png */; };
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
+		C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */; };
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
@@ -461,6 +462,8 @@
 		C55D427D2539776500CFCF73 /* drop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop@3x.png"; sourceTree = "<group>"; };
 		C55D42832539886900CFCF73 /* TabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarControllerConfig.h; sourceTree = "<group>"; };
 		C55D42842539886900CFCF73 /* TabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerConfig.m; sourceTree = "<group>"; };
+		C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJRefresh.m"; sourceTree = "<group>"; };
+		C55FEC8925B4285700D8C30D /* UIView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJRefresh.h"; sourceTree = "<group>"; };
 		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1211,6 +1214,15 @@
 			path = "Tabbaritem点击动效";
 			sourceTree = "<group>";
 		};
+		C55FEC8725B4285700D8C30D /* UIView+MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C55FEC8925B4285700D8C30D /* UIView+MJRefresh.h */,
+				C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */,
+			);
+			path = "UIView+MJRefresh";
+			sourceTree = "<group>";
+		};
 		C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1729,13 +1741,14 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C51576E825A351200074D945 /* UIView+Gesture */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C546103E258C8F9B0008928C /* UIView+AOP */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
 				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
 				C595BE7325864274002A4531 /* UIView+Extras */,
+				C51576E825A351200074D945 /* UIView+Gesture */,
 				C595BE742586427B002A4531 /* UIView+Measure */,
+				C55FEC8725B4285700D8C30D /* UIView+MJRefresh */,
 				C595BE7525864284002A4531 /* UIView+SuspendView */,
 			);
 			path = UIView;
@@ -2542,6 +2555,7 @@
 				C572F9782552C1EF004F5CC9 /* CADisplayLink_TimerManager.m in Sources */,
 				C5A4450A25ABFC57000F0CD2 /* WHToast+DDToast.m in Sources */,
 				C5C654CC259DF9B600FD2F99 /* ECPrivacyCheckFilesAndFolders.m in Sources */,
+				C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */,
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C534CE4E25875A47001369FD /* BWItemModel.m in Sources */,
 				C595D520258714C6002A4531 /* SuspendView.m in Sources */,
