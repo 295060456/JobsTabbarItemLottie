@@ -19,9 +19,9 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #endif
 
-#define MianScreen          UIScreen.mainScreen.bounds.size
-#define Device_Width        MianScreen.width//获取屏幕宽高
-#define Device_Height       MianScreen.height
+#define MainScreen          UIScreen.mainScreen.bounds.size
+#define Device_Width        MainScreen.width//获取屏幕宽高
+#define Device_Height       MainScreen.height
 #define MAINSCREEN_WIDTH    Device_Width
 #define MAINSCREEN_HEIGHT   Device_Height
 
