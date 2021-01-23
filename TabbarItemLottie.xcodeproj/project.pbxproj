@@ -129,6 +129,7 @@
 		C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */; };
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
+		C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
 		C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */; };
 		C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */; };
@@ -473,6 +474,8 @@
 		C56BBC7A25879AB30043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC7B25879AB30043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
+		C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundImage.m"; sourceTree = "<group>"; };
+		C57297E325BB0A9200726419 /* UIView+BackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BackgroundImage.h"; sourceTree = "<group>"; };
 		C572F9452552C184004F5CC9 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
@@ -1261,6 +1264,15 @@
 			path = SceneDelegate;
 			sourceTree = "<group>";
 		};
+		C57297E125BB0A9200726419 /* UIView+BackgroundImage */ = {
+			isa = PBXGroup;
+			children = (
+				C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */,
+				C57297E325BB0A9200726419 /* UIView+BackgroundImage.h */,
+			);
+			path = "UIView+BackgroundImage";
+			sourceTree = "<group>";
+		};
 		C572F9432552C184004F5CC9 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1741,6 +1753,7 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C546103E258C8F9B0008928C /* UIView+AOP */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
@@ -2521,6 +2534,7 @@
 				C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */,
 				C55BF54525AC904000A8347F /* TabbarVC.m in Sources */,
 				C5A4450425ABFC57000F0CD2 /* JXCategoryTitleBackgroundCellModel.m in Sources */,
+				C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */,
 				C5A4450725ABFC57000F0CD2 /* JXCategoryTimelineView.m in Sources */,
 				C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */,
 				C50A3F742540A5A600465D01 /* NavigationBar.m in Sources */,
