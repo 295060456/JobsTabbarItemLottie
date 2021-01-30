@@ -350,6 +350,7 @@
 		C5461040258C8F9B0008928C /* UIView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AOP.h"; sourceTree = "<group>"; };
 		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
+		C54C8A8325C5545F0054F53F /* MacroDef_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDef_App.h; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C55801BA258A40F40078DB8F /* Others.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Others.h; sourceTree = "<group>"; };
@@ -843,6 +844,7 @@
 		C50A401B2540AA3000465D01 /* 各项宏定义 */ = {
 			isa = PBXGroup;
 			children = (
+				C54C8A8325C5545F0054F53F /* MacroDef_App.h */,
 				C50A401C2540AA3800465D01 /* MacroDef_Cor.h */,
 				C50A401F2540AA3800465D01 /* MacroDef_Func.h */,
 				C50A401E2540AA3800465D01 /* MacroDef_Size.h */,
