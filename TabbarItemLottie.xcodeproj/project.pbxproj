@@ -125,6 +125,7 @@
 		C55D427F2539776500CFCF73 /* drop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427D2539776500CFCF73 /* drop@3x.png */; };
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
 		C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */; };
+		C562DE9725C7C582004D1AEA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C562DE9625C7C582004D1AEA /* UIView+ViewController.m */; };
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
 		C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */; };
@@ -465,6 +466,8 @@
 		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C562DE9525C7C581004D1AEA /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		C562DE9625C7C582004D1AEA /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVerticalArrangementLabsView.m; sourceTree = "<group>"; };
 		C565CBFB25A4386C00848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
 		C565CBFC25A4386C00848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
@@ -1228,6 +1231,15 @@
 			path = "UIView+MJRefresh";
 			sourceTree = "<group>";
 		};
+		C562DE9425C7C57B004D1AEA /* UIView+ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C562DE9525C7C581004D1AEA /* UIView+ViewController.h */,
+				C562DE9625C7C582004D1AEA /* UIView+ViewController.m */,
+			);
+			path = "UIView+ViewController";
+			sourceTree = "<group>";
+		};
 		C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1508,8 +1520,8 @@
 		C595D51C258714C6002A4531 /* SuspendBtn */ = {
 			isa = PBXGroup;
 			children = (
-				C595D51D258714C6002A4531 /* SuspendBtn.m */,
 				C595D51E258714C6002A4531 /* SuspendBtn.h */,
+				C595D51D258714C6002A4531 /* SuspendBtn.m */,
 			);
 			path = SuspendBtn;
 			sourceTree = "<group>";
@@ -1755,6 +1767,7 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C562DE9425C7C57B004D1AEA /* UIView+ViewController */,
 				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C546103E258C8F9B0008928C /* UIView+AOP */,
@@ -2536,6 +2549,7 @@
 				C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */,
 				C55BF54525AC904000A8347F /* TabbarVC.m in Sources */,
 				C5A4450425ABFC57000F0CD2 /* JXCategoryTitleBackgroundCellModel.m in Sources */,
+				C562DE9725C7C582004D1AEA /* UIView+ViewController.m in Sources */,
 				C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */,
 				C5A4450725ABFC57000F0CD2 /* JXCategoryTimelineView.m in Sources */,
 				C50A3F672540A59600465D01 /* UIViewController+BaseVC.m in Sources */,

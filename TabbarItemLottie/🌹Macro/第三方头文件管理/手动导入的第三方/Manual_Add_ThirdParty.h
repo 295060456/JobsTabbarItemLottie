@@ -20,6 +20,7 @@
 #import "UIView+EmptyData.h"
 #import "UIView+Gesture.h"
 #import "UIView+MJRefresh.h"
+#import "UIView+ViewController.h"
 /// UIButton
 #import "UIButton+ImageTitleSpacing.h"
 /// UIImage
@@ -53,6 +54,8 @@
 #import "TabbarControllerSysEx.h"// 深度拓展系统UITabBar全家桶=
 #import "TimerManager.h"
 #import "SuspendBtn.h"
+#import "SuspendLab.h"
+#import "SuspendView.h"
 #import "FileFolderHandleTool.h"
 
 #endif /* Manual_Add_ThirdParty_h */
