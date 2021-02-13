@@ -127,6 +127,7 @@
 		C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */; };
 		C562DE9725C7C582004D1AEA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C562DE9625C7C582004D1AEA /* UIView+ViewController.m */; };
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
+		C56736CC25D77BBE008ABAF9 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56736CB25D77BBE008ABAF9 /* BaseView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
 		C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
@@ -471,6 +472,8 @@
 		C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVerticalArrangementLabsView.m; sourceTree = "<group>"; };
 		C565CBFB25A4386C00848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
 		C565CBFC25A4386C00848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
+		C56736CA25D77BBE008ABAF9 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		C56736CB25D77BBE008ABAF9 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		C56BBC7A25879AB30043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC7B25879AB30043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
@@ -1250,6 +1253,33 @@
 			path = TwoVerticalArrangementLabsView;
 			sourceTree = "<group>";
 		};
+		C56736C825D77BAB008ABAF9 /* UIView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C562DE9425C7C57B004D1AEA /* UIView+ViewController */,
+				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
+				C595BE7125864269002A4531 /* UIView+Animation */,
+				C546103E258C8F9B0008928C /* UIView+AOP */,
+				C595BE722586426E002A4531 /* UIView+Chain */,
+				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
+				C595BE7325864274002A4531 /* UIView+Extras */,
+				C51576E825A351200074D945 /* UIView+Gesture */,
+				C595BE742586427B002A4531 /* UIView+Measure */,
+				C55FEC8725B4285700D8C30D /* UIView+MJRefresh */,
+				C595BE7525864284002A4531 /* UIView+SuspendView */,
+			);
+			path = "UIView+Category";
+			sourceTree = "<group>";
+		};
+		C56736C925D77BB6008ABAF9 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				C56736CA25D77BBE008ABAF9 /* BaseView.h */,
+				C56736CB25D77BBE008ABAF9 /* BaseView.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		C56BBC7925879AB30043C977 /* UIControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -1767,17 +1797,8 @@
 		C5AEE91325373638000E1C5F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				C562DE9425C7C57B004D1AEA /* UIView+ViewController */,
-				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
-				C595BE7125864269002A4531 /* UIView+Animation */,
-				C546103E258C8F9B0008928C /* UIView+AOP */,
-				C595BE722586426E002A4531 /* UIView+Chain */,
-				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
-				C595BE7325864274002A4531 /* UIView+Extras */,
-				C51576E825A351200074D945 /* UIView+Gesture */,
-				C595BE742586427B002A4531 /* UIView+Measure */,
-				C55FEC8725B4285700D8C30D /* UIView+MJRefresh */,
-				C595BE7525864284002A4531 /* UIView+SuspendView */,
+				C56736C925D77BB6008ABAF9 /* BaseView */,
+				C56736C825D77BAB008ABAF9 /* UIView+Category */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2530,6 +2551,7 @@
 			files = (
 				C5A43AC225AAF8C2000F0CD2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				C534CE5125875A47001369FD /* BWShareView.m in Sources */,
+				C56736CC25D77BBE008ABAF9 /* BaseView.m in Sources */,
 				C5AEE94C25373638000E1C5F /* VC@4.m in Sources */,
 				C5C654CE259DF9B600FD2F99 /* ECPrivacyCheckSpeechRecognition.m in Sources */,
 				C5D1C120258B20EF00784D2F /* UIView+EmptyData.m in Sources */,

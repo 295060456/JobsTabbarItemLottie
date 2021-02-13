@@ -13,6 +13,9 @@
 #import "NSObject+Sound.h"
 #import "NSObject+Extras.h"
 /// UIView
+// BaseView
+#import "BaseView.h"
+// UIView+Category
 #import "UIView+Measure.h"
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
