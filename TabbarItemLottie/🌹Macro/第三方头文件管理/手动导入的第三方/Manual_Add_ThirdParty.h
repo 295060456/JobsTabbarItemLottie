@@ -8,14 +8,14 @@
 #ifndef Manual_Add_ThirdParty_h
 #define Manual_Add_ThirdParty_h
 
-#pragma mark —— BaseCustomizeUIKit
-/// NSObject
+/// BaseCustomizeUIKit
+#pragma mark —— NSObject
 #import "NSObject+Sound.h"
 #import "NSObject+Extras.h"
-/// UIView
-// BaseView
+#pragma mark —— UIView
+/// BaseView
 #import "BaseView.h"
-// UIView+Category
+/// UIView+Category
 #import "UIView+Measure.h"
 #import "UIView+Extras.h"
 #import "UIView+Animation.h"
@@ -24,12 +24,12 @@
 #import "UIView+Gesture.h"
 #import "UIView+MJRefresh.h"
 #import "UIView+ViewController.h"
-/// UIButton
+#pragma mark —— UIButton
 #import "UIButton+ImageTitleSpacing.h"
-/// UIImage
+#pragma mark —— UIImage
 #import "LoadingImage.h"
 #import "UIImage+Extras.h"
-/// UIViewController
+#pragma mark —— UIViewController
 #import "UIViewController+BaseVC.h"
 #import "UIViewController+BackBtn.h"
 #import "UIViewController+BRPickerView.h"
@@ -43,13 +43,18 @@
 #import "UIViewController+NavigationBar.h"
 #import "UIViewController+EmptyData.h"
 #import "UIViewController+XLBubbleTransition.h"
-/// UINavigationController
+#pragma mark —— UINavigationController
 #import "BaseNavigationVC.h"
-/// UINavigationBar
+#pragma mark —— UINavigationBar
 #import "NavigationBar.h"
-/// NSObject
+#pragma mark —— NSObject
 #import "NSObject+Shake.h"
 #import "NSObject+DataSave.h"
+#pragma mark —— UIImageView
+// BaseImageView
+#import "BaseImageView.h"
+// UIImageView+Category
+#import "UIImageView+GIF.h"//UIImageView支持GIF动画 https://github.com/pupboss/UIImageView-GIF
 
 #pragma mark —— Manual_Add_ThirdParty_h
 #import "UserDefaultManager.h"
