@@ -144,6 +144,7 @@
 		C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9832539DACC00846814 /* TransitionAnimation.m */; };
 		C583BAB825E4B38D0054FD6E /* BaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C583BAB325E4B38D0054FD6E /* BaseImageView.m */; };
 		C583BAB925E4B38D0054FD6E /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C583BAB625E4B38D0054FD6E /* UIImageView+GIF.m */; };
+		C59434FE25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59434FB25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.m */; };
 		C595D51F258714C6002A4531 /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D518258714C5002A4531 /* SuspendLab.m */; };
 		C595D520258714C6002A4531 /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D51A258714C6002A4531 /* SuspendView.m */; };
 		C595D521258714C6002A4531 /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C595D51D258714C6002A4531 /* SuspendBtn.m */; };
@@ -513,6 +514,9 @@
 		C583BAB625E4B38D0054FD6E /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
 		C583BAB725E4B38D0054FD6E /* UIImageView+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIF.h"; sourceTree = "<group>"; };
 		C591EF892563C88B005B78CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C59434FB25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+IndicateWordLimit.m"; sourceTree = "<group>"; };
+		C59434FC25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+IndicateWordLimit.h"; sourceTree = "<group>"; };
+		C59434FD25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITextView+IndicateWordLimit.png"; sourceTree = "<group>"; };
 		C595D517258714C5002A4531 /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
 		C595D518258714C5002A4531 /* SuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendLab.m; sourceTree = "<group>"; };
 		C595D51A258714C6002A4531 /* SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendView.m; sourceTree = "<group>"; };
@@ -802,6 +806,7 @@
 				C572F9D02552C683004F5CC9 /* UILabel */,
 				C50A3F6E2540A5A600465D01 /* UINavigationBar */,
 				C50A3F712540A5A600465D01 /* UINavigationController */,
+				C59434FA25E7AAF4003BCA91 /* UITextView+IndicateWordLimit */,
 				C5AEE91325373638000E1C5F /* UIView */,
 				C50A3F402540A58C00465D01 /* UIViewController */,
 			);
@@ -1516,6 +1521,16 @@
 				C50A40E62540AC8600465D01 /* ⚽️PicResource */,
 			);
 			path = "资源文件";
+			sourceTree = "<group>";
+		};
+		C59434FA25E7AAF4003BCA91 /* UITextView+IndicateWordLimit */ = {
+			isa = PBXGroup;
+			children = (
+				C59434FC25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.h */,
+				C59434FB25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.m */,
+				C59434FD25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.png */,
+			);
+			path = "UITextView+IndicateWordLimit";
 			sourceTree = "<group>";
 		};
 		C595BE7125864269002A4531 /* UIView+Animation */ = {
@@ -2689,6 +2704,7 @@
 				C5AEE94925373638000E1C5F /* VC@9.m in Sources */,
 				C5AEE89225373580000E1C5F /* TabbarItemLottieSceneDelegate.m in Sources */,
 				C5D6DCB625860F5900029AFF /* NSTimerManager.m in Sources */,
+				C59434FE25E7AAF4003BCA91 /* UITextView+IndicateWordLimit.m in Sources */,
 				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
 				C5A43AC025AAF8C2000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
