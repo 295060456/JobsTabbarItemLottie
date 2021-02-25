@@ -36,6 +36,7 @@ def func
   pod 'YYImage'
   pod 'WHToast' # https://github.com/remember17/WHToast 一个轻量级的提示控件，没有任何依赖
   pod 'TXFileOperation' # 文件夹操作 https://github.com/xtzPioneer/TXFileOperation
+  pod 'TABAnimated' # https://github.com/tigerAndBull/TABAnimated
   end
 
 # 基础的公共配置
