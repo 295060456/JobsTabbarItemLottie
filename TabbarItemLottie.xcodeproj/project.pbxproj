@@ -129,6 +129,8 @@
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56736CC25D77BBE008ABAF9 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56736CB25D77BBE008ABAF9 /* BaseView.m */; };
 		C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBC7B25879AB30043C977 /* UIControl+XY.m */; };
+		C56BBCB325E90786001E1E69 /* UIView+CallBackInfoByBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBCB225E90786001E1E69 /* UIView+CallBackInfoByBlock.m */; };
+		C56BBCBD25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56BBCBC25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.m */; };
 		C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
 		C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */; };
@@ -480,6 +482,10 @@
 		C56BBC7A25879AB30043C977 /* UIControl+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XY.h"; sourceTree = "<group>"; };
 		C56BBC7B25879AB30043C977 /* UIControl+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XY.m"; sourceTree = "<group>"; };
 		C56BBC7C25879AB30043C977 /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS小技巧：用runtime 解决UIButton 重复点击问题.md"; sourceTree = "<group>"; };
+		C56BBCB125E90786001E1E69 /* UIView+CallBackInfoByBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CallBackInfoByBlock.h"; sourceTree = "<group>"; };
+		C56BBCB225E90786001E1E69 /* UIView+CallBackInfoByBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CallBackInfoByBlock.m"; sourceTree = "<group>"; };
+		C56BBCBB25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CallBackInfoByBlock.h"; sourceTree = "<group>"; };
+		C56BBCBC25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CallBackInfoByBlock.m"; sourceTree = "<group>"; };
 		C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundImage.m"; sourceTree = "<group>"; };
 		C57297E325BB0A9200726419 /* UIView+BackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BackgroundImage.h"; sourceTree = "<group>"; };
 		C572F9452552C184004F5CC9 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
@@ -1268,10 +1274,10 @@
 		C56736C825D77BAB008ABAF9 /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C562DE9425C7C57B004D1AEA /* UIView+ViewController */,
-				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
 				C595BE7125864269002A4531 /* UIView+Animation */,
 				C546103E258C8F9B0008928C /* UIView+AOP */,
+				C57297E125BB0A9200726419 /* UIView+BackgroundImage */,
+				C56BBCB025E90786001E1E69 /* UIView+CallBackInfoByBlock */,
 				C595BE722586426E002A4531 /* UIView+Chain */,
 				C5D1C11D258B20EF00784D2F /* UIView+EmptyData */,
 				C595BE7325864274002A4531 /* UIView+Extras */,
@@ -1279,6 +1285,7 @@
 				C595BE742586427B002A4531 /* UIView+Measure */,
 				C55FEC8725B4285700D8C30D /* UIView+MJRefresh */,
 				C595BE7525864284002A4531 /* UIView+SuspendView */,
+				C562DE9425C7C57B004D1AEA /* UIView+ViewController */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -1300,6 +1307,24 @@
 				C56BBC7B25879AB30043C977 /* UIControl+XY.m */,
 			);
 			path = UIControl;
+			sourceTree = "<group>";
+		};
+		C56BBCB025E90786001E1E69 /* UIView+CallBackInfoByBlock */ = {
+			isa = PBXGroup;
+			children = (
+				C56BBCB125E90786001E1E69 /* UIView+CallBackInfoByBlock.h */,
+				C56BBCB225E90786001E1E69 /* UIView+CallBackInfoByBlock.m */,
+			);
+			path = "UIView+CallBackInfoByBlock";
+			sourceTree = "<group>";
+		};
+		C56BBCBA25E90797001E1E69 /* UIViewController+CallBackInfoByBlock */ = {
+			isa = PBXGroup;
+			children = (
+				C56BBCBB25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.h */,
+				C56BBCBC25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.m */,
+			);
+			path = "UIViewController+CallBackInfoByBlock";
 			sourceTree = "<group>";
 		};
 		C57278CB25409846002373D7 /* AppDelegate */ = {
@@ -2174,6 +2199,7 @@
 				C544BE3B2583740000C6CF2A /* UIViewController+BaseVC */,
 				C544BE3C2583740B00C6CF2A /* UIViewController+BRPickerView */,
 				C544BE3D2583741400C6CF2A /* UIViewController+BWShareView */,
+				C56BBCBA25E90797001E1E69 /* UIViewController+CallBackInfoByBlock */,
 				C5D1BC6D258B0D3200784D2F /* UIViewController+EmptyData */,
 				C544BE3E2583741D00C6CF2A /* UIViewController+GifImageView */,
 				C544BE3F2583742400C6CF2A /* UIViewController+JPImageresizerView */,
@@ -2694,6 +2720,7 @@
 				C5C654D3259DF9B600FD2F99 /* ECPrivacyCheckHealth.m in Sources */,
 				C50A3F662540A59600465D01 /* UIViewController+BWShareView.m in Sources */,
 				C50A3F5F2540A59600465D01 /* UIViewController+Shake.m in Sources */,
+				C56BBCBD25E90797001E1E69 /* UIViewController+CallBackInfoByBlock.m in Sources */,
 				C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */,
 				C5A4450525ABFC57000F0CD2 /* JXCategoryTitleBackgroundCell.m in Sources */,
 				C5C654CB259DF9B600FD2F99 /* ECPrivacyCheckLocationServices.m in Sources */,
@@ -2708,6 +2735,7 @@
 				C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */,
 				C5A43AC025AAF8C2000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
+				C56BBCB325E90786001E1E69 /* UIView+CallBackInfoByBlock.m in Sources */,
 				C5A96FE925BD34C9000077BC /* NSObject+SPAlertController.m in Sources */,
 				C5D602CE2586325C00029AFF /* UIViewController+NavigationBar.m in Sources */,
 				C5AEE94425373638000E1C5F /* VC@1.m in Sources */,

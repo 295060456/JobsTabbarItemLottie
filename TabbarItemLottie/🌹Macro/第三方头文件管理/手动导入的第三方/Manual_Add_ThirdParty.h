@@ -24,6 +24,7 @@
 #import "UIView+Gesture.h"
 #import "UIView+MJRefresh.h"
 #import "UIView+ViewController.h"
+#import "UIView+CallBackInfoByBlock.h"
 #pragma mark —— UIButton
 #import "UIButton+ImageTitleSpacing.h"
 #pragma mark —— UIImage
@@ -43,6 +44,7 @@
 #import "UIViewController+NavigationBar.h"
 #import "UIViewController+EmptyData.h"
 #import "UIViewController+XLBubbleTransition.h"
+#import "UIViewController+CallBackInfoByBlock.h"
 #pragma mark —— UINavigationController
 #import "BaseNavigationVC.h"
 #pragma mark —— UINavigationBar
