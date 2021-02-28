@@ -269,7 +269,7 @@
 		C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1C118258B20E100784D2F /* UIViewController+EmptyData.m */; };
 		C5D1C120258B20EF00784D2F /* UIView+EmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1C11E258B20EF00784D2F /* UIView+EmptyData.m */; };
 		C5D602C52586324D00029AFF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602C32586324D00029AFF /* BaseViewController.m */; };
-		C5D602CE2586325C00029AFF /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602CC2586325C00029AFF /* UIViewController+NavigationBar.m */; };
+		C5D602CE2586325C00029AFF /* UIViewController+BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D602CC2586325C00029AFF /* UIViewController+BaseNavigationBar.m */; };
 		C5D6DCA825860F4500029AFF /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCA425860F4500029AFF /* NSObject+Time.m */; };
 		C5D6DCA925860F4500029AFF /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCA625860F4500029AFF /* TimeModel.m */; };
 		C5D6DCB625860F5900029AFF /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCB525860F5800029AFF /* NSTimerManager.m */; };
@@ -718,8 +718,8 @@
 		C5D1C11F258B20EF00784D2F /* UIView+EmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EmptyData.h"; sourceTree = "<group>"; };
 		C5D602C32586324D00029AFF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C5D602C42586324D00029AFF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		C5D602CC2586325C00029AFF /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
-		C5D602CD2586325C00029AFF /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
+		C5D602CC2586325C00029AFF /* UIViewController+BaseNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseNavigationBar.m"; sourceTree = "<group>"; };
+		C5D602CD2586325C00029AFF /* UIViewController+BaseNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseNavigationBar.h"; sourceTree = "<group>"; };
 		C5D6DCA325860F4500029AFF /* NSObject+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Time.h"; sourceTree = "<group>"; };
 		C5D6DCA425860F4500029AFF /* NSObject+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Time.m"; sourceTree = "<group>"; };
 		C5D6DCA625860F4500029AFF /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
@@ -1062,13 +1062,13 @@
 			path = "UIViewController+Shake";
 			sourceTree = "<group>";
 		};
-		C544BE422583744100C6CF2A /* UIViewController+NavigationBar */ = {
+		C544BE422583744100C6CF2A /* UIViewController+BaseNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				C5D602CD2586325C00029AFF /* UIViewController+NavigationBar.h */,
-				C5D602CC2586325C00029AFF /* UIViewController+NavigationBar.m */,
+				C5D602CD2586325C00029AFF /* UIViewController+BaseNavigationBar.h */,
+				C5D602CC2586325C00029AFF /* UIViewController+BaseNavigationBar.m */,
 			);
-			path = "UIViewController+NavigationBar";
+			path = "UIViewController+BaseNavigationBar";
 			sourceTree = "<group>";
 		};
 		C546103E258C8F9B0008928C /* UIView+AOP */ = {
@@ -2239,7 +2239,7 @@
 				C544BE3E2583741D00C6CF2A /* UIViewController+GifImageView */,
 				C544BE3F2583742400C6CF2A /* UIViewController+JPImageresizerView */,
 				C544BE402583742E00C6CF2A /* UIViewController+MJRefresh */,
-				C544BE422583744100C6CF2A /* UIViewController+NavigationBar */,
+				C544BE422583744100C6CF2A /* UIViewController+BaseNavigationBar */,
 				C544BE412583743500C6CF2A /* UIViewController+Shake */,
 			);
 			path = "UIViewController+Others";
@@ -2771,7 +2771,7 @@
 				C5A43AC025AAF8C2000F0CD2 /* UIScrollView+FDFullscreenPopGesture.m in Sources */,
 				C5AEE94B25373638000E1C5F /* VC@7.m in Sources */,
 				C5A96FE925BD34C9000077BC /* NSObject+SPAlertController.m in Sources */,
-				C5D602CE2586325C00029AFF /* UIViewController+NavigationBar.m in Sources */,
+				C5D602CE2586325C00029AFF /* UIViewController+BaseNavigationBar.m in Sources */,
 				C5AEE94425373638000E1C5F /* VC@1.m in Sources */,
 				C50A3F642540A59600465D01 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C5C654D2259DF9B600FD2F99 /* ECPrivacyCheckContacts.m in Sources */,

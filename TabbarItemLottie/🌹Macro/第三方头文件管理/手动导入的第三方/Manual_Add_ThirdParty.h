@@ -40,7 +40,7 @@
 #import "UIViewController+JXPagerViewListViewDelegate.h"
 #import "UIViewController+MJRefresh.h"
 #import "UIViewController+Shake.h"
-#import "UIViewController+NavigationBar.h"
+#import "UIViewController+BaseNavigationBar.h"
 #import "UIViewController+EmptyData.h"
 #import "UIViewController+XLBubbleTransition.h"
 #pragma mark —— UINavigationController
