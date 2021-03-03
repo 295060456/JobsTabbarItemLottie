@@ -356,6 +356,7 @@
 		C5461040258C8F9B0008928C /* UIView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AOP.h"; sourceTree = "<group>"; };
 		C54B3C1D25525FE2003BE195 /* UIFont+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extras.h"; sourceTree = "<group>"; };
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
+		C54C642325EFC313007DD043 /* DDCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCacheTool.h; sourceTree = "<group>"; };
 		C54C8A8325C5545F0054F53F /* MacroDef_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDef_App.h; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
@@ -1088,6 +1089,14 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		C54C642225EFC313007DD043 /* 清除缓存 */ = {
+			isa = PBXGroup;
+			children = (
+				C54C642325EFC313007DD043 /* DDCacheTool.h */,
+			);
+			path = "清除缓存";
+			sourceTree = "<group>";
+		};
 		C54FE2D42576724300937C11 /* UIViewController+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1561,6 +1570,7 @@
 		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C54C642225EFC313007DD043 /* 清除缓存 */,
 				C5CF17A225AC7FD000381935 /* LYLUnicode */,
 				C5A43ABA25AAF8C2000F0CD2 /* 手势滑动返回 */,
 				C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */,

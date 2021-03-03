@@ -66,5 +66,6 @@
 #import "SuspendLab.h"
 #import "SuspendView.h"
 #import "FileFolderHandleTool.h"
+#import "DDCacheTool.h"
 
 #endif /* Manual_Add_ThirdParty_h */
