@@ -33,6 +33,7 @@
 		C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C53D39B92598C83000B48431 /* UIViewController+XLBubbleTransition.m */; };
 		C5461041258C8F9B0008928C /* UIView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = C546103F258C8F9B0008928C /* UIView+AOP.m */; };
 		C54B3C1F25525FE2003BE195 /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */; };
+		C5542DA925F3250E002D1CA6 /* CheckMemFreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5542DA825F3250E002D1CA6 /* CheckMemFreeVC.m */; };
 		C5569632255BFCB1005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556962C255BFCB1005C1361 /* NSString+Extras.m */; };
 		C558F3F0258A30F60078DB8F /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C558F3EE258A30F60078DB8F /* NotificationManager.m */; };
 		C55BF54525AC904000A8347F /* TabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BF54425AC904000A8347F /* TabbarVC.m */; };
@@ -358,6 +359,8 @@
 		C54B3C1E25525FE2003BE195 /* UIFont+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extras.m"; sourceTree = "<group>"; };
 		C54C642325EFC313007DD043 /* DDCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCacheTool.h; sourceTree = "<group>"; };
 		C54C8A8325C5545F0054F53F /* MacroDef_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDef_App.h; sourceTree = "<group>"; };
+		C5542DA725F3250E002D1CA6 /* CheckMemFreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMemFreeVC.h; sourceTree = "<group>"; };
+		C5542DA825F3250E002D1CA6 /* CheckMemFreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMemFreeVC.m; sourceTree = "<group>"; };
 		C556962C255BFCB1005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C556962E255BFCB1005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C55801BA258A40F40078DB8F /* Others.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Others.h; sourceTree = "<group>"; };
@@ -1116,6 +1119,15 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		C5542DA625F3250E002D1CA6 /* CheckMemFreeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C5542DA725F3250E002D1CA6 /* CheckMemFreeVC.h */,
+				C5542DA825F3250E002D1CA6 /* CheckMemFreeVC.m */,
+			);
+			path = CheckMemFreeVC;
+			sourceTree = "<group>";
+		};
 		C5580613258A468D0078DB8F /* PodsManual */ = {
 			isa = PBXGroup;
 			children = (
@@ -1570,6 +1582,7 @@
 		C591EF852563C85F005B78CC /* Manual_Add_ThirdParty  */ = {
 			isa = PBXGroup;
 			children = (
+				C5542DA625F3250E002D1CA6 /* CheckMemFreeVC */,
 				C54C642225EFC313007DD043 /* 清除缓存 */,
 				C5CF17A225AC7FD000381935 /* LYLUnicode */,
 				C5A43ABA25AAF8C2000F0CD2 /* 手势滑动返回 */,
@@ -2736,6 +2749,7 @@
 				C5C654CD259DF9B600FD2F99 /* ECPrivacyCheckCalendars.m in Sources */,
 				C5D6DCA925860F4500029AFF /* TimeModel.m in Sources */,
 				C50A3F5C2540A59600465D01 /* UIViewController+BackBtn.m in Sources */,
+				C5542DA925F3250E002D1CA6 /* CheckMemFreeVC.m in Sources */,
 				C50A3F622540A59600465D01 /* UIViewController+BRPickerView.m in Sources */,
 				C5C654C7259DF9B600FD2F99 /* ECPrivacyCheckMicrophone.m in Sources */,
 				C56BBC7D25879AB30043C977 /* UIControl+XY.m in Sources */,
