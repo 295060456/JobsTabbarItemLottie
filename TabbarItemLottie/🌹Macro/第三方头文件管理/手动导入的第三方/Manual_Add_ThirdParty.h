@@ -47,6 +47,10 @@
 #import "BaseNavigationVC.h"
 #pragma mark —— UINavigationBar
 #import "BaseNavigationBar.h"
+#pragma mark —— UITextView
+/// UITextView+Category
+#import "UITextView+IndicateWordLimit.h"
+#import "UITextView+Extend.h"
 #pragma mark —— NSObject
 #import "NSObject+Shake.h"
 #import "NSObject+DataSave.h"

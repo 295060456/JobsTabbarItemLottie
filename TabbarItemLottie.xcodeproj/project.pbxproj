@@ -126,6 +126,7 @@
 		C55D427F2539776500CFCF73 /* drop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55D427D2539776500CFCF73 /* drop@3x.png */; };
 		C55D42852539886900CFCF73 /* TabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C55D42842539886900CFCF73 /* TabBarControllerConfig.m */; };
 		C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */; };
+		C56190E626008F5E00D4546E /* UITextView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C56190E526008F5E00D4546E /* UITextView+Extend.m */; };
 		C562DE9725C7C582004D1AEA /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C562DE9625C7C582004D1AEA /* UIView+ViewController.m */; };
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C56736CC25D77BBE008ABAF9 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C56736CB25D77BBE008ABAF9 /* BaseView.m */; };
@@ -473,6 +474,8 @@
 		C55E2AED25FB28A000716A9B /* MacroDef_SysWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_SysWarning.h; sourceTree = "<group>"; };
 		C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJRefresh.m"; sourceTree = "<group>"; };
 		C55FEC8925B4285700D8C30D /* UIView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJRefresh.h"; sourceTree = "<group>"; };
+		C56190E426008F5E00D4546E /* UITextView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extend.h"; sourceTree = "<group>"; };
+		C56190E526008F5E00D4546E /* UITextView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extend.m"; sourceTree = "<group>"; };
 		C56207132553FE5100FE435F /* 验证码按钮单例封装.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "验证码按钮单例封装.md"; sourceTree = "<group>"; };
 		C56208362553FF5E00FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -949,7 +952,7 @@
 		C542D71825EB7B9100D776D8 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
-				C59434FA25E7AAF4003BCA91 /* UITextView+IndicateWordLimit */,
+				C56190E226008F5600D4546E /* UITextView+Category */,
 			);
 			path = UITextView;
 			sourceTree = "<group>";
@@ -1362,6 +1365,24 @@
 				C55FEC8825B4285700D8C30D /* UIView+MJRefresh.m */,
 			);
 			path = "UIView+MJRefresh";
+			sourceTree = "<group>";
+		};
+		C56190E226008F5600D4546E /* UITextView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C56190E326008F5E00D4546E /* UITextView+Extend */,
+				C59434FA25E7AAF4003BCA91 /* UITextView+IndicateWordLimit */,
+			);
+			path = "UITextView+Category";
+			sourceTree = "<group>";
+		};
+		C56190E326008F5E00D4546E /* UITextView+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				C56190E426008F5E00D4546E /* UITextView+Extend.h */,
+				C56190E526008F5E00D4546E /* UITextView+Extend.m */,
+			);
+			path = "UITextView+Extend";
 			sourceTree = "<group>";
 		};
 		C562DE9425C7C57B004D1AEA /* UIView+ViewController */ = {
@@ -2786,6 +2807,7 @@
 				C55FEC8A25B4285700D8C30D /* UIView+MJRefresh.m in Sources */,
 				C5AEE93B25373638000E1C5F /* CustomTabBar.m in Sources */,
 				C534CE4E25875A47001369FD /* BWItemModel.m in Sources */,
+				C56190E626008F5E00D4546E /* UITextView+Extend.m in Sources */,
 				C595D520258714C6002A4531 /* SuspendView.m in Sources */,
 				C5A4450925ABFC57000F0CD2 /* JXCategoryTimelineCell.m in Sources */,
 				C5C654CD259DF9B600FD2F99 /* ECPrivacyCheckCalendars.m in Sources */,
