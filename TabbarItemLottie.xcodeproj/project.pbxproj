@@ -336,6 +336,10 @@
 		C50A40E62540AC8600465D01 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C51576E925A351200074D945 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
 		C51576EA25A351200074D945 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
+		C51F88DD2608625D00953C10 /* 安全区域.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "安全区域.png"; sourceTree = "<group>"; };
+		C51F88DE2608625D00953C10 /* MacroDef_AppDeviceScreenSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_AppDeviceScreenSize.h; sourceTree = "<group>"; };
+		C51F88DF2608625D00953C10 /* iPhone尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone尺寸.png"; sourceTree = "<group>"; };
+		C51F88E02608625D00953C10 /* iPad尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad尺寸.png"; sourceTree = "<group>"; };
 		C534CE4725875A47001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE4825875A47001369FD /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
 		C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -481,6 +485,9 @@
 		C5620B8D2554047300FE435F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C562DE9525C7C581004D1AEA /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		C562DE9625C7C582004D1AEA /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		C56321C626084B9200822149 /* BaseViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewControllerProtocol.h; sourceTree = "<group>"; };
+		C56321C726084B9200822149 /* BaseCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellProtocol.h; sourceTree = "<group>"; };
+		C56321C826084B9200822149 /* BaseViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewProtocol.h; sourceTree = "<group>"; };
 		C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVerticalArrangementLabsView.m; sourceTree = "<group>"; };
 		C565CBFB25A4386C00848134 /* TwoVerticalArrangementLabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVerticalArrangementLabsView.h; sourceTree = "<group>"; };
 		C565CBFC25A4386C00848134 /* TwoVerticalArrangementLabsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwoVerticalArrangementLabsView.png; sourceTree = "<group>"; };
@@ -805,6 +812,7 @@
 		C50A3F792540A5AC00465D01 /* BaseCustomizeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C56321C526084B9200822149 /* BaseProtocol */,
 				C542D71825EB7B9100D776D8 /* UITextView */,
 				C50A3FB72540A7D900465D01 /* NSObject */,
 				C5AEE91B25373638000E1C5F /* NSString */,
@@ -863,8 +871,8 @@
 		C50A3FEC2540A90600465D01 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				C51F6F38260858FB00953C10 /* UIImage+Category */,
 				C5AEE91A25373638000E1C5F /* LoadingImage.h */,
-				C53CA1FF25A1D4F90007F58F /* UIImage+Extras */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -888,6 +896,33 @@
 				C51576EA25A351200074D945 /* UIView+Gesture.m */,
 			);
 			path = "UIView+Gesture";
+			sourceTree = "<group>";
+		};
+		C51F6F38260858FB00953C10 /* UIImage+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C53CA1FF25A1D4F90007F58F /* UIImage+Extras */,
+			);
+			path = "UIImage+Category";
+			sourceTree = "<group>";
+		};
+		C51F82F226085F6700953C10 /* UILabel+Category */ = {
+			isa = PBXGroup;
+			children = (
+				C542D71B25EB7BB200D776D8 /* UILabel+Extra */,
+			);
+			path = "UILabel+Category";
+			sourceTree = "<group>";
+		};
+		C51F88DC2608625D00953C10 /* 苹果产品尺寸 */ = {
+			isa = PBXGroup;
+			children = (
+				C51F88DD2608625D00953C10 /* 安全区域.png */,
+				C51F88E02608625D00953C10 /* iPad尺寸.png */,
+				C51F88DF2608625D00953C10 /* iPhone尺寸.png */,
+				C51F88DE2608625D00953C10 /* MacroDef_AppDeviceScreenSize.h */,
+			);
+			path = "苹果产品尺寸";
 			sourceTree = "<group>";
 		};
 		C534E7A8257F907E00DBC3CE /* NSObject+Others */ = {
@@ -1344,6 +1379,7 @@
 		C55E2AE525FB288E00716A9B /* MacroDef_Size */ = {
 			isa = PBXGroup;
 			children = (
+				C51F88DC2608625D00953C10 /* 苹果产品尺寸 */,
 				C50A401E2540AA3800465D01 /* MacroDef_Size.h */,
 			);
 			path = MacroDef_Size;
@@ -1392,6 +1428,16 @@
 				C562DE9625C7C582004D1AEA /* UIView+ViewController.m */,
 			);
 			path = "UIView+ViewController";
+			sourceTree = "<group>";
+		};
+		C56321C526084B9200822149 /* BaseProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C56321C626084B9200822149 /* BaseViewControllerProtocol.h */,
+				C56321C726084B9200822149 /* BaseCellProtocol.h */,
+				C56321C826084B9200822149 /* BaseViewProtocol.h */,
+			);
+			path = BaseProtocol;
 			sourceTree = "<group>";
 		};
 		C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */ = {
@@ -1548,7 +1594,7 @@
 		C572F9D02552C683004F5CC9 /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				C542D71B25EB7BB200D776D8 /* UILabel+Extra */,
+				C51F82F226085F6700953C10 /* UILabel+Category */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
