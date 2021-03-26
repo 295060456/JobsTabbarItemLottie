@@ -53,6 +53,7 @@
 #import "UITextView+Extend.h"
 #pragma mark —— NSObject
 #import "NSObject+Shake.h"
+#import "NSObject+DefConfig.h"
 #import "NSObject+DataSave.h"
 #import "NSObject+CallBackInfoByBlock.h"
 #pragma mark —— UIImageView

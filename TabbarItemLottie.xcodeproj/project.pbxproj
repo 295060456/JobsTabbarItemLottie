@@ -275,6 +275,8 @@
 		C5D6DCA825860F4500029AFF /* NSObject+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCA425860F4500029AFF /* NSObject+Time.m */; };
 		C5D6DCA925860F4500029AFF /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCA625860F4500029AFF /* TimeModel.m */; };
 		C5D6DCB625860F5900029AFF /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCB525860F5800029AFF /* NSTimerManager.m */; };
+		C5D8D2A8260CC47E00BDAF76 /* toastLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5D8D2A7260CC47E00BDAF76 /* toastLoading.gif */; };
+		C5D8D914260CC94E00BDAF76 /* NSObject+DefConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8D912260CC94E00BDAF76 /* NSObject+DefConfig.m */; };
 		C5DF45A925A89A2900E91985 /* LOTAnimationMJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF459B25A89A2900E91985 /* LOTAnimationMJRefreshHeader.m */; };
 		C5DF45AA25A89A2900E91985 /* LOTAnimationMJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF459E25A89A2900E91985 /* LOTAnimationMJRefreshFooter.m */; };
 		C5DF45AB25A89A2900E91985 /* JsonRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5DF45A125A89A2900E91985 /* JsonRes.bundle */; };
@@ -741,6 +743,9 @@
 		C5D6DCA725860F4500029AFF /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		C5D6DCB425860F5800029AFF /* NSTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerManager.h; sourceTree = "<group>"; };
 		C5D6DCB525860F5800029AFF /* NSTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerManager.m; sourceTree = "<group>"; };
+		C5D8D2A7260CC47E00BDAF76 /* toastLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = toastLoading.gif; sourceTree = "<group>"; };
+		C5D8D912260CC94E00BDAF76 /* NSObject+DefConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DefConfig.m"; sourceTree = "<group>"; };
+		C5D8D913260CC94E00BDAF76 /* NSObject+DefConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DefConfig.h"; sourceTree = "<group>"; };
 		C5DF459B25A89A2900E91985 /* LOTAnimationMJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationMJRefreshHeader.m; sourceTree = "<group>"; };
 		C5DF459C25A89A2900E91985 /* LOTAnimationMJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTAnimationMJRefreshHeader.h; sourceTree = "<group>"; };
 		C5DF459E25A89A2900E91985 /* LOTAnimationMJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOTAnimationMJRefreshFooter.m; sourceTree = "<group>"; };
@@ -847,6 +852,7 @@
 		C50A3FB72540A7D900465D01 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				C5D8D911260CC94E00BDAF76 /* NSObject+DefConfig */,
 				C5D6DCA525860F4500029AFF /* NSObject (Time) */,
 				C50A3FB82540A7E400465D01 /* NSObject+Alert */,
 				C56BD7A125E9393F001E1E69 /* NSObject+CallBackInfoByBlock */,
@@ -1859,6 +1865,7 @@
 		C5A444FE25ABFC57000F0CD2 /* WHToast */ = {
 			isa = PBXGroup;
 			children = (
+				C5D8D2A7260CC47E00BDAF76 /* toastLoading.gif */,
 				C5A444FF25ABFC57000F0CD2 /* WHToast+DDToast.m */,
 				C5A4450025ABFC57000F0CD2 /* WHToast+DDToast.h */,
 			);
@@ -2377,6 +2384,15 @@
 			path = "UIViewController+Others";
 			sourceTree = "<group>";
 		};
+		C5D8D911260CC94E00BDAF76 /* NSObject+DefConfig */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8D912260CC94E00BDAF76 /* NSObject+DefConfig.m */,
+				C5D8D913260CC94E00BDAF76 /* NSObject+DefConfig.h */,
+			);
+			path = "NSObject+DefConfig";
+			sourceTree = "<group>";
+		};
 		C5DF459A25A89A2900E91985 /* LOTAnimationMJRefreshHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -2565,6 +2581,7 @@
 				C5C654EF259DF9B600FD2F99 /* 相机@3x.png in Resources */,
 				C55D415B2539760C00CFCF73 /* user_00084@3x.png in Resources */,
 				C5AEE9062537362C000E1C5F /* home_priase_animation.json in Resources */,
+				C5D8D2A8260CC47E00BDAF76 /* toastLoading.gif in Resources */,
 				C5AEE9012537362C000E1C5F /* post_selected@3x.png in Resources */,
 				C55D41722539766300CFCF73 /* Tools_00030@2x.png in Resources */,
 				C55D4206253976D300CFCF73 /* Tools_00051@3x.png in Resources */,
@@ -2828,6 +2845,7 @@
 				C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */,
 				C5C654C8259DF9B600FD2F99 /* ECPrivacyCheckHomeKit.m in Sources */,
 				C53CA20225A1D4F90007F58F /* UIImage+Extras.m in Sources */,
+				C5D8D914260CC94E00BDAF76 /* NSObject+DefConfig.m in Sources */,
 				C5AEE93D25373638000E1C5F /* UIView+Measure.m in Sources */,
 				C5AEE89B25373580000E1C5F /* TabbarItemLottie.xcdatamodeld in Sources */,
 				C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */,
