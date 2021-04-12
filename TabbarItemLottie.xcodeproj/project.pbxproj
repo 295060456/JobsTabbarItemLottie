@@ -866,10 +866,8 @@
 		C50A3FB82540A7E400465D01 /* NSObject+Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C5A96FE725BD34C9000077BC /* NSObject+SPAlertController.h */,
-				C5A96FE625BD34C9000077BC /* NSObject+SPAlertController.m */,
-				C5A96FE425BD34C8000077BC /* NSObject+SYSAlertController.h */,
-				C5A96FE525BD34C8000077BC /* NSObject+SYSAlertController.m */,
+				C55022FF2624328500487A54 /* NSObject+SPAlertController */,
+				C55023002624328A00487A54 /* NSObject+SYSAlertController */,
 			);
 			path = "NSObject+Alert";
 			sourceTree = "<group>";
@@ -1162,6 +1160,24 @@
 				C5D602C32586324D00029AFF /* BaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		C55022FF2624328500487A54 /* NSObject+SPAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				C5A96FE725BD34C9000077BC /* NSObject+SPAlertController.h */,
+				C5A96FE625BD34C9000077BC /* NSObject+SPAlertController.m */,
+			);
+			path = "NSObject+SPAlertController";
+			sourceTree = "<group>";
+		};
+		C55023002624328A00487A54 /* NSObject+SYSAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				C5A96FE425BD34C8000077BC /* NSObject+SYSAlertController.h */,
+				C5A96FE525BD34C8000077BC /* NSObject+SYSAlertController.m */,
+			);
+			path = "NSObject+SYSAlertController";
 			sourceTree = "<group>";
 		};
 		C5542DA625F3250E002D1CA6 /* CheckMemFreeVC */ = {
