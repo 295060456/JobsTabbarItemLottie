@@ -23,6 +23,7 @@
 		C50A3FE82540A8C400465D01 /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3FE72540A8C400465D01 /* NSObject+Shake.m */; };
 		C50A40E72540AC8600465D01 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C50A40E62540AC8600465D01 /* ⚽️PicResource */; };
 		C51576EB25A351200074D945 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C51576EA25A351200074D945 /* UIView+Gesture.m */; };
+		C5318777262A90E0003C69AD /* DispatchTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5318776262A90E0003C69AD /* DispatchTimerManager.m */; };
 		C534CE4E25875A47001369FD /* BWItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4725875A47001369FD /* BWItemModel.m */; };
 		C534CE4F25875A47001369FD /* BWItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */; };
 		C534CE5125875A47001369FD /* BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C534CE4D25875A47001369FD /* BWShareView.m */; };
@@ -135,7 +136,6 @@
 		C57297E425BB0A9200726419 /* UIView+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57297E225BB0A9200726419 /* UIView+BackgroundImage.m */; };
 		C572F94B2552C184004F5CC9 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9462552C184004F5CC9 /* UIButton+ImageTitleSpacing.m */; };
 		C572F94C2552C184004F5CC9 /* UIButton+CountDownBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */; };
-		C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */; };
 		C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9702552C1EF004F5CC9 /* Nanosecond_TimerManager.m */; };
 		C572F9782552C1EF004F5CC9 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9732552C1EF004F5CC9 /* CADisplayLink_TimerManager.m */; };
 		C572F9D52552C683004F5CC9 /* NSObject+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9D12552C683004F5CC9 /* NSObject+RichText.m */; };
@@ -342,6 +342,8 @@
 		C51F88DE2608625D00953C10 /* MacroDef_AppDeviceScreenSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_AppDeviceScreenSize.h; sourceTree = "<group>"; };
 		C51F88DF2608625D00953C10 /* iPhone尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone尺寸.png"; sourceTree = "<group>"; };
 		C51F88E02608625D00953C10 /* iPad尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad尺寸.png"; sourceTree = "<group>"; };
+		C5318775262A90E0003C69AD /* DispatchTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchTimerManager.h; sourceTree = "<group>"; };
+		C5318776262A90E0003C69AD /* DispatchTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTimerManager.m; sourceTree = "<group>"; };
 		C534CE4725875A47001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
 		C534CE4825875A47001369FD /* BWItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWItemCollectionViewCell.h; sourceTree = "<group>"; };
 		C534CE4925875A47001369FD /* BWItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -507,8 +509,6 @@
 		C572F9482552C184004F5CC9 /* UIButton+CountDownBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDownBtn.m"; sourceTree = "<group>"; };
 		C572F94A2552C184004F5CC9 /* UIButton+CountDownBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDownBtn.h"; sourceTree = "<group>"; };
 		C572F9672552C1EF004F5CC9 /* TimerManager_DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager_DefineStructure.h; sourceTree = "<group>"; };
-		C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCD_TimerManager.m; sourceTree = "<group>"; };
-		C572F96D2552C1EF004F5CC9 /* GCD_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD_TimerManager.h; sourceTree = "<group>"; };
 		C572F96E2552C1EF004F5CC9 /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
 		C572F9702552C1EF004F5CC9 /* Nanosecond_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nanosecond_TimerManager.m; sourceTree = "<group>"; };
 		C572F9712552C1EF004F5CC9 /* Nanosecond_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanosecond_TimerManager.h; sourceTree = "<group>"; };
@@ -927,6 +927,15 @@
 				C51F88DE2608625D00953C10 /* MacroDef_AppDeviceScreenSize.h */,
 			);
 			path = "苹果产品尺寸";
+			sourceTree = "<group>";
+		};
+		C5318774262A90E0003C69AD /* DispatchTimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5318775262A90E0003C69AD /* DispatchTimerManager.h */,
+				C5318776262A90E0003C69AD /* DispatchTimerManager.m */,
+			);
+			path = DispatchTimerManager;
 			sourceTree = "<group>";
 		};
 		C534E7A8257F907E00DBC3CE /* NSObject+Others */ = {
@@ -1577,22 +1586,13 @@
 			isa = PBXGroup;
 			children = (
 				C572F9722552C1EF004F5CC9 /* CADisplayLink_TimerManager */,
-				C572F96B2552C1EF004F5CC9 /* GCD_TimerManager(未完) */,
+				C5318774262A90E0003C69AD /* DispatchTimerManager */,
 				C572F96F2552C1EF004F5CC9 /* Nanosecond_TimerManager */,
 				C5D6DCB325860F5800029AFF /* NSTimerManager */,
 				C572F9672552C1EF004F5CC9 /* TimerManager_DefineStructure.h */,
 				C572F96E2552C1EF004F5CC9 /* TimerManager.h */,
 			);
 			path = TimerManager;
-			sourceTree = "<group>";
-		};
-		C572F96B2552C1EF004F5CC9 /* GCD_TimerManager(未完) */ = {
-			isa = PBXGroup;
-			children = (
-				C572F96C2552C1EF004F5CC9 /* GCD_TimerManager.m */,
-				C572F96D2552C1EF004F5CC9 /* GCD_TimerManager.h */,
-			);
-			path = "GCD_TimerManager(未完)";
 			sourceTree = "<group>";
 		};
 		C572F96F2552C1EF004F5CC9 /* Nanosecond_TimerManager */ = {
@@ -2853,6 +2853,7 @@
 				C50A3F742540A5A600465D01 /* BaseNavigationBar.m in Sources */,
 				C5DF45AC25A89A2900E91985 /* UIViewController+MJRefresh.m in Sources */,
 				C50A3F5D2540A59600465D01 /* UIViewController+GifImageView.m in Sources */,
+				C5318777262A90E0003C69AD /* DispatchTimerManager.m in Sources */,
 				C5C654D0259DF9B600FD2F99 /* ECPrivacyCheckMediaAndAppleMusic.m in Sources */,
 				C5D0BB1C25878F34002CA224 /* NSObject+Sound.m in Sources */,
 				C5D1C119258B20E100784D2F /* UIViewController+EmptyData.m in Sources */,
@@ -2876,7 +2877,6 @@
 				C5AEE94A25373638000E1C5F /* VC@3.m in Sources */,
 				C5AEEAA025381CDA000E1C5F /* JobsPullListAutoSizeView.m in Sources */,
 				C53D39BC2598C83000B48431 /* UIViewController+XLBubbleTransition.m in Sources */,
-				C572F9762552C1EF004F5CC9 /* GCD_TimerManager.m in Sources */,
 				C5AEE94725373638000E1C5F /* VC@8.m in Sources */,
 				C5AEEAAA253832EC000E1C5F /* JobsPullListTBVCell.m in Sources */,
 				C572F9782552C1EF004F5CC9 /* CADisplayLink_TimerManager.m in Sources */,
