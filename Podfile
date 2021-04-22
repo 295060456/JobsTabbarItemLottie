@@ -18,6 +18,8 @@ use_frameworks!
 
 # 特别说明：Ruby对大小写敏感，所以方法名不要用大写，否则执行失败
 def func
+  
+  pod 'AFNetworking'
   pod 'lottie-ios', '~> 2.5.3'
   pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
   pod 'Masonry' # https://github.com/SnapKit/Masonry 布局
@@ -38,6 +40,12 @@ def func
   pod 'TXFileOperation' # 文件夹操作 https://github.com/xtzPioneer/TXFileOperation
   pod 'TABAnimated' # https://github.com/tigerAndBull/TABAnimated
   pod 'LYEmptyView'
+  
+  pod 'ZFPlayer'
+  pod 'ZFPlayer/ControlView'
+  pod 'ZFPlayer/AVPlayer'
+  pod 'ZFPlayer/ijkplayer'
+  
   end
 
 # 基础的公共配置
