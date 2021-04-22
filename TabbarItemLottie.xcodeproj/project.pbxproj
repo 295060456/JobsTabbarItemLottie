@@ -347,6 +347,7 @@
 		C5C654F3259DF9B600FD2F99 /* ECPrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C654C0259DF9B600FD2F99 /* ECPrivacyCheckGatherTool.m */; };
 		C5D6DCB625860F5900029AFF /* NSTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6DCB525860F5800029AFF /* NSTimerManager.m */; };
 		C5D8D2A8260CC47E00BDAF76 /* toastLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5D8D2A7260CC47E00BDAF76 /* toastLoading.gif */; };
+		C5EA14E72631208700155822 /* UILabel+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EA14E52631208600155822 /* UILabel+Gesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -930,6 +931,9 @@
 		C5D6DCB425860F5800029AFF /* NSTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerManager.h; sourceTree = "<group>"; };
 		C5D6DCB525860F5800029AFF /* NSTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerManager.m; sourceTree = "<group>"; };
 		C5D8D2A7260CC47E00BDAF76 /* toastLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = toastLoading.gif; sourceTree = "<group>"; };
+		C5EA14E52631208600155822 /* UILabel+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Gesture.m"; sourceTree = "<group>"; };
+		C5EA14E62631208600155822 /* UILabel+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Gesture.h"; sourceTree = "<group>"; };
+		C5EA1A7F263124E900155822 /* JobsBaseCustomizeUIKitCoreHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobsBaseCustomizeUIKitCoreHeader.h; sourceTree = "<group>"; };
 		E113FFA63F096B61A8B5232A /* Pods-TabbarItemLottieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6AC619DD801D05E236406D0 /* Pods-TabbarItemLottieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieUITests/Pods-TabbarItemLottieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E73D5E22E280D19662E2FCE7 /* Pods-TabbarItemLottieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarItemLottieTests.release.xcconfig"; path = "Target Support Files/Pods-TabbarItemLottieTests/Pods-TabbarItemLottieTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1086,6 +1090,7 @@
 			isa = PBXGroup;
 			children = (
 				C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */,
+				C5EA1A7F263124E900155822 /* JobsBaseCustomizeUIKitCoreHeader.h */,
 			);
 			path = "手动导入的第三方";
 			sourceTree = "<group>";
@@ -1496,6 +1501,7 @@
 			isa = PBXGroup;
 			children = (
 				C58D82422630596900966F5F /* UILabel+Extra */,
+				C5EA14E42631208600155822 /* UILabel+Gesture */,
 			);
 			path = "UILabel+Category";
 			sourceTree = "<group>";
@@ -3329,6 +3335,15 @@
 			path = NSTimerManager;
 			sourceTree = "<group>";
 		};
+		C5EA14E42631208600155822 /* UILabel+Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA14E52631208600155822 /* UILabel+Gesture.m */,
+				C5EA14E62631208600155822 /* UILabel+Gesture.h */,
+			);
+			path = "UILabel+Gesture";
+			sourceTree = "<group>";
+		};
 		D1972A22E2348091360E3370 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3761,6 +3776,7 @@
 				C58D84012630596A00966F5F /* UIControl+XY.m in Sources */,
 				C5C654CE259DF9B600FD2F99 /* ECPrivacyCheckSpeechRecognition.m in Sources */,
 				C5A4450B25ABFC57000F0CD2 /* GKPhotoBrowser+SaveBtn.m in Sources */,
+				C5EA14E72631208700155822 /* UILabel+Gesture.m in Sources */,
 				C58D84172630596A00966F5F /* NSObject+Extras.m in Sources */,
 				C58D83F42630596A00966F5F /* MJRefreshConfigModel.m in Sources */,
 				C58D84202630596A00966F5F /* CJTextField.m in Sources */,
