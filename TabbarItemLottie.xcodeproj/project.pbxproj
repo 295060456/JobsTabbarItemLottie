@@ -110,6 +110,7 @@
 		C565CBFD25A4386C00848134 /* TwoVerticalArrangementLabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C565CBFA25A4386C00848134 /* TwoVerticalArrangementLabsView.m */; };
 		C572F9772552C1EF004F5CC9 /* Nanosecond_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9702552C1EF004F5CC9 /* Nanosecond_TimerManager.m */; };
 		C572F9782552C1EF004F5CC9 /* CADisplayLink_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C572F9732552C1EF004F5CC9 /* CADisplayLink_TimerManager.m */; };
+		C57688962674ACE100379F34 /* DDRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C57688952674ACE100379F34 /* DDRecord.m */; };
 		C579F84E2539D28C00846814 /* 旋转.png in Resources */ = {isa = PBXBuildFile; fileRef = C579F84D2539D28C00846814 /* 旋转.png */; };
 		C579F9852539DACD00846814 /* TransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9812539DACC00846814 /* TransitionController.m */; };
 		C579F9862539DACD00846814 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C579F9832539DACC00846814 /* TransitionAnimation.m */; };
@@ -519,6 +520,8 @@
 		C572F9712552C1EF004F5CC9 /* Nanosecond_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanosecond_TimerManager.h; sourceTree = "<group>"; };
 		C572F9732552C1EF004F5CC9 /* CADisplayLink_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADisplayLink_TimerManager.m; sourceTree = "<group>"; };
 		C572F9742552C1EF004F5CC9 /* CADisplayLink_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADisplayLink_TimerManager.h; sourceTree = "<group>"; };
+		C57688942674ACE100379F34 /* DDRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRecord.h; sourceTree = "<group>"; };
+		C57688952674ACE100379F34 /* DDRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRecord.m; sourceTree = "<group>"; };
 		C579F84D2539D28C00846814 /* 旋转.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旋转.png"; sourceTree = "<group>"; };
 		C579F9812539DACC00846814 /* TransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionController.m; sourceTree = "<group>"; };
 		C579F9822539DACC00846814 /* TransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionController.h; sourceTree = "<group>"; };
@@ -1332,6 +1335,15 @@
 				C572F9742552C1EF004F5CC9 /* CADisplayLink_TimerManager.h */,
 			);
 			path = CADisplayLink_TimerManager;
+			sourceTree = "<group>";
+		};
+		C57688932674ACE100379F34 /* DDRecord */ = {
+			isa = PBXGroup;
+			children = (
+				C57688942674ACE100379F34 /* DDRecord.h */,
+				C57688952674ACE100379F34 /* DDRecord.m */,
+			);
+			path = DDRecord;
 			sourceTree = "<group>";
 		};
 		C579F83D2539D25100846814 /* Suspend */ = {
@@ -2570,6 +2582,7 @@
 		C58D835F2630596900966F5F /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				C57688932674ACE100379F34 /* DDRecord */,
 				C58D83862630596A00966F5F /* NSObject (Time) */,
 				C58D83602630596900966F5F /* NSObject+Alert */,
 				C58D838C2630596A00966F5F /* NSObject+CallBackInfoByBlock */,
@@ -3830,6 +3843,7 @@
 				C59A3ED8258DD240005F6260 /* UserDefaultModel.m in Sources */,
 				C58D84162630596A00966F5F /* NSObject+RichText.m in Sources */,
 				C58D83B02630596A00966F5F /* UIImage+Overlay.m in Sources */,
+				C57688962674ACE100379F34 /* DDRecord.m in Sources */,
 				C58D83AC2630596A00966F5F /* UIImage+Extras.m in Sources */,
 				C58D83CA2630596A00966F5F /* UIView+Gradient.m in Sources */,
 				C58D83D52630596A00966F5F /* DeleteSystemUITabBarButton.m in Sources */,
