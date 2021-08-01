@@ -1015,13 +1015,13 @@
 			path = "苹果产品尺寸";
 			sourceTree = "<group>";
 		};
-		C5292F2026B675F700BEACD7 /* Pods */ = {
+		C5292F2026B675F700BEACD7 /* CocoaPods */ = {
 			isa = PBXGroup;
 			children = (
 				C5292F2126B675F700BEACD7 /* Pods.h */,
 				C5292F2226B675F700BEACD7 /* PodsManual.h */,
 			);
-			path = Pods;
+			path = CocoaPods;
 			sourceTree = "<group>";
 		};
 		C5318774262A90E0003C69AD /* DispatchTimerManager */ = {
@@ -1070,13 +1070,13 @@
 			path = PodsManual;
 			sourceTree = "<group>";
 		};
-		C558E783258A21BF0078DB8F /* 第三方头文件管理 */ = {
+		C558E783258A21BF0078DB8F /* 3rdManager */ = {
 			isa = PBXGroup;
 			children = (
-				C5292F2026B675F700BEACD7 /* Pods */,
-				C558E844258A23630078DB8F /* 手动导入的第三方 */,
+				C5292F2026B675F700BEACD7 /* CocoaPods */,
+				C558E844258A23630078DB8F /* Manual import */,
 			);
-			path = "第三方头文件管理";
+			path = 3rdManager;
 			sourceTree = "<group>";
 		};
 		C558E784258A21CB0078DB8F /* 各项全局定义 */ = {
@@ -1105,13 +1105,13 @@
 			path = "Swift-OC桥接头文件";
 			sourceTree = "<group>";
 		};
-		C558E844258A23630078DB8F /* 手动导入的第三方 */ = {
+		C558E844258A23630078DB8F /* Manual import */ = {
 			isa = PBXGroup;
 			children = (
 				C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */,
 				C5EA1A7F263124E900155822 /* JobsBaseCustomizeUIKitCoreHeader.h */,
 			);
-			path = "手动导入的第三方";
+			path = "Manual import";
 			sourceTree = "<group>";
 		};
 		C558F3EC258A30C60078DB8F /* 3rd */ = {
@@ -3255,7 +3255,7 @@
 			isa = PBXGroup;
 			children = (
 				C5AEE8D02537362C000E1C5F /* PrefixHeader.pch */,
-				C558E783258A21BF0078DB8F /* 第三方头文件管理 */,
+				C558E783258A21BF0078DB8F /* 3rdManager */,
 				C558E784258A21CB0078DB8F /* 各项全局定义 */,
 				C558E785258A21D30078DB8F /* 其他杂项 */,
 				C558E7DE258A21F00078DB8F /* Swift-OC桥接头文件 */,
