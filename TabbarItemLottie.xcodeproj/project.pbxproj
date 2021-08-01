@@ -389,6 +389,8 @@
 		C51F88DE2608625D00953C10 /* MacroDef_AppDeviceScreenSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDef_AppDeviceScreenSize.h; sourceTree = "<group>"; };
 		C51F88DF2608625D00953C10 /* iPhone尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone尺寸.png"; sourceTree = "<group>"; };
 		C51F88E02608625D00953C10 /* iPad尺寸.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad尺寸.png"; sourceTree = "<group>"; };
+		C5292F2126B675F700BEACD7 /* Pods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pods.h; sourceTree = "<group>"; };
+		C5292F2226B675F700BEACD7 /* PodsManual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodsManual.h; sourceTree = "<group>"; };
 		C5318775262A90E0003C69AD /* DispatchTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchTimerManager.h; sourceTree = "<group>"; };
 		C5318776262A90E0003C69AD /* DispatchTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchTimerManager.m; sourceTree = "<group>"; };
 		C534CE4725875A47001369FD /* BWItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWItemModel.m; sourceTree = "<group>"; };
@@ -407,8 +409,6 @@
 		C55801BA258A40F40078DB8F /* Others.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Others.h; sourceTree = "<group>"; };
 		C558E7DF258A22010078DB8F /* TabbarItemLottie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbarItemLottie-Bridging-Header.h"; sourceTree = "<group>"; };
 		C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manual_Add_ThirdParty.h; sourceTree = "<group>"; };
-		C558E847258A24250078DB8F /* Pods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pods.h; sourceTree = "<group>"; };
-		C558E849258A24630078DB8F /* PodsManual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodsManual.h; sourceTree = "<group>"; };
 		C558F3EE258A30F60078DB8F /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		C558F3EF258A30F60078DB8F /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
 		C558F3F5258A31010078DB8F /* DefineStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineStructure.h; sourceTree = "<group>"; };
@@ -1015,6 +1015,15 @@
 			path = "苹果产品尺寸";
 			sourceTree = "<group>";
 		};
+		C5292F2026B675F700BEACD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5292F2126B675F700BEACD7 /* Pods.h */,
+				C5292F2226B675F700BEACD7 /* PodsManual.h */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C5318774262A90E0003C69AD /* DispatchTimerManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1064,7 +1073,7 @@
 		C558E783258A21BF0078DB8F /* 第三方头文件管理 */ = {
 			isa = PBXGroup;
 			children = (
-				C558E845258A23690078DB8F /* Pods */,
+				C5292F2026B675F700BEACD7 /* Pods */,
 				C558E844258A23630078DB8F /* 手动导入的第三方 */,
 			);
 			path = "第三方头文件管理";
@@ -1103,15 +1112,6 @@
 				C5EA1A7F263124E900155822 /* JobsBaseCustomizeUIKitCoreHeader.h */,
 			);
 			path = "手动导入的第三方";
-			sourceTree = "<group>";
-		};
-		C558E845258A23690078DB8F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C558E847258A24250078DB8F /* Pods.h */,
-				C558E849258A24630078DB8F /* PodsManual.h */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		C558F3EC258A30C60078DB8F /* 3rd */ = {
@@ -4161,7 +4161,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.UBallLive.TabbarItemLottie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JobsComment.JobsAppDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TabbarItemLottie/🌹Macro/TabbarItemLottie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4186,7 +4186,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.UBallLive.TabbarItemLottie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JobsComment.JobsAppDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TabbarItemLottie/🌹Macro/TabbarItemLottie-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
