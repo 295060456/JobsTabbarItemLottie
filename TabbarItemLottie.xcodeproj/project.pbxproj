@@ -135,14 +135,12 @@
 		C58D83B42630596A00966F5F /* WhiteRightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58D824D2630596900966F5F /* WhiteRightArrow@3x.png */; };
 		C58D83B52630596A00966F5F /* UITableViewCell+WhiteArrows.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D824E2630596900966F5F /* UITableViewCell+WhiteArrows.m */; };
 		C58D83B62630596A00966F5F /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82502630596900966F5F /* BaseTableViewCell.m */; };
-		C58D83B72630596A00966F5F /* 高度自定义的按钮.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D82552630596900966F5F /* 高度自定义的按钮.md */; };
 		C58D83B82630596A00966F5F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82562630596900966F5F /* UIButton+ImageTitleSpacing.m */; };
 		C58D83B92630596A00966F5F /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58D82592630596900966F5F /* RBCLikeButton.bundle */; };
 		C58D83BA2630596A00966F5F /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D825A2630596900966F5F /* RBCLikeButton.m */; };
 		C58D83BB2630596A00966F5F /* UIButton+Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D825D2630596900966F5F /* UIButton+Timer.m */; };
 		C58D83BC2630596A00966F5F /* ButtonTimerConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82602630596900966F5F /* ButtonTimerConfigModel.m */; };
 		C58D83BD2630596A00966F5F /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C58D82632630596900966F5F /* Sound.wav */; };
-		C58D83BE2630596A00966F5F /* 带有按键音的按钮.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D82642630596900966F5F /* 带有按键音的按钮.md */; };
 		C58D83BF2630596A00966F5F /* SoundBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82652630596900966F5F /* SoundBtn.m */; };
 		C58D83C02630596A00966F5F /* del_Photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58D82692630596900966F5F /* del_Photo@3x.png */; };
 		C58D83C12630596A00966F5F /* del_Photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58D826A2630596900966F5F /* del_Photo@2x.png */; };
@@ -166,13 +164,10 @@
 		C58D83D32630596A00966F5F /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82A32630596900966F5F /* UIView+Extras.m */; };
 		C58D83D42630596A00966F5F /* UIFont+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82A82630596900966F5F /* UIFont+Extras.m */; };
 		C58D83D52630596A00966F5F /* DeleteSystemUITabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82AC2630596900966F5F /* DeleteSystemUITabBarButton.m */; };
-		C58D83D62630596A00966F5F /* 移除 系统自带的 UITabBarButton in Resources */ = {isa = PBXBuildFile; fileRef = C58D82AE2630596900966F5F /* 移除 系统自带的 UITabBarButton */; };
 		C58D83D72630596A00966F5F /* UITextView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82B32630596900966F5F /* UITextView+Extend.m */; };
 		C58D83D82630596A00966F5F /* UITextView+IndicateWordLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82B52630596900966F5F /* UITextView+IndicateWordLimit.m */; };
 		C58D83D92630596A00966F5F /* UITextView+IndicateWordLimit.png in Resources */ = {isa = PBXBuildFile; fileRef = C58D82B72630596900966F5F /* UITextView+IndicateWordLimit.png */; };
-		C58D83DA2630596A00966F5F /* iOS 获取手机型号、系统版本.png in Resources */ = {isa = PBXBuildFile; fileRef = C58D82BB2630596900966F5F /* iOS 获取手机型号、系统版本.png */; };
 		C58D83DB2630596A00966F5F /* UIDevice+XMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82BD2630596900966F5F /* UIDevice+XMUtils.m */; };
-		C58D83DC2630596A00966F5F /* 我为什么要这么做.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D82BF2630596900966F5F /* 我为什么要这么做.md */; };
 		C58D83DD2630596A00966F5F /* BaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82C22630596900966F5F /* BaseCollectionView.m */; };
 		C58D83DE2630596A00966F5F /* UICollectionView+RegisterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82C52630596900966F5F /* UICollectionView+RegisterClass.m */; };
 		C58D83DF2630596A00966F5F /* UICollectionViewCell+ShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82CA2630596900966F5F /* UICollectionViewCell+ShakeAnimation.m */; };
@@ -186,7 +181,6 @@
 		C58D83E72630596A00966F5F /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82E82630596900966F5F /* UIViewController+JXCategoryListContentViewDelegate.m */; };
 		C58D83E82630596A00966F5F /* XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82ED2630596900966F5F /* XLBubbleTransition.m */; };
 		C58D83E92630596A00966F5F /* UIViewController+XLBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82EE2630596900966F5F /* UIViewController+XLBubbleTransition.m */; };
-		C58D83EA2630596A00966F5F /* 使用方法.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D82EF2630596900966F5F /* 使用方法.md */; };
 		C58D83EB2630596A00966F5F /* UIViewController+BWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82F22630596900966F5F /* UIViewController+BWShareView.m */; };
 		C58D83EC2630596A00966F5F /* UIViewController+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82F52630596900966F5F /* UIViewController+JPImageresizerView.m */; };
 		C58D83ED2630596A00966F5F /* UIViewController+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D82F92630596900966F5F /* UIViewController+BackBtn.m */; };
@@ -208,9 +202,7 @@
 		C58D83FD2630596A00966F5F /* UITableView+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D832B2630596900966F5F /* UITableView+Expand.m */; };
 		C58D83FE2630596A00966F5F /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D832D2630596900966F5F /* UITableView+WWFoldableTableView.m */; };
 		C58D83FF2630596A00966F5F /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83302630596900966F5F /* BaseTableView.m */; };
-		C58D84002630596A00966F5F /* 专治UITableView相应链断裂.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D83312630596900966F5F /* 专治UITableView相应链断裂.md */; };
 		C58D84012630596A00966F5F /* UIControl+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83372630596900966F5F /* UIControl+XY.m */; };
-		C58D84022630596A00966F5F /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D83382630596900966F5F /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */; };
 		C58D84032630596A00966F5F /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D833B2630596900966F5F /* NSArray+Extension.m */; };
 		C58D84042630596A00966F5F /* NSArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D833F2630596900966F5F /* NSArray+Extend.m */; };
 		C58D84052630596A00966F5F /* TableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83442630596900966F5F /* TableViewHeaderView.m */; };
@@ -218,7 +210,6 @@
 		C58D84072630596A00966F5F /* LMHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D834C2630596900966F5F /* LMHWaterFallLayout.m */; };
 		C58D84082630596A00966F5F /* KFZShopCatoryFlowLayput.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D834F2630596900966F5F /* KFZShopCatoryFlowLayput.m */; };
 		C58D84092630596A00966F5F /* HQCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83512630596900966F5F /* HQCollectionViewFlowLayout.m */; };
-		C58D840A2630596A00966F5F /* UICollectionViewFlowLayout.md in Resources */ = {isa = PBXBuildFile; fileRef = C58D83532630596900966F5F /* UICollectionViewFlowLayout.md */; };
 		C58D840B2630596A00966F5F /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83562630596900966F5F /* CALayer+Transition.m */; };
 		C58D840C2630596A00966F5F /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D83592630596900966F5F /* CALayer+Anim.m */; };
 		C58D840D2630596A00966F5F /* BaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D835E2630596900966F5F /* BaseCollectionReusableView.m */; };
@@ -1192,8 +1183,8 @@
 		C558E844258A23630078DB8F /* Manual import */ = {
 			isa = PBXGroup;
 			children = (
-				C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */,
 				C5EA1A7F263124E900155822 /* JobsBaseCustomizeUIKitCoreHeader.h */,
+				C558E846258A237F0078DB8F /* Manual_Add_ThirdParty.h */,
 			);
 			path = "Manual import";
 			sourceTree = "<group>";
@@ -1219,9 +1210,9 @@
 		C558F3F4258A31010078DB8F /* 其他的一些全局定义文件 */ = {
 			isa = PBXGroup;
 			children = (
-				C558F3F5258A31010078DB8F /* DefineStructure.h */,
-				C558F3F6258A31010078DB8F /* APIKey.h */,
 				C558F3F7258A31010078DB8F /* AABlock.h */,
+				C558F3F6258A31010078DB8F /* APIKey.h */,
+				C558F3F5258A31010078DB8F /* DefineStructure.h */,
 			);
 			path = "其他的一些全局定义文件";
 			sourceTree = "<group>";
@@ -1484,7 +1475,6 @@
 		C58D822A2630596900966F5F /* JobsBaseCustomizeUIKitCore */ = {
 			isa = PBXGroup;
 			children = (
-				C5C7C8D126C521CC007F4D5F /* TYFSwizzle */,
 				C58D838F2630596A00966F5F /* BaseProtocol */,
 				C58D83542630596900966F5F /* CALayer */,
 				C58D83932630596A00966F5F /* DebugLogDescription */,
@@ -1492,6 +1482,7 @@
 				C58D835F2630596900966F5F /* NSObject */,
 				C58D82DC2630596900966F5F /* NSString */,
 				C58D82AA2630596900966F5F /* RedefineSys */,
+				C5C7C8D126C521CC007F4D5F /* TYFSwizzle */,
 				C58D82522630596900966F5F /* UIButton */,
 				C58D835B2630596900966F5F /* UICollectionReusableView 用作基类 */,
 				C58D82BE2630596900966F5F /* UICollectionView */,
@@ -1529,12 +1520,12 @@
 		C58D822D2630596900966F5F /* UIImage+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C58D822E2630596900966F5F /* UIImage+ScreenShot */,
 				C58D82312630596900966F5F /* UIImage+Extras */,
-				C58D82342630596900966F5F /* UIImage+SYS */,
-				C58D82372630596900966F5F /* UIImage+YBGIF */,
-				C58D823A2630596900966F5F /* UIImage+Tailor */,
 				C58D823D2630596900966F5F /* UIImage+Overlay */,
+				C58D822E2630596900966F5F /* UIImage+ScreenShot */,
+				C58D82342630596900966F5F /* UIImage+SYS */,
+				C58D823A2630596900966F5F /* UIImage+Tailor */,
+				C58D82372630596900966F5F /* UIImage+YBGIF */,
 			);
 			path = "UIImage+Category";
 			sourceTree = "<group>";
@@ -1542,8 +1533,8 @@
 		C58D822E2630596900966F5F /* UIImage+ScreenShot */ = {
 			isa = PBXGroup;
 			children = (
-				C58D822F2630596900966F5F /* UIImage+ScreenShot.m */,
 				C58D82302630596900966F5F /* UIImage+ScreenShot.h */,
+				C58D822F2630596900966F5F /* UIImage+ScreenShot.m */,
 			);
 			path = "UIImage+ScreenShot";
 			sourceTree = "<group>";
@@ -1551,8 +1542,8 @@
 		C58D82312630596900966F5F /* UIImage+Extras */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82322630596900966F5F /* UIImage+Extras.m */,
 				C58D82332630596900966F5F /* UIImage+Extras.h */,
+				C58D82322630596900966F5F /* UIImage+Extras.m */,
 			);
 			path = "UIImage+Extras";
 			sourceTree = "<group>";
@@ -1569,8 +1560,8 @@
 		C58D82372630596900966F5F /* UIImage+YBGIF */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82382630596900966F5F /* UIImage+YBGIF.m */,
 				C58D82392630596900966F5F /* UIImage+YBGIF.h */,
+				C58D82382630596900966F5F /* UIImage+YBGIF.m */,
 			);
 			path = "UIImage+YBGIF";
 			sourceTree = "<group>";
@@ -1578,8 +1569,8 @@
 		C58D823A2630596900966F5F /* UIImage+Tailor */ = {
 			isa = PBXGroup;
 			children = (
-				C58D823B2630596900966F5F /* UIImage+Tailor.m */,
 				C58D823C2630596900966F5F /* UIImage+Tailor.h */,
+				C58D823B2630596900966F5F /* UIImage+Tailor.m */,
 			);
 			path = "UIImage+Tailor";
 			sourceTree = "<group>";
@@ -1622,8 +1613,8 @@
 		C58D82452630596900966F5F /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82462630596900966F5F /* UITableViewCell+Category */,
 				C58D824F2630596900966F5F /* BaseTableViewCell */,
+				C58D82462630596900966F5F /* UITableViewCell+Category */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -1650,9 +1641,9 @@
 			isa = PBXGroup;
 			children = (
 				C58D824B2630596900966F5F /* UITableViewCell+WhiteArrows.h */,
+				C58D824E2630596900966F5F /* UITableViewCell+WhiteArrows.m */,
 				C58D824C2630596900966F5F /* WhiteRightArrow@2x.png */,
 				C58D824D2630596900966F5F /* WhiteRightArrow@3x.png */,
-				C58D824E2630596900966F5F /* UITableViewCell+WhiteArrows.m */,
 			);
 			path = "自定义右侧小箭头图标";
 			sourceTree = "<group>";
@@ -1660,8 +1651,8 @@
 		C58D824F2630596900966F5F /* BaseTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82502630596900966F5F /* BaseTableViewCell.m */,
 				C58D82512630596900966F5F /* BaseTableViewCell.h */,
+				C58D82502630596900966F5F /* BaseTableViewCell.m */,
 			);
 			path = BaseTableViewCell;
 			sourceTree = "<group>";
@@ -1682,8 +1673,8 @@
 		C58D82532630596900966F5F /* 高度自定义的按钮 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82542630596900966F5F /* UIButton+ImageTitleSpacing.h */,
 				C58D82552630596900966F5F /* 高度自定义的按钮.md */,
+				C58D82542630596900966F5F /* UIButton+ImageTitleSpacing.h */,
 				C58D82562630596900966F5F /* UIButton+ImageTitleSpacing.m */,
 			);
 			path = "高度自定义的按钮";
@@ -1692,8 +1683,8 @@
 		C58D82572630596900966F5F /* 高仿抖音点赞动画 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82582630596900966F5F /* RBCLikeButton.h */,
 				C58D82592630596900966F5F /* RBCLikeButton.bundle */,
+				C58D82582630596900966F5F /* RBCLikeButton.h */,
 				C58D825A2630596900966F5F /* RBCLikeButton.m */,
 			);
 			path = "高仿抖音点赞动画";
@@ -1703,9 +1694,9 @@
 			isa = PBXGroup;
 			children = (
 				C58D825C2630596900966F5F /* ButtonTimerDefStructure.h */,
-				C58D825D2630596900966F5F /* UIButton+Timer.m */,
 				C58D825E2630596900966F5F /* ButtonTimerModel */,
 				C58D82612630596900966F5F /* UIButton+Timer.h */,
+				C58D825D2630596900966F5F /* UIButton+Timer.m */,
 			);
 			path = "UIButton+Timer";
 			sourceTree = "<group>";
@@ -1722,10 +1713,10 @@
 		C58D82622630596900966F5F /* SoundBtn */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82632630596900966F5F /* Sound.wav */,
 				C58D82642630596900966F5F /* 带有按键音的按钮.md */,
-				C58D82652630596900966F5F /* SoundBtn.m */,
+				C58D82632630596900966F5F /* Sound.wav */,
 				C58D82662630596900966F5F /* SoundBtn.h */,
+				C58D82652630596900966F5F /* SoundBtn.m */,
 			);
 			path = SoundBtn;
 			sourceTree = "<group>";
@@ -1733,9 +1724,9 @@
 		C58D82672630596900966F5F /* 高仿iOS长按删除+抖动 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82682630596900966F5F /* LGiOSBtn.h */,
-				C58D82692630596900966F5F /* del_Photo@3x.png */,
 				C58D826A2630596900966F5F /* del_Photo@2x.png */,
+				C58D82692630596900966F5F /* del_Photo@3x.png */,
+				C58D82682630596900966F5F /* LGiOSBtn.h */,
 				C58D826B2630596900966F5F /* LGiOSBtn.m */,
 			);
 			path = "高仿iOS长按删除+抖动";
@@ -1745,7 +1736,6 @@
 			isa = PBXGroup;
 			children = (
 				C58D826D2630596900966F5F /* UIColor+Category */,
-				C58D82742630596900966F5F /* New Group */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -1762,8 +1752,8 @@
 		C58D826E2630596900966F5F /* UIColor+Gradient */ = {
 			isa = PBXGroup;
 			children = (
-				C58D826F2630596900966F5F /* UIColor+Gradient.m */,
 				C58D82702630596900966F5F /* UIColor+Gradient.h */,
+				C58D826F2630596900966F5F /* UIColor+Gradient.m */,
 			);
 			path = "UIColor+Gradient";
 			sourceTree = "<group>";
@@ -1771,17 +1761,10 @@
 		C58D82712630596900966F5F /* UIColor+Hex */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82722630596900966F5F /* UIColor+Hex.m */,
 				C58D82732630596900966F5F /* UIColor+Hex.h */,
+				C58D82722630596900966F5F /* UIColor+Hex.m */,
 			);
 			path = "UIColor+Hex";
-			sourceTree = "<group>";
-		};
-		C58D82742630596900966F5F /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C58D82752630596900966F5F /* UIView */ = {
@@ -1796,8 +1779,8 @@
 		C58D82762630596900966F5F /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82772630596900966F5F /* BaseView.m */,
 				C58D82782630596900966F5F /* BaseView.h */,
+				C58D82772630596900966F5F /* BaseView.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -1805,20 +1788,20 @@
 		C58D82792630596900966F5F /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C58D827A2630596900966F5F /* UIView+SuspendView */,
-				C58D827D2630596900966F5F /* UIView+ZFPlayer */,
-				C58D82802630596900966F5F /* UIView+Gesture */,
-				C58D82832630596900966F5F /* UIView+Measure */,
-				C58D82862630596900966F5F /* UIView+Gradient */,
-				C58D82892630596900966F5F /* UIView+Chain */,
-				C58D828C2630596900966F5F /* UIView+EmptyData */,
-				C58D828F2630596900966F5F /* UIView+BackgroundImage */,
-				C58D82922630596900966F5F /* UIView+ViewController */,
-				C58D82952630596900966F5F /* UIView+JHGestureBlock */,
 				C58D82982630596900966F5F /* UIView+Animation */,
 				C58D829B2630596900966F5F /* UIView+AOP */,
-				C58D829E2630596900966F5F /* UIView+MJRefresh */,
+				C58D828F2630596900966F5F /* UIView+BackgroundImage */,
+				C58D82892630596900966F5F /* UIView+Chain */,
+				C58D828C2630596900966F5F /* UIView+EmptyData */,
 				C58D82A12630596900966F5F /* UIView+Extras */,
+				C58D82802630596900966F5F /* UIView+Gesture */,
+				C58D82862630596900966F5F /* UIView+Gradient */,
+				C58D82952630596900966F5F /* UIView+JHGestureBlock */,
+				C58D82832630596900966F5F /* UIView+Measure */,
+				C58D829E2630596900966F5F /* UIView+MJRefresh */,
+				C58D827A2630596900966F5F /* UIView+SuspendView */,
+				C58D82922630596900966F5F /* UIView+ViewController */,
+				C58D827D2630596900966F5F /* UIView+ZFPlayer */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -1826,8 +1809,8 @@
 		C58D827A2630596900966F5F /* UIView+SuspendView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D827B2630596900966F5F /* UIView+SuspendView.m */,
 				C58D827C2630596900966F5F /* UIView+SuspendView.h */,
+				C58D827B2630596900966F5F /* UIView+SuspendView.m */,
 			);
 			path = "UIView+SuspendView";
 			sourceTree = "<group>";
@@ -1853,8 +1836,8 @@
 		C58D82832630596900966F5F /* UIView+Measure */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82842630596900966F5F /* UIView+Measure.m */,
 				C58D82852630596900966F5F /* UIView+Measure.h */,
+				C58D82842630596900966F5F /* UIView+Measure.m */,
 			);
 			path = "UIView+Measure";
 			sourceTree = "<group>";
@@ -1871,8 +1854,8 @@
 		C58D82892630596900966F5F /* UIView+Chain */ = {
 			isa = PBXGroup;
 			children = (
-				C58D828A2630596900966F5F /* UIView+Chain.m */,
 				C58D828B2630596900966F5F /* UIView+Chain.h */,
+				C58D828A2630596900966F5F /* UIView+Chain.m */,
 			);
 			path = "UIView+Chain";
 			sourceTree = "<group>";
@@ -1880,8 +1863,8 @@
 		C58D828C2630596900966F5F /* UIView+EmptyData */ = {
 			isa = PBXGroup;
 			children = (
-				C58D828D2630596900966F5F /* UIView+EmptyData.m */,
 				C58D828E2630596900966F5F /* UIView+EmptyData.h */,
+				C58D828D2630596900966F5F /* UIView+EmptyData.m */,
 			);
 			path = "UIView+EmptyData";
 			sourceTree = "<group>";
@@ -1889,8 +1872,8 @@
 		C58D828F2630596900966F5F /* UIView+BackgroundImage */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82902630596900966F5F /* UIView+BackgroundImage.m */,
 				C58D82912630596900966F5F /* UIView+BackgroundImage.h */,
+				C58D82902630596900966F5F /* UIView+BackgroundImage.m */,
 			);
 			path = "UIView+BackgroundImage";
 			sourceTree = "<group>";
@@ -1898,8 +1881,8 @@
 		C58D82922630596900966F5F /* UIView+ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82932630596900966F5F /* UIView+ViewController.m */,
 				C58D82942630596900966F5F /* UIView+ViewController.h */,
+				C58D82932630596900966F5F /* UIView+ViewController.m */,
 			);
 			path = "UIView+ViewController";
 			sourceTree = "<group>";
@@ -1907,8 +1890,8 @@
 		C58D82952630596900966F5F /* UIView+JHGestureBlock */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82962630596900966F5F /* UIView+JHGestureBlock.m */,
 				C58D82972630596900966F5F /* UIView+JHGestureBlock.h */,
+				C58D82962630596900966F5F /* UIView+JHGestureBlock.m */,
 			);
 			path = "UIView+JHGestureBlock";
 			sourceTree = "<group>";
@@ -1916,8 +1899,8 @@
 		C58D82982630596900966F5F /* UIView+Animation */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82992630596900966F5F /* UIView+Animation.m */,
 				C58D829A2630596900966F5F /* UIView+Animation.h */,
+				C58D82992630596900966F5F /* UIView+Animation.m */,
 			);
 			path = "UIView+Animation";
 			sourceTree = "<group>";
@@ -1925,8 +1908,8 @@
 		C58D829B2630596900966F5F /* UIView+AOP */ = {
 			isa = PBXGroup;
 			children = (
-				C58D829C2630596900966F5F /* UIView+AOP.m */,
 				C58D829D2630596900966F5F /* UIView+AOP.h */,
+				C58D829C2630596900966F5F /* UIView+AOP.m */,
 			);
 			path = "UIView+AOP";
 			sourceTree = "<group>";
@@ -1934,8 +1917,8 @@
 		C58D829E2630596900966F5F /* UIView+MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				C58D829F2630596900966F5F /* UIView+MJRefresh.m */,
 				C58D82A02630596900966F5F /* UIView+MJRefresh.h */,
+				C58D829F2630596900966F5F /* UIView+MJRefresh.m */,
 			);
 			path = "UIView+MJRefresh";
 			sourceTree = "<group>";
@@ -1953,7 +1936,6 @@
 			isa = PBXGroup;
 			children = (
 				C58D82A52630596900966F5F /* UIFont+Category */,
-				C58D82A92630596900966F5F /* UIFont+Categoryde */,
 			);
 			path = UIFont;
 			sourceTree = "<group>";
@@ -1975,13 +1957,6 @@
 			path = "UIFont+Extras";
 			sourceTree = "<group>";
 		};
-		C58D82A92630596900966F5F /* UIFont+Categoryde */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UIFont+Categoryde";
-			sourceTree = "<group>";
-		};
 		C58D82AA2630596900966F5F /* RedefineSys */ = {
 			isa = PBXGroup;
 			children = (
@@ -1993,9 +1968,9 @@
 		C58D82AB2630596900966F5F /* DeleteSystemUITabBarButton */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82AC2630596900966F5F /* DeleteSystemUITabBarButton.m */,
-				C58D82AD2630596900966F5F /* DeleteSystemUITabBarButton.h */,
 				C58D82AE2630596900966F5F /* 移除 系统自带的 UITabBarButton */,
+				C58D82AD2630596900966F5F /* DeleteSystemUITabBarButton.h */,
+				C58D82AC2630596900966F5F /* DeleteSystemUITabBarButton.m */,
 			);
 			path = DeleteSystemUITabBarButton;
 			sourceTree = "<group>";
@@ -2029,8 +2004,8 @@
 		C58D82B42630596900966F5F /* UITextView+IndicateWordLimit */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82B52630596900966F5F /* UITextView+IndicateWordLimit.m */,
 				C58D82B62630596900966F5F /* UITextView+IndicateWordLimit.h */,
+				C58D82B52630596900966F5F /* UITextView+IndicateWordLimit.m */,
 				C58D82B72630596900966F5F /* UITextView+IndicateWordLimit.png */,
 			);
 			path = "UITextView+IndicateWordLimit";
@@ -2093,8 +2068,8 @@
 		C58D82C62630596900966F5F /* UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82C72630596900966F5F /* UICollectionViewCell+Category */,
 				C58D82CE2630596900966F5F /* BaseCollectionViewCell */,
+				C58D82C72630596900966F5F /* UICollectionViewCell+Category */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -2102,8 +2077,8 @@
 		C58D82C72630596900966F5F /* UICollectionViewCell+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82C82630596900966F5F /* UICollectionViewCell+ShakeAnimation */,
 				C58D82CB2630596900966F5F /* UICollectionViewCell+Default */,
+				C58D82C82630596900966F5F /* UICollectionViewCell+ShakeAnimation */,
 			);
 			path = "UICollectionViewCell+Category";
 			sourceTree = "<group>";
@@ -2147,8 +2122,8 @@
 		C58D82D22630596900966F5F /* BaseImageView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82D32630596900966F5F /* BaseImageView.m */,
 				C58D82D42630596900966F5F /* BaseImageView.h */,
+				C58D82D32630596900966F5F /* BaseImageView.m */,
 			);
 			path = BaseImageView;
 			sourceTree = "<group>";
@@ -2156,8 +2131,8 @@
 		C58D82D52630596900966F5F /* UIImageView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82D62630596900966F5F /* UIImageView+GIF.m */,
 				C58D82D72630596900966F5F /* UIImageView+GIF.h */,
+				C58D82D62630596900966F5F /* UIImageView+GIF.m */,
 			);
 			path = "UIImageView+Category";
 			sourceTree = "<group>";
@@ -2173,8 +2148,8 @@
 		C58D82D92630596900966F5F /* BaseNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82DA2630596900966F5F /* BaseNavigationBar.m */,
 				C58D82DB2630596900966F5F /* BaseNavigationBar.h */,
+				C58D82DA2630596900966F5F /* BaseNavigationBar.m */,
 			);
 			path = BaseNavigationBar;
 			sourceTree = "<group>";
@@ -2190,8 +2165,8 @@
 		C58D82DD2630596900966F5F /* NSString+Extras */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82DE2630596900966F5F /* NSString+Extras.m */,
 				C58D82DF2630596900966F5F /* NSString+Extras.h */,
+				C58D82DE2630596900966F5F /* NSString+Extras.m */,
 			);
 			path = "NSString+Extras";
 			sourceTree = "<group>";
@@ -2199,8 +2174,8 @@
 		C58D82E02630596900966F5F /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82E12630596900966F5F /* UIViewController+Category */,
 				C58D83192630596900966F5F /* BaseViewController */,
+				C58D82E12630596900966F5F /* UIViewController+Category */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -2209,9 +2184,9 @@
 			isa = PBXGroup;
 			children = (
 				C58D82E22630596900966F5F /* UIViewController+JXCategory */,
-				C58D82E92630596900966F5F /* UIViewController+XLBubbleTransition */,
-				C58D82F02630596900966F5F /* UIViewController+Others */,
 				C58D830C2630596900966F5F /* UIViewController+MJRefresh */,
+				C58D82F02630596900966F5F /* UIViewController+Others */,
+				C58D82E92630596900966F5F /* UIViewController+XLBubbleTransition */,
 			);
 			path = "UIViewController+Category";
 			sourceTree = "<group>";
@@ -2219,8 +2194,8 @@
 		C58D82E22630596900966F5F /* UIViewController+JXCategory */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82E32630596900966F5F /* UIViewController+JXPagerViewListViewDelegate */,
 				C58D82E62630596900966F5F /* UIViewController+JXCategoryListContentViewDelegate */,
+				C58D82E32630596900966F5F /* UIViewController+JXPagerViewListViewDelegate */,
 			);
 			path = "UIViewController+JXCategory";
 			sourceTree = "<group>";
@@ -2246,19 +2221,11 @@
 		C58D82E92630596900966F5F /* UIViewController+XLBubbleTransition */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82EA2630596900966F5F /* XLBubbleTransition.h */,
-				C58D82EB2630596900966F5F /* UIViewController+XLBubbleTransition.h */,
-				C58D82EC2630596900966F5F /* UIViewController+XLBubbleTransition */,
-				C58D82ED2630596900966F5F /* XLBubbleTransition.m */,
-				C58D82EE2630596900966F5F /* UIViewController+XLBubbleTransition.m */,
 				C58D82EF2630596900966F5F /* 使用方法.md */,
-			);
-			path = "UIViewController+XLBubbleTransition";
-			sourceTree = "<group>";
-		};
-		C58D82EC2630596900966F5F /* UIViewController+XLBubbleTransition */ = {
-			isa = PBXGroup;
-			children = (
+				C58D82EB2630596900966F5F /* UIViewController+XLBubbleTransition.h */,
+				C58D82EE2630596900966F5F /* UIViewController+XLBubbleTransition.m */,
+				C58D82EA2630596900966F5F /* XLBubbleTransition.h */,
+				C58D82ED2630596900966F5F /* XLBubbleTransition.m */,
 			);
 			path = "UIViewController+XLBubbleTransition";
 			sourceTree = "<group>";
@@ -2266,15 +2233,15 @@
 		C58D82F02630596900966F5F /* UIViewController+Others */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82F12630596900966F5F /* UIViewController+BWShareView */,
-				C58D82F42630596900966F5F /* UIViewController+JPImageresizerView */,
 				C58D82F72630596900966F5F /* UIViewController+BackBtn */,
-				C58D82FA2630596900966F5F /* UIViewController+EmptyData */,
-				C58D82FD2630596900966F5F /* UIViewController+Shake */,
-				C58D83002630596900966F5F /* UIViewController+BaseVC */,
-				C58D83032630596900966F5F /* UIViewController+GifImageView */,
 				C58D83062630596900966F5F /* UIViewController+BaseNavigationBar */,
+				C58D83002630596900966F5F /* UIViewController+BaseVC */,
 				C58D83092630596900966F5F /* UIViewController+BRPickerView */,
+				C58D82F12630596900966F5F /* UIViewController+BWShareView */,
+				C58D82FA2630596900966F5F /* UIViewController+EmptyData */,
+				C58D83032630596900966F5F /* UIViewController+GifImageView */,
+				C58D82F42630596900966F5F /* UIViewController+JPImageresizerView */,
+				C58D82FD2630596900966F5F /* UIViewController+Shake */,
 			);
 			path = "UIViewController+Others";
 			sourceTree = "<group>";
@@ -2282,8 +2249,8 @@
 		C58D82F12630596900966F5F /* UIViewController+BWShareView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82F22630596900966F5F /* UIViewController+BWShareView.m */,
 				C58D82F32630596900966F5F /* UIViewController+BWShareView.h */,
+				C58D82F22630596900966F5F /* UIViewController+BWShareView.m */,
 			);
 			path = "UIViewController+BWShareView";
 			sourceTree = "<group>";
@@ -2291,8 +2258,8 @@
 		C58D82F42630596900966F5F /* UIViewController+JPImageresizerView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82F52630596900966F5F /* UIViewController+JPImageresizerView.m */,
 				C58D82F62630596900966F5F /* UIViewController+JPImageresizerView.h */,
+				C58D82F52630596900966F5F /* UIViewController+JPImageresizerView.m */,
 			);
 			path = "UIViewController+JPImageresizerView";
 			sourceTree = "<group>";
@@ -2318,8 +2285,8 @@
 		C58D82FD2630596900966F5F /* UIViewController+Shake */ = {
 			isa = PBXGroup;
 			children = (
-				C58D82FE2630596900966F5F /* UIViewController+Shake.m */,
 				C58D82FF2630596900966F5F /* UIViewController+Shake.h */,
+				C58D82FE2630596900966F5F /* UIViewController+Shake.m */,
 			);
 			path = "UIViewController+Shake";
 			sourceTree = "<group>";
@@ -2336,8 +2303,8 @@
 		C58D83032630596900966F5F /* UIViewController+GifImageView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83042630596900966F5F /* UIViewController+GifImageView.m */,
 				C58D83052630596900966F5F /* UIViewController+GifImageView.h */,
+				C58D83042630596900966F5F /* UIViewController+GifImageView.m */,
 			);
 			path = "UIViewController+GifImageView";
 			sourceTree = "<group>";
@@ -2354,8 +2321,8 @@
 		C58D83092630596900966F5F /* UIViewController+BRPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D830A2630596900966F5F /* UIViewController+BRPickerView.m */,
 				C58D830B2630596900966F5F /* UIViewController+BRPickerView.h */,
+				C58D830A2630596900966F5F /* UIViewController+BRPickerView.m */,
 			);
 			path = "UIViewController+BRPickerView";
 			sourceTree = "<group>";
@@ -2364,11 +2331,11 @@
 			isa = PBXGroup;
 			children = (
 				C58D830D2630596900966F5F /* ConfigModel */,
+				C58D83142630596900966F5F /* JsonRes.bundle */,
+				C58D83162630596900966F5F /* LOTAnimationMJRefreshFooter */,
 				C58D83102630596900966F5F /* LOTAnimationMJRefreshHeader */,
 				C58D83132630596900966F5F /* UIViewController+MJRefresh.h */,
-				C58D83142630596900966F5F /* JsonRes.bundle */,
 				C58D83152630596900966F5F /* UIViewController+MJRefresh.m */,
-				C58D83162630596900966F5F /* LOTAnimationMJRefreshFooter */,
 			);
 			path = "UIViewController+MJRefresh";
 			sourceTree = "<group>";
@@ -2385,8 +2352,8 @@
 		C58D83102630596900966F5F /* LOTAnimationMJRefreshHeader */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83112630596900966F5F /* LOTAnimationMJRefreshHeader.m */,
 				C58D83122630596900966F5F /* LOTAnimationMJRefreshHeader.h */,
+				C58D83112630596900966F5F /* LOTAnimationMJRefreshHeader.m */,
 			);
 			path = LOTAnimationMJRefreshHeader;
 			sourceTree = "<group>";
@@ -2394,8 +2361,8 @@
 		C58D83162630596900966F5F /* LOTAnimationMJRefreshFooter */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83172630596900966F5F /* LOTAnimationMJRefreshFooter.m */,
 				C58D83182630596900966F5F /* LOTAnimationMJRefreshFooter.h */,
+				C58D83172630596900966F5F /* LOTAnimationMJRefreshFooter.m */,
 			);
 			path = LOTAnimationMJRefreshFooter;
 			sourceTree = "<group>";
@@ -2403,8 +2370,8 @@
 		C58D83192630596900966F5F /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C58D831A2630596900966F5F /* BaseViewController.m */,
 				C58D831B2630596900966F5F /* BaseViewController.h */,
+				C58D831A2630596900966F5F /* BaseViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -2412,8 +2379,8 @@
 		C58D831C2630596900966F5F /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				C5C7C8D526C521D0007F4D5F /* UINavigationController+Category */,
 				C58D831D2630596900966F5F /* BaseNavigationVC */,
+				C5C7C8D526C521D0007F4D5F /* UINavigationController+Category */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -2421,8 +2388,8 @@
 		C58D831D2630596900966F5F /* BaseNavigationVC */ = {
 			isa = PBXGroup;
 			children = (
-				C58D831E2630596900966F5F /* BaseNavigationVC.m */,
 				C58D831F2630596900966F5F /* BaseNavigationVC.h */,
+				C58D831E2630596900966F5F /* BaseNavigationVC.m */,
 			);
 			path = BaseNavigationVC;
 			sourceTree = "<group>";
@@ -2430,8 +2397,8 @@
 		C58D83202630596900966F5F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83212630596900966F5F /* UITableView+Category */,
 				C58D832F2630596900966F5F /* BaseTableView */,
+				C58D83212630596900966F5F /* UITableView+Category */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -2440,8 +2407,8 @@
 			isa = PBXGroup;
 			children = (
 				C58D83222630596900966F5F /* TableViewAnimationKit */,
-				C58D83292630596900966F5F /* UITableView+Expand */,
 				C58D832C2630596900966F5F /* UITableView 折叠功能 */,
+				C58D83292630596900966F5F /* UITableView+Expand */,
 			);
 			path = "UITableView+Category";
 			sourceTree = "<group>";
@@ -2449,11 +2416,11 @@
 		C58D83222630596900966F5F /* TableViewAnimationKit */ = {
 			isa = PBXGroup;
 			children = (
+				C58D83272630596900966F5F /* TableViewAnimationKit.h */,
 				C58D83232630596900966F5F /* TableViewAnimationKit.m */,
+				C58D83262630596900966F5F /* TableViewAnimationKitConfig.h */,
 				C58D83242630596900966F5F /* TableViewAnimationKitHeaders.h */,
 				C58D83252630596900966F5F /* UITableView+XSAnimationKit.h */,
-				C58D83262630596900966F5F /* TableViewAnimationKitConfig.h */,
-				C58D83272630596900966F5F /* TableViewAnimationKit.h */,
 				C58D83282630596900966F5F /* UITableView+XSAnimationKit.m */,
 			);
 			path = TableViewAnimationKit;
@@ -2471,8 +2438,8 @@
 		C58D832C2630596900966F5F /* UITableView 折叠功能 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D832D2630596900966F5F /* UITableView+WWFoldableTableView.m */,
 				C58D832E2630596900966F5F /* UITableView+WWFoldableTableView.h */,
+				C58D832D2630596900966F5F /* UITableView+WWFoldableTableView.m */,
 			);
 			path = "UITableView 折叠功能";
 			sourceTree = "<group>";
@@ -2480,9 +2447,9 @@
 		C58D832F2630596900966F5F /* BaseTableView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83302630596900966F5F /* BaseTableView.m */,
 				C58D83312630596900966F5F /* 专治UITableView相应链断裂.md */,
 				C58D83322630596900966F5F /* BaseTableView.h */,
+				C58D83302630596900966F5F /* BaseTableView.m */,
 			);
 			path = BaseTableView;
 			sourceTree = "<group>";
@@ -2506,9 +2473,9 @@
 		C58D83352630596900966F5F /* UIControl+XY */ = {
 			isa = PBXGroup;
 			children = (
+				C58D83382630596900966F5F /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */,
 				C58D83362630596900966F5F /* UIControl+XY.h */,
 				C58D83372630596900966F5F /* UIControl+XY.m */,
-				C58D83382630596900966F5F /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md */,
 			);
 			path = "UIControl+XY";
 			sourceTree = "<group>";
@@ -2525,8 +2492,8 @@
 		C58D833A2630596900966F5F /* NSArray+Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C58D833B2630596900966F5F /* NSArray+Extension.m */,
 				C58D833C2630596900966F5F /* NSArray+Extension.h */,
+				C58D833B2630596900966F5F /* NSArray+Extension.m */,
 			);
 			path = "NSArray+Extension";
 			sourceTree = "<group>";
@@ -2551,8 +2518,8 @@
 		C58D83412630596900966F5F /* BaseTableViewHeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83422630596900966F5F /* TableViewHeaderView */,
 				C58D83452630596900966F5F /* TableViewFooterView */,
+				C58D83422630596900966F5F /* TableViewHeaderView */,
 			);
 			path = BaseTableViewHeaderFooterView;
 			sourceTree = "<group>";
@@ -2569,8 +2536,8 @@
 		C58D83452630596900966F5F /* TableViewFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83462630596900966F5F /* TableViewFooterView.m */,
 				C58D83472630596900966F5F /* TableViewFooterView.h */,
+				C58D83462630596900966F5F /* TableViewFooterView.m */,
 			);
 			path = TableViewFooterView;
 			sourceTree = "<group>";
@@ -2587,8 +2554,8 @@
 		C58D83492630596900966F5F /* BaseCollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				C58D834A2630596900966F5F /* LMHWaterFallLayout */,
 				C58D834D2630596900966F5F /* 给UICollectionView每个section加背景 */,
+				C58D834A2630596900966F5F /* LMHWaterFallLayout */,
 				C58D83502630596900966F5F /* UICollectionView 实现类似于UITableView的悬停效果 */,
 			);
 			path = BaseCollectionViewFlowLayout;
@@ -2615,8 +2582,8 @@
 		C58D83502630596900966F5F /* UICollectionView 实现类似于UITableView的悬停效果 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83512630596900966F5F /* HQCollectionViewFlowLayout.m */,
 				C58D83522630596900966F5F /* HQCollectionViewFlowLayout.h */,
+				C58D83512630596900966F5F /* HQCollectionViewFlowLayout.m */,
 			);
 			path = "UICollectionView 实现类似于UITableView的悬停效果";
 			sourceTree = "<group>";
@@ -2633,8 +2600,8 @@
 		C58D83552630596900966F5F /* CALayer+Transition */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83562630596900966F5F /* CALayer+Transition.m */,
 				C58D83572630596900966F5F /* CALayer+Transition.h */,
+				C58D83562630596900966F5F /* CALayer+Transition.m */,
 			);
 			path = "CALayer+Transition";
 			sourceTree = "<group>";
@@ -2642,8 +2609,8 @@
 		C58D83582630596900966F5F /* CALayer+Anim */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83592630596900966F5F /* CALayer+Anim.m */,
 				C58D835A2630596900966F5F /* CALayer+Anim.h */,
+				C58D83592630596900966F5F /* CALayer+Anim.m */,
 			);
 			path = "CALayer+Anim";
 			sourceTree = "<group>";
@@ -2693,8 +2660,8 @@
 		C58D83612630596900966F5F /* NSObject+SPAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83622630596900966F5F /* NSObject+SPAlertController.m */,
 				C58D83632630596900966F5F /* NSObject+SPAlertController.h */,
+				C58D83622630596900966F5F /* NSObject+SPAlertController.m */,
 			);
 			path = "NSObject+SPAlertController";
 			sourceTree = "<group>";
@@ -2702,8 +2669,8 @@
 		C58D83642630596900966F5F /* NSObject+SYSAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83652630596900966F5F /* NSObject+SYSAlertController.m */,
 				C58D83662630596900966F5F /* NSObject+SYSAlertController.h */,
+				C58D83652630596900966F5F /* NSObject+SYSAlertController.m */,
 			);
 			path = "NSObject+SYSAlertController";
 			sourceTree = "<group>";
@@ -2711,14 +2678,14 @@
 		C58D83672630596900966F5F /* NSObject+Others */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83682630596900966F5F /* NSObject+OpenURL */,
-				C58D836B2630596900966F5F /* NSObject+Measure */,
-				C58D836E2630596900966F5F /* NSObject+Shake */,
-				C58D83712630596900966F5F /* NSObject+Random */,
-				C58D83742630596900966F5F /* NSObject+Sound */,
 				C58D83772630596900966F5F /* NSObject+AFNReachability */,
-				C58D837A2630596A00966F5F /* NSObject+RichText */,
 				C58D837D2630596A00966F5F /* NSObject+Extras */,
+				C58D836B2630596900966F5F /* NSObject+Measure */,
+				C58D83682630596900966F5F /* NSObject+OpenURL */,
+				C58D83712630596900966F5F /* NSObject+Random */,
+				C58D837A2630596A00966F5F /* NSObject+RichText */,
+				C58D836E2630596900966F5F /* NSObject+Shake */,
+				C58D83742630596900966F5F /* NSObject+Sound */,
 			);
 			path = "NSObject+Others";
 			sourceTree = "<group>";
@@ -2726,8 +2693,8 @@
 		C58D83682630596900966F5F /* NSObject+OpenURL */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83692630596900966F5F /* NSObject+OpenURL.m */,
 				C58D836A2630596900966F5F /* NSObject+OpenURL.h */,
+				C58D83692630596900966F5F /* NSObject+OpenURL.m */,
 			);
 			path = "NSObject+OpenURL";
 			sourceTree = "<group>";
@@ -2735,8 +2702,8 @@
 		C58D836B2630596900966F5F /* NSObject+Measure */ = {
 			isa = PBXGroup;
 			children = (
-				C58D836C2630596900966F5F /* NSObject+Measure.m */,
 				C58D836D2630596900966F5F /* NSObject+Measure.h */,
+				C58D836C2630596900966F5F /* NSObject+Measure.m */,
 			);
 			path = "NSObject+Measure";
 			sourceTree = "<group>";
@@ -2753,8 +2720,8 @@
 		C58D83712630596900966F5F /* NSObject+Random */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83722630596900966F5F /* NSObject+Random.m */,
 				C58D83732630596900966F5F /* NSObject+Random.h */,
+				C58D83722630596900966F5F /* NSObject+Random.m */,
 			);
 			path = "NSObject+Random";
 			sourceTree = "<group>";
@@ -2762,8 +2729,8 @@
 		C58D83742630596900966F5F /* NSObject+Sound */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83752630596900966F5F /* NSObject+Sound.m */,
 				C58D83762630596900966F5F /* NSObject+Sound.h */,
+				C58D83752630596900966F5F /* NSObject+Sound.m */,
 			);
 			path = "NSObject+Sound";
 			sourceTree = "<group>";
@@ -2771,8 +2738,8 @@
 		C58D83772630596900966F5F /* NSObject+AFNReachability */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83782630596A00966F5F /* NSObject+AFNReachability.m */,
 				C58D83792630596A00966F5F /* NSObject+AFNReachability.h */,
+				C58D83782630596A00966F5F /* NSObject+AFNReachability.m */,
 			);
 			path = "NSObject+AFNReachability";
 			sourceTree = "<group>";
@@ -2798,8 +2765,8 @@
 		C58D83802630596A00966F5F /* NSObject+DataSave */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83812630596A00966F5F /* NSObject+DataSave.m */,
 				C58D83822630596A00966F5F /* NSObject+DataSave.h */,
+				C58D83812630596A00966F5F /* NSObject+DataSave.m */,
 			);
 			path = "NSObject+DataSave";
 			sourceTree = "<group>";
@@ -2816,8 +2783,8 @@
 		C58D83862630596A00966F5F /* NSObject (Time) */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83872630596A00966F5F /* TimeModel.m */,
 				C58D83882630596A00966F5F /* TimeModel.h */,
+				C58D83872630596A00966F5F /* TimeModel.m */,
 			);
 			path = "NSObject (Time)";
 			sourceTree = "<group>";
@@ -2825,8 +2792,8 @@
 		C58D83892630596A00966F5F /* NSObject+DefConfig */ = {
 			isa = PBXGroup;
 			children = (
-				C58D838A2630596A00966F5F /* NSObject+DefConfig.m */,
 				C58D838B2630596A00966F5F /* NSObject+DefConfig.h */,
+				C58D838A2630596A00966F5F /* NSObject+DefConfig.m */,
 			);
 			path = "NSObject+DefConfig";
 			sourceTree = "<group>";
@@ -2844,8 +2811,8 @@
 			isa = PBXGroup;
 			children = (
 				C5B5CBD526666C3F00264958 /* BaseButtonProtocol.h */,
-				C58D83902630596A00966F5F /* BaseViewControllerProtocol.h */,
 				C58D83912630596A00966F5F /* BaseCellProtocol.h */,
+				C58D83902630596A00966F5F /* BaseViewControllerProtocol.h */,
 				C58D83922630596A00966F5F /* BaseViewProtocol.h */,
 			);
 			path = BaseProtocol;
@@ -2863,8 +2830,8 @@
 		C58D83962630596A00966F5F /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83972630596A00966F5F /* UITextField+Category */,
 				C58D839B2630596A00966F5F /* BaseTextField */,
+				C58D83972630596A00966F5F /* UITextField+Category */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -2889,10 +2856,10 @@
 		C58D839B2630596A00966F5F /* BaseTextField */ = {
 			isa = PBXGroup;
 			children = (
-				C58D839C2630596A00966F5F /* HQTextField */,
 				C58D839F2630596A00966F5F /* CJTextField */,
-				C58D83A22630596A00966F5F /* ZYTextField */,
+				C58D839C2630596A00966F5F /* HQTextField */,
 				C58D83A82630596A00966F5F /* JobsMagicTextField */,
+				C58D83A22630596A00966F5F /* ZYTextField */,
 			);
 			path = BaseTextField;
 			sourceTree = "<group>";
@@ -2909,8 +2876,8 @@
 		C58D839F2630596A00966F5F /* CJTextField */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83A02630596A00966F5F /* CJTextField.m */,
 				C58D83A12630596A00966F5F /* CJTextField.h */,
+				C58D83A02630596A00966F5F /* CJTextField.m */,
 			);
 			path = CJTextField;
 			sourceTree = "<group>";
@@ -2918,11 +2885,11 @@
 		C58D83A22630596A00966F5F /* ZYTextField */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83A32630596A00966F5F /* ZYTextField.m */,
 				C58D83A42630596A00966F5F /* ZYTextField.bundle */,
-				C58D83A52630596A00966F5F /* ZYTextField+HistoryDataList.m */,
 				C58D83A62630596A00966F5F /* ZYTextField.h */,
+				C58D83A32630596A00966F5F /* ZYTextField.m */,
 				C58D83A72630596A00966F5F /* ZYTextField+HistoryDataList.h */,
+				C58D83A52630596A00966F5F /* ZYTextField+HistoryDataList.m */,
 			);
 			path = ZYTextField;
 			sourceTree = "<group>";
@@ -2930,8 +2897,8 @@
 		C58D83A82630596A00966F5F /* JobsMagicTextField */ = {
 			isa = PBXGroup;
 			children = (
-				C58D83A92630596A00966F5F /* JobsMagicTextField.m */,
 				C58D83AA2630596A00966F5F /* JobsMagicTextField.h */,
+				C58D83A92630596A00966F5F /* JobsMagicTextField.m */,
 			);
 			path = JobsMagicTextField;
 			sourceTree = "<group>";
@@ -2939,8 +2906,8 @@
 		C58D8474263059EF00966F5F /* 播放器控制层 */ = {
 			isa = PBXGroup;
 			children = (
-				C58D8475263059EF00966F5F /* CustomZFPlayerControlView.m */,
 				C58D8476263059EF00966F5F /* CustomZFPlayerControlView.h */,
+				C58D8475263059EF00966F5F /* CustomZFPlayerControlView.m */,
 			);
 			path = "播放器控制层";
 			sourceTree = "<group>";
@@ -2948,8 +2915,8 @@
 		C58E9F3726313C2600D1EDB8 /* NSObject+DataBinding */ = {
 			isa = PBXGroup;
 			children = (
-				C58E9F3826313C2600D1EDB8 /* NSObject+DataBinding.m */,
 				C58E9F3926313C2600D1EDB8 /* NSObject+DataBinding.h */,
+				C58E9F3826313C2600D1EDB8 /* NSObject+DataBinding.m */,
 			);
 			path = "NSObject+DataBinding";
 			sourceTree = "<group>";
@@ -2958,14 +2925,14 @@
 			isa = PBXGroup;
 			children = (
 				C58D8474263059EF00966F5F /* 播放器控制层 */,
-				C5542DA625F3250E002D1CA6 /* CheckMemFreeVC */,
-				C54C642225EFC313007DD043 /* 清除缓存 */,
-				C5A43ABA25AAF8C2000F0CD2 /* 手势滑动返回 */,
-				C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */,
-				C53CA1C525A1D4730007F58F /* 文件夹操作 */,
 				C50A3F7D2540A68300465D01 /* 分享控件 */,
+				C54C642225EFC313007DD043 /* 清除缓存 */,
 				C5AEEA5925380434000E1C5F /* 深度拓展系统UITabBar全家桶 */,
+				C5A43ABA25AAF8C2000F0CD2 /* 手势滑动返回 */,
+				C53CA1C525A1D4730007F58F /* 文件夹操作 */,
+				C5542DA625F3250E002D1CA6 /* CheckMemFreeVC */,
 				C572F9662552C1EF004F5CC9 /* TimerManager */,
+				C565CBF925A4386C00848134 /* TwoVerticalArrangementLabsView */,
 				C59A3ED3258DD240005F6260 /* UserDefaultManager */,
 			);
 			path = "Manual_Add_ThirdParty ";
@@ -3013,9 +2980,9 @@
 			isa = PBXGroup;
 			children = (
 				C59A3ED4258DD240005F6260 /* UserDefaultManager.h */,
+				C59A3ED7258DD240005F6260 /* UserDefaultManager.m */,
 				C59A3ED5258DD240005F6260 /* UserDefaultModel.h */,
 				C59A3ED6258DD240005F6260 /* UserDefaultModel.m */,
-				C59A3ED7258DD240005F6260 /* UserDefaultManager.m */,
 			);
 			path = UserDefaultManager;
 			sourceTree = "<group>";
@@ -3238,13 +3205,6 @@
 			path = UITabBar;
 			sourceTree = "<group>";
 		};
-		C5AEE91225373638000E1C5F /* 在系统api基础上二次封装的功能性拓展 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "在系统api基础上二次封装的功能性拓展";
-			sourceTree = "<group>";
-		};
 		C5AEE92425373638000E1C5F /* UITabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3297,10 +3257,9 @@
 				C55D413F253974CE00CFCF73 /* TabbarControllerSysEx.h */,
 				C579F9A02539DD9C00846814 /* 全局配置文件 */,
 				C579F99F2539DD7700846814 /* 一些需要单独列出来的功能性模块 */,
-				C5AEE91225373638000E1C5F /* 在系统api基础上二次封装的功能性拓展 */,
-				C5AEEA1D25373F5C000E1C5F /* UITabBarItem */,
-				C5AEE92425373638000E1C5F /* UITabBarController */,
 				C5AEE90D25373638000E1C5F /* UITabBar */,
+				C5AEE92425373638000E1C5F /* UITabBarController */,
+				C5AEEA1D25373F5C000E1C5F /* UITabBarItem */,
 			);
 			path = "深度拓展系统UITabBar全家桶";
 			sourceTree = "<group>";
@@ -3453,8 +3412,8 @@
 		C5C7C8D126C521CC007F4D5F /* TYFSwizzle */ = {
 			isa = PBXGroup;
 			children = (
-				C5C7C8D226C521CC007F4D5F /* TYFFSwizzle.m */,
 				C5C7C8D326C521CC007F4D5F /* TYFFSwizzle.h */,
+				C5C7C8D226C521CC007F4D5F /* TYFFSwizzle.m */,
 			);
 			path = TYFSwizzle;
 			sourceTree = "<group>";
@@ -3480,8 +3439,8 @@
 		C5EA14E42631208600155822 /* UILabel+Gesture */ = {
 			isa = PBXGroup;
 			children = (
-				C5EA14E52631208600155822 /* UILabel+Gesture.m */,
 				C5EA14E62631208600155822 /* UILabel+Gesture.h */,
+				C5EA14E52631208600155822 /* UILabel+Gesture.m */,
 			);
 			path = "UILabel+Gesture";
 			sourceTree = "<group>";
@@ -3636,7 +3595,6 @@
 				C5AEE9042537362C000E1C5F /* tab_search_animate.json in Resources */,
 				C55D41B92539769D00CFCF73 /* Tools_00040@3x.png in Resources */,
 				C55D421A253976E000CFCF73 /* Tools_00054@2x.png in Resources */,
-				C58D84022630596A00966F5F /* iOS小技巧：用runtime 解决UIButton 重复点击问题.md in Resources */,
 				C55D426F2539773800CFCF73 /* Settings_00208@3x.png in Resources */,
 				C55D425A2539770B00CFCF73 /* Tools_00063@3x.png in Resources */,
 				C55D41802539767600CFCF73 /* Tools_00032@2x.png in Resources */,
@@ -3645,7 +3603,6 @@
 				C55D427F2539776500CFCF73 /* drop@3x.png in Resources */,
 				C55D4236253976F600CFCF73 /* Tools_00058@2x.png in Resources */,
 				C55D416C2539765A00CFCF73 /* Tools_00029@3x.png in Resources */,
-				C58D83DA2630596A00966F5F /* iOS 获取手机型号、系统版本.png in Resources */,
 				C58D83C02630596A00966F5F /* del_Photo@3x.png in Resources */,
 				C55D41732539766300CFCF73 /* Tools_00030@3x.png in Resources */,
 				C55D41D5253976B400CFCF73 /* Tools_00044@2x.png in Resources */,
@@ -3679,7 +3636,6 @@
 				C55D423D253976FA00CFCF73 /* Tools_00059@3x.png in Resources */,
 				C50A40E72540AC8600465D01 /* bundle in Resources */,
 				C5C654DE259DF9B600FD2F99 /* 02.PNG in Resources */,
-				C58D83D62630596A00966F5F /* 移除 系统自带的 UITabBarButton in Resources */,
 				C5C654F1259DF9B600FD2F99 /* 文件和文件夹@3x.png in Resources */,
 				C55D41DC253976B700CFCF73 /* Tools_00045@3x.png in Resources */,
 				C5AEE8A025373581000E1C5F /* LaunchScreen.storyboard in Resources */,
@@ -3694,7 +3650,6 @@
 				C55D41FF253976D000CFCF73 /* Tools_00050@3x.png in Resources */,
 				C55D41B12539769900CFCF73 /* Tools_00039@3x.png in Resources */,
 				C55D41642539764F00CFCF73 /* Tools_00028@2x.png in Resources */,
-				C58D83DC2630596A00966F5F /* 我为什么要这么做.md in Resources */,
 				C55D415A2539760C00CFCF73 /* user_00084@2x.png in Resources */,
 				C55D42672539771400CFCF73 /* Tools_00065@2x.png in Resources */,
 				C55D41F7253976CC00CFCF73 /* Tools_00049@3x.png in Resources */,
@@ -3702,7 +3657,6 @@
 				C55D422F253976ED00CFCF73 /* Tools_00057@2x.png in Resources */,
 				C58D83BD2630596A00966F5F /* Sound.wav in Resources */,
 				C579F84E2539D28C00846814 /* 旋转.png in Resources */,
-				C58D83EA2630596A00966F5F /* 使用方法.md in Resources */,
 				C5C654DD259DF9B600FD2F99 /* 麦克风@2x.png in Resources */,
 				C55D4228253976E800CFCF73 /* Tools_00056@3x.png in Resources */,
 				C55D426E2539773800CFCF73 /* Settings_00208@2x.png in Resources */,
@@ -3720,10 +3674,8 @@
 				845891F72744BAD500119697 /* Login.xcassets in Resources */,
 				C5AEE9022537362C000E1C5F /* tab_me_animate.json in Resources */,
 				C5AEE8FB2537362C000E1C5F /* post_unselected@3x.png in Resources */,
-				C58D83BE2630596A00966F5F /* 带有按键音的按钮.md in Resources */,
 				C5C654E9259DF9B600FD2F99 /* 定位服务@2x.png in Resources */,
 				C55D41AA2539769500CFCF73 /* Tools_00038@3x.png in Resources */,
-				C58D840A2630596A00966F5F /* UICollectionViewFlowLayout.md in Resources */,
 				C55D4221253976E400CFCF73 /* Tools_00055@3x.png in Resources */,
 				C5AEE9032537362C000E1C5F /* tab_home_animate.json in Resources */,
 				C55D4245253976FE00CFCF73 /* Tools_00060@3x.png in Resources */,
@@ -3738,7 +3690,6 @@
 				C55D41C7253976AC00CFCF73 /* Tools_00042@2x.png in Resources */,
 				C55D41CE253976AF00CFCF73 /* Tools_00043@2x.png in Resources */,
 				C5C654E6259DF9B600FD2F99 /* 语音识别@3x.png in Resources */,
-				C58D83B72630596A00966F5F /* 高度自定义的按钮.md in Resources */,
 				C55D41F1253976C400CFCF73 /* Tools_00048@3x.png in Resources */,
 				C5AEE8F52537362C000E1C5F /* My_selected@3x.png in Resources */,
 				C5AEE9072537362C000E1C5F /* upgrade.json in Resources */,
@@ -3765,7 +3716,6 @@
 				C5AEE8F42537362C000E1C5F /* task_selected@2x.png in Resources */,
 				C55D41952539768400CFCF73 /* Tools_00035@2x.png in Resources */,
 				C5C654D9259DF9B600FD2F99 /* 运动与健身@3x.png in Resources */,
-				C58D84002630596A00966F5F /* 专治UITableView相应链断裂.md in Resources */,
 				C55D418E2539767F00CFCF73 /* Tools_00034@2x.png in Resources */,
 				C5C654D7259DF9B600FD2F99 /* 运动与健身@2x.png in Resources */,
 				C55D421B253976E000CFCF73 /* Tools_00054@3x.png in Resources */,
