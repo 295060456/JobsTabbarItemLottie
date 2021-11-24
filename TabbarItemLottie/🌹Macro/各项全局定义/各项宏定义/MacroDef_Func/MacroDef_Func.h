@@ -8,6 +8,7 @@
 #ifndef MacroDef_Func_h
 #define MacroDef_Func_h
 
+#import <UIKit/UIKit.h>
 #import "MacroDef_Sys.h"
 #import "TabbarItemLottieAppDelegate.h"
 #import "TabbarItemLottieSceneDelegate.h"
