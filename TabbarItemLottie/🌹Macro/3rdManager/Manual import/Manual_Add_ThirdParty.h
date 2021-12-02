@@ -11,7 +11,7 @@
 #import "JobsBaseCustomizeUIKitCoreHeader.h"
 
 #pragma mark —— Manual_Add_ThirdParty_h
-#import "UserDefaultManager.h"
+#import "NSUserDefaults+Manager.h"
 #import "BWShareView.h"// 分享控件
 #import "TabbarControllerSysEx.h"// 深度拓展系统UITabBar全家桶=
 #import "TimerManager.h"
