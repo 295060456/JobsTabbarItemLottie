@@ -19,7 +19,6 @@
 @property(nonatomic,strong)TabbarVC *tabBarVC;
 
 - (void)saveContext;
-+(instancetype)sharedInstance;
 
 @end
 

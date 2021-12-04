@@ -10,24 +10,16 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunguarded-availability-new"
 
+TabbarItemLottieAppDelegate *appDelegate;
 @interface TabbarItemLottieAppDelegate ()
 
 @end
 
 @implementation TabbarItemLottieAppDelegate
 
-static TabbarItemLottieAppDelegate *static_appDelegate = nil;
-+(instancetype)sharedInstance{
-    @synchronized(self){
-        if (!static_appDelegate) {
-            static_appDelegate = TabbarItemLottieAppDelegate.new;
-        }
-    }return static_appDelegate;
-}
-
 -(instancetype)init{
     if (self = [super init]) {
-        static_appDelegate = self;
+        appDelegate = self;
     }return self;
 }
 

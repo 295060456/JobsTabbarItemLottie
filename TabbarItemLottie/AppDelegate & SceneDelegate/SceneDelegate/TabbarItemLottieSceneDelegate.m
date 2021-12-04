@@ -12,24 +12,16 @@ API_AVAILABLE(ios(13.0))
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunguarded-availability-new"
 
+TabbarItemLottieSceneDelegate *sceneDelegate;
 @interface TabbarItemLottieSceneDelegate ()
 
 @end
 
 @implementation TabbarItemLottieSceneDelegate
 
-static TabbarItemLottieSceneDelegate *static_sceneDelegate = nil;
-+(instancetype)sharedInstance{
-    @synchronized(self){
-        if (!static_sceneDelegate) {
-            static_sceneDelegate = TabbarItemLottieSceneDelegate.new;
-        }
-    }return static_sceneDelegate;
-}
-
 -(instancetype)init{
     if (self = [super init]) {
-        static_sceneDelegate = self;
+        sceneDelegate = self;
     }return self;
 }
 
