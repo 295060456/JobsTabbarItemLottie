@@ -24,7 +24,7 @@ end
 def func
   pod 'NTESVerifyCode' # 网易验证码 https://github.com/yidun/NTESVerifyCode https://support.dun.163.com/documents/15588062143475712?docId=150442931089756160
   pod 'XYColorOC' # https://github.com/RayJiang16/XYColor 适配iOS 13夜间模式/深色外观(Dark Mode)
-  pod 'JobsGlobleDef'
+  # pod 'JobsGlobleDef'
   pod 'AFNetworking'
   pod 'lottie-ios', '~> 2.5.3'
   pod 'PPBadgeView' #https://github.com/jkpang/PPBadgeView iOS自定义Badge组件, 支持UIView, UITabBarItem, UIBarButtonItem以及子类
@@ -56,12 +56,12 @@ def func
 
 # 基础的公共配置
 def cocoPodsConfig
-  target 'TabbarItemLottieTests' do
+  target 'JobsTabbarItemLottieTests' do
     inherit! :search_paths # abstract! 指示当前的target是抽象的，因此不会直接链接Xcode target。与其相对应的是 inherit！
     # Pods for testing
     end
   
-  target 'TabbarItemLottieUITests' do
+  target 'JobsTabbarItemLottieUITests' do
     inherit! :search_paths
     # Pods for testing
     end
@@ -86,8 +86,8 @@ def cocoPodsConfig
   end
 end
 
-target 'TabbarItemLottie' do
-  # Pods for TabbarItemLottie
+target 'JobsTabbarItemLottie' do
+  # Pods for JobsTabbarItemLottie
   develop_sdk
   func
   cocoPodsConfig # 基础的公共配置
