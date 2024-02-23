@@ -1,6 +1,6 @@
 # iOS 倒计时按钮  &&  UITabbarCtr的封装
 
-https://github.com/295060456/TabbarItemLottie
+https://github.com/295060456/JobsTabbarItemLottie
 
 ![TabbarItemLottie 【Outlines 01】](https://user-images.githubusercontent.com/13795605/99761303-559d7200-2b28-11eb-9dc1-e0f1916a4f35.png)
 ![TabbarItemLottie 【Outlines 02】](https://user-images.githubusercontent.com/13795605/99761306-57673580-2b28-11eb-83c9-137d514f763e.png)
